@@ -6,11 +6,12 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { LanguageToggle } from "./LanguageToggle";
 import { useTranslation } from "@/lib/i18n";
-import { Menu, X, ArrowUpRight, Sprout, Layers, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowUpRight, Sprout, Volume2, VolumeX, ArrowRight } from "lucide-react";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [soundEnabled, setSoundEnabled] = useState(false);
   const pathname = usePathname();
   const { t } = useTranslation();
 
@@ -26,10 +27,13 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [pathname]);
+
+  const toggleSound = () => {
+    setSoundEnabled(!soundEnabled);
+  };
 
   const navItems = [
     { label: t("nav.home"), href: "/" },
@@ -47,8 +51,8 @@ export function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "py-3 bg-forest-950/85 backdrop-blur-xl border-b border-forest-800/40 shadow-xl shadow-forest-950/50"
-            : "py-6 bg-gradient-to-b from-forest-950/90 to-transparent"
+            ? "py-3 bg-forest-950/90 backdrop-blur-xl border-b border-forest-800/40 shadow-xl shadow-forest-950/50"
+            : "py-6 bg-gradient-to-b from-forest-950/95 to-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -97,9 +101,24 @@ export function Header() {
             })}
           </nav>
 
-          {/* Right Action CTA & Lang */}
+          {/* Right Action CTA & Controls */}
           <div className="hidden lg:flex items-center gap-3">
+            {/* Optional Environmental Sound Toggle */}
+            <button
+              onClick={toggleSound}
+              className={`p-2 rounded-full border transition-all ${
+                soundEnabled
+                  ? "bg-harvest-500/20 border-harvest-400 text-harvest-400"
+                  : "bg-forest-900/40 border-forest-500/30 text-sand-200/60 hover:text-sand-50"
+              }`}
+              title={soundEnabled ? "Mute Ambient Field Sound" : "Enable Ambient Field Sound"}
+              data-cursor-text="AUDIO"
+            >
+              {soundEnabled ? <Volume2 className="w-3.5 h-3.5 animate-pulse" /> : <VolumeX className="w-3.5 h-3.5" />}
+            </button>
+
             <LanguageToggle />
+
             <Link
               href="/start-project"
               className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-forest-600 via-forest-500 to-harvest-600 text-sand-50 text-xs font-bold tracking-wider uppercase shadow-lg hover:shadow-forest-500/25 transition-all duration-300 hover:scale-[1.03]"
@@ -165,7 +184,7 @@ export function Header() {
               </Link>
               <div className="flex justify-between items-center text-xs text-sand-200/60">
                 <span>© ODCONES PROJECTS</span>
-                <span>Agriculture • Water • Blue Economy</span>
+                <span>Anshuman Mohapatra — Founder</span>
               </div>
             </div>
           </motion.div>

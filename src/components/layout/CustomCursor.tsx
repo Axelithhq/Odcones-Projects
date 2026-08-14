@@ -10,7 +10,6 @@ export function CustomCursor() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Only run on desktop with fine pointers
     if (window.matchMedia("(pointer: coarse)").matches) return;
 
     const onMouseMove = (e: MouseEvent) => {
@@ -54,12 +53,12 @@ export function CustomCursor() {
     <div className="hidden lg:block pointer-events-none fixed inset-0 z-[9999] overflow-hidden">
       {/* Outer Ring / Cursor Bubble */}
       <motion.div
-        className="fixed top-0 left-0 rounded-full flex items-center justify-center pointer-events-none border border-forest-300/60 bg-forest-900/40 backdrop-blur-[2px] transition-colors"
+        className="fixed top-0 left-0 rounded-full flex items-center justify-center pointer-events-none border border-forest-300/60 bg-forest-950/70 backdrop-blur-[4px] shadow-2xl transition-colors"
         animate={{
-          x: mousePosition.x - (cursorText ? 44 : isHovered ? 24 : 12),
-          y: mousePosition.y - (cursorText ? 44 : isHovered ? 24 : 12),
-          width: cursorText ? 88 : isHovered ? 48 : 24,
-          height: cursorText ? 88 : isHovered ? 48 : 24,
+          x: mousePosition.x - (cursorText ? 48 : isHovered ? 24 : 12),
+          y: mousePosition.y - (cursorText ? 48 : isHovered ? 24 : 12),
+          width: cursorText ? 96 : isHovered ? 48 : 24,
+          height: cursorText ? 96 : isHovered ? 48 : 24,
           scale: 1,
         }}
         transition={{
@@ -73,7 +72,7 @@ export function CustomCursor() {
           <motion.span
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="text-[10px] font-bold tracking-widest text-harvest-300 uppercase text-center px-1 leading-tight font-display"
+            className="text-[9px] font-bold tracking-widest text-harvest-300 uppercase text-center px-2 leading-tight font-display"
           >
             {cursorText}
           </motion.span>

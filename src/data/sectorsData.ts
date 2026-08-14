@@ -5,6 +5,8 @@ export interface SectorInfo {
   tagline: string;
   heroImage: string;
   iconName: string;
+  accentColor: string;
+  badgeBg: string;
   shortDesc: string;
   longDesc: string;
   keyPillars: { title: string; desc: string }[];
@@ -19,11 +21,13 @@ export const SECTORS: SectorInfo[] = [
     id: "agriculture",
     slug: "agriculture",
     name: "AGRICULTURE",
-    tagline: "Building productive, resilient and sustainable agricultural ecosystems.",
-    heroImage: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=1600",
+    tagline: "From soil to harvest, building productive and resilient agricultural systems.",
+    heroImage: "https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&q=80&w=1600", // Real Indian paddy field farmer
     iconName: "Sprout",
-    shortDesc: "Transforming smallholder farming through climate-resilient practices, precision inputs, and high-yield agricultural infrastructure.",
-    longDesc: "ODCONES PROJECTS delivers end-to-end agricultural interventions designed for climate vulnerability, low seed-replacement rates, and fragmented landholdings. We integrate soil health management, high-efficiency irrigation, crop diversification, and value-chain integration to build self-sustaining rural agricultural hubs.",
+    accentColor: "#40916C",
+    badgeBg: "rgba(64, 145, 108, 0.15)",
+    shortDesc: "Transforming smallholder farming through climate-resilient practices, soil carbon enhancement, and high-yield agricultural infrastructure.",
+    longDesc: "ODCONES PROJECTS delivers end-to-end agricultural interventions designed for climate vulnerability, low seed-replacement rates, and fragmented landholdings. We integrate soil health management, high-efficiency drip irrigation, crop diversification, and value-chain integration to build self-sustaining rural agricultural hubs.",
     keyPillars: [
       { title: "Precision Crop Planning", desc: "AI and GIS-backed micro-climate land mapping for targeted crop choices." },
       { title: "Soil Regeneration", desc: "Organic carbon enhancement, micro-nutrient conditioning, and bio-fertilization." },
@@ -51,10 +55,12 @@ export const SECTORS: SectorInfo[] = [
     id: "horticulture",
     slug: "horticulture",
     name: "HORTICULTURE",
-    tagline: "Growing high-value crops through smarter cultivation systems.",
-    heroImage: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=1600",
+    tagline: "High-value crop production under protected greenhouse cultivation.",
+    heroImage: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=1600", // Polyhouse vegetable greenhouse
     iconName: "Flower2",
-    shortDesc: "High-density orchards, polyhouse cultivation, exotic vegetable farming, and cold-chain integrated harvest systems.",
+    accentColor: "#52B788",
+    badgeBg: "rgba(82, 183, 136, 0.15)",
+    shortDesc: "Naturally ventilated polyhouses, shade-net nurseries, exotic vegetable farming, and cold-chain integrated harvest systems.",
     longDesc: "Horticulture represents the highest income-per-acre vector for small and medium farmers. ODCONES designs state-of-the-art climate-controlled polyhouses, shade-net structures, micro-drip fertigation units, and post-harvest packhouses tailored for high-value fruits, vegetables, and floriculture.",
     keyPillars: [
       { title: "Protected Cultivation", desc: "Polyhouse & net-house architectures designed for year-round crop production." },
@@ -83,32 +89,34 @@ export const SECTORS: SectorInfo[] = [
     id: "fisheries",
     slug: "fisheries",
     name: "FISHERIES",
-    tagline: "Strengthening livelihoods through sustainable aquatic ecosystems.",
-    heroImage: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=1600",
+    tagline: "Supporting aquatic livelihoods, riverine fisherfolk, and natural water bodies.",
+    heroImage: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=1600", // Fishermen casting nets on freshwater lake
     iconName: "Fish",
-    shortDesc: "Inland fishery restoration, reservoir cage culture, marine community support, and modern landing center infrastructure.",
-    longDesc: "ODCONES works across riverine, estuarine, and inland water bodies to modernize capture and culture fisheries. We establish floating cage culture installations in large reservoirs, stock indigenous major carps, and deploy hygienic fish processing facilities for coastal fishing communities.",
+    accentColor: "#006680",
+    badgeBg: "rgba(0, 102, 128, 0.15)",
+    shortDesc: "Inland fishery restoration, fisherman cooperative support, hygienic landing docks, and riverine ecosystem preservation.",
+    longDesc: "ODCONES works across riverine, estuarine, and reservoir water bodies to modernize traditional capture fisheries. We empower local fishermen cooperatives with hygienic auction platforms, modern net gear, solar ice plants, and sustainable stock management.",
     keyPillars: [
-      { title: "Reservoir Cage Culture", desc: "HDPE floating cages for commercial fish rearing in inland reservoirs." },
-      { title: "Fisherman Cooperatives", desc: "Empowering local fishing societies with modern boats, nets, and insurance." },
-      { title: "Hygienic Landing Hubs", desc: "Solar illuminated, ice-equipped auction and processing platforms." },
-      { title: "Aquatic Biodiversity", desc: "Restoration of natural breeding grounds and riverine ecosystem health." }
+      { title: "Fisherman Cooperatives", desc: "Empowering local fishing societies with modern boats, nets, and safety gear." },
+      { title: "Hygienic Landing Hubs", desc: "Solar illuminated, ice-equipped auction and processing docks." },
+      { title: "Riverine Stocking", desc: "Restoration of natural breeding grounds and indigenous fingerling stocking." },
+      { title: "Cold-Chain Logistics", desc: "Insulated transport vehicles maintaining freshness from dock to market." }
     ],
     stats: [
-      { value: "1,200+", label: "Floating Cages Deployed" },
+      { value: "14,000", label: "Fisherfolk Impacted" },
       { value: "85+", label: "Water Bodies Managed" },
-      { value: "14,000", label: "Fisherfolk Impacted" }
+      { value: "32 Units", label: "Landing Centers Commissioned" }
     ],
-    technologies: ["Echo Sounder Bathymetry", "Water Quality Telemetry", "Floating HDPE Cages", "Solar Ice Generators"],
+    technologies: ["Echo Sounder Bathymetry", "Solar Ice Generators", "Insulated Cold Vehicles", "Cooperative Payout Ledgers"],
     challenges: [
       { title: "Over-exploitation", desc: "Depletion of wild fish stocks from unmonitored harvesting." },
       { title: "Poor Post-Harvest Value", desc: "Spoilage due to inadequate icing facilities at landing docks." }
     ],
     odconesApproach: [
-      "Community-led cage aquaculture in reservoir backwaters",
+      "Community-led fishing cooperative management",
       "Integrated ice plant & solar chill vehicle delivery",
       "Fingerling stocking in natural tanks & wetlands",
-      "Traceability systems for premium fish markets"
+      "Direct auction transparency at landing docks"
     ]
   },
   {
@@ -116,18 +124,20 @@ export const SECTORS: SectorInfo[] = [
     slug: "aquaculture",
     name: "AQUACULTURE",
     tagline: "Technology-driven fish production for a growing blue economy.",
-    heroImage: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=1600",
+    heroImage: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=1600", // Aquaculture aeration pond
     iconName: "Waves",
-    shortDesc: "Scientific fish & shrimp farming, Biofloc systems, RAS (Recirculating Aquaculture Systems), and bio-secure hatcheries.",
+    accentColor: "#149ECA",
+    badgeBg: "rgba(20, 158, 202, 0.15)",
+    shortDesc: "Scientific fish & shrimp farming, HDPE floating cages, Biofloc circular tanks, RAS units, and bio-secure hatcheries.",
     longDesc: "Modern aquaculture demands absolute water quality precision and bio-security. ODCONES designs turn-key commercial fish farms, high-density Biofloc tanks, Recirculating Aquaculture Systems (RAS), and automated feeding systems that maximize feed conversion ratio (FCR) while minimizing environmental footprint.",
     keyPillars: [
+      { title: "Reservoir Cage Culture", desc: "HDPE floating cages for commercial fish rearing in inland reservoirs." },
       { title: "Biofloc Technology", desc: "Zero-water exchange tanks utilizing microbial protein to feed fish." },
       { title: "RAS (Recirculating)", desc: "Indoor water filtration systems recycling 95%+ of water for urban fish farming." },
-      { title: "Bio-Secure Hatcheries", desc: "High-health SPF seed production for Pangasius, Tilapia, and Vannamei." },
-      { title: "Automated Feeding", desc: "Acoustic sensor-triggered demand feeders reducing feed waste by 30%." }
+      { title: "Automated Telemetry", desc: "IoT Dissolved Oxygen and pH sensors auto-triggering microbubble aerators." }
     ],
     stats: [
-      { value: "800+", label: "Aquaculture Ponds Built" },
+      { value: "1,200+", label: "Floating Cages Deployed" },
       { value: "1.15", label: "Industry-Leading FCR" },
       { value: "18,000 MT", label: "Annual Biomass Yield" }
     ],
@@ -148,10 +158,12 @@ export const SECTORS: SectorInfo[] = [
     slug: "animal-husbandry",
     name: "ANIMAL HUSBANDRY",
     tagline: "Supporting healthier livestock systems and rural livelihoods.",
-    heroImage: "https://images.unsplash.com/photo-1570042707220-410a563f8d9b?auto=format&fit=crop&q=80&w=1600",
+    heroImage: "https://images.unsplash.com/photo-1570042707220-410a563f8d9b?auto=format&fit=crop&q=80&w=1600", // Dairy cattle farming
     iconName: "ShieldCheck",
-    shortDesc: "Dairy herd improvement, bio-secure poultry clusters, goat farming initiatives, and telemedicine veterinary care.",
-    longDesc: "Livestock represents a essential financial cushion for rural households. ODCONES implements scientific dairy farm management, artificial insemination programs for indigenous breeds, green fodder production plots, and community-led goat and poultry micro-enterprises.",
+    accentColor: "#D4A373",
+    badgeBg: "rgba(212, 163, 115, 0.15)",
+    shortDesc: "Dairy herd improvement, bulk milk chilling hubs, perennial fodder security, and veterinary tele-care.",
+    longDesc: "Livestock represents an essential financial cushion for rural households. ODCONES implements scientific dairy farm management, artificial insemination programs for indigenous breeds, hydroponic green fodder production plots, and community-led goat and poultry micro-enterprises.",
     keyPillars: [
       { title: "Smart Dairy Hubs", desc: "Automated milking parlors, bulk milk chillers, and herd health tracking." },
       { title: "Green Fodder Security", desc: "Hydroponic fodder units and perennial Napier grass cultivation." },
@@ -179,10 +191,12 @@ export const SECTORS: SectorInfo[] = [
     id: "water-soil",
     slug: "water-soil",
     name: "WATER & SOIL CONSERVATION",
-    tagline: "Protecting the foundations of sustainable agriculture.",
-    heroImage: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1600",
+    tagline: "Protecting soil health and regenerating watershed landscapes.",
+    heroImage: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&q=80&w=1600", // Soil & irrigation channels
     iconName: "Droplets",
-    shortDesc: "Watershed restoration, check-dam construction, rainwater harvesting, sub-surface drainage, and soil carbon enhancement.",
+    accentColor: "#0A3A40",
+    badgeBg: "rgba(10, 58, 64, 0.2)",
+    shortDesc: "Watershed restoration, check dams, rainwater harvesting, sub-surface drainage, and saline land reclamation.",
     longDesc: "Without healthy soil and water security, agricultural development cannot endure. ODCONES executes catchment treatment, farm pond creation, gully plugging, check dam construction, and saline soil reclamation to regenerate degraded landscapes and recharge aquifer systems.",
     keyPillars: [
       { title: "Watershed Management", desc: "Ridge-to-valley soil treatment preventing runoff and topsoil erosion." },

@@ -3,11 +3,12 @@ import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CustomCursor } from "@/components/layout/CustomCursor";
-import { Sprout, ShieldCheck, Target, Eye, Award, CheckCircle2, ArrowUpRight } from "lucide-react";
+import { FounderSection } from "@/components/home/FounderSection";
+import { Eye, Target } from "lucide-react";
 
 export const metadata = {
-  title: "About ODCONES PROJECTS | Vision, Leadership & Ecosystem Architecture",
-  description: "Learn about ODCONES PROJECTS mission, vision, corporate leadership, and 5-stage evolutionary roadmap across rural development.",
+  title: "About ODCONES PROJECTS | Founder Anshuman Mohapatra & Ecosystem Vision",
+  description: "Learn about ODCONES PROJECTS mission, vision, Founder Anshuman Mohapatra, and 5-stage evolutionary roadmap across rural development.",
 };
 
 const TIMELINE = [
@@ -36,10 +37,13 @@ export default function AboutPage() {
           </h1>
 
           <p className="text-sand-200/80 text-base sm:text-lg max-w-2xl font-light">
-            We are an agricultural technology, blue economy engineering, and rural infrastructure organization dedicated to building systems that grow beyond today.
+            Founded by <strong className="text-sand-50">Anshuman Mohapatra</strong>, ODCONES PROJECTS is dedicated to building agricultural, aquatic, and watershed systems that grow beyond today.
           </p>
         </div>
       </section>
+
+      {/* Founder Section */}
+      <FounderSection />
 
       {/* Vision & Mission */}
       <section className="py-20 bg-forest-950 border-b border-forest-800/40">
@@ -67,7 +71,7 @@ export default function AboutPage() {
       </section>
 
       {/* Evolutionary Timeline */}
-      <section className="py-20 bg-forest-950 border-b border-forest-800/40">
+      <section className="py-20 bg-forest-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <span className="text-xs font-bold text-harvest-400 uppercase tracking-widest font-display">
@@ -86,37 +90,6 @@ export default function AboutPage() {
                   <h4 className="font-display font-extrabold text-lg text-sand-50">{item.title}</h4>
                 </div>
                 <p className="text-xs text-sand-200/80 md:w-2/3 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Leadership */}
-      <section className="py-20 bg-forest-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          <div className="text-center max-w-2xl mx-auto space-y-3">
-            <span className="text-xs font-bold text-harvest-400 uppercase tracking-widest font-display">
-              EXECUTIVE LEADERSHIP
-            </span>
-            <h2 className="font-display font-extrabold text-3xl text-sand-50 uppercase">
-              Driven By Domain Experts
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { name: "Dr. B. K. Odcone", role: "Founder & Managing Director", desc: "30+ years leading institutional agricultural development and blue economy policy implementation." },
-              { name: "Er. Sourav Odcone", role: "Chief Technology Officer", desc: "Expert in GIS telemetry, IoT sensor networks, and automated aquaculture recirculating systems." },
-              { name: "Ananya Patnaik", role: "Head of Agronomy & FPO Operations", desc: "Specialist in protected horticulture, high-value crop fertigation, and women SHG enterprise development." },
-            ].map((lead, idx) => (
-              <div key={idx} className="p-6 rounded-3xl bg-forest-900/40 border border-forest-800 space-y-3">
-                <div className="w-16 h-16 rounded-2xl bg-forest-800 border border-forest-600 flex items-center justify-center font-display font-bold text-harvest-400 text-xl">
-                  {lead.name.charAt(0)}
-                </div>
-                <h4 className="font-display font-bold text-lg text-sand-50">{lead.name}</h4>
-                <span className="text-xs font-bold text-harvest-400 block">{lead.role}</span>
-                <p className="text-xs text-sand-200/70 leading-relaxed">{lead.desc}</p>
               </div>
             ))}
           </div>
