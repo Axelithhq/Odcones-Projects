@@ -3,6 +3,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import { IMPACT_METRICS } from "@/data/impactData";
 import { formatNumber } from "@/lib/utils";
+import { useTranslation } from "@/lib/i18n";
+import { pickOr } from "@/lib/localize";
 
 function CounterItem({ value, suffix, label, category }: { value: number; suffix: string; label: string; category: string }) {
   const [count, setCount] = useState(0);
@@ -55,18 +57,20 @@ function CounterItem({ value, suffix, label, category }: { value: number; suffix
 }
 
 export function ImpactCounters() {
+  const { t, language } = useTranslation();
+
   return (
     <section className="py-24 bg-forest-950 text-sand-50 relative border-b border-forest-800/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-900/80 border border-forest-500/30 text-xs font-bold uppercase tracking-widest text-harvest-400">
-            <span>MEASURABLE FIELD FOOTPRINT</span>
+            <span>{t("impact.badge")}</span>
           </div>
           <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-sand-50 tracking-tight">
-            Impact Built On Empirical Proof
+            {t("impact.title")}
           </h2>
           <p className="text-sand-200/70 text-sm leading-relaxed">
-            Our interventions are benchmarked through third-party field enumeration, GIS satellite tracking, and continuous community yield audits.
+            {t("impact.dataNote")}
           </p>
         </div>
 
@@ -76,8 +80,8 @@ export function ImpactCounters() {
               key={metric.id}
               value={metric.value}
               suffix={metric.suffix}
-              label={metric.label}
-              category={metric.category}
+              label={pickOr(metric.label, metric.label_or, language)}
+              category={pickOr(metric.category, metric.category_or, language)}
             />
           ))}
         </div>

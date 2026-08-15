@@ -6,7 +6,7 @@ import { ArrowUpRight, ArrowRight, Sprout } from "lucide-react";
 import { useTranslation } from "@/lib/i18n";
 
 export function FinalCTA() {
-  const { t } = useTranslation();
+  const { t, localizeHref } = useTranslation();
 
   return (
     <section className="relative py-28 bg-forest-950 text-sand-50 overflow-hidden">
@@ -20,7 +20,7 @@ export function FinalCTA() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-8">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-forest-900/80 border border-forest-500/40 text-xs font-bold uppercase tracking-widest text-harvest-400">
           <Sprout className="w-4 h-4 text-harvest-400" />
-          <span>INITIATE PARTNERSHIP</span>
+          <span>{t("cta.badge")}</span>
         </div>
 
         <h2 className="font-display font-extrabold text-4xl sm:text-6xl lg:text-7xl text-sand-50 tracking-tight leading-[1.05] uppercase">
@@ -33,20 +33,20 @@ export function FinalCTA() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
           <Link
-            href="/start-project"
+            href={localizeHref("/start-project")}
             className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-harvest-500 via-harvest-400 to-forest-500 text-forest-950 font-display font-extrabold text-xs tracking-widest uppercase shadow-2xl hover:scale-105 transition-all flex items-center justify-center gap-2"
             data-cursor-text="ENQUIRE"
           >
-            <span>{t("nav.start_project")}</span>
+            <span>{t("nav.startProject")}</span>
             <ArrowUpRight className="w-4 h-4 text-forest-950" />
           </Link>
 
           <Link
-            href="/projects"
+            href={localizeHref("/projects")}
             className="w-full sm:w-auto px-8 py-4 rounded-full bg-forest-900/80 border border-forest-500/40 text-sand-50 font-display font-bold text-xs tracking-widest uppercase hover:bg-forest-800 transition-all flex items-center justify-center gap-2"
             data-cursor-text="EXPLORE"
           >
-            <span>{t("nav.explore_work")}</span>
+            <span>{t("nav.exploreWork")}</span>
             <ArrowRight className="w-4 h-4 text-harvest-400" />
           </Link>
         </div>

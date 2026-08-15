@@ -7,13 +7,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { LanguageToggle } from "./LanguageToggle";
 import { ReadAloudControls } from "./ReadAloudControls";
 import { useTranslation } from "@/lib/i18n";
+import { stripLocale } from "@/lib/i18n-config";
 import { Menu, X, ArrowUpRight, Sprout, ArrowRight } from "lucide-react";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-  const { t } = useTranslation();
+  const { t, localizeHref } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,7 +35,7 @@ export function Header() {
   const navItems = [
     { label: t("nav.home"), href: "/" },
     { label: t("nav.about"), href: "/about" },
-    { label: t("nav.what_we_do"), href: "/services" },
+    { label: t("nav.whatWeDo"), href: "/services" },
     { label: t("nav.projects"), href: "/projects" },
     { label: t("nav.platform"), href: "/platform" },
     { label: t("nav.impact"), href: "/impact" },
@@ -53,7 +54,7 @@ export function Header() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="group flex items-center gap-2.5 z-10" data-cursor-text="ODCONES">
+          <Link href={localizeHref("/")} className="group flex items-center gap-2.5 z-10" data-cursor-text="ODCONES">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-forest-600 via-forest-800 to-soil-700 p-0.5 shadow-lg group-hover:scale-105 transition-transform duration-300">
               <div className="w-full h-full bg-forest-950 rounded-[10px] flex items-center justify-center">
                 <Sprout className="w-5 h-5 text-harvest-400 group-hover:rotate-12 transition-transform duration-300" />
@@ -72,11 +73,15 @@ export function Header() {
           {/* Desktop Nav Links */}
           <nav className="hidden xl:flex items-center gap-1 px-4 py-1.5 rounded-full bg-forest-900/40 border border-forest-500/20 backdrop-blur-md">
             {navItems.map((item) => {
-              const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
+              const localizedHref = localizeHref(item.href);
+              const activePath = stripLocale(pathname);
+              const isActive =
+                activePath === item.href ||
+                (item.href !== "/" && activePath.startsWith(item.href));
               return (
                 <Link
                   key={item.href}
-                  href={item.href}
+                  href={localizedHref}
                   className={`relative px-3 py-1.5 text-xs font-semibold tracking-wide transition-colors rounded-full ${
                     isActive
                       ? "text-harvest-300 font-bold"
@@ -103,11 +108,11 @@ export function Header() {
             <LanguageToggle />
 
             <Link
-              href="/start-project"
+              href={localizeHref("/start-project")}
               className="group relative inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-forest-600 via-forest-500 to-harvest-600 text-sand-50 text-xs font-bold tracking-wider uppercase shadow-lg hover:shadow-forest-500/25 transition-all duration-300 hover:scale-[1.03]"
               data-cursor-text="ENQUIRE"
             >
-              <span>{t("nav.start_project")}</span>
+              <span>{t("nav.startProject")}</span>
               <ArrowUpRight className="w-4 h-4 text-sand-50 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </Link>
           </div>
@@ -149,7 +154,7 @@ export function Header() {
                   transition={{ delay: 0.1 + idx * 0.05 }}
                 >
                   <Link
-                    href={item.href}
+                    href={localizeHref(item.href)}
                     className="flex items-center justify-between text-xl font-display font-semibold text-sand-100 hover:text-harvest-400 py-2.5 border-b border-forest-800/40"
                   >
                     <span>{item.label}</span>
@@ -161,10 +166,10 @@ export function Header() {
 
             <div className="pt-6 border-t border-forest-800/60 flex flex-col gap-4">
               <Link
-                href="/start-project"
+                href={localizeHref("/start-project")}
                 className="w-full py-4 rounded-xl bg-gradient-to-r from-forest-600 to-harvest-600 text-center font-display font-bold text-sm tracking-wider uppercase text-sand-50 shadow-xl"
               >
-                {t("nav.start_project")}
+                {t("nav.startProject")}
               </Link>
               <div className="flex justify-between items-center text-xs text-sand-200/60">
                 <span>© ODCONES PROJECTS</span>

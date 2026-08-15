@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { locales } from '@/lib/i18n-config';
 import { SECTORS } from '@/data/sectorsData';
 import { FEATURED_PROJECTS } from '@/data/projectsData';
 import { SERVICES } from '@/data/servicesData';
@@ -19,46 +20,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/careers',
     '/contact',
     '/start-project',
-  ].map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1.0 : 0.8,
-  }));
+    '/privacy',
+    '/terms',
+  ];
 
-  const sectorRoutes = SECTORS.map((sector) => ({
-    url: `${baseUrl}/sectors/${sector.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }));
+  const detailRoutes = [
+    ...SECTORS.map((sector) => `/sectors/${sector.slug}`),
+    ...FEATURED_PROJECTS.map((proj) => `/projects/${proj.slug}`),
+    ...SERVICES.map((service) => `/services/${service.slug}`),
+    ...ARTICLES.map((article) => `/insights/${article.slug}`),
+  ];
 
-  const projectRoutes = FEATURED_PROJECTS.map((proj) => ({
-    url: `${baseUrl}/projects/${proj.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }));
+  const routeWithAlternates = (route: string, priority: number, changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency']) => {
+    const urls = Object.fromEntries(
+      locales.map((locale) => [locale, `${baseUrl}/${locale}${route}`])
+    ) as Record<string, string>;
 
-  const serviceRoutes = SERVICES.map((service) => ({
-    url: `${baseUrl}/services/${service.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }));
-
-  const articleRoutes = ARTICLES.map((article) => ({
-    url: `${baseUrl}/insights/${article.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.6,
-  }));
+    return {
+      url: urls.en,
+      lastModified: new Date(),
+      changeFrequency,
+      priority,
+      alternates: { languages: { ...urls, 'x-default': urls.en } },
+    };
+  };
 
   return [
-    ...staticRoutes,
-    ...sectorRoutes,
-    ...projectRoutes,
-    ...serviceRoutes,
-    ...articleRoutes,
+    ...staticRoutes.map((route, i) =>
+      routeWithAlternates(route, route === '' ? 1.0 : i < 4 ? 0.8 : 0.6, route === '' ? 'weekly' : 'monthly')
+    ),
+    ...detailRoutes.map((route) =>
+      routeWithAlternates(route, route.startsWith('/insights/') ? 0.6 : 0.7, 'monthly')
+    ),
   ];
 }

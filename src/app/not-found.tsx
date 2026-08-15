@@ -9,7 +9,7 @@ import { useTranslation } from "@/lib/i18n";
 import { ArrowLeft, Sprout } from "lucide-react";
 
 export default function NotFound() {
-  const { t } = useTranslation();
+  const { t, localizeHref } = useTranslation();
 
   return (
     <main className="min-h-screen bg-forest-950 text-sand-100 relative has-custom-cursor flex flex-col justify-between pt-24">
@@ -22,24 +22,24 @@ export default function NotFound() {
         </div>
 
         <span className="text-xs font-bold font-mono text-harvest-400 uppercase tracking-widest block">
-          ERROR 404 • UNSETTLED FIELD
+          {t("notFound.badge")}
         </span>
 
         <h1 className="font-display font-extrabold text-3xl sm:text-5xl text-sand-50 uppercase tracking-tight">
-          {t("not_found.title")}
+          {t("notFound.title")}
         </h1>
 
         <p className="text-sm text-sand-200/80 leading-relaxed font-light">
-          The page or resource you are looking for might have been moved or does not exist in the ODCONES platform directory.
+          {t("notFound.desc")}
         </p>
 
         <div className="pt-4">
           <Link
-            href="/"
+            href={localizeHref("/")}
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-harvest-500 to-forest-500 text-forest-950 font-display font-extrabold text-xs uppercase tracking-wider shadow-xl hover:scale-105 transition-all"
           >
             <ArrowLeft className="w-4 h-4 text-forest-950" />
-            <span>{t("not_found.btn")}</span>
+            <span>{t("notFound.backHome")}</span>
           </Link>
         </div>
       </div>

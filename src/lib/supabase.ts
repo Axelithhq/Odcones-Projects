@@ -8,16 +8,22 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 export type ProjectItem = {
   id: string;
   title: string;
+  title_or?: string;
   slug: string;
   sector: string;
+  sector_or?: string;
   location: string;
   year: string;
   client: string;
   status: 'In Progress' | 'Completed' | 'Upcoming';
   description: string;
+  description_or?: string;
   challenge?: string;
+  challenge_or?: string;
   solution?: string;
+  solution_or?: string;
   impact_metrics?: Record<string, string>;
+  impact_metrics_or?: Record<string, string>;
   images: string[];
   featured?: boolean;
   created_at?: string;
@@ -41,10 +47,13 @@ export type EnquiryItem = {
 export type ArticleItem = {
   id: string;
   title: string;
+  title_or?: string;
   slug: string;
   category: string;
   excerpt: string;
+  excerpt_or?: string;
   content: string;
+  content_or?: string;
   read_time: string;
   image_url: string;
   author: string;

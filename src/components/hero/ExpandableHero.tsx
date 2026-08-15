@@ -18,7 +18,7 @@ const ICON_MAP: Record<string, React.ReactNode> = {
 
 export function ExpandableHero() {
   const [activeHoverIndex, setActiveHoverIndex] = useState<number | null>(0);
-  const { t, language } = useTranslation();
+  const { t, language, localizeHref } = useTranslation();
 
   return (
     <section className="relative w-full min-h-[92vh] pt-20 bg-forest-950 flex flex-col justify-between overflow-hidden">
@@ -27,31 +27,18 @@ export function ExpandableHero() {
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-900/80 border border-forest-500/30 text-xs font-bold uppercase tracking-widest text-harvest-400 mb-2">
             <span className="w-2 h-2 rounded-full bg-harvest-400 animate-pulse" />
-            <span>{language === "or" ? "ଓଡକୋନ୍ସ ପ୍ରୋଜେକ୍ଟସ ପ୍ଲାଟଫର୍ମ" : "ODCONES PROJECTS PLATFORM"}</span>
+            <span>{t("hero.badge")}</span>
           </div>
           <h1 className="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-sand-50 tracking-tight leading-[1.05]">
-            {language === "or" ? (
-              <>
-                ମାଟିରୁ ଜଳ ସଂରକ୍ଷଣ <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-harvest-300 via-forest-300 to-aqua-400">
-                  ସୁସ୍ଥିର ଗ୍ରାମୀଣ ପ୍ରଗତି।
-                </span>
-              </>
-            ) : (
-              <>
-                FROM SOIL TO WATER <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-harvest-300 via-forest-300 to-aqua-400">
-                  TO SUSTAINABLE GROWTH.
-                </span>
-              </>
-            )}
+            {t("hero.title1")} <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-harvest-300 via-forest-300 to-aqua-400">
+              {t("hero.title2")}
+            </span>
           </h1>
         </div>
 
         <p className="text-sand-200/70 text-xs sm:text-sm max-w-md leading-relaxed font-light">
-          {language === "or"
-            ? "ଆମର ୬ଟି ମୁଖ୍ୟ କ୍ଷେତ୍ର ଉପରେ କର୍ସର ରଖି ଓଡକୋନ୍ସ ପ୍ରୋଜେକ୍ଟସର କୃଷି, ମତ୍ସ୍ୟଚାଷ ଓ ଗ୍ରାମୀଣ ବିକାଶ କାର୍ଯ୍ୟସୂଚୀ ଦେଖନ୍ତୁ।"
-            : "Hover across our core sector domains to explore how ODCONES PROJECTS builds climate-resilient, tech-enabled rural ecosystems."}
+          {t("hero.subtitle")}
         </p>
       </div>
 
@@ -66,7 +53,7 @@ export function ExpandableHero() {
           return (
             <Link
               key={sector.id}
-              href={`/sectors/${sector.slug}`}
+              href={localizeHref(`/sectors/${sector.slug}`)}
               onMouseEnter={() => setActiveHoverIndex(index)}
               className={`relative h-full transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group overflow-hidden border-r border-forest-800/40 last:border-r-0 ${flexGrowClass}`}
               data-cursor-text="DISCOVER"
@@ -129,7 +116,7 @@ export function ExpandableHero() {
 
                   {/* Action Link Arrow */}
                   <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-sand-50 group-hover:text-harvest-400 pt-1">
-                    <span>{language === "or" ? "କ୍ଷେତ୍ର ଦେଖନ୍ତୁ" : "Explore Domain"}</span>
+                    <span>{t("fromField.exploreDomain")}</span>
                     <ArrowUpRight
                       className={`w-4 h-4 transition-transform duration-300 ${
                         isExpanded ? "translate-x-1 -translate-y-1 text-harvest-400" : ""
@@ -160,7 +147,7 @@ export function ExpandableHero() {
           return (
             <Link
               key={sector.id}
-              href={`/sectors/${sector.slug}`}
+              href={localizeHref(`/sectors/${sector.slug}`)}
               className="relative h-56 rounded-2xl overflow-hidden border border-forest-800/60 group shadow-lg flex flex-col justify-between p-5"
             >
               <div
@@ -182,7 +169,7 @@ export function ExpandableHero() {
                 </h3>
                 <p className="text-xs text-sand-200/80 line-clamp-2">{displayDesc}</p>
                 <div className="flex items-center gap-1 text-xs font-semibold text-harvest-400 pt-1">
-                  <span>{language === "or" ? "ଦେଖନ୍ତୁ" : "Discover"}</span>
+                  <span>{t("hero.discover")}</span>
                   <ChevronRight className="w-4 h-4" />
                 </div>
               </div>

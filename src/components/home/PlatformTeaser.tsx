@@ -4,9 +4,11 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Cpu, Activity, Droplets, Thermometer, ShieldCheck, ArrowRight, BarChart3, Smartphone } from "lucide-react";
+import { useTranslation } from "@/lib/i18n";
 
 export function PlatformTeaser() {
   const [activeTab, setActiveTab] = useState<"water" | "soil" | "weather">("water");
+  const { localizeHref } = useTranslation();
 
   return (
     <section className="py-24 bg-forest-950 text-sand-50 relative overflow-hidden border-b border-forest-800/40">
@@ -55,7 +57,7 @@ export function PlatformTeaser() {
 
             <div className="pt-4">
               <Link
-                href="/platform"
+                href={localizeHref("/platform")}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-aqua-700 to-forest-600 hover:from-aqua-600 hover:to-forest-500 text-sand-50 text-xs font-bold uppercase tracking-wider shadow-lg hover:shadow-aqua-500/20 transition-all"
                 data-cursor-text="DASHBOARD"
               >

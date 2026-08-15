@@ -4,8 +4,10 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ShieldCheck, Cpu, Waves, Sprout, ArrowUpRight } from "lucide-react";
+import { useTranslation } from "@/lib/i18n";
 
 export function IntroSection() {
+  const { localizeHref } = useTranslation();
   return (
     <section className="py-24 bg-forest-950 text-sand-50 relative overflow-hidden border-b border-forest-800/40">
       {/* Background Accent Grid */}
@@ -52,7 +54,7 @@ export function IntroSection() {
 
             <div className="pt-2">
               <Link
-                href="/about"
+                href={localizeHref("/about")}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-forest-800 hover:bg-forest-700 border border-forest-500/40 text-sand-50 text-xs font-bold uppercase tracking-wider transition-all"
                 data-cursor-text="ABOUT"
               >
