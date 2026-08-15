@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { SECTORS } from "@/data/sectorsData";
+import { useTranslation } from "@/lib/i18n";
 import { ArrowUpRight, Sprout, Flower2, Fish, Waves, ShieldCheck, Droplets, ChevronRight } from "lucide-react";
 
 const ICON_MAP: Record<string, React.ReactNode> = {
@@ -17,6 +18,7 @@ const ICON_MAP: Record<string, React.ReactNode> = {
 
 export function ExpandableHero() {
   const [activeHoverIndex, setActiveHoverIndex] = useState<number | null>(0);
+  const { t, language } = useTranslation();
 
   return (
     <section className="relative w-full min-h-[92vh] pt-20 bg-forest-950 flex flex-col justify-between overflow-hidden">
@@ -25,18 +27,31 @@ export function ExpandableHero() {
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-900/80 border border-forest-500/30 text-xs font-bold uppercase tracking-widest text-harvest-400 mb-2">
             <span className="w-2 h-2 rounded-full bg-harvest-400 animate-pulse" />
-            <span>ODCONES PROJECTS PLATFORM</span>
+            <span>{language === "or" ? "ଓଡକୋନ୍ସ ପ୍ରୋଜେକ୍ଟସ ପ୍ଲାଟଫର୍ମ" : "ODCONES PROJECTS PLATFORM"}</span>
           </div>
           <h1 className="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-sand-50 tracking-tight leading-[1.05]">
-            FROM SOIL TO WATER <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-harvest-300 via-forest-300 to-aqua-400">
-              TO SUSTAINABLE GROWTH.
-            </span>
+            {language === "or" ? (
+              <>
+                ମାଟିରୁ ଜଳ ସଂରକ୍ଷଣ <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-harvest-300 via-forest-300 to-aqua-400">
+                  ସୁସ୍ଥିର ଗ୍ରାମୀଣ ପ୍ରଗତି।
+                </span>
+              </>
+            ) : (
+              <>
+                FROM SOIL TO WATER <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-harvest-300 via-forest-300 to-aqua-400">
+                  TO SUSTAINABLE GROWTH.
+                </span>
+              </>
+            )}
           </h1>
         </div>
 
-        <p className="text-sand-200/70 text-xs sm:text-sm max-w-md leading-relaxed">
-          Hover across our core sector domains to explore how ODCONES PROJECTS builds climate-resilient, tech-enabled rural ecosystems.
+        <p className="text-sand-200/70 text-xs sm:text-sm max-w-md leading-relaxed font-light">
+          {language === "or"
+            ? "ଆମର ୬ଟି ମୁଖ୍ୟ କ୍ଷେତ୍ର ଉପରେ କର୍ସର ରଖି ଓଡକୋନ୍ସ ପ୍ରୋଜେକ୍ଟସର କୃଷି, ମତ୍ସ୍ୟଚାଷ ଓ ଗ୍ରାମୀଣ ବିକାଶ କାର୍ଯ୍ୟସୂଚୀ ଦେଖନ୍ତୁ।"
+            : "Hover across our core sector domains to explore how ODCONES PROJECTS builds climate-resilient, tech-enabled rural ecosystems."}
         </p>
       </div>
 
@@ -45,6 +60,8 @@ export function ExpandableHero() {
         {SECTORS.map((sector, index) => {
           const isExpanded = activeHoverIndex === index;
           const flexGrowClass = isExpanded ? "flex-[3.5]" : "flex-1";
+          const displayName = language === "or" && sector.name_or ? sector.name_or : sector.name;
+          const displayTagline = language === "or" && sector.tagline_or ? sector.tagline_or : sector.tagline;
 
           return (
             <Link
@@ -92,7 +109,7 @@ export function ExpandableHero() {
                 {/* Bottom Bar: Title, Description & CTA */}
                 <div className="space-y-3 transform transition-transform duration-500">
                   <h3 className="font-display font-extrabold text-xl lg:text-2xl text-sand-50 tracking-wider uppercase leading-tight group-hover:text-harvest-300">
-                    {sector.name}
+                    {displayName}
                   </h3>
 
                   {/* Expandable Description */}
@@ -106,13 +123,13 @@ export function ExpandableHero() {
                     className="overflow-hidden"
                   >
                     <p className="text-xs text-sand-200/80 leading-relaxed max-w-md pt-1 pb-2">
-                      {sector.tagline}
+                      {displayTagline}
                     </p>
                   </motion.div>
 
                   {/* Action Link Arrow */}
                   <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-sand-50 group-hover:text-harvest-400 pt-1">
-                    <span>Explore Domain</span>
+                    <span>{language === "or" ? "କ୍ଷେତ୍ର ଦେଖନ୍ତୁ" : "Explore Domain"}</span>
                     <ArrowUpRight
                       className={`w-4 h-4 transition-transform duration-300 ${
                         isExpanded ? "translate-x-1 -translate-y-1 text-harvest-400" : ""
@@ -136,37 +153,42 @@ export function ExpandableHero() {
 
       {/* MOBILE & TABLET: Interactive Grid/Carousel Fallback */}
       <div className="lg:hidden w-full px-4 py-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {SECTORS.map((sector, index) => (
-          <Link
-            key={sector.id}
-            href={`/sectors/${sector.slug}`}
-            className="relative h-56 rounded-2xl overflow-hidden border border-forest-800/60 group shadow-lg flex flex-col justify-between p-5"
-          >
-            <div
-              className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-              style={{ backgroundImage: `url(${sector.heroImage})` }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-forest-950 via-forest-950/80 to-forest-950/40" />
+        {SECTORS.map((sector, index) => {
+          const displayName = language === "or" && sector.name_or ? sector.name_or : sector.name;
+          const displayDesc = language === "or" && sector.shortDesc_or ? sector.shortDesc_or : sector.shortDesc;
 
-            <div className="relative z-10 flex justify-between items-center">
-              <span className="text-xs font-bold text-harvest-400">0{index + 1}</span>
-              <div className="w-8 h-8 rounded-lg bg-forest-900/80 border border-forest-500/40 text-sand-100 flex items-center justify-center">
-                {ICON_MAP[sector.iconName]}
-              </div>
-            </div>
+          return (
+            <Link
+              key={sector.id}
+              href={`/sectors/${sector.slug}`}
+              className="relative h-56 rounded-2xl overflow-hidden border border-forest-800/60 group shadow-lg flex flex-col justify-between p-5"
+            >
+              <div
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                style={{ backgroundImage: `url(${sector.heroImage})` }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-forest-950 via-forest-950/80 to-forest-950/40" />
 
-            <div className="relative z-10 space-y-1">
-              <h3 className="font-display font-extrabold text-lg text-sand-50 uppercase tracking-wide">
-                {sector.name}
-              </h3>
-              <p className="text-xs text-sand-200/80 line-clamp-2">{sector.shortDesc}</p>
-              <div className="flex items-center gap-1 text-xs font-semibold text-harvest-400 pt-1">
-                <span>Discover</span>
-                <ChevronRight className="w-4 h-4" />
+              <div className="relative z-10 flex justify-between items-center">
+                <span className="text-xs font-bold text-harvest-400">0{index + 1}</span>
+                <div className="w-8 h-8 rounded-lg bg-forest-900/80 border border-forest-500/40 text-sand-100 flex items-center justify-center">
+                  {ICON_MAP[sector.iconName]}
+                </div>
               </div>
-            </div>
-          </Link>
-        ))}
+
+              <div className="relative z-10 space-y-1">
+                <h3 className="font-display font-extrabold text-lg text-sand-50 uppercase tracking-wide">
+                  {displayName}
+                </h3>
+                <p className="text-xs text-sand-200/80 line-clamp-2">{displayDesc}</p>
+                <div className="flex items-center gap-1 text-xs font-semibold text-harvest-400 pt-1">
+                  <span>{language === "or" ? "ଦେଖନ୍ତୁ" : "Discover"}</span>
+                  <ChevronRight className="w-4 h-4" />
+                </div>
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </section>
   );
