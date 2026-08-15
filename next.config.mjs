@@ -13,9 +13,6 @@ const nextConfig = {
       },
     ],
   },
-  experimental: {
-    // serverActions settings if needed
-  },
 };
 
 export default nextConfig;

@@ -4,8 +4,11 @@ import { Footer } from "@/components/layout/Footer";
 import { IntroAnimation } from "@/components/hero/IntroAnimation";
 import { ExpandableHero } from "@/components/hero/ExpandableHero";
 import { IntroSection } from "@/components/home/IntroSection";
-import { InteractiveEcosystem } from "@/components/home/InteractiveEcosystem";
+import { FromFieldToFuture } from "@/components/home/FromFieldToFuture";
 import { DayInFieldStory } from "@/components/home/DayInFieldStory";
+import { FieldKit } from "@/components/home/FieldKit";
+import { DigitalField } from "@/components/home/DigitalField";
+import { OneEcosystem } from "@/components/home/OneEcosystem";
 import { PeopleStories } from "@/components/home/PeopleStories";
 import { FounderSection } from "@/components/home/FounderSection";
 import { InteractiveFieldMap } from "@/components/home/InteractiveFieldMap";
@@ -26,34 +29,43 @@ export default function HomePage() {
       <IntroAnimation />
       <Header />
 
-      {/* 02. Six-Sector Immersive Hero ("WHERE LAND, WATER & PEOPLE MEET") */}
+      {/* 01. Six-Sector Immersive Hero ("WHERE LAND, WATER & PEOPLE MEET") */}
       <ExpandableHero />
 
-      {/* 04. Introduction ("WE WORK WHERE LIFE GROWS") */}
+      {/* 02. Introduction ("WE WORK WHERE LIFE GROWS") */}
       <IntroSection />
 
-      {/* 03. Agricultural Ecosystem Network */}
-      <InteractiveEcosystem />
+      {/* 04. FROM THE FIELD TO THE FUTURE (Interactive 3D Composition & Sector Switcher) */}
+      <FromFieldToFuture />
 
       {/* 05. A Day in the Field Storytelling Timeline */}
       <DayInFieldStory />
 
-      {/* 12. Technology as an Enabler (FieldOS Platform Teaser) */}
+      {/* 06. WHAT MOVES THE FIELD (3D Equipment Kit Arrangement) */}
+      <FieldKit />
+
+      {/* 07. ONE CONNECTED ECOSYSTEM (Pipeline Visualizer) */}
+      <OneEcosystem />
+
+      {/* 08. ODCONES FIELDOS (3D Spatial Device Showcase) */}
+      <DigitalField />
+
+      {/* 10. REAL FIELD → DIGITAL FIELD (Telemetry & Advisory Preview) */}
       <PlatformTeaser />
 
-      {/* 13. The People Behind the Systems (Human Stories) */}
+      {/* 12. PEOPLE OF THE FIELD (Documentary Human Stories) */}
       <PeopleStories />
 
-      {/* 14. Interactive Field Map (Odisha & Eastern India Footprint) */}
+      {/* 13. INTERACTIVE FIELD MAP (Regional Footprint) */}
       <InteractiveFieldMap />
 
-      {/* 16. Impact Statistics & Live Counters */}
+      {/* 14. MEASURABLE IMPACT (Audited Statistics) */}
       <ImpactCounters />
 
-      {/* 17. Founder & Vision (Anshuman Mohapatra — Founder) */}
+      {/* 15. FOUNDER & VISION (Anshuman Mohapatra — Founder) */}
       <FounderSection />
 
-      {/* 18. Start A Project & Final CTA */}
+      {/* 16. START A PROJECT & FOOTER */}
       <FinalCTA />
 
       <Footer />
