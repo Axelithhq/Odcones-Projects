@@ -5,13 +5,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { LanguageToggle } from "./LanguageToggle";
+import { ReadAloudControls } from "./ReadAloudControls";
 import { useTranslation } from "@/lib/i18n";
-import { Menu, X, ArrowUpRight, Sprout, Volume2, VolumeX, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowUpRight, Sprout, ArrowRight } from "lucide-react";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [soundEnabled, setSoundEnabled] = useState(false);
   const pathname = usePathname();
   const { t } = useTranslation();
 
@@ -30,10 +30,6 @@ export function Header() {
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [pathname]);
-
-  const toggleSound = () => {
-    setSoundEnabled(!soundEnabled);
-  };
 
   const navItems = [
     { label: t("nav.home"), href: "/" },
@@ -74,14 +70,14 @@ export function Header() {
           </Link>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-forest-900/40 border border-forest-500/20 backdrop-blur-md">
+          <nav className="hidden xl:flex items-center gap-1 px-4 py-1.5 rounded-full bg-forest-900/40 border border-forest-500/20 backdrop-blur-md">
             {navItems.map((item) => {
               const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`relative px-3.5 py-1.5 text-xs font-semibold tracking-wide transition-colors rounded-full ${
+                  className={`relative px-3 py-1.5 text-xs font-semibold tracking-wide transition-colors rounded-full ${
                     isActive
                       ? "text-harvest-300 font-bold"
                       : "text-sand-100/80 hover:text-sand-50 hover:bg-forest-800/40"
@@ -103,25 +99,12 @@ export function Header() {
 
           {/* Right Action CTA & Controls */}
           <div className="hidden lg:flex items-center gap-3">
-            {/* Optional Environmental Sound Toggle */}
-            <button
-              onClick={toggleSound}
-              className={`p-2 rounded-full border transition-all ${
-                soundEnabled
-                  ? "bg-harvest-500/20 border-harvest-400 text-harvest-400"
-                  : "bg-forest-900/40 border-forest-500/30 text-sand-200/60 hover:text-sand-50"
-              }`}
-              title={soundEnabled ? "Mute Ambient Field Sound" : "Enable Ambient Field Sound"}
-              data-cursor-text="AUDIO"
-            >
-              {soundEnabled ? <Volume2 className="w-3.5 h-3.5 animate-pulse" /> : <VolumeX className="w-3.5 h-3.5" />}
-            </button>
-
+            <ReadAloudControls />
             <LanguageToggle />
 
             <Link
               href="/start-project"
-              className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-forest-600 via-forest-500 to-harvest-600 text-sand-50 text-xs font-bold tracking-wider uppercase shadow-lg hover:shadow-forest-500/25 transition-all duration-300 hover:scale-[1.03]"
+              className="group relative inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-forest-600 via-forest-500 to-harvest-600 text-sand-50 text-xs font-bold tracking-wider uppercase shadow-lg hover:shadow-forest-500/25 transition-all duration-300 hover:scale-[1.03]"
               data-cursor-text="ENQUIRE"
             >
               <span>{t("nav.start_project")}</span>
@@ -131,6 +114,7 @@ export function Header() {
 
           {/* Mobile Right Bar */}
           <div className="flex items-center gap-2 lg:hidden">
+            <ReadAloudControls />
             <LanguageToggle />
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
