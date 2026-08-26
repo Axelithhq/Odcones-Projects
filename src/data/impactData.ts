@@ -1,7 +1,5 @@
 export interface ImpactMetric {
   id: string;
-  value: number;
-  suffix: string;
   label: string;
   label_or?: string;
   category: string;
@@ -13,57 +11,47 @@ export interface ImpactMetric {
 export const IMPACT_METRICS: ImpactMetric[] = [
   {
     id: "m-1",
-    value: 10000,
-    suffix: "+",
-    label: "Farmers & Communities Impacted",
-    label_or: "ପ୍ରଭାବିତ ଚାଷୀ ଓ ସମୁଦାୟ",
-    category: "Social Impact",
-    category_or: "ସାମାଜିକ ପ୍ରଭାବ",
-    description: "Direct training, input distribution, and yield optimization provided to rural households across Odisha and neighboring regions.",
-    description_or: "ଓଡ଼ିଶା ଓ ପଡ଼ୋଶୀ ଅଞ୍ଚଳର ଗ୍ରାମୀଣ ପରିବାରଗୁଡ଼ିକୁ ସିଧାସଳଖ ପ୍ରଶିକ୍ଷଣ, ସାମଗ୍ରୀ ବିତରଣ ଓ ଉତ୍ପାଦନ ଅପ୍ଟିମାଇଜେସନ୍ ପ୍ରଦାନ।"
+    label: "End-to-End DPR Preparation",
+    label_or: "ସମ୍ପୂର୍ଣ୍ଣ DPR ପ୍ରସ୍ତୁତି",
+    category: "Technical Consultancy",
+    category_or: "ବୈଷୟିକ ପରାମର୍ଶ",
+    description: "Detailed Project Reports tailored for bank finance, government schemes, and enterprise expansion.",
+    description_or: "ବ୍ୟାଙ୍କ ଋଣ, ସରକାରୀ ଯୋଜନା ଓ ବ୍ୟବସାୟ ସମ୍ପ୍ରସାରଣ ପାଇଁ ବ୍ୟକ୍ତିଗତ DPR ପ୍ରସ୍ତୁତି।"
   },
   {
     id: "m-2",
-    value: 150,
-    suffix: "+",
-    label: "Projects Completed",
-    label_or: "ସମ୍ପୂର୍ଣ୍ଣ ହୋଇଥିବା ପ୍ରକଳ୍ପ",
-    category: "Execution Excellence",
-    category_or: "ନିର୍ବାହ ଉତ୍କର୍ଷତା",
-    description: "High-impact interventions executed across Agriculture, Aquaculture, Horticulture, and Soil Conservation.",
-    description_or: "କୃଷି, ଜଳଚର ପାଳନ, ଉଦ୍ୟାନ କୃଷି ଓ ମାଟି ସଂରକ୍ଷଣ କ୍ଷେତ୍ରରେ ଉଚ୍ଚ-ପ୍ରଭାବ କାର୍ଯ୍ୟକ୍ରମ ନିର୍ବାହ।"
+    label: "Techno-Economic Feasibility Audits",
+    label_or: "ତ୍ରାକ୍ନୋ-ଇକୋନୋମିକ ସମ୍ଭାବ୍ୟତା ସର୍ବେକ୍ଷଣ",
+    category: "Project Assessment",
+    category_or: "ପ୍ରକଳ୍ପ ଆକଳନ",
+    description: "Rigorous technical feasibility, production potential, and operating economics evaluation.",
+    description_or: "କଠୋର ବୈଷୟିକ ସମ୍ଭାବ୍ୟତା, ଉତ୍ପାଦନ କ୍ଷମତା ଓ ପରିଚାଳନା ଅର୍ଥନୀତି ମୂଲ୍ୟାଙ୍କନ।"
   },
   {
     id: "m-3",
-    value: 25,
-    suffix: "+",
-    label: "Districts Reached",
-    label_or: "ପହଞ୍ଚୁଥିବା ଜିଲ୍ଲା",
-    category: "Geographic Coverage",
-    category_or: "ଭୌଗୋଳିକ ପରିସୀମା",
-    description: "Active footprints across coastal, inland reservoir, and high-altitude tribal agrarian belts.",
-    description_or: "ଉପକୂଳବର୍ତ୍ତୀ, ଆଭ୍ୟନ୍ତରୀଣ ଜଳାଶୟ ଓ ଉଚ୍ଚ ପର୍ବତୀୟ ଆଦିବାସୀ କୃଷି ଅଞ୍ଚଳରେ ସକ୍ରିୟ ଉପସ୍ଥିତି।"
+    label: "2D & 3D Engineering Layouts",
+    label_or: "୨D ଓ ୩D ଇଞ୍ଜିନିୟରିଂ ଲେ-ଆଉଟ୍",
+    category: "Engineering & Design",
+    category_or: "ଇଞ୍ଜିନିୟରିଂ ଓ ଡିଜାଇନ୍",
+    description: "Functional site blueprints, civil estimates, machinery placement, and 3D architectural visualization.",
+    description_or: "କାର୍ଯ୍ୟକ୍ଷମ ସାଇଟ୍ ନକ୍ସା, ସିଭିଲ୍ ଆକଳନ, ମେସିନ ସ୍ଥାପନ ଓ ୩D ଭିଜୁଆଲାଇଜେସନ୍।"
   },
   {
     id: "m-4",
-    value: 500,
-    suffix: "+",
-    label: "Aquaculture & Agri Infrastructure Systems",
-    label_or: "ଜଳଚର ପାଳନ ଓ କୃଷି ଭିତ୍ତିଭୂମି ବ୍ୟବସ୍ଥା",
-    category: "Infrastructure",
-    category_or: "ଭିତ୍ତିଭୂମି",
-    description: "HDPE floating cage units, Biofloc circular tanks, polyhouses, and cold storage packhouses installed.",
-    description_or: "HDPE ଫ୍ଲୋଟିଙ୍ଗ କେଜ୍ ୟୁନିଟ୍, ବାୟୋଫ୍ଲୋକ୍ ବୃତ୍ତାକାର ଟ୍ୟାଙ୍କ, ପଲିହାଉସ ଓ କୋଲ୍ଡ ଷ୍ଟୋରେଜ ପ୍ୟାକ୍ ହାଉସ ସଂସ୍ଥାପିତ।"
+    label: "Financial Modeling & Viability",
+    label_or: "ଆର୍ଥିକ ଯୋଜନା ଓ ସୁସ୍ଥତା",
+    category: "Financial Planning",
+    category_or: "ଆର୍ଥିକ ଯୋଜନା",
+    description: "Comprehensive profit & loss projections, cash flow analysis, DSCR calculation, and repayment schedules.",
+    description_or: "ଲାଭ-କ୍ଷତି ଆକଳନ, କ୍ୟାଶ୍ ଫ୍ଲୋ, DSCR ଗଣନା ଓ ଋଣ ପରିଶୋଧ ସୂଚୀ।"
   },
   {
     id: "m-5",
-    value: 50000,
-    suffix: "+",
-    label: "Acres / Hectares Impacted",
-    label_or: "ପ୍ରଭାବିତ ଏକର / ହେକ୍ଟର",
-    category: "Environmental Restoration",
-    category_or: "ପରିବେଶ ପୁନରୁଦ୍ଧାର",
-    description: "Farmlands modernized through precision drip irrigation, watershed check dams, and saline soil reclamation.",
-    description_or: "ସଠିକ୍ ଡ୍ରିପ୍ ସେଚନ, ଜଳଛାୟା ଚେକ୍ ଡ୍ୟାମ୍ ଓ ଲୁଣାକ୍ତ ମାଟି ପୁନରୁଦ୍ଧାର ମାଧ୍ୟମରେ ଆଧୁନିକୀକରଣ ହୋଇଥିବା କୃଷି ଭୂମି।"
+    label: "Government Scheme Advisory",
+    label_or: "ସରକାରୀ ଯୋଜନା ପରାମର୍ଶ",
+    category: "Scheme Advisory",
+    category_or: "ଯୋଜନା ପରାମର୍ଶ",
+    description: "Identification of applicable government programs and project documentation according to scheme guidelines.",
+    description_or: "ଯୋଗ୍ୟ ସରକାରୀ ଯୋଜନା ଚିହ୍ନଟ ଓ ପ୍ରକଳ୍ପ ଦସ୍ତାବେଜ୍ ପ୍ରସ୍ତୁତି।"
   }
 ];

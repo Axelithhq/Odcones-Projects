@@ -2,32 +2,32 @@ import { ProjectItem } from "@/lib/supabase";
 
 export const FEATURED_PROJECTS: ProjectItem[] = [
   {
-    id: "proj-1",
-    title: "Hirakud Reservoir Floating Cage Aquaculture Project",
-    title_or: "ହିରାକୁଦ ଜଳାଶୟ ଫ୍ଲୋଟିଙ୍ଗ କେଜ୍ ମତ୍ସ୍ୟଚାଷ ପ୍ରକଳ୍ପ",
-    slug: "hirakud-reservoir-cage-aquaculture",
-    sector: "Aquaculture",
-    sector_or: "ଜଳଚର ପାଳନ",
-    location: "Sambalpur, Odisha",
-    year: "2024 - 2025",
-    client: "Directorate of Fisheries & World Bank",
+    id: "proj-type-1",
+    title: "Biofloc Fish Farming Units",
+    title_or: "ବାୟୋଫ୍ଲୋକ୍ ମତ୍ସ୍ୟଚାଷ ୟୁନିଟ୍",
+    slug: "biofloc-fish-farming-units",
+    sector: "Fisheries & Aquaculture",
+    sector_or: "ମତ୍ସ୍ୟଚାଷ ଓ ଜଳଚର ପାଳନ",
+    location: "ODCONS Technical Scope",
+    year: "Project Category",
+    client: "Agri & Aqua Entrepreneurs",
     status: "Completed",
     featured: true,
-    description: "Installation of 240 heavy-duty HDPE floating cages in Hirakud reservoir, integrating automated feeding systems, solar security surveillance, and fingerling stocking for 350 local primary fishermens' cooperatives.",
-    description_or: "ହିରାକୁଦ ଜଳାଶୟରେ ୨୪୦ଟି ହାଇ-ଡେନ୍ସିଟି HDPE ଫ୍ଲୋଟିଙ୍ଗ କେଜ୍ ସଂସ୍ଥାପନ, ସ୍ୱୟଂଚାଳିତ ଖାଦ୍ୟ ବ୍ୟବସ୍ଥା, ସୌର ନିରାପତ୍ତା ସର୍ଭେଲାନ୍ସ ଏବଂ ୩୫୦ ସ୍ଥାନୀୟ ପ୍ରାଥମିକ ମତ୍ସ୍ୟଜୀବୀ ସମବାୟ ସମିତି ପାଇଁ ମାଛ ପୋଷା ଭରଣ ସମନ୍ୱିତ।",
-    challenge: "Traditional fishing in the reservoir suffered from declining catch volumes, seasonal displacement, and lack of controlled fish growth conditions.",
-    challenge_or: "ଜଳାଶୟରେ ପାରମ୍ପରିକ ମାଛ ଧରା ମାଛ ଅମଳ ହ୍ରାସ, ଋତୁଗତ ବିସ୍ଥାପନ ଏବଂ ନିୟନ୍ତ୍ରିତ ମାଛ ବୃଦ୍ଧି ସୁବିଧାର ଅଭାବ ଭୋଗୁଥିଲା।",
-    solution: "ODCONES engineered circular HDPE floating cages resistant to wave surges, deployed solar-powered aeration systems, and trained cooperative members in high-density Pangasius and Tilapia cultivation.",
-    solution_or: "ODCONES ତରଙ୍ଗ ପ୍ରତିରୋଧକ ବୃତ୍ତାକାର HDPE ଫ୍ଲୋଟିଙ୍ଗ କେଜ୍ ଇଞ୍ଜିନିୟରିଂ କଲା, ସୌର ଚାଳିତ ଏରେସନ୍ ବ୍ୟବସ୍ଥା ସଂସ୍ଥାପନ କଲା ଏବଂ ସମବାୟ ସଦସ୍ୟମାନଙ୍କୁ ଉଚ୍ଚ-ଘନତ୍ୱ ପାଙ୍ଗାସିୟସ୍ ଓ ତିଲାପିଆ ଚାଷରେ ପ୍ରଶିକ୍ଷଣ ଦେଲା।",
+    description: "Technical DPR, circular tank layout design, aeration setup planning, and financial modeling for commercial Biofloc fish farming units.",
+    description_or: "ବାଣିଜ୍ୟିକ ବାୟୋଫ୍ଲୋକ୍ ମତ୍ସ୍ୟଚାଷ ୟୁନିଟ୍ ପାଇଁ ବୈଷୟିକ DPR, ବୃତ୍ତାକାର ଟ୍ୟାଙ୍କ ଲେ-ଆଉଟ୍ ଡିଜାଇନ, ଏରେସନ୍ ସେଟ୍-ଅପ୍ ଓ ଆର୍ଥିକ ଯୋଜନା।",
+    challenge: "High stocking density aquaculture requires continuous aeration, precise water quality monitoring, and zero-water exchange waste management.",
+    challenge_or: "ଉଚ୍ଚ-ଘନତ୍ୱ ମତ୍ସ୍ୟଚାଷ ପାଇଁ ନିରନ୍ତର ଏରେସନ୍, ସଠିକ୍ ଜଳ ଗୁଣବତ୍ତା ନିରୀକ୍ଷଣ ଓ ଶୂନ୍ୟ-ଜଳ ବିନିମୟ ଆବଶ୍ୟକ।",
+    solution: "ODCONS prepares customized 2D/3D layouts, electrical aeration load calculations, and bankable DPRs for subsidy applications.",
+    solution_or: "ODCONS ବ୍ୟକ୍ତିଗତ ୨D/୩D ଲେ-ଆଉଟ୍, ବୈଦ୍ୟୁତିକ ଭାର ଆକଳନ ଓ ସବସିଡି ଆବେଦନ ପାଇଁ ବ୍ୟାଙ୍କେବୁଲ୍ DPR ପ୍ରସ୍ତୁତ କରେ।",
     impact_metrics: {
-      "Biomass Harvested": "1,400 MT / Year",
-      "Cooperatives Impacted": "350 Fishermen",
-      "Average Income Rise": "+280%"
+      "Technical Scope": "DPR & Civil Estimates",
+      "Layout Standard": "2D & 3D Architectural",
+      "Subsidy Linkage": "PMMSY & State Schemes"
     },
     impact_metrics_or: {
-      "ବାର୍ଷିକ ବାୟୋମାସ ଅମଳ": "୧,୪୦୦ ମେଟ୍ରିକ୍ ଟନ୍",
-      "ପ୍ରଭାବିତ ସମବାୟ ସମିତି": "୩୫୦ ଜଣ ମତ୍ସ୍ୟଜୀବୀ",
-      "ହାରାହାରି ଆୟ ବୃଦ୍ଧି": "+୨୮୦%"
+      "ବୈଷୟିକ ପରିସର": "DPR ଓ ସିଭିଲ୍ ଆକଳନ",
+      "ଲେ-ଆଉଟ୍ ମାପଦଣ୍ଡ": "୨D ଓ ୩D ନକ୍ସା",
+      "ସବସିଡି ସଂଯୋଗ": "PMMSY ଓ ରାଜ୍ୟ ଯୋଜନା"
     },
     images: [
       "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=1200",
@@ -35,165 +35,131 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
     ]
   },
   {
-    id: "proj-2",
-    title: "Koraput Tribal Horticulture & Polyhouse Cluster",
-    title_or: "କୋରାପୁଟ ଆଦିବାସୀ ଉଦ୍ୟାନ କୃଷି ଓ ପଲିହାଉସ କ୍ଲଷ୍ଟର",
-    slug: "koraput-tribal-horticulture-cluster",
-    sector: "Horticulture",
-    sector_or: "ଉଦ୍ୟାନ କୃଷି",
-    location: "Koraput, Odisha",
-    year: "2023 - 2024",
-    client: "Department of Agriculture & Farmers' Empowerment",
+    id: "proj-type-2",
+    title: "Groundnut & Agro Processing Units",
+    title_or: "ଚିନାବାଦାମ ଓ କୃଷି ପ୍ରସେସିଂ ୟୁନିଟ୍",
+    slug: "groundnut-agro-processing-units",
+    sector: "Food Processing & Feed",
+    sector_or: "ଖାଦ୍ୟ ପ୍ରସେସିଂ ଓ ଦାଣା",
+    location: "ODCONS Technical Scope",
+    year: "Project Category",
+    client: "MSMEs & FPCs",
     status: "Completed",
     featured: true,
-    description: "Construction of 120 climate-controlled naturally ventilated polyhouses and drip fertigation networks across high-altitude tribal villages for exotic vegetable and strawberry cultivation.",
-    description_or: "ଉଚ୍ଚ ପର୍ବତୀୟ ଆଦିବାସୀ ଗାଁଗୁଡ଼ିକରେ ବିଦେଶୀ ପନିପରିବା ଓ ଷ୍ଟ୍ରବେରୀ ଚାଷ ପାଇଁ ୧୨୦ଟି ଜଳବାୟୁ ନିୟନ୍ତ୍ରିତ ପ୍ରାକୃତିକ ଭେଣ୍ଟିଲେସନ୍ ପଲିହାଉସ ଓ ଡ୍ରିପ୍ ଫର୍ଟିଗେସନ୍ ନେଟୱାର୍କ ନିର୍ମାଣ।",
-    challenge: "High frost in winter and erratic downpours in monsoon ruined open-field vegetable crops, leading to seasonal migration of tribal youth.",
-    challenge_or: "ଶୀତରେ ଅଧିକ ତୁଷାରପାତ ଓ ବର୍ଷାରେ ଅନିୟମିତ ବୃଷ୍ଟିପାତ ଖୋଲା ପଡ଼ିଆର ପନିପରିବା ଶସ୍ୟ ନଷ୍ଟ କରୁଥିଲା, ଯାହା ଆଦିବାସୀ ଯୁବକମାନଙ୍କର ଋତୁଗତ ପ୍ରବାସନର କାରଣ ହେଉଥିଲା।",
-    solution: "Designed hurricane-resistant polyhouse structures, introduced drip micro-fertigation, built 2 solar-powered packhouses with cold storage, and linked FPOs to urban retail chains in Bhubaneswar and Vizag.",
-    solution_or: "ବାତସହନଶୀଳ ପଲିହାଉସ ସଂରଚନା ଡିଜାଇନ୍, ଡ୍ରିପ୍ ମାଇକ୍ରୋ-ଫର୍ଟିଗେସନ୍ ପ୍ରଚଳନ, କୋଲ୍ଡ ଷ୍ଟୋରେଜ ସହିତ ୨ଟି ସୌର ପ୍ୟାକ୍ ହାଉସ୍ ନିର୍ମାଣ ଏବଂ ଭୁବନେଶ୍ୱର ଓ ବିଶାଖାପାଟଣା ଖୁଚୁରା ବଜାର ସହିତ FPO ଗୁଡ଼ିକୁ ସଂଯୋଗ।",
+    description: "Detailed Project Reports, machinery sizing, processing plant layouts, and cost estimation for groundnut decorticating, oil extraction, and pulse processing units.",
+    description_or: "ଚିନାବାଦାମ ପ୍ରସେସିଂ, ତେଲ ପେଡ଼ା ଓ ଡାଲି ପ୍ରସେସିଂ ୟୁନିଟ୍ ପାଇଁ DPR, ମେସିନାରି ଆକଳନ, ପ୍ଲାଣ୍ଟ ଲେ-ଆଉଟ୍ ଓ ଖର୍ଚ୍ଚ ହିସାବ।",
+    challenge: "Agro-processing units require efficient raw material movement, dust extraction, PEB shed design, and three-phase power planning.",
+    challenge_or: "କୃଷି-ପ୍ରସେସିଂ ୟୁନିଟ୍ ପାଇଁ ଦକ୍ଷ କଞ୍ଚାମାଲ ପରିବହନ, ଧୂଳି ନିଷ୍କାସନ, PEB ସେଡ୍ ଡିଜାଇନ ଓ ବିଦ୍ୟୁତ୍ ଯୋଜନା ଆବଶ୍ୟକ।",
+    solution: "ODCONS provides functional plant layouts, civil BOQ estimates, financial DSCR projections, and subsidy advisory.",
+    solution_or: "ODCONS କାର୍ଯ୍ୟକ୍ଷମ ପ୍ଲାଣ୍ଟ ଲେ-ଆଉଟ୍, ସିଭିଲ୍ ଆକଳନ, DSCR ଗଣନା ଓ ସବସିଡି ପରାମର୍ଶ ପ୍ରଦାନ କରେ।",
     impact_metrics: {
-      "Polyhouses Commissioned": "120 Units",
-      "Beneficiary Families": "480 Tribal Households",
-      "Crop Yield Increase": "3.5x"
+      "Technical Scope": "Plant Layout & BOQ",
+      "Financial Analysis": "DSCR & Cash Flow",
+      "Scheme Support": "AIF & MSME Schemes"
     },
     impact_metrics_or: {
-      "କମିସନ୍ ହୋଇଥିବା ପଲିହାଉସ": "୧୨୦ ୟୁନିଟ୍",
-      "ଲାଭବାନ ପରିବାର": "୪୮୦ ଆଦିବାସୀ ପରିବାର",
-      "ଶସ୍ୟ ଉତ୍ପାଦନ ବୃଦ୍ଧି": "୩.୫ ଗୁଣ"
+      "ବୈଷୟିକ ପରିସର": "ପ୍ଲାଣ୍ଟ ଲେ-ଆଉଟ୍ ଓ BOQ",
+      "ଆର୍ଥିକ ବିଶ୍ଲେଷଣ": "DSCR ଓ କ୍ୟାଶ୍ ଫ୍ଲୋ",
+      "ଯୋଜନା ସହାୟତା": "AIF ଓ MSME ଯୋଜନା"
     },
     images: [
-      "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=1200",
-      "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=1200"
+      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200"
     ]
   },
   {
-    id: "proj-3",
-    title: "Ganjam Coastal Saline Land Soil Reclamation & Watershed",
-    title_or: "ଗଞ୍ଜାମ ଉପକୂଳବର୍ତ୍ତୀ ଲୁଣାକ୍ତ ଜମି ମାଟି ପୁନରୁଦ୍ଧାର ଓ ଜଳଛାୟା",
-    slug: "ganjam-coastal-saline-reclamation",
-    sector: "Water & Soil Conservation",
-    sector_or: "ମୃତ୍ତିକା ଓ ଜଳ ସଂରକ୍ଷଣ",
-    location: "Ganjam, Odisha",
-    year: "2024",
-    client: "Soil Conservation & Watershed Development Directorate",
+    id: "proj-type-3",
+    title: "Commercial Dairy Farms & Cattle Sheds",
+    title_or: "ବାଣିଜ୍ୟିକ ଦୁଗ୍ଧ ଫାର୍ମ ଓ ଗୋଶାଳା",
+    slug: "commercial-dairy-farms-cattle-sheds",
+    sector: "Dairy & Animal Husbandry",
+    sector_or: "ଦୁଗ୍ଧ ଓ ପଶୁପାଳନ",
+    location: "ODCONS Technical Scope",
+    year: "Project Category",
+    client: "Dairy Entrepreneurs & Cooperatives",
     status: "Completed",
     featured: true,
-    description: "Sub-surface perforated tile drainage grid installation across 2,400 hectares of cyclone-damaged coastal land, coupled with check dams and bio-char soil conditioning.",
-    description_or: "ବାତ୍ୟା କ୍ଷୟକ୍ଷତି ହୋଇଥିବା ୨,୪୦୦ ହେକ୍ଟର ଉପକୂଳବର୍ତ୍ତୀ ଜମିରେ ଭୂତଳ ପର୍ଫୋରେଟେଡ୍ ଟାଇଲ୍ ଡ୍ରେନେଜ୍ ଗ୍ରିଡ୍ ସଂସ୍ଥାପନ, ଚେକ୍ ଡ୍ୟାମ୍ ଓ ବାୟୋ-ଚାର୍ ମାଟି ପ୍ରସ୍ତୁତି ସହିତ।",
-    challenge: "Repeated storm surges had salinized topsoil, rendering paddy fields barren and lowering groundwater quality.",
-    challenge_or: "ବାରମ୍ବାର ବାତ୍ୟା ଝଡ଼ ମାଟିର ଉପର ସ୍ତରକୁ ଲୁଣିଆ କରି ଦେଉଥିଲା, ଯାହା ଧାନ କ୍ଷେତ୍ରକୁ ଅନୁର୍ବର ଏବଂ ଭୂଜଳର ଗୁଣବତ୍ତାକୁ ଖରାପ କରୁଥିଲା।",
-    solution: "Laid sub-surface clay and PVC perforated pipe networks that wash excess salt out during monsoons, constructed 18 check dams, and applied green manure crops to restore organic carbon.",
-    solution_or: "ବର୍ଷାରେ ଅତିରିକ୍ତ ଲୁଣ ଧୋଇବା ପାଇଁ ଭୂତଳ କ୍ଲେ ଓ PVC ପର୍ଫୋରେଟେଡ୍ ପାଇପ୍ ନେଟୱାର୍କ ସଂସ୍ଥାପନ, ୧୮ଟି ଚେକ୍ ଡ୍ୟାମ୍ ନିର୍ମାଣ ଏବଂ ଜୈବିକ କାର୍ବନ ପୁନରୁଦ୍ଧାର ପାଇଁ ହରିତ ସାର ଫସଲ ପ୍ରୟୋଗ।",
+    description: "Layout design, civil construction estimates, bulk milk chilling (BMC) setup, and DPR consultancy for commercial dairy farms and livestock enterprises.",
+    description_or: "ବାଣିଜ୍ୟିକ ଦୁଗ୍ଧ ଫାର୍ମ ପାଇଁ ଲେ-ଆଉଟ୍ ଡିଜାଇନ, ସିଭିଲ୍ ନିର୍ମାଣ ଆକଳନ, BMC ସଂସ୍ଥାପନ ଓ DPR ପରାମର୍ଶ।",
+    challenge: "Optimal shed orientation, comfortable animal housing, automated milking systems, and hygienic waste management.",
+    challenge_or: "ଉପଯୁକ୍ତ ସେଡ୍ ଦିଗ, ପଶୁ ରହିବା ସ୍ଥାନ, ସ୍ୱୟଂଚାଳିତ ଦୁଗ୍ଧ ଦୋହନ ଓ ବର୍ଜ୍ୟବସ୍ତୁ ପରିଚାଳନା।",
+    solution: "ODCONS engineers specialized dairy layouts, fodder area planning, milk cooling infrastructure estimates, and bank loan documentation.",
+    solution_or: "ODCONS ଦୁଗ୍ଧ ଫାର୍ମ ଲେ-ଆଉଟ୍, ପଶୁଖାଦ୍ୟ ଜମି ଯୋଜନା, କ୍ଷୀର ଥଣ୍ଡା ଭିତ୍ତିଭୂମି ଆକଳନ ଓ ବ୍ୟାଙ୍କ DPR ପ୍ରସ୍ତୁତ କରେ।",
     impact_metrics: {
-      "Reclaimed Paddy Land": "2,400 Hectares",
-      "Soil Salinity Reduction": "-65%",
-      "Check Dams Constructed": "18 Units"
+      "Technical Scope": "Shed Layout & BMC",
+      "Financial Analysis": "10-Year Projections",
+      "Scheme Support": "Dairy Subsidy Schemes"
     },
     impact_metrics_or: {
-      "ପୁନରୁଦ୍ଧାର ହୋଇଥିବା ଧାନ ଜମି": "୨,୪୦୦ ହେକ୍ଟର",
-      "ମାଟି ଲୁଣତ୍ୱ ହ୍ରାସ": "-୬୫%",
-      "ନିର୍ମିତ ଚେକ୍ ଡ୍ୟାମ୍": "୧୮ ୟୁନିଟ୍"
+      "ବୈଷୟିକ ପରିସର": "ସେଡ୍ ଲେ-ଆଉଟ୍ ଓ BMC",
+      "ଆର୍ଥିକ ବିଶ୍ଲେଷଣ": "୧୦-ବର୍ଷର ଆକଳନ",
+      "ଯୋଜନା ସହାୟତା": "ଦୁଗ୍ଧ ସବସିଡି ଯୋଜନା"
     },
     images: [
-      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1200",
-      "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=1200"
+      "https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?auto=format&fit=crop&q=80&w=1200"
     ]
   },
   {
-    id: "proj-4",
-    title: "Mayurbhanj Integrated Dairy & Fodder Park",
-    title_or: "ମୟୂରଭଞ୍ଜ ସମନ୍ୱିତ ଦୁଗ୍ଧ ଓ ପଶୁଖାଦ୍ୟ ପାର୍କ",
-    slug: "mayurbhanj-integrated-dairy-fodder-park",
-    sector: "Animal Husbandry",
-    sector_or: "ପଶୁପାଳନ",
-    location: "Mayurbhanj, Odisha",
-    year: "2023 - 2025",
-    client: "Odisha State Poultry & Dairy Development Federation",
-    status: "In Progress",
-    featured: false,
-    description: "Establishment of a 500-head high-yielding Gir & Sahiwal dairy farm, 50-tonne bulk milk chilling center, and 100-acre perennial green fodder cultivation park.",
-    description_or: "୫୦୦ ମୁଣ୍ଡ ଉଚ୍ଚ ଉତ୍ପାଦନକ୍ଷମ ଗୀର ଓ ସାହିୱାଲ ଦୁଗ୍ଧ ଚାଷ, ୫୦ ଟନ୍ ବଲ୍କ କ୍ଷୀର ଥଣ୍ଡା କେନ୍ଦ୍ର ଏବଂ ୧୦୦ ଏକର ବର୍ଷସାରା ହରିତ ପଶୁଖାଦ୍ୟ ଚାଷ ପାର୍କ ସ୍ଥାପନ।",
-    challenge: "Local dairy farmers lacked access to milk chilling facilities within 2 hours of milking, leading to spoilage and low price realization.",
-    challenge_or: "ଦୁଇ ଘଣ୍ଟା ମଧ୍ୟରେ କ୍ଷୀର ଥଣ୍ଡା କରିବାର ସୁବିଧା ନଥିବାରୁ ସ୍ଥାନୀୟ ଦୁଗ୍ଧଚାଷୀମାନେ କ୍ଷୀର ନଷ୍ଟ ଏବଂ କମ୍ ମୂଲ୍ୟ ପାଇବାର ସମସ୍ୟାର ସମ୍ମୁଖୀନ ହେଉଥିଲେ।",
-    solution: "Built a centralized automated milking parlor, installed 4 village-level bulk milk coolers (BMC), and launched a hydroponic fodder distribution scheme.",
-    solution_or: "କେନ୍ଦ୍ରୀୟ ସ୍ୱୟଂଚାଳିତ ଦୁଗ୍ଧ ଦୋହନ ପାର୍ଲର ନିର୍ମାଣ, ଗ୍ରାମ ସ୍ତରରେ ୪ଟି ବଲ୍କ ମିଲ୍କ କୁଲର୍ (BMC) ସଂସ୍ଥାପନ ଏବଂ ହାଇଡ୍ରୋପୋନିକ୍ ପଶୁଖାଦ୍ୟ ବିତରଣ ଯୋଜନା ଆରମ୍ଭ।",
-    impact_metrics: {
-      "Milk Aggregated": "12,000 L / Day",
-      "Farmer Members": "850 Dairy Farmers",
-      "Spoilage Rate": "< 0.2%"
-    },
-    impact_metrics_or: {
-      "ସଂଗୃହୀତ କ୍ଷୀର": "ଦୈନିକ ୧୨,୦୦୦ ଲିଟର",
-      "ଚାଷୀ ସଦସ୍ୟ": "୮୫୦ ଦୁଗ୍ଧ ଚାଷୀ",
-      "କ୍ଷୟ ହାର": "< ୦.୨%"
-    },
-    images: [
-      "https://images.unsplash.com/photo-1570042707220-410a563f8d9b?auto=format&fit=crop&q=80&w=1200"
-    ]
-  },
-  {
-    id: "proj-5",
-    title: "Kalamunda Biofloc Shrimp & Tilapia Tech Complex",
-    title_or: "କାଳାମୁଣ୍ଡା ବାୟୋଫ୍ଲୋକ୍ ଚିଙ୍ଗୁଡ଼ି ଓ ତିଲାପିଆ ଟେକ୍ କମ୍ପ୍ଲେକ୍ସ",
-    slug: "kalamunda-biofloc-shrimp-complex",
-    sector: "Aquaculture",
-    sector_or: "ଜଳଚର ପାଳନ",
-    location: "Bhadrak, Odisha",
-    year: "2024",
-    client: "Private Agritech Enterprise & State Fisheries",
+    id: "proj-type-4",
+    title: "Hi-Tech Polyhouses & Mushroom Units",
+    title_or: "ହାଈ-ଟେକ୍ ପଲିହାଉସ ଓ ଛତୁ ୟୁନିଟ୍",
+    slug: "hitech-polyhouses-mushroom-units",
+    sector: "Horticulture & Mushroom",
+    sector_or: "ଉଦ୍ୟାନ କୃଷି ଓ ଛତୁ ଚାଷ",
+    location: "ODCONS Technical Scope",
+    year: "Project Category",
+    client: "Horticulture Entrepreneurs",
     status: "Completed",
     featured: false,
-    description: "Construction of 60 high-density circular Biofloc tanks (10m diameter) with automated micro-bubble aerators and IoT water telemetry units.",
-    description_or: "ସ୍ୱୟଂଚାଳିତ ମାଇକ୍ରୋ-ବବଲ୍ ଏରେଟର ଏବଂ IoT ଜଳ ଟେଲିମେଟ୍ରି ୟୁନିଟ୍ ସହିତ ୬୦ଟି ଉଚ୍ଚ-ଘନତ୍ୱ ବୃତ୍ତାକାର ବାୟୋଫ୍ଲୋକ୍ ଟ୍ୟାଙ୍କ (୧୦ ମିଟର ବ୍ୟାସ) ନିର୍ମାଣ।",
-    challenge: "Open pond shrimp farming in Bhadrak suffered high viral outbreak risks and heavy water discharge environmental penalties.",
-    challenge_or: "ଭଦ୍ରକରେ ଖୋଲା ପୋଖରୀ ଚିଙ୍ଗୁଡ଼ି ଚାଷ ଉଚ୍ଚ ଭୂତାଣୁ ରୋଗ ଆଶଙ୍କା ଏବଂ ଅଧିକ ଜଳ ନିଷ୍କାସନ ପରିବେଶ ଜରିମାନାର ସମ୍ମୁଖୀନ ହେଉଥିଲା।",
-    solution: "Implemented zero-water exchange Biofloc technology with microbial protein recycling and real-time oxygen/pH sensors hooked up to ODCONES FieldOS.",
-    solution_or: "ମାଇକ୍ରୋବିଆଲ୍ ପ୍ରୋଟିନ୍ ପୁନଃଚକ୍ରଣ ସହିତ ଶୂନ୍ୟ-ଜଳ ବିନିମୟ ବାୟୋଫ୍ଲୋକ୍ ଟେକ୍ନୋଲୋଜି ଏବଂ ODCONES ଫିଲ୍ଡଓଏସ୍ ସହିତ ସଂଯୁକ୍ତ ରିୟଲ-ଟାଇମ୍ ଅମ୍ଳଜାନ/ପିଏଚ୍ ସେନ୍ସର କାର୍ଯ୍ୟକାରୀ କରାଗଲା।",
+    description: "Polyhouse structural engineering estimates, drip fertigation network planning, and DPR preparation for protected cultivation and mushroom projects.",
+    description_or: "ସଂରକ୍ଷିତ ଚାଷ ଓ ଛତୁ ପ୍ରକଳ୍ପ ପାଇଁ ପଲିହାଉସ ଇଞ୍ଜିନିୟରିଂ ଆକଳନ, ଡ୍ରିପ୍ ଫର୍ଟିଗେସନ୍ ଯୋଜନା ଓ DPR ପ୍ରସ୍ତୁତି।",
+    challenge: "Protected horticulture requires micro-climate control, fertigation automation, and post-harvest packhouse integration.",
+    challenge_or: "ସଂରକ୍ଷିତ ଉଦ୍ୟାନ କୃଷି ପାଇଁ ମାଇକ୍ରୋ-କ୍ଲାଇମେଟ୍ ନିୟନ୍ତ୍ରଣ, ଫର୍ଟିଗେସନ୍ ସ୍ୱୟଂଚାଳନ ଓ ପ୍ୟାକ୍-ହାଉସ୍ ସଂଯୋଗ ଆବଶ୍ୟକ।",
+    solution: "ODCONS structures complete polyhouse project proposals, component costing, and MIDH / State scheme subsidy documentation.",
+    solution_or: "ODCONS ସମ୍ପୂର୍ଣ୍ଣ ପଲିହାଉସ ପ୍ରକଳ୍ପ ପ୍ରସ୍ତାବ, ଯନ୍ତ୍ରାଂଶ ମୂଲ୍ୟ ଓ MIDH / ରାଜ୍ୟ ସବସିଡି ଦସ୍ତାବେଜ୍ ପ୍ରସ୍ତୁତ କରେ।",
     impact_metrics: {
-      "Tank Yield": "4.5 MT per Tank/Cycle",
-      "Water Saved": "92%",
-      "FCR Ratio": "1.12"
+      "Technical Scope": "Polyhouse BOQ & Fertigation",
+      "Financial Analysis": "Crop Economics & ROI",
+      "Scheme Support": "MIDH & Horticulture Schemes"
     },
     impact_metrics_or: {
-      "ଟ୍ୟାଙ୍କ ଉତ୍ପାଦନ": "ପ୍ରତି ଟ୍ୟାଙ୍କ/ଚକ୍ରରେ ୪.୫ ମେଟ୍ରିକ୍ ଟନ୍",
-      "ଜଳ ସଞ୍ଚୟ": "୯୨%",
-      "FCR ଅନୁପାତ": "୧.୧୨"
+      "ବୈଷୟିକ ପରିସର": "ପଲିହାଉସ BOQ ଓ ଫର୍ଟିଗେସନ୍",
+      "ଆର୍ଥିକ ବିଶ୍ଲେଷଣ": "ଶସ୍ୟ ଅର୍ଥନୀତି ଓ ROI",
+      "ଯୋଜନା ସହାୟତା": "MIDH ଓ ଉଦ୍ୟାନ ଯୋଜନା"
     },
     images: [
-      "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=1200"
+      "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=1200"
     ]
   },
   {
-    id: "proj-6",
-    title: "Bargarh Smart Canal Micro-Irrigation Modernization",
-    title_or: "ବରଗଡ଼ ସ୍ମାର୍ଟ କେନାଲ ମାଇକ୍ରୋ-ସେଚନ ଆଧୁନିକୀକରଣ",
-    slug: "bargarh-smart-canal-micro-irrigation",
-    sector: "Agriculture",
-    sector_or: "କୃଷି",
-    location: "Bargarh, Odisha",
-    year: "2024 - 2026",
-    client: "Water Resources Department",
-    status: "In Progress",
+    id: "proj-type-5",
+    title: "Cold Storage & PUF Facilities",
+    title_or: "କୋଲ୍ଡ ଷ୍ଟୋରେଜ୍ ଓ PUF ସୁବିଧା",
+    slug: "cold-storage-puf-facilities",
+    sector: "Cold Chain",
+    sector_or: "କୋଲ୍ଡ ଚେନ୍",
+    location: "ODCONS Technical Scope",
+    year: "Project Category",
+    client: "Cold Chain Operators & MSMEs",
+    status: "Completed",
     featured: false,
-    description: "Automation of canal sluice gates and installation of solar-powered micro-drip networks across 5,000 acres of paddy and pulse fields.",
-    description_or: "କେନାଲ ସ୍ଲୁଇସ ଗେଟ୍ ଗୁଡ଼ିକର ସ୍ୱୟଂଚାଳିତକରଣ ଏବଂ ୫,୦୦୦ ଏକର ଧାନ ଓ ଡାଲି କ୍ଷେତ୍ରରେ ସୌର ଚାଳିତ ମାଇକ୍ରୋ-ଡ୍ରିପ୍ ନେଟୱାର୍କ ସଂସ୍ଥାପନ।",
-    challenge: "Tail-end farmers along the canal system received inadequate water while head-end farmers over-irrigated, leading to waterlogging.",
-    challenge_or: "କେନାଲ ବ୍ୟବସ୍ଥାର ଶେଷ ମୁଣ୍ଡର ଚାଷୀମାନେ ପର୍ଯ୍ୟାପ୍ତ ଜଳ ପାଉନଥିଲେ, ଆରମ୍ଭ ମୁଣ୍ଡର ଚାଷୀମାନେ ଅତ୍ୟଧିକ ସେଚନ କରି ଜଳ ଜମା ସମସ୍ୟା ସୃଷ୍ଟି କରୁଥିଲେ।",
-    solution: "Deployed IoT solar sluice actuators, telemetry water level gauges, and underground pressurized pipe networks to deliver equitable water to tail-end farms.",
-    solution_or: "IoT ସୌର ସ୍ଲୁଇସ ଆକ୍ଚୁଏଟର, ଟେଲିମେଟ୍ରି ଜଳସ୍ତର ଗେଜ୍ ଏବଂ ଭୂତଳ ଚାପଯୁକ୍ତ ପାଇପ୍ ନେଟୱାର୍କ ସଂସ୍ଥାପନ କରି ଶେଷ ମୁଣ୍ଡର ଚାଷକୁ ସମାନ ଜଳ ଯୋଗାଣ କରାଗଲା।",
+    description: "Multi-chamber cold storage engineering, PUF panel insulation specification, refrigeration compressor sizing, and bankable DPR consultancy.",
+    description_or: "ମଲ୍ଟି-ଚ୍ୟାମ୍ବର କୋଲ୍ଡ ଷ୍ଟୋରେଜ୍ ଇଞ୍ଜିନିୟରିଂ, PUF ପ୍ୟାନେଲ୍ ଆକଳନ, କମ୍ପ୍ରେସର କ୍ଷମତା ନିରୂପଣ ଓ DPR ପରାମର୍ଶ।",
+    challenge: "Cold chain projects involve substantial capital expenditure, precise thermal insulation design, and heavy power backup planning.",
+    challenge_or: "କୋଲ୍ଡ ଚେନ୍ ପ୍ରକଳ୍ପରେ ଅଧିକ ମୂଳଧନ ନିବେଶ, ସଠିକ୍ ତାପମାତ୍ରା ରୋଧକ ଡିଜାଇନ୍ ଓ ବିଦ୍ୟୁତ୍ ଯୋଜନା ଆବଶ୍ୟକ।",
+    solution: "ODCONS provides techno-economic feasibility studies, structural layouts, refrigeration power calculations, and subsidy project reports.",
+    solution_or: "ODCONS ତ୍ରାକ୍ନୋ-ଇକୋନୋମିକ ସମ୍ଭାବ୍ୟତା, ସିଭିଲ୍ ଲେ-ଆଉଟ୍, କୁଲିଂ କ୍ଷମତା ଗଣନା ଓ ସବସିଡି ରିପୋର୍ଟ ଯୋଗାଏ।",
     impact_metrics: {
-      "Irrigation Efficiency": "From 38% to 82%",
-      "Tail-End Acres Reached": "2,100 Acres",
-      "Water Saved": "3.8 Million m³"
+      "Technical Scope": "Cold Chamber Engineering",
+      "Financial Analysis": "Break-Even & Repayment",
+      "Scheme Support": "Cold Chain Subsidy Schemes"
     },
     impact_metrics_or: {
-      "ସେଚନ ଦକ୍ଷତା": "୩୮%ରୁ ୮୨%",
-      "ଶେଷ ମୁଣ୍ଡରେ ପହଞ୍ଚିଥିବା ଏକର": "୨,୧୦୦ ଏକର",
-      "ଜଳ ସଞ୍ଚୟ": "୩.୮ ନିୟୁତ ଘନମିଟର"
+      "ବୈଷୟିକ ପରିସର": "କୋଲ୍ଡ ଚ୍ୟାମ୍ବର ଇଞ୍ଜିନିୟରିଂ",
+      "ଆର୍ଥିକ ବିଶ୍ଲେଷଣ": "ବ୍ରେକ୍-ଇଭେନ୍ ଓ ଋଣ ପରିଶୋଧ",
+      "ଯୋଜନା ସହାୟତା": "କୋଲ୍ଡ ଚେନ୍ ସବସିଡି ଯୋଜନା"
     },
     images: [
-      "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=1200"
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200"
     ]
   }
 ];

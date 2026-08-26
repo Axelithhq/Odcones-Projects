@@ -3,113 +3,194 @@ import { ArticleItem } from "@/lib/supabase";
 export const ARTICLES: ArticleItem[] = [
   {
     id: "art-1",
-    title: "Scaling Reservoir Cage Aquaculture in Eastern India: Operational & Technical Lessons",
-    title_or: "ପୂର୍ବ ଭାରତରେ ଜଳାଶୟ କେଜ୍ ମତ୍ସ୍ୟଚାଷର ବିସ୍ତାର: ପରିଚାଳନା ଓ ପ୍ରଯୁକ୍ତିଗତ ଶିକ୍ଷା",
-    slug: "scaling-reservoir-cage-aquaculture-eastern-india",
-    category: "Aquaculture",
-    excerpt: "How HDPE floating cage installations are unlocking multi-fold productivity for reservoir fisherfolk while protecting wild aquatic biodiversity.",
-    excerpt_or: "HDPE ଫ୍ଲୋଟିଙ୍ଗ କେଜ୍ ସଂସ୍ଥାପନ କିପରି ବନ୍ୟ ଜଳ ଜୈବିକ ବିବିଧତାକୁ ସୁରକ୍ଷିତ ରଖି ଜଳାଶୟ ମତ୍ସ୍ୟଜୀବୀଙ୍କ ପାଇଁ ବହୁଗୁଣ ଉତ୍ପାଦନ ଖୋଲୁଛି।",
+    title: "How to Prepare a Bankable DPR for Bank Finance",
+    title_or: "ବ୍ୟାଙ୍କ ଋଣ ପାଇଁ ଏକ ବ୍ୟାଙ୍କେବୁଲ୍ DPR କିପରି ପ୍ରସ୍ତୁତ କରିବେ",
+    slug: "how-to-prepare-bankable-dpr-bank-finance",
+    category: "DPR & Finance",
+    excerpt: "Key technical, financial, and market parameters required by banks and financial institutions when evaluating project reports.",
+    excerpt_or: "ପ୍ରକଳ୍ପ ରିପୋର୍ଟ ମୂଲ୍ୟାଙ୍କନ କରିବା ସମୟରେ ବ୍ୟାଙ୍କ ଓ ଆର୍ଥିକ ଅନୁଷ୍ଠାନଗୁଡ଼ିକ ଦ୍ୱାରା ଆବଶ୍ୟକ ପ୍ରମୁଖ ବୈଷୟିକ, ଆର୍ଥିକ ଓ ବଜାର ମାପଦଣ୍ଡ।",
     content: `
-      ### The Blue Economy Imperative
+      ### Understanding Bankable DPR Requirements
 
-      Inland reservoirs in India represent over 3.15 million hectares of underutilized water surface. Historically, harvest yields averaged less than 50 kg/hectare/year under extensive stocking regimes. The introduction of high-density floating cage culture has fundamentally transformed this economic dynamic.
+      A Detailed Project Report (DPR) serves as the primary technical and financial blueprint submitted to commercial banks, regional rural banks, and financial institutions for term loan sanctioning.
 
-      #### Key Engineering Considerations:
-      1. **Frame Resilience**: Using 100% virgin High-Density Polyethylene (HDPE) frame pipes capable of handling wave heights of up to 1.5 meters during monsoons.
-      2. **Aeration Dynamics**: Deploying solar-hybrid venturi aerators to prevent oxygen crashes during summer water thermal stratification.
-      3. **Cooperative Governance**: Transitioning local fisherfolk from individual netters to cage management cooperative shareholders.
-
-      #### Results from Hirakud Reservoir Field Trials:
-      Over a 14-month study period across 240 cages, average stocking densities achieved 35 kg/m³ with a Feed Conversion Ratio (FCR) of 1.14. Mortality dropped from 22% in open water stocking to under 4.2% in controlled cages.
+      #### Core Components of a Bankable DPR:
+      1. **Promoter Background & Technical Competence**: Background of the entrepreneur, FPO, or firm.
+      2. **Technical Feasibility**: Detailed specification of land, civil infrastructure, plant & machinery, raw material linkages, and utility requirements.
+      3. **Financial Projections**: Projected Profit & Loss, Balance Sheet, Cash Flow statement, DSCR, and Break-Even Analysis over the loan repayment tenure.
+      4. **Market & Sourcing Analysis**: Assessment of target buyers, demand-supply gaps, and pricing structure.
     `,
     content_or: `
-      ### ବ୍ଲୁ ଇକୋନୋମିର ଆବଶ୍ୟକତା
+      ### ବ୍ୟାଙ୍କେବୁଲ୍ DPR ଆବଶ୍ୟକତା ବୁଝିବା
 
-      ଭାରତର ଆଭ୍ୟନ୍ତରୀଣ ଜଳାଶୟଗୁଡ଼ିକ ୩.୧୫ ନିୟୁତ ହେକ୍ଟରରୁ ଅଧିକ ଅବ୍ୟବହୃତ ଜଳ ପୃଷ୍ଠକୁ ପ୍ରତିନିଧିତ୍ୱ କରନ୍ତି। ବ୍ୟାପକ ମାଛ ପୁନର୍ଭରଣ ପଦ୍ଧତିରେ ଐତିହାସିକ ଭାବେ ବାର୍ଷିକ ଅମଳ ହାରାହାରି ୫୦ କି.ଗ୍ରା./ହେକ୍ଟରରୁ କମ୍ ରହିଥିଲା। ଉଚ୍ଚ-ଘନତ୍ୱ ଫ୍ଲୋଟିଙ୍ଗ କେଜ୍ ଚାଷର ପ୍ରଚଳନ ଏହି ଅର୍ଥନୈତିକ ଗତିଶୀଳତାକୁ ମୌଳିକ ଭାବେ ପରିବର୍ତ୍ତନ କରିଛି।
+      ଏକ ବିସ୍ତୃତ ପ୍ରକଳ୍ପ ରିପୋର୍ଟ (DPR) ମାଧ୍ୟମରେ ବ୍ୟାଙ୍କ ଓ ଆର୍ଥିକ ଅନୁଷ୍ଠାନଗୁଡ଼ିକୁ ପ୍ରକଳ୍ପର ବୈଷୟିକ ଓ ଆର୍ଥିକ ସମ୍ଭାବ୍ୟତା ଉପସ୍ଥାପନ କରାଯାଏ।
 
-      #### ପ୍ରମୁଖ ଯାନ୍ତ୍ରିକ ବିଚାର:
-      ୧. **ଫ୍ରେମ୍ ସ୍ଥାୟୀତ୍ୱ**: ବର୍ଷାଋତୁରେ ୧.୫ ମିଟର ପର୍ଯ୍ୟନ୍ତ ତରଙ୍ଗ ଉଚ୍ଚତା ପରିଚାଳନା କରିପାରୁଥିବା ୧୦୦% ଭର୍ଜିନ୍ ହାଇ-ଡେନ୍ସିଟି ପଲିଥିଲିନ (HDPE) ଫ୍ରେମ୍ ପାଇପ୍ ବ୍ୟବହାର।
-      ୨. **ଏରେସନ୍ ଗତିଶୀଳତା**: ଗ୍ରୀଷ୍ମ ଋତୁରେ ଜଳ ଉତ୍ତାପ ସ୍ତରୀକରଣ ସମୟରେ ଅମ୍ଳଜାନ ସଙ୍କଟ ରୋକିବା ପାଇଁ ସୌର-ହାଇବ୍ରିଡ୍ ଭେଞ୍ଚୁରି ଏରେଟର ସଂସ୍ଥାପନ।
-      ୩. **ସମବାୟ ଶାସନ**: ସ୍ଥାନୀୟ ମତ୍ସ୍ୟଜୀବୀମାନଙ୍କୁ ଏକକ ଜାଲ ବ୍ୟବସାୟରୁ କେଜ୍ ପରିଚାଳନା ସମବାୟ ଭାଗିଦାର ଭାବେ ପରିବର୍ତ୍ତନ।
-
-      #### ହିରାକୁଦ ଜଳାଶୟ କ୍ଷେତ୍ର ପରୀକ୍ଷା ଫଳାଫଳ:
-      ୨୪୦ଟି କେଜ୍ ରେ ୧୪ ମାସ ଅଧ୍ୟୟନ ଅବଧିରେ, ହାରାହାରି ମାଛ ଘନତ୍ୱ ୩୫ କି.ଗ୍ରା./ଘନମିଟର ଏବଂ ଖାଦ୍ୟ ରୂପାନ୍ତର ଅନୁପାତ (FCR) ୧.୧୪ ହାସଲ ହେଲା। ଖୋଲା ଜଳରେ ମୃତ୍ୟୁହାର ୨୨%ରୁ ନିୟନ୍ତ୍ରିତ କେଜ୍ ରେ ୪.୨% ତଳେ ଖସିଆସିଲା।
+      #### ବ୍ୟାଙ୍କେବୁଲ୍ DPR ର ପ୍ରମୁଖ ବିଭାଗ:
+      ୧. **ପ୍ରବର୍ତ୍ତକ ପରିଚୟ**: ଉଦ୍ୟୋଗୀ ବା FPO ର ପୃଷ୍ଠଭୂମି।
+      ୨. **ବୈଷୟିକ ସମ୍ଭାବ୍ୟତା**: ଜମି, ସିଭିଲ୍ ଭିତ୍ତିଭୂମି, ମେସିନାରି, କଞ୍ଚାମାଲ ଓ ବିଦ୍ୟୁତ୍/ଜଳ ସୁବିଧା।
+      ୩. **ଆର୍ଥିକ ଆକଳନ**: ଲାଭ-କ୍ଷତି, କ୍ୟାଶ୍ ଫ୍ଲୋ, DSCR ଓ ବ୍ରେକ୍-ଇଭେନ୍ ଆକଳନ।
+      ୪. **ବଜାର ସର୍ବେକ୍ଷଣ**: ବିକ୍ରି ସୁବିଧା ଓ ଚାହିଦା ଆକଳନ।
     `,
-    read_time: "6 min read",
-    image_url: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=1200",
-    author: "Dr. S. K. Mahapatra, Head of Blue Economy Research",
-    published_at: "2024-11-12"
+    read_time: "5 min read",
+    image_url: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1200",
+    author: "ODCONS Knowledge Centre",
+    published_at: "2026-01-15"
   },
   {
     id: "art-2",
-    title: "Climate-Smart Micro-Irrigation & Sub-Surface Tile Drainage in Coastal Saline Lands",
-    title_or: "ଉପକୂଳବର୍ତ୍ତୀ ଲୁଣାକ୍ତ ଜମିରେ ଜଳବାୟୁ-ସ୍ମାର୍ଟ ମାଇକ୍ରୋ-ସେଚନ ଓ ଭୂତଳ ଟାଇଲ୍ ନିଷ୍କାସନ",
-    slug: "climate-smart-micro-irrigation-coastal-saline-lands",
-    category: "Water & Soil",
-    excerpt: "Restoring cyclone-affected coastal agricultural fields through subsurface salt leaching and solar-powered drip fertigation.",
-    excerpt_or: "ଭୂତଳ ଲୁଣ ନିଷ୍କାସନ ଏବଂ ସୌର ଚାଳିତ ଡ୍ରିପ୍ ଫର୍ଟିଗେସନ୍ ମାଧ୍ୟମରେ ବାତ୍ୟା ପ୍ରଭାବିତ ଉପକୂଳବର୍ତ୍ତୀ କୃଷି କ୍ଷେତ୍ରର ପୁନରୁଦ୍ଧାର।",
+    title: "Government Subsidies for Agribusiness Projects",
+    title_or: "କୃଷି ବ୍ୟବସାୟ ପ୍ରକଳ୍ପ ପାଇଁ ସରକାରୀ ସବସିଡି ଯୋଜନା",
+    slug: "government-subsidies-agribusiness-projects",
+    category: "Government Schemes",
+    excerpt: "Navigating subsidy guidelines, eligible infrastructure components, and application documentation for agribusiness enterprises.",
+    excerpt_or: "କୃଷି ଉଦ୍ୟୋଗ ପାଇଁ ସବସିଡି ନିୟମାବଳୀ, ଯୋଗ୍ୟ ଭିତ୍ତିଭୂମି ଓ ଦସ୍ତାବେଜ ପ୍ରସ୍ତୁତି।",
     content: `
-      ### Reclaiming Saline Degraded Coastal Soils
+      ### Maximizing Capital Efficiency Through Government Assistance
 
-      Coastal agrarian zones frequently face dual threats: seawater intrusion during cyclones and seasonal drought during summer. Soil salinity levels exceeding 8 dS/m render traditional rice varieties unproductive.
+      Central and State government schemes provide credit-linked capital subsidies for eligible agricultural, food processing, and rural infrastructure investments.
 
-      #### Solution Architecture:
-      - **Sub-Surface Drainage (SSD)**: Perforated corrugated PVC pipes wrapped in synthetic filter envelopes laid at 1.2m depth with 15m lateral spacing.
-      - **Leaching Protocols**: Trapping monsoon rainwater in farm ponds and using it to flush soluble salts into drainage collectors.
-      - **Bio-char Soil Conditioners**: Incorporating paddy-husk biochar to increase soil cation exchange capacity (CEC).
-
-      #### Economic Outcomes:
-      Yields of local paddy restored from 1.2 MT/ha to 4.4 MT/ha in 2 seasons, while cropping intensity expanded from single-crop to double-crop with pulses.
+      #### Key Focus Areas:
+      - Agriculture Infrastructure Fund (AIF)
+      - Pradhan Mantri Matsya Sampada Yojana (PMMSY)
+      - Mission for Integrated Development of Horticulture (MIDH)
+      - State Agricultural & Industrial Policies
     `,
     content_or: `
-      ### ଲୁଣାକ୍ତ ଅବକ୍ଷୟ ଉପକୂଳବର୍ତ୍ତୀ ମାଟିର ପୁନରୁଦ୍ଧାର
+      ### ସରକାରୀ ସହାୟତା ମାଧ୍ୟମରେ ମୂଳଧନ ସଞ୍ଚୟ
 
-      ଉପକୂଳବର୍ତ୍ତୀ କୃଷି ଅଞ୍ଚଳଗୁଡ଼ିକ ପ୍ରାୟତଃ ଦୁଇଟି ସମ୍ମୁଖୀନ ବିପଦର ସମ୍ମୁଖୀନ: ବାତ୍ୟା ସମୟରେ ସମୁଦ୍ର ଜଳ ପ୍ରବେଶ ଏବଂ ଗ୍ରୀଷ୍ମରେ ଋତୁଗତ ମରୁଡ଼ି। ୮ dS/m ରୁ ଅଧିକ ମାଟି ଲୁଣତ୍ୱ ପାରମ୍ପରିକ ଧାନ ଜାତିକୁ ଅନୁତ୍ପାଦକ କରିଥାଏ।
-
-      #### ସମାଧାନ ସ୍ଥାପତ୍ୟ:
-      - **ଭୂତଳ ନିଷ୍କାସନ (SSD)**: ୧.୨ ମିଟର ଗଭୀରତାରେ ୧୫ ମିଟର ପାର୍ଶ୍ୱ ବ୍ୟବଧାନରେ ସିନ୍ଥେଟିକ୍ ଫିଲ୍ଟର ଆବରଣରେ ପର୍ଫୋରେଟେଡ୍ କରୁଗେଟେଡ୍ PVC ପାଇପ୍ ବିଛାଇବା।
-      - **ଲିଚିଂ ପଦ୍ଧତି**: ଫାର୍ମ ପୋଣ୍ଡରେ ବର୍ଷା ଜଳ ଅଟକାଇ ଦ୍ରବଣୀୟ ଲୁଣକୁ ନିଷ୍କାସନ ସଂଗ୍ରହକାରୀଙ୍କ ମଧ୍ୟରେ ଧୋଇବା ପାଇଁ ବ୍ୟବହାର।
-      - **ବାୟୋ-ଚାର୍ ମାଟି ପ୍ରସ୍ତୁତି**: ମାଟିର କ୍ୟାସନ ବିନିମୟ କ୍ଷମତା (CEC) ବୃଦ୍ଧି ପାଇଁ ଧାନ ତୁଷ ବାୟୋଚାର ମିଶ୍ରଣ।
-
-      #### ଆର୍ଥିକ ଫଳାଫଳ:
-      ୨ ଋତୁରେ ସ୍ଥାନୀୟ ଧାନର ଉତ୍ପାଦନ ୧.୨ MT/ହେକ୍ଟରରୁ ୪.୪ MT/ହେକ୍ଟରକୁ ପୁନରୁଦ୍ଧାର ହେଲା, ଏବଂ ଶସ୍ୟ ତୀବ୍ରତା ଏକ ଫସଲରୁ ଡାଲି ସହିତ ଦ୍ୱିତୀୟ ଫସଲକୁ ବିସ୍ତାର ହେଲା।
+      କେନ୍ଦ୍ର ଓ ରାଜ୍ୟ ସରକାରୀ ଯୋଜନାଗୁଡ଼ିକ ଯୋଗ୍ୟ କୃଷି, ଖାଦ୍ୟ ପ୍ରସେସିଂ ଓ ଗ୍ରାମୀଣ ଭିତ୍ତିଭୂମି ପ୍ରକଳ୍ପ ପାଇଁ ସବସିଡି ପ୍ରଦାନ କରନ୍ତି।
     `,
-    read_time: "8 min read",
-    image_url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1200",
-    author: "Er. Ramesh Chandra Das, Lead Hydrologist",
-    published_at: "2024-10-28"
+    read_time: "6 min read",
+    image_url: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200",
+    author: "ODCONS Knowledge Centre",
+    published_at: "2026-01-20"
   },
   {
     id: "art-3",
-    title: "High-Density Polyhouse Horticulture: Optimizing Micro-Climate for Tribal Smallholders",
-    title_or: "ଉଚ୍ଚ-ଘନତ୍ୱ ପଲିହାଉସ ଉଦ୍ୟାନ କୃଷି: ଆଦିବାସୀ କ୍ଷୁଦ୍ର ଚାଷୀଙ୍କ ପାଇଁ ମାଇକ୍ରୋ-କ୍ଲାଇମେଟ୍ ଅପ୍ଟିମାଇଜେସନ୍",
-    slug: "high-density-polyhouse-horticulture-tribal-smallholders",
-    category: "Horticulture",
-    excerpt: "How protected cultivation structures are helping tribal farmers in hilly terrains earn year-round steady cash flow from high-value crops.",
-    excerpt_or: "ପର୍ବତୀୟ ଅଞ୍ଚଳର ଆଦିବାସୀ ଚାଷୀମାନଙ୍କୁ ସଂରକ୍ଷିତ ଚାଷ ସଂରଚନା କିପରି ଉଚ୍ଚ ମୂଲ୍ୟଯୁକ୍ତ ଶସ୍ୟରୁ ବର୍ଷସାରା ସ୍ଥିର ଆୟ ପାଇବାରେ ସାହାଯ୍ୟ କରୁଛି।",
+    title: "How to Calculate Total Project Cost for Agribusiness & Fisheries",
+    title_or: "କୃଷି ଓ ମତ୍ସ୍ୟ ପ୍ରକଳ୍ପ ପାଇଁ ସମ୍ପୂର୍ଣ୍ଣ ପ୍ରକଳ୍ପ ମୂଲ୍ୟ କିପରି ଗଣନା କରିବେ",
+    slug: "how-to-calculate-project-cost",
+    category: "Project Costing",
+    excerpt: "Understanding land development, civil construction, machinery, utilities, preliminary expenses, and working capital requirements.",
+    excerpt_or: "ଜମି ବିକାଶ, ସିଭିଲ୍ ନିର୍ମାଣ, ମେସିନ, ପ୍ରାରମ୍ଭିକ ଖର୍ଚ୍ଚ ଓ କାର୍ଯ୍ୟକାରୀ ମୂଳଧନର ସମ୍ପୂର୍ଣ୍ଣ ଆକଳନ।",
     content: `
-      ### Bridging the High-Value Market Gap
+      ### Structural Breakdown of Project Cost
 
-      Tribal farmers in high-altitude zones often suffer from poor market access and vulnerability to extreme weather. By introducing 500 sq. meter naturally ventilated polyhouses combined with solar micro-chillers, farmers can produce high-demand capsicum, Dutch roses, and seedless cucumbers.
-
-      #### Technical Highlights:
-      - 200 micron UV-stabilized polyethylene films with anti-drip and anti-dust coatings.
-      - Automated fertigation injection manifolds based on real-time soil electrical conductivity (EC) sensors.
-      - Direct FPO aggregation models eliminating up to 4 layers of middleman margins.
+      Accurate project cost estimation prevents cost overruns during implementation. Total project cost comprises fixed capital investment and margin money for working capital.
     `,
     content_or: `
-      ### ଉଚ୍ଚ ମୂଲ୍ୟ ବଜାରର ଅନ୍ତର ପୂରଣ
+      ### ପ୍ରକଳ୍ପ ମୂଲ୍ୟର ସଠିକ୍ ଆକଳନ
 
-      ଉଚ୍ଚ ପର୍ବତୀୟ ଅଞ୍ଚଳର ଆଦିବାସୀ ଚାଷୀମାନେ ପ୍ରାୟତଃ ଦୁର୍ବଳ ବଜାର ଉପଲବ୍ଧତା ଏବଂ ଚରମ ପାଣିପାଗର ସମ୍ମୁଖୀନ ହୁଅନ୍ତି। ସୌର ମାଇକ୍ରୋ-ଚିଲର୍ ସହିତ ୫୦୦ ବର୍ଗମିଟର ପ୍ରାକୃତିକ ଭେଣ୍ଟିଲେସନ୍ ପଲିହାଉସ ପ୍ରଚଳନ କରି ଚାଷୀମାନେ ଅଧିକ ଚାହିଦାଯୁକ୍ତ କ୍ୟାପ୍ସିକମ୍, ଡଚ୍ ଗୋଲାପ ଓ ବିହୀନ କାକୁଡ଼ି ଉତ୍ପାଦନ କରିପାରିବେ।
+      ସଠିକ୍ ଆକଳନ ନିର୍ମାଣ ସମୟରେ ଅତିରିକ୍ତ ଖର୍ଚ୍ଚ ରୋକିଥାଏ।
+    `,
+    read_time: "4 min read",
+    image_url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+    author: "ODCONS Knowledge Centre",
+    published_at: "2026-02-01"
+  },
+  {
+    id: "art-4",
+    title: "Biofloc Fish Farming: Infrastructure & Project Planning",
+    title_or: "ବାୟୋଫ୍ଲୋକ୍ ମତ୍ସ୍ୟଚାଷ: ଭିତ୍ତିଭୂମି ଓ ପ୍ରକଳ୍ପ ଯୋଜନା",
+    slug: "biofloc-fish-farming-infrastructure-project-planning",
+    category: "Fisheries",
+    excerpt: "Infrastructure requirements, circular tank specifications, aeration setups, and water quality testing for commercial Biofloc units.",
+    excerpt_or: "ବାୟୋଫ୍ଲୋକ୍ ୟୁନିଟ୍ ପାଇଁ ଭିତ୍ତିଭୂମି, ଟ୍ୟାଙ୍କ ଡିଜାଇନ, ଏରେସନ୍ ସେଟ୍-ଅପ୍ ଓ ଜଳ ପରୀକ୍ଷା।",
+    content: `
+      ### High-Density Biofloc Technology Planning
 
-      #### ପ୍ରଯୁକ୍ତିଗତ ବିଶେଷତ୍ୱ:
-      - ଆଣ୍ଟି-ଡ୍ରିପ୍ ଓ ଆଣ୍ଟି-ଡଷ୍ଟ୍ ଆବରଣ ସହିତ ୨୦୦ ମାଇକ୍ରନ୍ UV-ସ୍ଥିର ପଲିଥିଲିନ ଫିଲ୍ମ।
-      - ରିୟଲ-ଟାଇମ୍ ମାଟି ବୈଦ୍ୟୁତିକ ପରିବହନ (EC) ସେନ୍ସର ଆଧାରରେ ସ୍ୱୟଂଚାଳିତ ଫର୍ଟିଗେସନ୍ ଇଞ୍ଜେକ୍ସନ୍ ମାନିଫୋଲ୍ଡ।
-      - ମଧ୍ୟସ୍ଥ ଲାଭର ୪ ସ୍ତର ପର୍ଯ୍ୟନ୍ତ ଦୂର କରୁଥିବା ସିଧାସଳଖ FPO ସଂଗ୍ରହ ମଡେଲ।
+      Biofloc fish farming offers zero-water exchange aquaculture suited for land-limited entrepreneurs. Proper infrastructure design is critical to maintaining dissolved oxygen and microbial biofloc stability.
+    `,
+    content_or: `
+      ### ବାୟୋଫ୍ଲୋକ୍ ଟେକ୍ନୋଲୋଜି ଯୋଜନା
+    `,
+    read_time: "7 min read",
+    image_url: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=1200",
+    author: "ODCONS Knowledge Centre",
+    published_at: "2026-02-10"
+  },
+  {
+    id: "art-5",
+    title: "Commercial Dairy Farm Project Planning & Layout",
+    title_or: "ବାଣିଜ୍ୟିକ ଦୁଗ୍ଧ ଫାର୍ମ ପ୍ରକଳ୍ପ ଯୋଜନା ଓ ଲେ-ଆଉଟ୍",
+    slug: "commercial-dairy-farm-project-planning",
+    category: "Dairy & Livestock",
+    excerpt: "Cattle shed orientation, milking parlor design, bulk milk chilling (BMC) setup, and green fodder cultivation planning.",
+    excerpt_or: "ଗୋଶାଳା ନିର୍ମାଣ, କ୍ଷୀର ଦୋହନ ସ୍ଥାନ, BMC ସଂସ୍ଥାପନ ଓ ପଶୁଖାଦ୍ୟ ଯୋଜନା।",
+    content: `
+      ### Designing Efficient Commercial Dairy Infrastructure
+
+      Proper shed orientation, ventilation, comfortable bedding, and hygienic milking infrastructure determine milk yield and herd health in commercial dairy farming.
+    `,
+    content_or: `
+      ### ବାଣିଜ୍ୟିକ ଦୁଗ୍ଧ ଫାର୍ମ ଡିଜାଇନ୍
     `,
     read_time: "5 min read",
-    image_url: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=1200",
-    author: "Priyanka Naik, Agronomy Specialist",
-    published_at: "2024-09-15"
+    image_url: "https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?auto=format&fit=crop&q=80&w=1200",
+    author: "ODCONS Knowledge Centre",
+    published_at: "2026-02-15"
+  },
+  {
+    id: "art-6",
+    title: "Fish Feed Plant Project Planning & Machinery Sizing",
+    title_or: "ମାଛ ଦାଣା ପ୍ଲାଣ୍ଟ ପ୍ରକଳ୍ପ ଯୋଜନା ଓ ମେସିନ୍ ନିର୍ବାଚନ",
+    slug: "fish-feed-plant-project-planning",
+    category: "Feed & Processing",
+    excerpt: "Floating and sinking feed manufacturing machinery selection, raw material grinding, extruder capacity, and dryer specifications.",
+    excerpt_or: "ଫ୍ଲୋଟିଙ୍ଗ ଓ ସିଙ୍କିଙ୍ଗ ଫିଡ୍ ମେସିନାରି, କଞ୍ଚାମାଲ ଗ୍ରାଇଣ୍ଡିଂ ଓ ଡ୍ରାୟର ଆକଳନ।",
+    content: `
+      ### Aquafeed Production Infrastructure
+
+      Manufacturing high-quality extruded floating fish feed requires specialized hammermills, twin-screw extruders, fluid bed dryers, and oil coating drums.
+    `,
+    content_or: `
+      ### ମାଛ ଦାଣା ଉତ୍ପାଦନ ଭିତ୍ତିଭୂମି
+    `,
+    read_time: "6 min read",
+    image_url: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200",
+    author: "ODCONS Knowledge Centre",
+    published_at: "2026-02-20"
+  },
+  {
+    id: "art-7",
+    title: "Cold Storage Project Planning & Technical Specifications",
+    title_or: "କୋଲ୍ଡ ଷ୍ଟୋରେଜ୍ ପ୍ରକଳ୍ପ ଯୋଜନା ଓ ବୈଷୟିକ ବିବରଣୀ",
+    slug: "cold-storage-project-planning",
+    category: "Cold Chain",
+    excerpt: "Multi-chamber cold storage insulation, refrigeration compressor sizing, humidity control, and PUF panel facility planning.",
+    excerpt_or: "ମଲ୍ଟି-ଚ୍ୟାମ୍ବର କୋଲ୍ଡ ଷ୍ଟୋରେଜ୍, କମ୍ପ୍ରେସର ଆକଳନ, ଆର୍ଦ୍ରତା ନିୟନ୍ତ୍ରଣ ଓ PUF ପ୍ୟାନେଲ୍।",
+    content: `
+      ### Post-Harvest Cold Chain Infrastructure
+
+      Cold storage facilities preserve fresh produce and perishable goods. Proper insulation panel thickness and refrigeration tonnage calculation ensure energy efficiency.
+    `,
+    content_or: `
+      ### ଶୀତଳ ଭଣ୍ଡାର ଭିତ୍ତିଭୂମି ଯୋଜନା
+    `,
+    read_time: "6 min read",
+    image_url: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200",
+    author: "ODCONS Knowledge Centre",
+    published_at: "2026-02-22"
+  },
+  {
+    id: "art-8",
+    title: "How DSCR Determines Loan Repayment Capacity",
+    title_or: "DSCR କିପରି ଋଣ ପରିଶୋଧ କ୍ଷମତା ନିରୂପଣ କରେ",
+    slug: "how-dscr-determines-loan-repayment-capacity",
+    category: "Financial Analysis",
+    excerpt: "Understanding Debt Service Coverage Ratio (DSCR), net operating income calculation, and bank viability benchmarks.",
+    excerpt_or: "DSCR ଗଣନା, ଖୁଦ୍ର ନିଟ୍ ପରିଚାଳନା ଆୟ ଓ ବ୍ୟାଙ୍କ ଋଣ ଯୋଗ୍ୟତା।",
+    content: `
+      ### Evaluating Debt Service Coverage Ratio (DSCR)
+
+      DSCR is the critical financial metric used by bankers to measure a project's cash flow availability to service annual principal and interest payments.
+    `,
+    content_or: `
+      ### DSCR ଓ ଋଣ ପରିଶୋଧ କ୍ଷମତା
+    `,
+    read_time: "5 min read",
+    image_url: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200",
+    author: "ODCONS Knowledge Centre",
+    published_at: "2026-02-25"
   }
 ];

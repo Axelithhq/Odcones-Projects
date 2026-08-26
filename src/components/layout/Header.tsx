@@ -8,13 +8,13 @@ import { LanguageToggle } from "./LanguageToggle";
 import { ReadAloudControls } from "./ReadAloudControls";
 import { useTranslation } from "@/lib/i18n";
 import { useTheme } from "@/lib/theme";
-import { Menu, X, ArrowUpRight, Sun, Moon, Calendar } from "lucide-react";
+import { Menu, X, Sun, Moon, Calendar } from "lucide-react";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-  const { t, language } = useTranslation();
+  const { language } = useTranslation();
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
@@ -30,14 +30,15 @@ export function Header() {
   }, [pathname]);
 
   const navItems = [
-    { label: t("nav.home"), href: "/" },
-    { label: t("nav.about"), href: "/about" },
-    { label: t("nav.what_we_do"), href: "/services" },
-    { label: t("nav.projects"), href: "/projects" },
-    { label: t("nav.platform"), href: "/platform" },
-    { label: t("nav.impact"), href: "/impact" },
-    { label: t("nav.insights"), href: "/insights" },
-    { label: t("nav.contact"), href: "/contact" },
+    { label: language === "or" ? "ମୁଖ୍ୟ ପୃଷ୍ଠା" : "Home", href: "/" },
+    { label: language === "or" ? "ଆମ ବିଷୟରେ" : "About Us", href: "/about" },
+    { label: language === "or" ? "ସେବା ସମୂହ" : "Services", href: "/services" },
+    { label: language === "or" ? "କ୍ଷେତ୍ରଗୁଡ଼ିକ" : "Sectors", href: "/sectors" },
+    { label: language === "or" ? "ପ୍ରକଳ୍ପ ସମୂହ" : "Projects", href: "/projects" },
+    { label: language === "or" ? "DPR ପରାମର୍ଶ" : "DPR Consultancy", href: "/dpr-consultancy" },
+    { label: language === "or" ? "ସରକାରୀ ଯୋଜନା" : "Government Schemes", href: "/government-schemes" },
+    { label: language === "or" ? "ଜ୍ଞାନ କେନ୍ଦ୍ର" : "Insights", href: "/insights" },
+    { label: language === "or" ? "ଯୋଗାଯୋଗ" : "Contact", href: "/contact" },
   ];
 
   return (
@@ -50,7 +51,7 @@ export function Header() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Logo with official Logo.png */}
+          {/* Logo with official Logo.png & ODCONS spelling */}
           <Link href="/" className="group flex items-center gap-3 z-10" data-cursor-text="ODCONS">
             <div className="w-10 h-10 rounded-xl overflow-hidden bg-forest-900 border border-forest-700 p-1 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
               <img src="/logo.png" alt="ODCONS PROJECTS" className="w-full h-full object-contain" />
@@ -78,7 +79,6 @@ export function Header() {
                       ? "text-harvest-300 font-bold"
                       : "text-sand-100/80 hover:text-sand-50 hover:bg-forest-800/40"
                   }`}
-                  data-cursor-text="GOTO"
                 >
                   {item.label}
                   {isActive && (
@@ -104,7 +104,6 @@ export function Header() {
               className="p-2 rounded-full bg-forest-900/50 border border-forest-700/50 text-sand-200 hover:text-harvest-400 transition-colors"
               title="Toggle Light / Dark Theme"
               aria-label="Toggle Theme"
-              data-cursor-text="THEME"
             >
               {theme === "light" ? <Moon className="w-3.5 h-3.5" /> : <Sun className="w-3.5 h-3.5 text-harvest-400" />}
             </button>
@@ -112,7 +111,6 @@ export function Header() {
             <Link
               href="/book-consultation"
               className="group relative inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-forest-600 via-forest-500 to-harvest-600 text-sand-50 text-xs font-bold tracking-wider uppercase shadow-lg hover:shadow-forest-500/25 transition-all duration-300 hover:scale-[1.03]"
-              data-cursor-text="BOOK"
             >
               <Calendar className="w-3.5 h-3.5" />
               <span>{language === "or" ? "ବୁକିଂ କରନ୍ତୁ" : "Book Consultation"}</span>
@@ -134,7 +132,7 @@ export function Header() {
         </div>
       </header>
 
-      {/* Mobile Animated Overlay Menu */}
+      {/* Mobile Overlay Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
@@ -144,20 +142,20 @@ export function Header() {
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className="fixed inset-0 z-40 bg-forest-950/98 backdrop-blur-2xl flex flex-col justify-between pt-24 pb-8 px-6 lg:hidden"
           >
-            <div className="flex flex-col gap-3 overflow-y-auto">
-              <span className="text-[10px] font-bold tracking-[0.3em] text-forest-400 uppercase mb-2">
-                NAVIGATION MENU
+            <div className="flex flex-col gap-2 overflow-y-auto">
+              <span className="text-[10px] font-bold tracking-[0.3em] text-forest-400 uppercase mb-2 font-display">
+                ODCONS NAVIGATION
               </span>
               {navItems.map((item, idx) => (
                 <motion.div
                   key={item.href}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.1 + idx * 0.05 }}
+                  transition={{ delay: 0.05 + idx * 0.03 }}
                 >
                   <Link
                     href={item.href}
-                    className="flex items-center justify-between text-xl font-display font-semibold text-sand-100 hover:text-harvest-400 py-2.5 border-b border-forest-800/40"
+                    className="flex items-center justify-between text-lg font-display font-semibold text-sand-100 hover:text-harvest-400 py-2 border-b border-forest-800/40"
                   >
                     <span>{item.label}</span>
                   </Link>
@@ -165,14 +163,14 @@ export function Header() {
               ))}
             </div>
 
-            <div className="pt-6 border-t border-forest-800/60 flex flex-col gap-4">
+            <div className="pt-4 border-t border-forest-800/60 flex flex-col gap-3">
               <Link
                 href="/book-consultation"
-                className="w-full py-4 rounded-xl bg-gradient-to-r from-forest-600 to-harvest-600 text-center font-display font-bold text-sm tracking-wider uppercase text-sand-50 shadow-xl"
+                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-forest-600 to-harvest-600 text-center font-display font-bold text-xs tracking-wider uppercase text-sand-50 shadow-xl"
               >
                 {language === "or" ? "ବୁକିଂ କରନ୍ତୁ" : "Book Consultation"}
               </Link>
-              <div className="flex justify-between items-center text-xs text-sand-200/60">
+              <div className="flex justify-between items-center text-[11px] text-sand-200/60 font-mono">
                 <span>© ODCONS PROJECTS</span>
                 <span>Anshuman Mohapatra — Founder</span>
               </div>
