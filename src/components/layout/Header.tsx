@@ -7,22 +7,19 @@ import { motion, AnimatePresence } from "framer-motion";
 import { LanguageToggle } from "./LanguageToggle";
 import { ReadAloudControls } from "./ReadAloudControls";
 import { useTranslation } from "@/lib/i18n";
-import { stripLocale } from "@/lib/i18n-config";
-import { Menu, X, ArrowUpRight, Sprout, ArrowRight } from "lucide-react";
+import { useTheme } from "@/lib/theme";
+import { Menu, X, ArrowUpRight, Sun, Moon, Calendar } from "lucide-react";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-  const { t, localizeHref } = useTranslation();
+  const { t, language } = useTranslation();
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 40) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 40);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -35,7 +32,7 @@ export function Header() {
   const navItems = [
     { label: t("nav.home"), href: "/" },
     { label: t("nav.about"), href: "/about" },
-    { label: t("nav.whatWeDo"), href: "/services" },
+    { label: t("nav.what_we_do"), href: "/services" },
     { label: t("nav.projects"), href: "/projects" },
     { label: t("nav.platform"), href: "/platform" },
     { label: t("nav.impact"), href: "/impact" },
@@ -48,23 +45,21 @@ export function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "py-3 bg-forest-950/90 backdrop-blur-xl border-b border-forest-800/40 shadow-xl shadow-forest-950/50"
-            : "py-6 bg-gradient-to-b from-forest-950/95 to-transparent"
+            ? "py-3 bg-forest-950/90 backdrop-blur-xl border-b border-forest-800/40 shadow-xl"
+            : "py-5 bg-gradient-to-b from-forest-950/95 to-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Logo */}
-          <Link href={localizeHref("/")} className="group flex items-center gap-2.5 z-10" data-cursor-text="ODCONES">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-forest-600 via-forest-800 to-soil-700 p-0.5 shadow-lg group-hover:scale-105 transition-transform duration-300">
-              <div className="w-full h-full bg-forest-950 rounded-[10px] flex items-center justify-center">
-                <Sprout className="w-5 h-5 text-harvest-400 group-hover:rotate-12 transition-transform duration-300" />
-              </div>
+          {/* Logo with official Logo.png */}
+          <Link href="/" className="group flex items-center gap-3 z-10" data-cursor-text="ODCONS">
+            <div className="w-10 h-10 rounded-xl overflow-hidden bg-forest-900 border border-forest-700 p-1 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+              <img src="/logo.png" alt="ODCONS PROJECTS" className="w-full h-full object-contain" />
             </div>
             <div className="flex flex-col">
               <span className="font-display font-bold text-lg tracking-wider text-sand-50 uppercase leading-none group-hover:text-harvest-400 transition-colors">
-                ODCONES
+                ODCONS
               </span>
-              <span className="text-[10px] font-semibold tracking-[0.25em] text-forest-300 uppercase leading-tight">
+              <span className="text-[9px] font-semibold tracking-[0.25em] text-forest-300 uppercase leading-tight">
                 PROJECTS
               </span>
             </div>
@@ -73,15 +68,11 @@ export function Header() {
           {/* Desktop Nav Links */}
           <nav className="hidden xl:flex items-center gap-1 px-4 py-1.5 rounded-full bg-forest-900/40 border border-forest-500/20 backdrop-blur-md">
             {navItems.map((item) => {
-              const localizedHref = localizeHref(item.href);
-              const activePath = stripLocale(pathname);
-              const isActive =
-                activePath === item.href ||
-                (item.href !== "/" && activePath.startsWith(item.href));
+              const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
               return (
                 <Link
                   key={item.href}
-                  href={localizedHref}
+                  href={item.href}
                   className={`relative px-3 py-1.5 text-xs font-semibold tracking-wide transition-colors rounded-full ${
                     isActive
                       ? "text-harvest-300 font-bold"
@@ -107,13 +98,24 @@ export function Header() {
             <ReadAloudControls />
             <LanguageToggle />
 
-            <Link
-              href={localizeHref("/start-project")}
-              className="group relative inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-forest-600 via-forest-500 to-harvest-600 text-sand-50 text-xs font-bold tracking-wider uppercase shadow-lg hover:shadow-forest-500/25 transition-all duration-300 hover:scale-[1.03]"
-              data-cursor-text="ENQUIRE"
+            {/* Theme Toggle Button */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full bg-forest-900/50 border border-forest-700/50 text-sand-200 hover:text-harvest-400 transition-colors"
+              title="Toggle Light / Dark Theme"
+              aria-label="Toggle Theme"
+              data-cursor-text="THEME"
             >
-              <span>{t("nav.startProject")}</span>
-              <ArrowUpRight className="w-4 h-4 text-sand-50 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              {theme === "light" ? <Moon className="w-3.5 h-3.5" /> : <Sun className="w-3.5 h-3.5 text-harvest-400" />}
+            </button>
+
+            <Link
+              href="/book-consultation"
+              className="group relative inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-forest-600 via-forest-500 to-harvest-600 text-sand-50 text-xs font-bold tracking-wider uppercase shadow-lg hover:shadow-forest-500/25 transition-all duration-300 hover:scale-[1.03]"
+              data-cursor-text="BOOK"
+            >
+              <Calendar className="w-3.5 h-3.5" />
+              <span>{language === "or" ? "ବୁକିଂ କରନ୍ତୁ" : "Book Consultation"}</span>
             </Link>
           </div>
 
@@ -154,11 +156,10 @@ export function Header() {
                   transition={{ delay: 0.1 + idx * 0.05 }}
                 >
                   <Link
-                    href={localizeHref(item.href)}
+                    href={item.href}
                     className="flex items-center justify-between text-xl font-display font-semibold text-sand-100 hover:text-harvest-400 py-2.5 border-b border-forest-800/40"
                   >
                     <span>{item.label}</span>
-                    <ArrowRight className="w-5 h-5 text-forest-500" />
                   </Link>
                 </motion.div>
               ))}
@@ -166,13 +167,13 @@ export function Header() {
 
             <div className="pt-6 border-t border-forest-800/60 flex flex-col gap-4">
               <Link
-                href={localizeHref("/start-project")}
+                href="/book-consultation"
                 className="w-full py-4 rounded-xl bg-gradient-to-r from-forest-600 to-harvest-600 text-center font-display font-bold text-sm tracking-wider uppercase text-sand-50 shadow-xl"
               >
-                {t("nav.startProject")}
+                {language === "or" ? "ବୁକିଂ କରନ୍ତୁ" : "Book Consultation"}
               </Link>
               <div className="flex justify-between items-center text-xs text-sand-200/60">
-                <span>© ODCONES PROJECTS</span>
+                <span>© ODCONS PROJECTS</span>
                 <span>Anshuman Mohapatra — Founder</span>
               </div>
             </div>

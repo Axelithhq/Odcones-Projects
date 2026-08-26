@@ -11,6 +11,26 @@
   --font-noto-oriya: 'Noto Sans Oriya', 'Inter', sans-serif;
 }
 
+/* Light Theme Variables */
+html.light-mode {
+  --bg-primary: #F8F9F5;
+  --bg-secondary: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --text-primary: #1A251E;
+  --text-secondary: #4A5D50;
+  --border-color: #D4DDD5;
+}
+
+/* Dark Theme Variables (Default) */
+html.dark-mode, html:not(.light-mode) {
+  --bg-primary: #06130B;
+  --bg-secondary: #0A1C12;
+  --bg-card: #0D2316;
+  --text-primary: #ECEFE6;
+  --text-secondary: #A3B8A8;
+  --border-color: rgba(82, 183, 136, 0.2);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,9 +40,10 @@
 html {
   scroll-behavior: smooth;
   font-family: var(--font-inter);
-  background-color: #06130B;
-  color: #ECEFE6;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 html[lang="or"] {
@@ -32,8 +53,8 @@ html[lang="or"] {
 
 body {
   min-height: 100vh;
-  background-color: #06130B;
-  color: #ECEFE6;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -43,7 +64,7 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #06130B;
+  background: var(--bg-primary);
 }
 ::-webkit-scrollbar-thumb {
   background: #1A4D2E;
@@ -53,7 +74,7 @@ body {
   background: #40916C;
 }
 
-/* Glassmorphism Utilities */
+/* Glassmorphism & Theme Cards */
 .glass-panel {
   background: rgba(12, 35, 20, 0.65);
   backdrop-filter: blur(16px);
@@ -61,11 +82,21 @@ body {
   border: 1px solid rgba(82, 183, 136, 0.15);
 }
 
+html.light-mode .glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #D4DDD5;
+}
+
 .glass-card {
   background: rgba(28, 30, 27, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+html.light-mode .glass-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
 }
 
 /* Read Aloud Active Speech Paragraph Highlight */
