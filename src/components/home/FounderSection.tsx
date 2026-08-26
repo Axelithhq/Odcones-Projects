@@ -21,7 +21,7 @@ export function FounderSection() {
               <div className="h-[460px] bg-gradient-to-t from-forest-950 via-forest-900 to-forest-800 flex flex-col items-center justify-end p-8 text-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#52B788_1px,transparent_1px)] [background-size:24px_24px]" />
                 
-                {/* Fallback Portrait Frame */}
+                {/* Founder Portrait Frame — Replace with <img> when real photo is provided */}
                 <div className="w-36 h-36 rounded-full bg-gradient-to-br from-forest-600 via-forest-800 to-harvest-600 p-1 mb-6 shadow-xl relative z-10">
                   <div className="w-full h-full bg-forest-950 rounded-full flex items-center justify-center text-harvest-400 font-display font-extrabold text-4xl">
                     AM
@@ -35,9 +35,6 @@ export function FounderSection() {
                   <span className="text-xs font-bold tracking-widest text-harvest-400 uppercase font-display block">
                     {t("founder.role")}
                   </span>
-                  <p className="text-[11px] text-sand-200/60 pt-1 font-mono">
-                    [ {t("founder.portraitReady")} ]
-                  </p>
                 </div>
               </div>
             </div>

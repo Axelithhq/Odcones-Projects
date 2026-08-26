@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Wrench, Smartphone, Droplets, Layers, Sprout, Navigation, BookOpen, Search, Info } from "lucide-react";
 import { useTranslation } from "@/lib/i18n";
 import { pickOr } from "@/lib/localize";

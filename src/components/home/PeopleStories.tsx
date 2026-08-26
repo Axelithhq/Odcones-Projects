@@ -19,7 +19,7 @@ const PEOPLE_STORIES: PersonStory[] = [
     name: "Subash Sahoo",
     roleKey: "people.roleFisher",
     location: "Hirakud Reservoir, Sambalpur",
-    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=600",
     quote: [
       "Floating HDPE cage farming changed our lives. Instead of hoping for wild fish, we manage 24 cages that produce predictable harvests every 6 months.",
       "ଫ୍ଲୋଟିଙ୍ଗ ଏଚଡିପିଇ କେଜ୍ ଚାଷ ଆମ ଜୀବନ ବଦଳାଇ ଦେଇଛି। ଜଙ୍ଗଲୀ ମାଛ ଆଶା କରିବା ବଦଳରେ, ଆମେ ୨୪ଟି କେଜ୍ ପରିଚାଳନା କରୁଛୁ ଯାହା ପ୍ରତି ୬ ମାସରେ ଆନୁମାନିକ ଫସଲ ଉତ୍ପାଦନ କରେ।"
@@ -30,7 +30,7 @@ const PEOPLE_STORIES: PersonStory[] = [
     name: "Kamala Pujari",
     roleKey: "people.roleGrower",
     location: "Koraput, Odisha",
-    image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=600",
     quote: [
       "Our polyhouses protect crops from heavy summer heat and frost. We now cultivate yellow capsicum and strawberries sold directly to retail buyers.",
       "ଆମର ପଲିହାଉସ ଫସଲକୁ ପ୍ରବଳ ଗ୍ରୀଷ୍ମ ପ୍ରବାହ ଓ କାକରରୁ ରକ୍ଷା କରେ। ଏବେ ଆମେ ହଳଦିଆ କ୍ୟାପ୍ସିକମ୍ ଓ ଷ୍ଟ୍ରବେରୀ ଚାଷ କରୁଛୁ ଯାହା ସିଧାସଳଖ ଖୁଚୁରା କ୍ରେତାଙ୍କୁ ବିକ୍ରି ହୁଏ।"
@@ -41,7 +41,7 @@ const PEOPLE_STORIES: PersonStory[] = [
     name: "Dharmananda Jena",
     roleKey: "people.roleOperator",
     location: "Bhadrak, Odisha",
-    image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=600",
     quote: [
       "With IoT oxygen sensors and zero-water exchange Biofloc tanks, we achieve superior fish growth with zero pathogen outbreaks.",
       "ଆଇଓଟି ଅମ୍ଳଜାନ ସେନ୍ସର ଓ ଶୂନ୍ୟ-ଜଳ ବିନିମୟ ବାୟୋଫ୍ଲୋକ୍ ଟାଙ୍କି ଦ୍ୱାରା, ଆମେ କୌଣସି ରୋଗଜୀବାଣୁ ଆକ୍ରମଣ ବିନା ଉତ୍ତମ ମାଛ ବୃଦ୍ଧି ହାସଲ କରୁ।"
@@ -78,8 +78,8 @@ export function PeopleStories() {
               data-cursor-text="STORY"
             >
               <div className="space-y-4">
-                <div className="h-56 rounded-2xl overflow-hidden relative">
-                  <img src={person.image} alt={person.name} className="w-full h-full object-cover" />
+                <div className="h-40 rounded-2xl overflow-hidden relative">
+                  <img src={person.image} alt={`Field scene: ${t(person.roleKey)} — ${person.location}`} className="w-full h-full object-cover" />
                   <div className="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-forest-950/80 backdrop-blur-md text-[10px] font-bold text-harvest-400">
                     {person.location}
                   </div>

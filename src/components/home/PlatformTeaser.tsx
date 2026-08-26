@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { Cpu, Activity, Droplets, Thermometer, ShieldCheck, ArrowRight, BarChart3, Smartphone } from "lucide-react";
 import { useTranslation } from "@/lib/i18n";
 

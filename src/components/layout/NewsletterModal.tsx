@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Mail, X, CheckCircle2, Sprout } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "@/lib/i18n";
 
 export function NewsletterModal() {
@@ -59,8 +60,23 @@ export function NewsletterModal() {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-forest-950/80 backdrop-blur-md">
-      <div className="relative w-full max-w-md p-8 rounded-3xl bg-forest-900 border border-forest-700 shadow-2xl space-y-6 text-sand-50">
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.3 }}
+        className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-forest-950/80 backdrop-blur-md"
+        onClick={handleDismiss}
+      >
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.95, y: 20 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          className="relative w-full max-w-md p-8 rounded-3xl bg-forest-900 border border-forest-700 shadow-2xl space-y-6 text-sand-50"
+          onClick={(e) => e.stopPropagation()}
+        >
         <button
           onClick={handleDismiss}
           className="absolute top-4 right-4 p-2 rounded-full bg-forest-950/60 border border-forest-700 text-sand-200 hover:text-rose-400"
@@ -127,7 +143,8 @@ export function NewsletterModal() {
             </form>
           </>
         )}
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </AnimatePresence>
   );
 }

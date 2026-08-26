@@ -2,7 +2,6 @@
 
 import React from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { ShieldCheck, Cpu, Waves, Sprout, ArrowUpRight } from "lucide-react";
 import { useTranslation } from "@/lib/i18n";
 
