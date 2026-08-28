@@ -10,6 +10,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        theme: {
+          base: "var(--bg-base)",
+          surface: "var(--bg-surface)",
+          elevated: "var(--bg-surface-elevated)",
+          muted: "var(--bg-surface-muted)",
+          text: "var(--text-primary)",
+          "text-muted": "var(--text-muted)",
+          border: "var(--border-subtle)",
+          accent: "var(--accent-primary)",
+          gold: "var(--accent-gold)",
+          water: "var(--accent-water)",
+        },
         forest: {
           950: "#06130B",
           900: "#0C2314",
