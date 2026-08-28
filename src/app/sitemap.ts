@@ -6,7 +6,7 @@ import { SERVICES } from '@/data/servicesData';
 import { ARTICLES } from '@/data/insightsData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://odcones.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://odcons.com';
 
   const staticRoutes = [
     '',

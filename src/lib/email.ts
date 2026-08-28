@@ -27,7 +27,7 @@ export function isSupabaseConfigured(): boolean {
 
 export async function sendEmail({ to, subject, html }: SendEmailPayload): Promise<{ success: boolean; id?: string }> {
   const apiKey = process.env.RESEND_API_KEY;
-  const fromEmail = process.env.RESEND_FROM_EMAIL || "contact@odcones.com";
+  const fromEmail = process.env.RESEND_FROM_EMAIL || "contact@odcons.com";
   const fromName = process.env.RESEND_FROM_NAME || "ODCONS PROJECTS";
 
   // If no Resend API Key is set, log email payload cleanly in development

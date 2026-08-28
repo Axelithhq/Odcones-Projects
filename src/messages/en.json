@@ -1,8 +1,8 @@
 {
   "meta": {
-    "siteName": "ODCONES PROJECTS",
+    "siteName": "ODCONS PROJECTS",
     "tagline": "We work where life grows.",
-    "description": "ODCONES PROJECTS develops and delivers integrated solutions across agriculture, fisheries, aquaculture, horticulture and sustainable rural development."
+    "description": "ODCONS PROJECTS develops and delivers integrated solutions across agriculture, fisheries, aquaculture, horticulture and sustainable rural development."
   },
   "nav": {
     "home": "Home",
@@ -23,10 +23,10 @@
     "companyTitle": "Company"
   },
   "hero": {
-    "badge": "ODCONES PROJECTS PLATFORM",
+    "badge": "ODCONS PROJECTS PLATFORM",
     "title1": "WE WORK WHERE",
     "title2": "LIFE GROWS.",
-    "subtitle": "From rain-fed fields to inland waters, ODCONES PROJECTS builds practical, climate-resilient systems across agriculture, fisheries, aquaculture, horticulture and rural livelihoods.",
+    "subtitle": "From rain-fed fields to inland waters, ODCONS PROJECTS builds practical, climate-resilient systems across agriculture, fisheries, aquaculture, horticulture and rural livelihoods.",
     "explore": "Explore Our Sectors",
     "discover": "Discover"
   },
@@ -34,14 +34,14 @@
     "badge": "OUR CORE PURPOSE",
     "title1": "Building Systems",
     "title2": "That Grow Beyond Today.",
-    "body": "ODCONES PROJECTS operates at the intersection of agriculture, the blue economy, precision technology, agri-infrastructure and community resilience. We engineer holistic, scalable solutions that empower smallholder farmers, fishing communities and institutional partners across India.",
-    "learnMore": "Learn More About ODCONES",
+    "body": "ODCONS PROJECTS operates at the intersection of agriculture, the blue economy, precision technology, agri-infrastructure and community resilience. We engineer holistic, scalable solutions that empower smallholder farmers, fishing communities and institutional partners across India.",
+    "learnMore": "Learn More About ODCONS",
     "pillar1Title": "Agri-Resilience",
     "pillar1Desc": "Climate-smart cropping & soil health",
     "pillar2Title": "Blue Economy",
     "pillar2Desc": "Biofloc, RAS & reservoir cages",
     "pillar3Title": "Agritech Integration",
-    "pillar3Desc": "ODCONES FieldOS & telemetry",
+    "pillar3Desc": "ODCONS FieldOS & telemetry",
     "visionBadge": "ECOSYSTEM VISION",
     "visionQuote": "\"Engineering better outcomes for the people who grow, produce and sustain our future.\""
   },
@@ -49,7 +49,7 @@
     "badge": "IMMERSIVE FIELD COMPOSITION",
     "title1": "FROM THE FIELD",
     "title2": "TO THE FUTURE",
-    "subtitle": "Where physical agricultural and aquatic environments stream field data into the ODCONES FieldOS management platform.",
+    "subtitle": "Where physical agricultural and aquatic environments stream field data into the ODCONS FieldOS management platform.",
     "sectorSpec": "SECTOR SPECIFICATION",
     "heroObject": "PRIMARY HERO OBJECT & EQUIPMENT",
     "dataPipeline": "DATA STREAM PIPELINE",
@@ -63,7 +63,7 @@
   },
   "fieldos": {
     "badge": "FIELDOS PLATFORM",
-    "title": "ODCONES FieldOS",
+    "title": "ODCONS FieldOS",
     "subtitle": "Digital field management for mobile officers, project managers and executives.",
     "demoNote": "Demo interface with sample data",
     "demoBadge": "DEMO",
@@ -98,18 +98,18 @@
   "fieldKit": {
     "badge": "FIELD EQUIPMENT & TELEMETRY KIT",
     "title": "What Moves The Field",
-    "subtitle": "Every tool in our physical field kit helps ODCONES collect ground-truth data across farms, ponds and watersheds."
+    "subtitle": "Every tool in our physical field kit helps ODCONS collect ground-truth data across farms, ponds and watersheds."
   },
   "ecosystem": {
     "badge": "INTEGRATED SYSTEM ARCHITECTURE",
     "title": "One Ecosystem. Many Possibilities.",
-    "subtitle": "ODCONES PROJECTS operates across interconnected agricultural and aquatic systems rather than isolated projects.",
+    "subtitle": "ODCONS PROJECTS operates across interconnected agricultural and aquatic systems rather than isolated projects.",
     "impact": "TOTAL SYSTEM IMPACT",
     "impactText": "Building systems that grow beyond today.",
     "exploreAll": "Explore All Sectors",
     "pipelineStage": "PIPELINE STAGE",
     "outcomeImpact": "MEASURABLE OUTCOME IMPACT",
-    "dataNote": "Outcome figures are illustrative placeholders, editable in the content data layer, until verified by ODCONES PROJECTS."
+    "dataNote": "Outcome figures are illustrative placeholders, editable in the content data layer, until verified by ODCONS PROJECTS."
   },
   "people": {
     "badge": "HUMAN STORIES FROM THE FIELD",
@@ -137,7 +137,7 @@
     "title": "Impact Built On The Ground",
     "subtitle": "Wherever real numbers are yet to be verified by the organization, we show them as editable placeholders or 'Data coming soon' rather than invented figures.",
     "comingSoon": "DATA COMING SOON",
-    "dataNote": "Figures below are illustrative placeholders, editable in the content data layer, until verified by ODCONES PROJECTS.",
+    "dataNote": "Figures below are illustrative placeholders, editable in the content data layer, until verified by ODCONS PROJECTS.",
     "metricLabel": "METRIC",
     "verified": "VERIFIED",
     "placeholder": "PLACEHOLDER",
@@ -158,16 +158,16 @@
 "districts": "PROJECT FOOTPRINTS"
   },
   "founder": {
-    "badge": "THE VISION BEHIND ODCONES",
+    "badge": "THE VISION BEHIND ODCONS",
     "title0": "Building Systems",
     "title1": "Grounded in the Field,",
     "title2": "Engineered for the Future.",
-    "quote": "ODCONES PROJECTS was built around a simple belief — development should create systems that remain productive, sustainable and useful long after a project is completed.",
+    "quote": "ODCONS PROJECTS was built around a simple belief — development should create systems that remain productive, sustainable and useful long after a project is completed.",
     "name": "Anshuman Mohapatra",
     "role": "Founder",
-    "roleFull": "Founder, ODCONES PROJECTS",
-    "para1": "Under the leadership of Founder Anshuman Mohapatra, ODCONES PROJECTS was established to bridge the gap between high-level policy planning and ground-level execution in agricultural, aquatic and watershed landscapes.",
-    "para2": "By respecting traditional wisdom while introducing precision telemetry, scientific seed and feed protocols and durable infrastructure, ODCONES delivers measurable, verifiable outcomes for smallholder farmers and fishing communities across India.",
+    "roleFull": "Founder, ODCONS PROJECTS",
+    "para1": "Under the leadership of Founder Anshuman Mohapatra, ODCONS PROJECTS was established to bridge the gap between high-level policy planning and ground-level execution in agricultural, aquatic and watershed landscapes.",
+    "para2": "By respecting traditional wisdom while introducing precision telemetry, scientific seed and feed protocols and durable infrastructure, ODCONS delivers measurable, verifiable outcomes for smallholder farmers and fishing communities across India.",
     "portraitReady": "Founder portrait will be displayed here when supplied by the project owner."
   },
   "cta": {
@@ -176,9 +176,9 @@
     "desc": "Have a project in agriculture, fisheries, aquaculture, horticulture or sustainable development? Let's explore what we can build together."
   },
   "about": {
-    "badge": "ABOUT ODCONES PROJECTS",
+    "badge": "ABOUT ODCONS PROJECTS",
     "title": "Engineering Sustainable Rural Futures",
-    "subtitle": "Founded by {founder}, ODCONES PROJECTS is dedicated to building agricultural, aquatic and watershed systems that grow beyond today.",
+    "subtitle": "Founded by {founder}, ODCONS PROJECTS is dedicated to building agricultural, aquatic and watershed systems that grow beyond today.",
     "visionTitle": "Our Corporate Vision",
     "vision": "To be India's premier integrated technology and project execution platform across Agriculture, Fisheries, Aquaculture and Soil-Water conservation — restoring natural ecosystems while maximizing rural economic productivity.",
     "missionTitle": "Our Operational Mission",
@@ -201,7 +201,7 @@
     "backToProjects": "Back to Projects",
     "overview": "Executive Overview",
     "challenge": "The Challenge",
-    "solution": "The ODCONES Solution",
+    "solution": "The ODCONS Solution",
     "approach": "Our Approach",
     "implementation": "Implementation",
     "technology": "Technology Applied",
@@ -215,7 +215,7 @@
     "statusInProgress": "In Progress",
     "statusUpcoming": "Upcoming",
     "sector": "Sector",
-    "metricsNote": "Impact figures are sample placeholders, editable in the content data layer, until verified by ODCONES PROJECTS."
+    "metricsNote": "Impact figures are sample placeholders, editable in the content data layer, until verified by ODCONS PROJECTS."
   },
   "services": {
     "badge": "WHAT WE DO",
@@ -227,16 +227,16 @@
     "scopeTitle": "Service Scope & Execution Architecture",
     "coreDeliverables": "Core Deliverables",
     "contractService": "Contract This Service",
-    "contractDesc": "ODCONES provides complete project lifecycle execution across government schemes, private enterprise and institutional programs.",
+    "contractDesc": "ODCONS provides complete project lifecycle execution across government schemes, private enterprise and institutional programs.",
     "initiateProposal": "Initiate Service Proposal"
   },
   "sectors": {
     "badge": "SECTOR DOMAIN",
     "title": "Sector Domains",
-    "subtitle": "Explore the interconnected systems ODCONES works across.",
+    "subtitle": "Explore the interconnected systems ODCONS works across.",
     "visionTitle": "Sector Vision & Strategic Capability",
     "challengesTitle": "Field Challenges Addressed",
-    "approachTitle": "The ODCONES Execution Model",
+    "approachTitle": "The ODCONS Execution Model",
     "relatedProjects": "Featured Case Studies",
     "viewCaseStudy": "View Case Study",
     "startSectorProject": "Start a Project",
@@ -244,7 +244,7 @@
     "startSector": "Start a {sector} Project",
     "startSectorDesc": "Consult with our agronomy, blue economy and engineering design teams today.",
     "stats": "Key Indicators",
-    "statsNote": "Indicators are sample placeholders, editable in the content data layer, until verified by ODCONES PROJECTS."
+    "statsNote": "Indicators are sample placeholders, editable in the content data layer, until verified by ODCONS PROJECTS."
   },
   "insights": {
     "badge": "KNOWLEDGE HUB",
@@ -287,10 +287,10 @@
   },
   "contact": {
     "badge": "CONTACT",
-    "title": "Get In Touch With ODCONES",
+    "title": "Get In Touch With ODCONS",
     "subtitle": "Reach out to our project team for agricultural, fisheries, aquaculture or infrastructure proposals.",
     "hqTitle": "Headquarters",
-    "hqName": "ODCONES PROJECTS",
+    "hqName": "ODCONS PROJECTS",
     "hqAddress": "Plot No. 452, Infocity Rural Tech Hub, Patia, Bhubaneswar, Odisha — 751024",
     "emailLabel": "Email",
     "phoneLabel": "Phone",
@@ -330,7 +330,7 @@
     "submit": "Confirm & Submit Proposal",
     "submitting": "Submitting Proposal...",
     "successTitle": "Project Enquiry Received",
-    "successDesc": "Thank you for submitting your project requirements. An ODCONES senior domain expert will review your submission and reach out within 24 business hours.",
+    "successDesc": "Thank you for submitting your project requirements. An ODCONS senior domain expert will review your submission and reach out within 24 business hours.",
     "successLocal": "Your enquiry was saved in this browser. Connect a database (see .env.example) to receive it server-side.",
     "browseProjects": "Browse Existing Case Studies",
     "step1Title": "What type of entity are you representing?",
@@ -355,7 +355,7 @@
   },
   "platform": {
     "badge": "FIELDOS PLATFORM",
-    "title": "ODCONES FieldOS Dashboard",
+    "title": "ODCONS FieldOS Dashboard",
     "subtitle": "Integrated field telemetry, IoT aeration control and beneficiary tracking portal.",
     "demoBanner": "Sample data shown for demonstration. Live values appear once field telemetry is connected.",
     "gatewaysOnline": "IoT Gateways Online",
@@ -395,7 +395,7 @@
   },
   "notFound": {
     "title": "This path hasn't been cultivated yet.",
-    "desc": "The page or resource you are looking for may have moved or does not exist in the ODCONES platform directory.",
+    "desc": "The page or resource you are looking for may have moved or does not exist in the ODCONS platform directory.",
     "backHome": "Return Home",
     "badge": "ERROR 404 • UNSETTLED FIELD"
   },
@@ -404,27 +404,27 @@
     "title": "Privacy Policy",
     "updated": "Last updated",
     "bodyTitle": "How we handle your information",
-    "para1": "ODCONES PROJECTS collects only the information you choose to share through our contact and project enquiry forms: your name, organization, email, phone and project details.",
-    "para2": "We use this information solely to respond to your enquiry, evaluate your project request and communicate about ODCONES PROJECTS services. We do not sell or rent your personal data to third parties.",
+    "para1": "ODCONS PROJECTS collects only the information you choose to share through our contact and project enquiry forms: your name, organization, email, phone and project details.",
+    "para2": "We use this information solely to respond to your enquiry, evaluate your project request and communicate about ODCONS PROJECTS services. We do not sell or rent your personal data to third parties.",
     "para3": "If no live database or email service is configured, form submissions are stored only in your browser for demo purposes and are not transmitted anywhere.",
-    "contactUs": "For privacy questions, contact us at info@odconesprojects.org."
+    "contactUs": "For privacy questions, contact us at info@odconsprojects.org."
   },
   "terms": {
     "badge": "POLICIES",
     "title": "Terms of Service",
     "updated": "Last updated",
     "bodyTitle": "Terms of use",
-    "para1": "The content on this website is provided for general information about ODCONES PROJECTS and its services. While we work hard to keep it accurate, we do not guarantee completeness or suitability for any particular purpose.",
-    "para2": "Illustrative project examples and metrics are shown as placeholders until verified by ODCONES PROJECTS. They do not constitute verified claims or guarantees of results.",
+    "para1": "The content on this website is provided for general information about ODCONS PROJECTS and its services. While we work hard to keep it accurate, we do not guarantee completeness or suitability for any particular purpose.",
+    "para2": "Illustrative project examples and metrics are shown as placeholders until verified by ODCONS PROJECTS. They do not constitute verified claims or guarantees of results.",
     "para3": "By submitting a project enquiry, you agree that we may contact you using the details provided to discuss your request.",
-    "contactUs": "Questions? Contact us at info@odconesprojects.org."
+    "contactUs": "Questions? Contact us at info@odconsprojects.org."
   },
   "footer": {
     "tagline": "Building sustainable systems across agriculture, fisheries, aquaculture and rural development — we work where life grows.",
     "subscribeTitle": "Subscribe to Industry Insights",
     "subscribePlaceholder": "Enter your email address",
     "subscribeBtn": "Subscribe",
-    "subscribed": "Thank you for subscribing to ODCONES Insights!",
+    "subscribed": "Thank you for subscribing to ODCONS Insights!",
     "subscribeNote": "Subscriptions are stored locally until an email service is connected.",
     "sectorsTitle": "Sectors",
     "companyTitle": "Company & Services",
@@ -484,7 +484,7 @@
  "lock": "Lock CMS",
  "save": "Save Changes",
  "saved": "Bilingual Content Saved Successfully!",
- "portalTitle": "ODCONES CMS MANAGEMENT PORTAL",
+ "portalTitle": "ODCONS CMS MANAGEMENT PORTAL",
  "editingEntity": "Editing Entity",
  "tabProjects": "Projects",
  "tabServices": "Services",

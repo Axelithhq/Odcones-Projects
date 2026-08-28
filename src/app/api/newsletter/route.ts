@@ -42,8 +42,8 @@ export async function POST(req: NextRequest) {
   if (isEmailConfigured()) {
     await sendEmail({
       to: process.env.CONTACT_EMAIL!,
-      subject: "[ODCONES] New Newsletter Subscriber",
-      html: `<p>A new subscriber joined the ODCONES Insights newsletter: <strong>${escapeHtml(email)}</strong></p>`,
+      subject: "[ODCONS] New Newsletter Subscriber",
+      html: `<p>A new subscriber joined the ODCONS Insights newsletter: <strong>${escapeHtml(email)}</strong></p>`,
     });
   }
 

@@ -7,8 +7,8 @@ import { generateLangParams, requireLang, getServerT } from "@/lib/page-utils";
 import { ShieldCheck, BarChart3, TrendingUp, Users, Droplets } from "lucide-react";
 
 export const metadata = {
-  title: "Impact & Metrics | ODCONES PROJECTS",
-  description: "Impact metrics and community footprints reported by ODCONES PROJECTS. Figures shown as placeholders until verified by the organization.",
+  title: "Impact & Metrics | ODCONS PROJECTS",
+  description: "Impact metrics and community footprints reported by ODCONS PROJECTS. Figures shown as placeholders until verified by the organization.",
 };
 
 export function generateStaticParams() {

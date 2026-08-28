@@ -89,7 +89,7 @@ const FIELD_SCENES: FieldScene[] = [
     title: ["FieldOS Data Synchronization", "ଫିଲ୍ଡଓଏସ୍ ତଥ୍ୟ ସିଙ୍କ୍ରୋନାଇଜେସନ"],
     category: ["Field Operations", "କ୍ଷେତ୍ର କାର୍ଯ୍ୟ"],
     desc: [
-      "Field officers log daily beneficiary payouts, FPO crop ledgers, and sensor telemetry logs to the central ODCONES FieldOS server.",
+      "Field officers log daily beneficiary payouts, FPO crop ledgers, and sensor telemetry logs to the central ODCONS FieldOS server.",
       "କ୍ଷେତ୍ର ଅଧିକାରୀମାନେ ଦୈନିକ ଲାଭଭୋଗୀ ପଇସା ବଣ୍ଟନ, ଏଫପିଓ ଫସଲ ହିସାବ ଓ ସେନ୍ସର ଟେଲିମେଟ୍ରି ଲଗ୍ କେନ୍ଦ୍ରୀୟ ଓଡକୋନ୍ସ ଫିଲ୍ଡଓଏସ୍ ସର୍ଭରରେ ସଞ୍ଚୟ କରନ୍ତି।"
     ],
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1200",

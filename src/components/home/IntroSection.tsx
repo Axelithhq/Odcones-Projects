@@ -28,7 +28,7 @@ export function IntroSection() {
             </h2>
 
             <p className="text-sand-200/80 text-base sm:text-lg leading-relaxed max-w-2xl font-light">
-              ODCONES PROJECTS operates at the intersection of <strong className="text-sand-50 font-semibold">Agriculture, Blue Economy, Precision Technology, Agri-Infrastructure, and Community Resilience</strong>. We engineer holistic, scaleable solutions that empower smallholder farmers, fishing communities, and institutional partners across India.
+              ODCONS PROJECTS operates at the intersection of <strong className="text-sand-50 font-semibold">Agriculture, Blue Economy, Precision Technology, Agri-Infrastructure, and Community Resilience</strong>. We engineer holistic, scaleable solutions that empower smallholder farmers, fishing communities, and institutional partners across India.
             </p>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
@@ -47,7 +47,7 @@ export function IntroSection() {
               <div className="p-4 rounded-2xl bg-forest-900/40 border border-forest-700/30 space-y-1 col-span-2 sm:col-span-1">
                 <Cpu className="w-5 h-5 text-forest-300" />
                 <h4 className="font-bold text-sm text-sand-50">Agritech Integration</h4>
-                <p className="text-xs text-sand-200/60">ODCONES FieldOS & telemetry</p>
+                <p className="text-xs text-sand-200/60">ODCONS FieldOS & telemetry</p>
               </div>
             </div>
 
@@ -57,7 +57,7 @@ export function IntroSection() {
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-forest-800 hover:bg-forest-700 border border-forest-500/40 text-sand-50 text-xs font-bold uppercase tracking-wider transition-all"
                 data-cursor-text="ABOUT"
               >
-                <span>Learn More About ODCONES</span>
+                <span>Learn More About ODCONS</span>
                 <ArrowUpRight className="w-4 h-4 text-harvest-400" />
               </Link>
             </div>

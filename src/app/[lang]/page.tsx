@@ -19,8 +19,8 @@ import { CustomCursor } from "@/components/layout/CustomCursor";
 import { generateLangParams, requireLang } from "@/lib/page-utils";
 
 export const metadata = {
-  title: "ODCONES PROJECTS | Where Land, Water & People Meet",
-  description: "ODCONES PROJECTS: Leading Agriculture, Horticulture, Fisheries, Aquaculture, Animal Husbandry & Rural Development Digital Platform.",
+  title: "ODCONS PROJECTS | Where Land, Water & People Meet",
+  description: "ODCONS PROJECTS: Leading Agriculture, Horticulture, Fisheries, Aquaculture, Animal Husbandry & Rural Development Digital Platform.",
 };
 
 export function generateStaticParams() {
@@ -54,7 +54,7 @@ export default async function HomePage(props: { params: Promise<{ lang: string }
       {/* 07. ONE CONNECTED ECOSYSTEM (Pipeline Visualizer) */}
       <OneEcosystem />
 
-      {/* 08. ODCONES FIELDOS (3D Spatial Device Showcase) */}
+      {/* 08. ODCONS FIELDOS (3D Spatial Device Showcase) */}
       <DigitalField />
 
       {/* 10. REAL FIELD → DIGITAL FIELD (Telemetry & Advisory Preview) */}

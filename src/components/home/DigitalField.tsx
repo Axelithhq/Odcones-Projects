@@ -19,7 +19,7 @@ export function DigitalField() {
           </div>
 
           <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-sand-50 tracking-tight">
-            ODCONES FieldOS™ Spatial Platform
+            ODCONS FieldOS™ Spatial Platform
           </h2>
 
           <p className="text-sand-200/80 text-sm sm:text-base leading-relaxed font-light">
@@ -80,7 +80,7 @@ export function DigitalField() {
             <div className="flex justify-between items-center border-b border-forest-800/80 pb-4">
               <div>
                 <span className="text-[10px] font-bold text-forest-400 uppercase">GOOD MORNING, FIELD OFFICER</span>
-                <h3 className="font-display font-extrabold text-lg text-sand-50">ODCONES FieldOS Hub</h3>
+                <h3 className="font-display font-extrabold text-lg text-sand-50">ODCONS FieldOS Hub</h3>
               </div>
               <div className="text-right">
                 <span className="font-mono text-xs text-harvest-400 font-bold">28.4°C | Clear Sky</span>

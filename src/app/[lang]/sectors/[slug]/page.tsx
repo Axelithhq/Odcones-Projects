@@ -40,7 +40,7 @@ export default async function SectorDetailPage(props: { params: Promise<{ lang: 
   const stats = pickOrArray(sector.stats, sector.stats_or, lang);
   const technologies = pickOrArray(sector.technologies, sector.technologies_or, lang);
   const challenges = pickOrArray(sector.challenges, sector.challenges_or, lang);
-  const odconesApproach = pickOrArray(sector.odconesApproach, sector.odconesApproach_or, lang);
+  const odconsApproach = pickOrArray(sector.odconsApproach, sector.odconsApproach_or, lang);
 
   const relatedProjects = FEATURED_PROJECTS.filter(
     (p) => p.sector.toLowerCase() === sector.name.toLowerCase() || p.sector.toLowerCase() === sector.id.toLowerCase()
@@ -119,7 +119,7 @@ export default async function SectorDetailPage(props: { params: Promise<{ lang: 
             </div>
           )}
 
-          {/* Challenges & ODCONES Solution Approach */}
+          {/* Challenges & ODCONS Solution Approach */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="p-8 rounded-3xl bg-forest-900/40 border border-forest-800/60 space-y-4">
               <h3 className="font-display font-extrabold text-xl text-sand-50 uppercase">
@@ -140,7 +140,7 @@ export default async function SectorDetailPage(props: { params: Promise<{ lang: 
                 {t("sectors.approachTitle")}
               </h3>
               <ul className="space-y-3 text-xs text-sand-200/90">
-                {odconesApproach.map((ap, idx) => (
+                {odconsApproach.map((ap, idx) => (
                   <li key={idx} className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-harvest-400 flex-shrink-0 mt-0.5" />
                     <span className="leading-relaxed">{ap}</span>

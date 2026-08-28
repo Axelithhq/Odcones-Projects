@@ -6,8 +6,8 @@ import { generateLangParams, requireLang, getServerT } from "@/lib/page-utils";
 import { FileText } from "lucide-react";
 
 export const metadata = {
-  title: "Terms of Service | ODCONES PROJECTS",
-  description: "Terms of service for using the ODCONES PROJECTS website and submitting project enquiries.",
+  title: "Terms of Service | ODCONS PROJECTS",
+  description: "Terms of service for using the ODCONS PROJECTS website and submitting project enquiries.",
 };
 
 export function generateStaticParams() {

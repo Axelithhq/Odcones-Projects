@@ -25,8 +25,8 @@ export const SERVICES: ServiceInfo[] = [
     category_or: "କୌଶଳଗତ ପରାମର୍ଶ",
     shortDesc: "Feasibility studies, Detailed Project Reports (DPR), financial modeling, and environmental impact assessments for government and corporate agri-projects.",
     shortDesc_or: "ସରକାରୀ ଏବଂ କର୍ପୋରେଟ୍ କୃଷି ପ୍ରକଳ୍ପ ପାଇଁ ସମ୍ଭାବ୍ୟତା ଅଧ୍ୟୟନ, ବିସ୍ତୃତ ପ୍ରକଳ୍ପ ରିପୋର୍ଟ (DPR), ଆର୍ଥିକ ମଡେଲିଂ ଓ ପରିବେଶ ପ୍ରଭାବ ମୂଲ୍ୟାଙ୍କନ।",
-    fullDesc: "ODCONES provides rigorous macro and micro-level project planning for mega agricultural, fisheries, and rural infrastructure projects. Our team prepares DPRs aligned with NABARD, World Bank, and Ministry guidelines.",
-    fullDesc_or: "ODCONES କୃଷି, ମତ୍ସ୍ୟଚାଷ ଓ ଗ୍ରାମୀଣ ଭିତ୍ତିଭୂମି ପ୍ରକଳ୍ପ ପାଇଁ କଠୋର ମାକ୍ରୋ ଓ ମାଇକ୍ରୋ ସ୍ତରୀୟ ପ୍ରକଳ୍ପ ନିୟୋଜନ କରେ। ଆମ ଟିମ୍ NABARD, ବିଶ୍ୱ ବ୍ୟାଙ୍କ ଓ ମନ୍ତ୍ରଣାଳୟର ନିର୍ଦ୍ଦେଶାବଳୀ ସହିତ ସମନ୍ୱିତ DPR ପ୍ରସ୍ତୁତ କରେ।",
+    fullDesc: "ODCONS provides rigorous macro and micro-level project planning for mega agricultural, fisheries, and rural infrastructure projects. Our team prepares DPRs aligned with NABARD, World Bank, and Ministry guidelines.",
+    fullDesc_or: "ODCONS କୃଷି, ମତ୍ସ୍ୟଚାଷ ଓ ଗ୍ରାମୀଣ ଭିତ୍ତିଭୂମି ପ୍ରକଳ୍ପ ପାଇଁ କଠୋର ମାକ୍ରୋ ଓ ମାଇକ୍ରୋ ସ୍ତରୀୟ ପ୍ରକଳ୍ପ ନିୟୋଜନ କରେ। ଆମ ଟିମ୍ NABARD, ବିଶ୍ୱ ବ୍ୟାଙ୍କ ଓ ମନ୍ତ୍ରଣାଳୟର ନିର୍ଦ୍ଦେଶାବଳୀ ସହିତ ସମନ୍ୱିତ DPR ପ୍ରସ୍ତୁତ କରେ।",
     iconName: "FileText",
     deliverables: [
       "GIS-based Land & Water Feasibility Reports",
@@ -77,8 +77,8 @@ export const SERVICES: ServiceInfo[] = [
     category_or: "ବ୍ଲୁ ଇକୋନୋମି",
     shortDesc: "Reservoir cage culture installations, modern fish landing centers, auction halls, and riverine ecosystem enhancement.",
     shortDesc_or: "ଜଳାଶୟ କେଜ୍ ସଂସ୍ଥାପନ, ଆଧୁନିକ ମାଛ ଉତାରିବା କେନ୍ଦ୍ର, ନିଲାମ ହଲ୍ ଓ ନଦୀ ଇକୋସିଷ୍ଟମ୍ ଉନ୍ନୟନ।",
-    fullDesc: "ODCONES modernized capture fisheries through floating cage setups in major water reservoirs and state-of-the-art landing docks equipped with solar ice plants and insulated transport vehicles.",
-    fullDesc_or: "ODCONES ପ୍ରମୁଖ ଜଳାଶୟଗୁଡ଼ିକରେ ଫ୍ଲୋଟିଙ୍ଗ କେଜ୍ ଏବଂ ସୌର ବରଫ କାରଖାନା ଓ ଇନସୁଲେଟେଡ୍ ପରିବହନ ଯାନ ସହିତ ଅତ୍ୟାଧୁନିକ ଲ୍ୟାଣ୍ଡିଂ ଡକ୍ ନିର୍ମାଣ କରି ମତ୍ସ୍ୟଜୀବୀମାନଙ୍କ ଜୀବିକାକୁ ଆଧୁନିକୀକରଣ କଲା।",
+    fullDesc: "ODCONS modernized capture fisheries through floating cage setups in major water reservoirs and state-of-the-art landing docks equipped with solar ice plants and insulated transport vehicles.",
+    fullDesc_or: "ODCONS ପ୍ରମୁଖ ଜଳାଶୟଗୁଡ଼ିକରେ ଫ୍ଲୋଟିଙ୍ଗ କେଜ୍ ଏବଂ ସୌର ବରଫ କାରଖାନା ଓ ଇନସୁଲେଟେଡ୍ ପରିବହନ ଯାନ ସହିତ ଅତ୍ୟାଧୁନିକ ଲ୍ୟାଣ୍ଡିଂ ଡକ୍ ନିର୍ମାଣ କରି ମତ୍ସ୍ୟଜୀବୀମାନଙ୍କ ଜୀବିକାକୁ ଆଧୁନିକୀକରଣ କଲା।",
     iconName: "Fish",
     deliverables: [
       "High-Density Reservoir Floating Cages",
@@ -315,13 +315,13 @@ export const SERVICES: ServiceInfo[] = [
     fullDesc_or: "ପୋଖରୀ ଜଳ ଅମ୍ଳଜାନ ଟେଲିମେଟ୍ରିରୁ ଆରମ୍ଭ କରି କ୍ଷେତ୍ର କର୍ମଚାରୀ GPS ଟ୍ରାକିଂ ଓ ଶସ୍ୟ ରୋଗ ନିର୍ଣ୍ଣୟ ପର୍ଯ୍ୟନ୍ତ ଗ୍ରାମୀଣ ପରିଚାଳନାରେ ଅତ୍ୟାଧୁନିକ ଟେକ୍ନୋଲୋଜି ପ୍ରୟୋଗ।",
     iconName: "Cpu",
     deliverables: [
-      "ODCONES FieldOS Platform Deployment",
+      "ODCONS FieldOS Platform Deployment",
       "IoT Sensor & Gateway Installation",
       "Custom Mobile Survey Apps",
       "Automated SMS/WhatsApp Farmer Advisory"
     ],
     deliverables_or: [
-      "ODCONES ଫିଲ୍ଡଓଏସ୍ ପ୍ଲାଟଫର୍ମ କାର୍ଯ୍ୟନିର୍ବାହ",
+      "ODCONS ଫିଲ୍ଡଓଏସ୍ ପ୍ଲାଟଫର୍ମ କାର୍ଯ୍ୟନିର୍ବାହ",
       "IoT ସେନ୍ସର ଓ ଗେଟ୍ୱେ ସଂସ୍ଥାପନ",
       "ବିଶେଷ ମୋବାଇଲ୍ ସର୍ଭେ ଆପ୍",
       "ସ୍ୱୟଂଚାଳିତ SMS/WhatsApp ଚାଷୀ ପରାମର୍ଶ"

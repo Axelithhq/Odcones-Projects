@@ -6,8 +6,8 @@ import { generateLangParams, requireLang, getServerT } from "@/lib/page-utils";
 import { ShieldCheck } from "lucide-react";
 
 export const metadata = {
-  title: "Privacy Policy | ODCONES PROJECTS",
-  description: "Privacy policy for ODCONES PROJECTS website and project enquiry forms.",
+  title: "Privacy Policy | ODCONS PROJECTS",
+  description: "Privacy policy for ODCONS PROJECTS website and project enquiry forms.",
 };
 
 export function generateStaticParams() {

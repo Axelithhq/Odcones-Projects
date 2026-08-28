@@ -41,7 +41,7 @@ export const TranslationProvider = ({
       document.documentElement.lang = routeLang;
       return;
     }
-    const saved = localStorage.getItem("odcones_lang");
+    const saved = localStorage.getItem("odcons_lang");
     if (saved === "en" || saved === "or") {
       setLanguageState(saved);
       document.documentElement.lang = saved;
@@ -51,7 +51,7 @@ export const TranslationProvider = ({
   }, [pathname]);
 
   const setLanguage = (lang: Language) => {
-    localStorage.setItem("odcones_lang", lang);
+    localStorage.setItem("odcons_lang", lang);
     const routeLang = getLocaleFromPath(pathname);
     if (routeLang && routeLang !== lang) {
       document.documentElement.lang = lang;

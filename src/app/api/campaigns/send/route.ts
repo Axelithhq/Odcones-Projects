@@ -5,7 +5,7 @@ import { sendEmail } from "@/lib/email";
 export async function POST(req: Request) {
   try {
     const cookieStore = await cookies();
-    const session = cookieStore.get("odcones_admin_session")?.value;
+    const session = cookieStore.get("odcons_admin_session")?.value;
     if (!session) {
       return NextResponse.json({ error: "Unauthorized — admin session required" }, { status: 401 });
     }

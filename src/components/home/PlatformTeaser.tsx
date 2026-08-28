@@ -21,14 +21,14 @@ export function PlatformTeaser() {
             </div>
 
             <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-sand-50 tracking-tight leading-[1.1]">
-              ODCONES FieldOS <br />
+              ODCONS FieldOS <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-aqua-400 via-forest-300 to-harvest-400">
                 Digital Monitoring Hub
               </span>
             </h2>
 
             <p className="text-sand-200/80 text-sm sm:text-base leading-relaxed">
-              ODCONES FieldOS provides real-time telemetry, IoT sensor integration, beneficiary management, and satellite crop health analytics for large-scale agricultural and aquaculture interventions.
+              ODCONS FieldOS provides real-time telemetry, IoT sensor integration, beneficiary management, and satellite crop health analytics for large-scale agricultural and aquaculture interventions.
             </p>
 
             <div className="space-y-3 pt-2">

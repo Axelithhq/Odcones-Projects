@@ -17,7 +17,7 @@ export async function generateMetadata({
     notFound();
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://odcones.com";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://odcons.com";
   const isOr = lang === "or";
 
   const languages = Object.fromEntries(
@@ -27,10 +27,10 @@ export async function generateMetadata({
   return {
     title: isOr
       ? "ଓଡକୋନ୍ସ ପ୍ରୋଜେକ୍ଟସ | ସ୍ଥାୟୀ କୃଷି ଓ ବ୍ଲୁ ଇକୋନୋମି"
-      : "ODCONES PROJECTS | Sustainable Agriculture & Blue Economy",
+      : "ODCONS PROJECTS | Sustainable Agriculture & Blue Economy",
     description: isOr
       ? "ଓଡକୋନ୍ସ ପ୍ରୋଜେକ୍ଟସ: କୃଷି, ଉଦ୍ୟାନ କୃଷି, ମତ୍ସ୍ୟ, ଜଳଚର ଚାଷ, ପଶୁପାଳନ ଓ ଗ୍ରାମୀଣ ବିକାଶର ଅଗ୍ରଣୀ ଡିଜିଟାଲ ପ୍ଲାଟଫର୍ମ।"
-      : "ODCONES PROJECTS: Leading Agriculture, Horticulture, Fisheries, Aquaculture, Animal Husbandry & Rural Development Digital Platform.",
+      : "ODCONS PROJECTS: Leading Agriculture, Horticulture, Fisheries, Aquaculture, Animal Husbandry & Rural Development Digital Platform.",
     alternates: {
       canonical: `${baseUrl}/${lang}`,
       languages,

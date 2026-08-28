@@ -21,8 +21,8 @@ export interface SectorInfo {
   technologies_or?: string[];
   challenges: { title: string; desc: string }[];
   challenges_or?: { title: string; desc: string }[];
-  odconesApproach: string[];
-  odconesApproach_or?: string[];
+  odconsApproach: string[];
+  odconsApproach_or?: string[];
 }
 
 export const SECTORS: SectorInfo[] = [
@@ -39,8 +39,8 @@ export const SECTORS: SectorInfo[] = [
     badgeBg: "rgba(64, 145, 108, 0.15)",
     shortDesc: "Transforming smallholder farming through climate-resilient practices, soil carbon enhancement, and high-yield agricultural infrastructure.",
     shortDesc_or: "କ୍ଷୁଦ୍ର ଓ ନାମମାତ୍ର ଚାଷୀମାନଙ୍କ ପାଇଁ ଜଳବାୟୁ ସହନଶୀଳ କୃଷି, ମୃତ୍ତିକା ସ୍ୱାସ୍ଥ୍ୟ ସୁରକ୍ଷା ଓ ଆଧୁନିକ କୃଷି ଭିତ୍ତିଭୂମି।",
-    longDesc: "ODCONES PROJECTS delivers end-to-end agricultural interventions designed for climate vulnerability, low seed-replacement rates, and fragmented landholdings.",
-    longDesc_or: "ODCONES PROJECTS ଜଳବାୟୁ ଭୁଷ୍କୋଣତା, କମ୍ ବୀଜ ବଦଳ ହାର ଓ ଛିନ୍ନଭିନ୍ନ ଜମି ବିଭାଜନ ପାଇଁ ଉପଯୁକ୍ତ ଏଣ୍ଡ-ଟୁ-ଏଣ୍ଡ କୃଷି ପ୍ରତିଷେଧକ କାର୍ଯ୍ୟକ୍ରମ ପ୍ରଦାନ କରେ।",
+    longDesc: "ODCONS PROJECTS delivers end-to-end agricultural interventions designed for climate vulnerability, low seed-replacement rates, and fragmented landholdings.",
+    longDesc_or: "ODCONS PROJECTS ଜଳବାୟୁ ଭୁଷ୍କୋଣତା, କମ୍ ବୀଜ ବଦଳ ହାର ଓ ଛିନ୍ନଭିନ୍ନ ଜମି ବିଭାଜନ ପାଇଁ ଉପଯୁକ୍ତ ଏଣ୍ଡ-ଟୁ-ଏଣ୍ଡ କୃଷି ପ୍ରତିଷେଧକ କାର୍ଯ୍ୟକ୍ରମ ପ୍ରଦାନ କରେ।",
     keyPillars: [
       { title: "Precision Crop Planning", desc: "AI and GIS-backed micro-climate land mapping for targeted crop choices." },
       { title: "Soil Regeneration", desc: "Organic carbon enhancement, micro-nutrient conditioning, and bio-fertilization." }
@@ -61,8 +61,8 @@ export const SECTORS: SectorInfo[] = [
     technologies_or: ["GIS ଶସ୍ୟ ମ୍ୟାପିଂ", "IoT ମାଟି ଆର୍ଦ୍ରତା ସେନ୍ସର", "ଡ୍ରୋନ୍ କୀଟନାଶକ ସିଞ୍ଚନ"],
     challenges: [{ title: "Monsoon Dependency", desc: "Uncertain rain cycles impacting traditional sowing schedules." }],
     challenges_or: [{ title: "ମୌସୁମୀ ନିର୍ଭରଶୀଳତା", desc: "ଅନିଶ୍ଚିତ ବର୍ଷା ଚକ୍ର ପାରମ୍ପରିକ ବୁଣା ସମୟସୂଚୀକୁ ପ୍ରଭାବିତ କରେ।" }],
-    odconesApproach: ["Site-specific micro-climatic zoning", "Community water harvesting structures"],
-    odconesApproach_or: ["ସ୍ଥାନୀୟ ମାଇକ୍ରୋ-କ୍ଲାଇମେଟିକ୍ ଜୋନିଂ", "ସାମୁହିକ ଜଳ ସଂଗ୍ରହ ସଂରଚନା"]
+    odconsApproach: ["Site-specific micro-climatic zoning", "Community water harvesting structures"],
+    odconsApproach_or: ["ସ୍ଥାନୀୟ ମାଇକ୍ରୋ-କ୍ଲାଇମେଟିକ୍ ଜୋନିଂ", "ସାମୁହିକ ଜଳ ସଂଗ୍ରହ ସଂରଚନା"]
   },
   {
     id: "horticulture",
@@ -91,8 +91,8 @@ export const SECTORS: SectorInfo[] = [
     technologies_or: ["ଜଳବାୟୁ ନିୟନ୍ତ୍ରଣ ସେନ୍ସର", "ସ୍ୱୟଂଚାଳିତ ଫର୍ଟିଗେସନ୍ କଣ୍ଟ୍ରୋଲର"],
     challenges: [{ title: "High Perishability", desc: "Up to 35% crop loss post-harvest due to lack of immediate cooling." }],
     challenges_or: [{ title: "ଅଧିକ କ୍ଷୟଶୀଳତା", desc: "ତୁରନ୍ତ ଥଣ୍ଡା ବ୍ୟବସ୍ଥା ଅଭାବରୁ ଅମଳ ପରେ ୩୫% ପର୍ଯ୍ୟନ୍ତ ଶସ୍ୟ କ୍ଷତି।" }],
-    odconesApproach: ["Precision greenhouse ventilation controls"],
-    odconesApproach_or: ["ସଠିକ୍ ଗ୍ରୀନ୍ ହାଉସ ଭେଣ୍ଟିଲେସନ୍ ନିୟନ୍ତ୍ରଣ"]
+    odconsApproach: ["Precision greenhouse ventilation controls"],
+    odconsApproach_or: ["ସଠିକ୍ ଗ୍ରୀନ୍ ହାଉସ ଭେଣ୍ଟିଲେସନ୍ ନିୟନ୍ତ୍ରଣ"]
   },
   {
     id: "fisheries",
@@ -107,8 +107,8 @@ export const SECTORS: SectorInfo[] = [
     badgeBg: "rgba(0, 102, 128, 0.15)",
     shortDesc: "Inland fishery restoration, fisherman cooperative support, hygienic landing docks, and riverine ecosystem preservation.",
     shortDesc_or: "ମତ୍ସ୍ୟ ସମବାୟ ସମିତି ସଶକ୍ତିକରଣ, ସୌର ପାଳିତ ବରଫ କେନ୍ଦ୍ର ଓ ମାଛ ଉତାରିବା ନିଲାମ କେନ୍ଦ୍ର।",
-    longDesc: "ODCONES works across riverine, estuarine, and reservoir water bodies to modernize traditional capture fisheries.",
-    longDesc_or: "ODCONES ପାରମ୍ପରିକ ମତ୍ସ୍ୟ ଅମଳକୁ ଆଧୁନିକୀକରଣ କରିବା ପାଇଁ ନଦୀ, ମୁହାଣ ଓ ଜଳାଶୟ ଜଳ ନିକ୍ଷେତ୍ରରେ କାର୍ଯ୍ୟ କରେ।",
+    longDesc: "ODCONS works across riverine, estuarine, and reservoir water bodies to modernize traditional capture fisheries.",
+    longDesc_or: "ODCONS ପାରମ୍ପରିକ ମତ୍ସ୍ୟ ଅମଳକୁ ଆଧୁନିକୀକରଣ କରିବା ପାଇଁ ନଦୀ, ମୁହାଣ ଓ ଜଳାଶୟ ଜଳ ନିକ୍ଷେତ୍ରରେ କାର୍ଯ୍ୟ କରେ।",
     keyPillars: [{ title: "Fisherman Cooperatives", desc: "Empowering local fishing societies with modern boats and net gear." }],
     keyPillars_or: [{ title: "ମତ୍ସ୍ୟଜୀବୀ ସମବାୟ", desc: "ଆଧୁନିକ ଡଙ୍ଗା ଓ ଜାଲ ଯନ୍ତ୍ର ସହିତ ସ୍ଥାନୀୟ ମତ୍ସ୍ୟ ସମିତିମାନଙ୍କୁ ସଶକ୍ତିକରଣ।" }],
     stats: [{ value: "14,000", label: "Fisherfolk Impacted" }],
@@ -117,8 +117,8 @@ export const SECTORS: SectorInfo[] = [
     technologies_or: ["ଇକୋ ସାଉଣ୍ଡର ବାଥିମେଟ୍ରି", "ସୌର ବରଫ ଜେନେରେଟର"],
     challenges: [{ title: "Over-exploitation", desc: "Depletion of wild fish stocks from unmonitored harvesting." }],
     challenges_or: [{ title: "ଅତ୍ୟଧିକ ଦୋହନ", desc: "ଅନିୟନ୍ତ୍ରିତ ଅମଳରୁ ବନ୍ୟ ମାଛ ସଂଖ୍ୟା ହ୍ରାସ।" }],
-    odconesApproach: ["Community-led fishing cooperative management"],
-    odconesApproach_or: ["ସମୁଦାୟ ନେତୃତ୍ୱାଧୀନ ମତ୍ସ୍ୟ ସମବାୟ ପରିଚାଳନା"]
+    odconsApproach: ["Community-led fishing cooperative management"],
+    odconsApproach_or: ["ସମୁଦାୟ ନେତୃତ୍ୱାଧୀନ ମତ୍ସ୍ୟ ସମବାୟ ପରିଚାଳନା"]
   },
   {
     id: "aquaculture",
@@ -143,8 +143,8 @@ export const SECTORS: SectorInfo[] = [
     technologies_or: ["IoT ଦ୍ରବୀଭୂତ ଅମ୍ଳଜାନ ସେନ୍ସର", "ମାଇକ୍ରୋବବଲ୍ ଏରେଟର"],
     challenges: [{ title: "Oxygen Crashes", desc: "Sudden nocturnal dissolved oxygen drops causing mass mortality." }],
     challenges_or: [{ title: "ଅମ୍ଳଜାନ ସଙ୍କଟ", desc: "ରାତିରେ ହଠାତ୍ ଦ୍ରବୀଭୂତ ଅମ୍ଳଜାନ ହ୍ରାସ ଯୋଗୁଁ ମାଛ ମରଣ।" }],
-    odconesApproach: ["24/7 telemetry oxygen monitoring with auto-aerator triggers"],
-    odconesApproach_or: ["ସ୍ୱୟଂଚାଳିତ ଏରେଟର ଟ୍ରିଗର ସହିତ ୨୪/୭ ଟେଲିମେଟ୍ରି ଅମ୍ଳଜାନ ନିରୀକ୍ଷଣ"]
+    odconsApproach: ["24/7 telemetry oxygen monitoring with auto-aerator triggers"],
+    odconsApproach_or: ["ସ୍ୱୟଂଚାଳିତ ଏରେଟର ଟ୍ରିଗର ସହିତ ୨୪/୭ ଟେଲିମେଟ୍ରି ଅମ୍ଳଜାନ ନିରୀକ୍ଷଣ"]
   },
   {
     id: "animal-husbandry",
@@ -169,8 +169,8 @@ export const SECTORS: SectorInfo[] = [
     technologies_or: ["RFID ପଶୁ ପରିଚୟ", "ହାଇଡ୍ରୋପୋନିକ୍ ଘାସ ଟ୍ରେ"],
     challenges: [{ title: "Fodder Shortage", desc: "Lack of green fodder in dry summer months reducing milk yield." }],
     challenges_or: [{ title: "ପଶୁଖାଦ୍ୟ ଅଭାବ", desc: "ଶୁଖିଲା ଗ୍ରୀଷ୍ମ ମାସରେ ହରିତ ଘାସ ଅଭାବରୁ କ୍ଷୀର ଉତ୍ପାଦନ ହ୍ରାସ।" }],
-    odconesApproach: ["Year-round hydroponic fodder production units"],
-    odconesApproach_or: ["ବର୍ଷସାରା ହାଇଡ୍ରୋପୋନିକ୍ ଘାସ ଉତ୍ପାଦନ ୟୁନିଟ୍"]
+    odconsApproach: ["Year-round hydroponic fodder production units"],
+    odconsApproach_or: ["ବର୍ଷସାରା ହାଇଡ୍ରୋପୋନିକ୍ ଘାସ ଉତ୍ପାଦନ ୟୁନିଟ୍"]
   },
   {
     id: "water-soil",
@@ -195,7 +195,7 @@ export const SECTORS: SectorInfo[] = [
     technologies_or: ["GIS ଜଳବିଜ୍ଞାନ ମଡେଲିଂ", "ଭୂତଳ ନିଷ୍କାସନ ପାଇପ୍ ନେଟୱାର୍କ"],
     challenges: [{ title: "Topsoil Erosion", desc: "Heavy rain washes away fertile topsoil into rivers." }],
     challenges_or: [{ title: "ଉପର ସ୍ତର କ୍ଷୟ", desc: "ପ୍ରବଳ ବର୍ଷାରେ ଉର୍ବର ଉପର ସ୍ତର ନଦୀକୁ ଭାସିଯାଏ।" }],
-    odconesApproach: ["Contour trenching & vegetative bunding along hillsides"],
-    odconesApproach_or: ["ପାହାଡ଼ କୂଳରେ ସୋପାନ ଟ୍ରେଞ୍ଚିଂ ଓ ଉଦ୍ଭିଦ ବନ୍ଧ"]
+    odconsApproach: ["Contour trenching & vegetative bunding along hillsides"],
+    odconsApproach_or: ["ପାହାଡ଼ କୂଳରେ ସୋପାନ ଟ୍ରେଞ୍ଚିଂ ଓ ଉଦ୍ଭିଦ ବନ୍ଧ"]
   }
 ];

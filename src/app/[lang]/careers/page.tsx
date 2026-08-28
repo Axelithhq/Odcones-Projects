@@ -31,7 +31,7 @@ export default function CareersPage() {
       if (!res.ok) throw new Error("failed");
       setSubmitState("success");
     } catch {
-      localStorage.setItem("odcones_career_apply", JSON.stringify({ ...formData, role: selectedJob?.title, at: new Date().toISOString() }));
+      localStorage.setItem("odcons_career_apply", JSON.stringify({ ...formData, role: selectedJob?.title, at: new Date().toISOString() }));
       setSubmitState("success");
     }
   };

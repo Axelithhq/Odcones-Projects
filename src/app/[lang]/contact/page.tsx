@@ -33,7 +33,7 @@ export default function ContactPage() {
       });
       if (!res.ok) throw new Error("failed");
     } catch {
-      localStorage.setItem("odcones_enquiry", JSON.stringify({ ...formData, at: new Date().toISOString() }));
+      localStorage.setItem("odcons_enquiry", JSON.stringify({ ...formData, at: new Date().toISOString() }));
       setError(true);
     } finally {
       setSubmitting(false);
@@ -82,7 +82,7 @@ export default function ContactPage() {
 
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-harvest-400 flex-shrink-0" />
-                  <span>{t("contact.emailLabel")}: info@odconesprojects.org</span>
+                  <span>{t("contact.emailLabel")}: info@odconsprojects.org</span>
                 </div>
 
                 <div className="flex items-center gap-3">

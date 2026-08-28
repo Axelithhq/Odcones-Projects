@@ -41,7 +41,7 @@ export function IntroAnimation() {
               className="text-center"
             >
               <span className="font-display font-extrabold text-2xl tracking-[0.2em] text-sand-50 uppercase">
-                ODCONES
+                ODCONS
               </span>
             </motion.div>
 

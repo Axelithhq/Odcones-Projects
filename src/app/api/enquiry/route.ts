@@ -64,7 +64,7 @@ export async function POST(req: NextRequest) {
   if (isEmailConfigured()) {
     await sendEmail({
       to: process.env.CONTACT_EMAIL!,
-      subject: `[ODCONES] New Project Enquiry from ${name}`,
+      subject: `[ODCONS] New Project Enquiry from ${name}`,
       html: `
         <h2>New Project Enquiry</h2>
         <p><strong>Name:</strong> ${escapeHtml(name)}</p>

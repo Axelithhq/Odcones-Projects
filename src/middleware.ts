@@ -27,7 +27,7 @@ export function middleware(request: NextRequest) {
     (pathname.includes("/admin") && pathname !== "/en/admin" && pathname !== "/or/admin" && pathname !== "/admin");
 
   if (isAdminRoute) {
-    const session = request.cookies.get("odcones_admin_session")?.value;
+    const session = request.cookies.get("odcons_admin_session")?.value;
     if (!session) {
       const locale = extractLocale(pathname) || defaultLocale;
       const loginUrl = request.nextUrl.clone();
@@ -40,17 +40,17 @@ export function middleware(request: NextRequest) {
     const locale = pathname.split("/")[1];
     if (isValidLocale(locale)) {
       const response = NextResponse.next();
-      response.cookies.set("odcones_locale", locale, {
+      response.cookies.set("odcons_locale", locale, {
         path: "/",
         maxAge: 60 * 60 * 24 * 365,
         sameSite: "lax",
       });
-      response.headers.set("x-odcones-locale", locale);
+      response.headers.set("x-odcons-locale", locale);
       return response;
     }
   }
 
-  const savedLocale = request.cookies.get("odcones_locale")?.value;
+  const savedLocale = request.cookies.get("odcons_locale")?.value;
   const targetLocale = isValidLocale(savedLocale) ? savedLocale : defaultLocale;
 
   const url = request.nextUrl.clone();

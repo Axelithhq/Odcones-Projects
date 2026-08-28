@@ -94,7 +94,7 @@ export default function StartProjectWizardPage() {
       if (!res.ok) throw new Error("failed");
       setSubmitted(true);
     } catch {
-      localStorage.setItem("odcones_enquiry", JSON.stringify({ ...formData, at: new Date().toISOString() }));
+      localStorage.setItem("odcons_enquiry", JSON.stringify({ ...formData, at: new Date().toISOString() }));
       setDemo(true);
       setSubmitted(true);
     } finally {

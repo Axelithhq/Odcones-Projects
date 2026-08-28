@@ -10,7 +10,7 @@ import { pickOr } from "@/lib/localize";
 import { ArrowRight, BookOpen, Clock } from "lucide-react";
 
 export const metadata = {
-  title: "Insights & Research Hub | ODCONES PROJECTS",
+  title: "Insights & Research Hub | ODCONS PROJECTS",
   description: "Read whitepapers, operational studies, and technical research articles on agriculture, aquaculture, and blue economy.",
 };
 

@@ -43,7 +43,7 @@ export default function HomePage() {
       {/* 06. WHAT MOVES THE FIELD (3D Equipment Kit Arrangement) */}
       <FieldKit />
 
-      {/* 07. ODCONES FIELDOS (3D Spatial Device Showcase) */}
+      {/* 07. ODCONS FIELDOS (3D Spatial Device Showcase) */}
       <DigitalField />
 
       {/* 08. FOUNDER & VISION (Anshuman Mohapatra — Founder) */}

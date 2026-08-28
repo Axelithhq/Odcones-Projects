@@ -190,7 +190,7 @@ export function EcosystemCanvas() {
     return (
       <div className="w-full h-full min-h-[350px] flex flex-col items-center justify-center bg-forest-950/80 border border-forest-800 rounded-2xl p-6 text-center space-y-3">
         <Sprout className="w-8 h-8 text-harvest-400" />
-        <p className="text-xs text-sand-200/80">ODCONES Sustainable Ecosystem Visualizer</p>
+        <p className="text-xs text-sand-200/80">ODCONS Sustainable Ecosystem Visualizer</p>
       </div>
     );
   }

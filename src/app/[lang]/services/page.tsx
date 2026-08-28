@@ -10,8 +10,8 @@ import { pickOr, pickOrArray } from "@/lib/localize";
 import { ArrowUpRight, CheckCircle2, ArrowRight } from "lucide-react";
 
 export const metadata = {
-  title: "What We Do | 12 Comprehensive Services | ODCONES PROJECTS",
-  description: "Explore the 12 core services offered by ODCONES PROJECTS across agricultural planning, aquaculture engineering, water management, and rural development.",
+  title: "What We Do | 12 Comprehensive Services | ODCONS PROJECTS",
+  description: "Explore the 12 core services offered by ODCONS PROJECTS across agricultural planning, aquaculture engineering, water management, and rural development.",
 };
 
 export function generateStaticParams() {

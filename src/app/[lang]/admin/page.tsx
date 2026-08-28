@@ -23,7 +23,7 @@ export default function AdminPage() {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (passkey === "odcones2026" || passkey === "admin") {
+    if (passkey === "odcons2026" || passkey === "admin") {
       setIsAuthenticated(true);
       setErrorMsg("");
     } else {

@@ -22,7 +22,7 @@ export function Footer() {
       });
       if (!res.ok) throw new Error("failed");
     } catch {
-      localStorage.setItem("odcones_subscriber", email);
+      localStorage.setItem("odcons_subscriber", email);
     }
     setSubscribed(true);
     setEmail("");
@@ -46,7 +46,7 @@ export function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-display font-bold text-xl tracking-wider text-sand-50 uppercase leading-none">
-                  ODCONES
+                  ODCONS
                 </span>
                 <span className="text-[10px] font-semibold tracking-[0.25em] text-forest-300 uppercase">
                   PROJECTS
@@ -137,10 +137,10 @@ export function Footer() {
               {t("footer.contactTitle")}
             </h4>
             <div className="text-xs text-sand-200/70 space-y-2 leading-relaxed">
-              <p className="font-semibold text-sand-100">ODCONES PROJECTS PVT LTD</p>
+              <p className="font-semibold text-sand-100">ODCONS PROJECTS PVT LTD</p>
               <p>Plot No. 452, Infocity Rural Tech Hub,</p>
               <p>Patia, Bhubaneswar, Odisha — 751024</p>
-              <p className="pt-2"><strong className="text-sand-100">{t("contact.emailLabel")}:</strong> info@odconesprojects.org</p>
+              <p className="pt-2"><strong className="text-sand-100">{t("contact.emailLabel")}:</strong> info@odconsprojects.org</p>
               <p><strong className="text-sand-100">{t("contact.phoneLabel")}:</strong> +91 674 290 8820</p>
             </div>
           </div>
@@ -148,7 +148,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-sand-200/50 gap-4">
-          <p>© {new Date().getFullYear()} ODCONES PROJECTS. {t("footer.rights")}</p>
+          <p>© {new Date().getFullYear()} ODCONS PROJECTS. {t("footer.rights")}</p>
           <div className="flex items-center gap-6">
             <Link href={localizeHref("/privacy")} className="hover:text-sand-100 transition-colors">{t("footer.privacy")}</Link>
             <Link href={localizeHref("/terms")} className="hover:text-sand-100 transition-colors">{t("footer.terms")}</Link>
