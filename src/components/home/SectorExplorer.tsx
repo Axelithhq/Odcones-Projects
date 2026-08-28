@@ -157,7 +157,7 @@ export function SectorExplorer() {
               </div>
             </div>
 
-            <p className="text-xs sm:text-sm text-sand-200/80 leading-relaxed font-light">
+            <p className="text-xs sm:text-sm text-theme-text-muted leading-relaxed font-light">
               {selectedSector.desc}
             </p>
 
@@ -165,7 +165,7 @@ export function SectorExplorer() {
               <span className="text-[10px] font-bold text-forest-300 uppercase tracking-widest font-display">
                 TECHNICAL PROJECT TYPES INCLUDED:
               </span>
-              <div className="space-y-1 text-xs text-sand-100 font-mono">
+              <div className="space-y-1 text-xs text-theme-text font-mono">
                 {selectedSector.projects.map((proj, idx) => (
                   <div key={idx} className="flex items-center gap-2">
                     <span className="text-harvest-400">✓</span>

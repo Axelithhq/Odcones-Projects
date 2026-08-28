@@ -33,7 +33,7 @@ export default function EngineeringPage() {
   const { language } = useTranslation();
 
   return (
-    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor pt-20">
+    <main className="min-h-screen bg-theme-base text-theme-text relative has-custom-cursor pt-20">
       <CustomCursor />
       <Header />
 
@@ -49,7 +49,7 @@ export default function EngineeringPage() {
             {language === "or" ? "ଇଞ୍ଜିନିୟରିଂ ଆକଳନ, ୨D ଓ ୩D ଲେ-ଆଉଟ୍" : "ENGINEERING ESTIMATES & 2D/3D LAYOUTS"}
           </h1>
 
-          <p className="text-sand-200/80 text-base sm:text-lg max-w-3xl leading-relaxed font-light">
+          <p className="text-theme-text-muted text-base sm:text-lg max-w-3xl leading-relaxed font-light">
             ODCONS PROJECTS provides precision civil construction estimates, structural engineering layouts, plant machinery arrangements, and 3D architectural visualization for commercial agricultural, aquatic, and industrial projects.
           </p>
         </div>
@@ -76,14 +76,14 @@ export default function EngineeringPage() {
                 <h3 className="font-display font-extrabold text-2xl text-sand-50">
                   {language === "or" ? srv.title_or : srv.title}
                 </h3>
-                <p className="text-xs text-sand-200/80 leading-relaxed font-light">{srv.desc}</p>
+                <p className="text-xs text-theme-text-muted leading-relaxed font-light">{srv.desc}</p>
               </div>
 
               <div className="p-4 rounded-2xl bg-theme-base border border-forest-800 space-y-2">
                 <span className="text-[10px] font-bold text-forest-300 uppercase tracking-widest font-display">
                   DELIVERABLE SPECIFICATIONS:
                 </span>
-                <div className="space-y-1 text-xs text-sand-100 font-mono">
+                <div className="space-y-1 text-xs text-theme-text font-mono">
                   {srv.deliverables.map((del, dIdx) => (
                     <div key={dIdx} className="flex items-center gap-2">
                       <CheckCircle2 className="w-3.5 h-3.5 text-harvest-400" />
@@ -102,7 +102,7 @@ export default function EngineeringPage() {
         <h2 className="font-display font-extrabold text-3xl text-sand-50 uppercase">
           Need Engineering Drawings for Your Project?
         </h2>
-        <p className="text-sand-200/80 text-sm max-w-xl mx-auto font-light">
+        <p className="text-theme-text-muted text-sm max-w-xl mx-auto font-light">
           Connect with Founder Anshuman Mohapatra & ODCONS engineering team to structure your civil BOQ, machinery layouts, and 3D architectural plans.
         </p>
 

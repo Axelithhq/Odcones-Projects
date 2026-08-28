@@ -29,7 +29,7 @@ export default async function ImpactPage(props: { params: Promise<{ lang: string
   const pick = (pair: [string, string]) => (isOr ? pair[1] : pair[0]);
 
   return (
-    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
+    <main className="min-h-screen bg-theme-base text-theme-text relative has-custom-cursor overflow-x-hidden pt-20">
       <CustomCursor />
       <Header />
 
@@ -43,7 +43,7 @@ export default async function ImpactPage(props: { params: Promise<{ lang: string
             {t("impact.title")}
           </h1>
 
-          <p className="text-sand-200/80 text-base sm:text-lg max-w-2xl font-light">
+          <p className="text-theme-text-muted text-base sm:text-lg max-w-2xl font-light">
             {t("impact.dataNote")}
           </p>
         </div>
@@ -59,7 +59,7 @@ export default async function ImpactPage(props: { params: Promise<{ lang: string
           </h2>
 
           <div className="overflow-x-auto rounded-3xl border border-forest-800 bg-forest-900/40 p-6">
-            <table className="w-full text-left text-xs text-sand-200">
+            <table className="w-full text-left text-xs text-theme-text-muted">
               <thead className="border-b border-forest-800 text-harvest-400 font-display font-bold uppercase text-[10px]">
                 <tr>
                   <th className="pb-3">{t("impact.sector")}</th>
@@ -81,7 +81,7 @@ export default async function ImpactPage(props: { params: Promise<{ lang: string
             </table>
           </div>
 
-          <p className="text-center text-[10px] text-sand-200/50 font-mono uppercase tracking-widest">
+          <p className="text-center text-[10px] text-theme-text-muted font-mono uppercase tracking-widest">
             {t("impact.pendingVerification")}
           </p>
         </div>

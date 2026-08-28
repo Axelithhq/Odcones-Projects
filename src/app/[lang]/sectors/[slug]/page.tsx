@@ -47,7 +47,7 @@ export default async function SectorDetailPage(props: { params: Promise<{ lang: 
   );
 
   return (
-    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
+    <main className="min-h-screen bg-theme-base text-theme-text relative has-custom-cursor overflow-x-hidden pt-20">
       <CustomCursor />
       <Header />
 
@@ -66,7 +66,7 @@ export default async function SectorDetailPage(props: { params: Promise<{ lang: 
             {name}
           </h1>
 
-          <p className="text-sand-200/90 text-lg sm:text-xl max-w-3xl leading-relaxed font-light">
+          <p className="text-theme-text-muted text-lg sm:text-xl max-w-3xl leading-relaxed font-light">
             {tagline}
           </p>
 
@@ -75,7 +75,7 @@ export default async function SectorDetailPage(props: { params: Promise<{ lang: 
             {stats.map((st, idx) => (
               <div key={idx} className="p-4 rounded-2xl bg-forest-900/60 border border-forest-700/40 backdrop-blur-md">
                 <p className="font-display font-extrabold text-3xl text-harvest-300">{st.value}</p>
-                <span className="text-xs font-semibold text-sand-200/70">{st.label}</span>
+                <span className="text-xs font-semibold text-theme-text-muted">{st.label}</span>
               </div>
             ))}
           </div>
@@ -93,7 +93,7 @@ export default async function SectorDetailPage(props: { params: Promise<{ lang: 
               <h2 className="font-display font-extrabold text-3xl text-sand-50 uppercase">
                 {t("sectors.visionTitle")}
               </h2>
-              <p className="text-sand-200/80 text-base leading-relaxed">
+              <p className="text-theme-text-muted text-base leading-relaxed">
                 {longDesc}
               </p>
 
@@ -101,7 +101,7 @@ export default async function SectorDetailPage(props: { params: Promise<{ lang: 
                 {keyPillars.map((pillar, idx) => (
                   <div key={idx} className="p-5 rounded-2xl bg-forest-900/40 border border-forest-800/60 space-y-2">
                     <h4 className="font-bold text-sm text-harvest-400 font-display">{pillar.title}</h4>
-                    <p className="text-xs text-sand-200/70 leading-relaxed">{pillar.desc}</p>
+                    <p className="text-xs text-theme-text-muted leading-relaxed">{pillar.desc}</p>
                   </div>
                 ))}
               </div>
@@ -129,7 +129,7 @@ export default async function SectorDetailPage(props: { params: Promise<{ lang: 
                 {challenges.map((ch, idx) => (
                   <div key={idx} className="space-y-1">
                     <h4 className="text-sm font-bold text-harvest-400">{ch.title}</h4>
-                    <p className="text-xs text-sand-200/70">{ch.desc}</p>
+                    <p className="text-xs text-theme-text-muted">{ch.desc}</p>
                   </div>
                 ))}
               </div>
@@ -139,7 +139,7 @@ export default async function SectorDetailPage(props: { params: Promise<{ lang: 
               <h3 className="font-display font-extrabold text-xl text-sand-50 uppercase">
                 {t("sectors.approachTitle")}
               </h3>
-              <ul className="space-y-3 text-xs text-sand-200/90">
+              <ul className="space-y-3 text-xs text-theme-text-muted">
                 {odconsApproach.map((ap, idx) => (
                   <li key={idx} className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-harvest-400 flex-shrink-0 mt-0.5" />
@@ -173,7 +173,7 @@ export default async function SectorDetailPage(props: { params: Promise<{ lang: 
                     <h4 className="font-display font-bold text-lg text-sand-50 group-hover:text-harvest-400 transition-colors">
                       {pickOr(proj.title, proj.title_or, lang)}
                     </h4>
-                    <p className="text-xs text-sand-200/70 line-clamp-2">{pickOr(proj.description, proj.description_or, lang)}</p>
+                    <p className="text-xs text-theme-text-muted line-clamp-2">{pickOr(proj.description, proj.description_or, lang)}</p>
                     <div className="flex items-center gap-1 text-xs font-bold text-harvest-400">
                       <span>{t("sectors.viewCaseStudy")}</span>
                       <ArrowRight className="w-4 h-4" />
@@ -190,7 +190,7 @@ export default async function SectorDetailPage(props: { params: Promise<{ lang: 
               <h3 className="font-display font-extrabold text-2xl text-sand-50 uppercase">
                 {t("sectors.startSector", { sector: name })}
               </h3>
-              <p className="text-xs text-sand-200/80 pt-1">
+              <p className="text-xs text-theme-text-muted pt-1">
                 {t("sectors.startSectorDesc")}
               </p>
             </div>

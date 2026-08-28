@@ -12,7 +12,7 @@ export default function NotFound() {
   const { t, localizeHref } = useTranslation();
 
   return (
-    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor flex flex-col justify-between pt-24">
+    <main className="min-h-screen bg-theme-base text-theme-text relative has-custom-cursor flex flex-col justify-between pt-24">
       <CustomCursor />
       <Header />
 
@@ -29,7 +29,7 @@ export default function NotFound() {
           {t("notFound.title")}
         </h1>
 
-        <p className="text-sm text-sand-200/80 leading-relaxed font-light">
+        <p className="text-sm text-theme-text-muted leading-relaxed font-light">
           {t("notFound.desc")}
         </p>
 

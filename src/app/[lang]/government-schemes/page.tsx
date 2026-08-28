@@ -37,7 +37,7 @@ export default function GovernmentSchemesPage() {
   const { language } = useTranslation();
 
   return (
-    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor pt-20">
+    <main className="min-h-screen bg-theme-base text-theme-text relative has-custom-cursor pt-20">
       <CustomCursor />
       <Header />
 
@@ -53,7 +53,7 @@ export default function GovernmentSchemesPage() {
             {language === "or" ? "ସରକାରୀ ଯୋଜନା ଓ ସବସିଡି ପରାମର୍ଶ" : "GOVERNMENT SCHEME & SUBSIDY CONSULTANCY"}
           </h1>
 
-          <p className="text-sand-200/80 text-base sm:text-lg max-w-3xl leading-relaxed font-light">
+          <p className="text-theme-text-muted text-base sm:text-lg max-w-3xl leading-relaxed font-light">
             Government assistance can significantly improve the financial feasibility of eligible projects. ODCONS PROJECTS assists entrepreneurs in identifying relevant schemes and structuring projects according to applicable guidelines.
           </p>
         </div>
@@ -110,7 +110,7 @@ export default function GovernmentSchemesPage() {
           <span className="text-xs font-mono font-bold text-harvest-400 uppercase tracking-widest block">
             IMPORTANT POLICY DISCLAIMER
           </span>
-          <p className="text-xs sm:text-sm text-sand-200/90 leading-relaxed font-light italic">
+          <p className="text-xs sm:text-sm text-theme-text-muted leading-relaxed font-light italic">
             "Government schemes, subsidy rates, eligible components and application procedures are subject to the prevailing guidelines of the respective department or implementing agency."
           </p>
         </div>

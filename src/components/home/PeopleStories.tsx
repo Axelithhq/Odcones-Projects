@@ -65,7 +65,7 @@ export function PeopleStories() {
           <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-sand-50 tracking-tight">
             {t("people.title")}
           </h2>
-          <p className="text-sand-200/70 text-sm leading-relaxed">
+          <p className="text-theme-text-muted text-sm leading-relaxed">
             {t("people.subtitle")}
           </p>
         </div>
@@ -90,13 +90,13 @@ export function PeopleStories() {
                   <span className="text-xs text-forest-300 font-semibold block">{t(person.roleKey)}</span>
                 </div>
 
-                <p className="text-xs text-sand-200/80 leading-relaxed italic font-light">
+                <p className="text-xs text-theme-text-muted leading-relaxed italic font-light">
                   "{pick(person.quote)}"
                 </p>
               </div>
 
               <div className="pt-4 border-t border-forest-800/60 flex items-center justify-between text-xs">
-                <span className="text-[10px] font-bold text-sand-200/60 uppercase">{t("people.outcome")}:</span>
+                <span className="text-[10px] font-bold text-theme-text-muted uppercase">{t("people.outcome")}:</span>
                 <span className="font-bold text-harvest-400 font-display">{pick(person.impact)}</span>
               </div>
             </div>
@@ -104,7 +104,7 @@ export function PeopleStories() {
         </div>
 
         <div className="text-center max-w-3xl mx-auto pt-2">
-          <p className="text-xs text-sand-200/50 leading-relaxed">{t("people.note")}</p>
+          <p className="text-xs text-theme-text-muted leading-relaxed">{t("people.note")}</p>
         </div>
       </div>
     </section>

@@ -27,26 +27,26 @@ export function PlatformTeaser() {
               </span>
             </h2>
 
-            <p className="text-sand-200/80 text-sm sm:text-base leading-relaxed">
+            <p className="text-theme-text-muted text-sm sm:text-base leading-relaxed">
               ODCONS FieldOS provides real-time telemetry, IoT sensor integration, beneficiary management, and satellite crop health analytics for large-scale agricultural and aquaculture interventions.
             </p>
 
             <div className="space-y-3 pt-2">
-              <div className="flex items-center gap-3 text-xs text-sand-100 font-semibold">
+              <div className="flex items-center gap-3 text-xs text-theme-text font-semibold">
                 <div className="w-6 h-6 rounded-full bg-forest-800 flex items-center justify-center text-harvest-400">
                   <ShieldCheck className="w-3.5 h-3.5" />
                 </div>
                 <span>Real-Time Aquaculture Dissolved Oxygen & pH Telemetry</span>
               </div>
 
-              <div className="flex items-center gap-3 text-xs text-sand-100 font-semibold">
+              <div className="flex items-center gap-3 text-xs text-theme-text font-semibold">
                 <div className="w-6 h-6 rounded-full bg-forest-800 flex items-center justify-center text-harvest-400">
                   <ShieldCheck className="w-3.5 h-3.5" />
                 </div>
                 <span>GIS Crop Health Index (NDVI) & Weather Predictive Advisory</span>
               </div>
 
-              <div className="flex items-center gap-3 text-xs text-sand-100 font-semibold">
+              <div className="flex items-center gap-3 text-xs text-theme-text font-semibold">
                 <div className="w-6 h-6 rounded-full bg-forest-800 flex items-center justify-center text-harvest-400">
                   <ShieldCheck className="w-3.5 h-3.5" />
                 </div>
@@ -73,7 +73,7 @@ export function PlatformTeaser() {
               <div className="flex items-center justify-between border-b border-forest-800 pb-4">
                 <div className="flex items-center gap-3">
                   <div className="w-3 h-3 rounded-full bg-emerald-400 animate-ping" />
-                  <span className="text-xs font-bold tracking-widest text-sand-100 uppercase font-display">
+                  <span className="text-xs font-bold tracking-widest text-theme-text uppercase font-display">
                     FieldOS TELEMETRY NODE #482 — HIRAKUD POND #12
                   </span>
                 </div>
@@ -89,7 +89,7 @@ export function PlatformTeaser() {
                   className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                     activeTab === "water"
                       ? "bg-aqua-600 text-sand-50 font-bold"
-                      : "bg-theme-base text-sand-200/60 hover:text-sand-50"
+                      : "bg-theme-base text-theme-text-muted hover:text-sand-50"
                   }`}
                 >
                   Water Telemetry
@@ -99,7 +99,7 @@ export function PlatformTeaser() {
                   className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                     activeTab === "soil"
                       ? "bg-harvest-600 text-sand-50 font-bold"
-                      : "bg-theme-base text-sand-200/60 hover:text-sand-50"
+                      : "bg-theme-base text-theme-text-muted hover:text-sand-50"
                   }`}
                 >
                   Soil Nitrogen & Moisture
@@ -109,7 +109,7 @@ export function PlatformTeaser() {
                   className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                     activeTab === "weather"
                       ? "bg-forest-700 text-sand-50 font-bold"
-                      : "bg-theme-base text-sand-200/60 hover:text-sand-50"
+                      : "bg-theme-base text-theme-text-muted hover:text-sand-50"
                   }`}
                 >
                   Micro-Climate
@@ -188,7 +188,7 @@ export function PlatformTeaser() {
                         <Thermometer className="w-4 h-4" />
                       </div>
                       <p className="font-display font-bold text-2xl text-sand-50">31 °C</p>
-                      <span className="text-[10px] text-sand-200/60">Humidity 68%</span>
+                      <span className="text-[10px] text-theme-text-muted">Humidity 68%</span>
                     </div>
 
                     <div className="p-4 rounded-2xl bg-theme-base/80 border border-forest-800/60 space-y-1">
@@ -197,7 +197,7 @@ export function PlatformTeaser() {
                         <Droplets className="w-4 h-4" />
                       </div>
                       <p className="font-display font-bold text-2xl text-sand-50">12 mm</p>
-                      <span className="text-[10px] text-sand-200/60">Expected 16:00 IST</span>
+                      <span className="text-[10px] text-theme-text-muted">Expected 16:00 IST</span>
                     </div>
 
                     <div className="p-4 rounded-2xl bg-theme-base/80 border border-forest-800/60 space-y-1">

@@ -37,7 +37,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
   ];
 
   return (
-    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor pt-20">
+    <main className="min-h-screen bg-theme-base text-theme-text relative has-custom-cursor pt-20">
       <CustomCursor />
       <Header />
 
@@ -53,7 +53,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
             {isOr ? "ଓଡକୋନ୍ସ ପ୍ରୋଜେକ୍ଟସ ବିଷୟରେ" : "ABOUT ODCONS PROJECTS"}
           </h1>
 
-          <p className="text-sand-200/80 text-base sm:text-lg max-w-3xl leading-relaxed font-light">
+          <p className="text-theme-text-muted text-base sm:text-lg max-w-3xl leading-relaxed font-light">
             ODCONS PROJECTS is a project consultancy and technical service organization focused on developing technically feasible, financially viable, and practically implementable projects.
           </p>
         </div>
@@ -66,7 +66,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
             <Eye className="w-6 h-6" />
           </div>
           <h2 className="font-display font-extrabold text-2xl text-sand-50 uppercase">Our Vision</h2>
-          <p className="text-xs sm:text-sm text-sand-200/80 leading-relaxed font-light">
+          <p className="text-xs sm:text-sm text-theme-text-muted leading-relaxed font-light">
             "To become a trusted project consultancy organization supporting entrepreneurship, agribusiness development, value addition and sustainable rural industrialization."
           </p>
         </div>
@@ -76,7 +76,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
             <Target className="w-6 h-6" />
           </div>
           <h2 className="font-display font-extrabold text-2xl text-sand-50 uppercase">Our Mission</h2>
-          <p className="text-xs sm:text-sm text-sand-200/80 leading-relaxed font-light">
+          <p className="text-xs sm:text-sm text-theme-text-muted leading-relaxed font-light">
             "To provide clients with professional project planning, realistic cost assessment, technical documentation and financial analysis that facilitate informed investment decisions and successful project implementation."
           </p>
         </div>
@@ -91,7 +91,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
           <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-sand-50 uppercase">
             Our Project-Development Approach
           </h2>
-          <p className="text-sand-200/80 text-xs sm:text-sm font-light">
+          <p className="text-theme-text-muted text-xs sm:text-sm font-light">
             Every project begins with understanding the entrepreneur's concept. We subsequently assess the full project pipeline.
           </p>
         </div>
@@ -106,7 +106,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
               <h3 className="font-display font-bold text-lg text-sand-50">
                 {isOr ? stg.title_or : stg.title}
               </h3>
-              <p className="text-xs text-sand-200/80 leading-relaxed font-light">
+              <p className="text-xs text-theme-text-muted leading-relaxed font-light">
                 {isOr ? stg.desc_or : stg.desc}
               </p>
             </div>

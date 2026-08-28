@@ -96,7 +96,7 @@ export function EditorialServices() {
             {language === "or" ? "ଆମର ବୈଷୟିକ ସେବା ସମୂହ" : "EDITORIAL SERVICE SYSTEM"}
           </h2>
 
-          <p className="text-sand-200/80 text-sm sm:text-base leading-relaxed font-light">
+          <p className="text-theme-text-muted text-sm sm:text-base leading-relaxed font-light">
             ODCONS PROJECTS provides complete end-to-end technical consultancy across project planning, engineering, DPR preparation, and financial modeling.
           </p>
         </div>
@@ -153,7 +153,7 @@ export function EditorialServices() {
                 <h3 className="font-display font-extrabold text-2xl text-sand-50">
                   {language === "or" ? activeService.title_or : activeService.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-sand-200/80 leading-relaxed font-light">
+                <p className="text-xs sm:text-sm text-theme-text-muted leading-relaxed font-light">
                   {activeService.desc}
                 </p>
               </div>
@@ -162,7 +162,7 @@ export function EditorialServices() {
                 <span className="text-[10px] font-bold text-forest-300 uppercase tracking-widest font-display">
                   SERVICE DELIVERABLES:
                 </span>
-                <div className="space-y-1 text-xs text-sand-100 font-mono">
+                <div className="space-y-1 text-xs text-theme-text font-mono">
                   {activeService.deliverables.map((del, idx) => (
                     <div key={idx} className="flex items-center gap-2">
                       <span className="text-harvest-400">✓</span>

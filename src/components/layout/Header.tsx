@@ -147,7 +147,7 @@ export function Header() {
                           : "bg-forest-800/80 text-harvest-300 border-forest-500/50 font-bold shadow-md"
                         : isLight && isScrolled
                         ? "border-transparent text-[#4A5D50] hover:text-[#1A251E] hover:bg-forest-100/60 hover:border-[#D4DDD5]"
-                        : "border-transparent text-sand-200/80 hover:text-sand-50 hover:bg-forest-800/40 hover:border-forest-700/40"
+                        : "border-transparent text-theme-text-muted hover:text-sand-50 hover:bg-forest-800/40 hover:border-forest-700/40"
                     }`}
                   >
                     <span className="group-hover:-translate-y-[0.5px] transition-transform duration-200">
@@ -191,7 +191,7 @@ export function Header() {
                 className={`p-1.5 rounded-full transition-colors ${
                   isLight
                     ? "text-[#4A5D50] hover:text-harvest-600"
-                    : "text-sand-200/80 hover:text-harvest-400"
+                    : "text-theme-text-muted hover:text-harvest-400"
                 }`}
                 title="Toggle Theme"
                 aria-label="Toggle Theme"
@@ -257,7 +257,7 @@ export function Header() {
                         TECHNICAL CONSULTANCY
                       </span>
                       <h4 className="font-display font-extrabold text-base">Engineering & DPR Services</h4>
-                      <p className="text-xs text-sand-200/70 font-light leading-relaxed">
+                      <p className="text-xs text-theme-text-muted font-light leading-relaxed">
                         Structured Detailed Project Reports, civil construction estimates, financial DSCR analysis, and scheme advisory.
                       </p>
                     </div>
@@ -265,19 +265,19 @@ export function Header() {
                     <Link href="/dpr-consultancy" className="p-4 rounded-2xl bg-forest-900/40 border border-forest-800/60 hover:border-harvest-400/60 hover:bg-forest-900/70 transition-all space-y-2 group shadow-md">
                       <FileText className="w-5 h-5 text-harvest-400 group-hover:scale-110 transition-transform" />
                       <h5 className="font-display font-bold text-sm">Detailed Project Reports (DPR)</h5>
-                      <p className="text-xs text-sand-200/70">Customized DPRs for bank credit appraisal and subsidy applications.</p>
+                      <p className="text-xs text-theme-text-muted">Customized DPRs for bank credit appraisal and subsidy applications.</p>
                     </Link>
 
                     <Link href="/engineering" className="p-4 rounded-2xl bg-forest-900/40 border border-forest-800/60 hover:border-harvest-400/60 hover:bg-forest-900/70 transition-all space-y-2 group shadow-md">
                       <Wrench className="w-5 h-5 text-harvest-400 group-hover:scale-110 transition-transform" />
                       <h5 className="font-display font-bold text-sm">Engineering Estimates & 2D/3D</h5>
-                      <p className="text-xs text-sand-200/70">Civil estimates, plant machinery layouts, and 3D spatial models.</p>
+                      <p className="text-xs text-theme-text-muted">Civil estimates, plant machinery layouts, and 3D spatial models.</p>
                     </Link>
 
                     <Link href="/financial-consultancy" className="p-4 rounded-2xl bg-forest-900/40 border border-forest-800/60 hover:border-harvest-400/60 hover:bg-forest-900/70 transition-all space-y-2 group shadow-md">
                       <Landmark className="w-5 h-5 text-harvest-400 group-hover:scale-110 transition-transform" />
                       <h5 className="font-display font-bold text-sm">Financial Modeling & DSCR</h5>
-                      <p className="text-xs text-sand-200/70">Projected P&L, 10-year cash flow, and loan repayment analysis.</p>
+                      <p className="text-xs text-theme-text-muted">Projected P&L, 10-year cash flow, and loan repayment analysis.</p>
                     </Link>
                   </div>
                 )}
@@ -310,7 +310,7 @@ export function Header() {
                           className="p-3 rounded.xl bg-forest-900/40 border border-forest-800/50 hover:border-harvest-400/60 hover:bg-forest-900/80 transition-all space-y-1 group"
                         >
                           <span className="text-xs font-display font-bold block group-hover:text-harvest-400">{sec.title}</span>
-                          <span className="text-[10px] text-sand-200/60 font-mono block">{sec.desc}</span>
+                          <span className="text-[10px] text-theme-text-muted font-mono block">{sec.desc}</span>
                         </Link>
                       ))}
                     </div>
@@ -325,7 +325,7 @@ export function Header() {
                         PROJECT CAPABILITIES
                       </span>
                       <h4 className="font-display font-extrabold text-base">Project Expertise Categories</h4>
-                      <p className="text-xs text-sand-200/70 font-light leading-relaxed">
+                      <p className="text-xs text-theme-text-muted font-light leading-relaxed">
                         Technical DPRs and layouts structured by ODCONS PROJECTS across agricultural and aquaculture domains.
                       </p>
                     </div>

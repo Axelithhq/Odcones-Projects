@@ -29,7 +29,7 @@ export function OneEcosystem() {
           <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-sand-50 tracking-tight">
             {t("ecosystem.title")}
           </h2>
-          <p className="text-sand-200/80 text-sm leading-relaxed">
+          <p className="text-theme-text-muted text-sm leading-relaxed">
             {t("ecosystem.subtitle")}
           </p>
         </div>
@@ -50,7 +50,7 @@ export function OneEcosystem() {
               <h3 className="font-display font-extrabold text-lg text-sand-50 group-hover:text-harvest-400 transition-colors">
                 {pick(node.label)}
               </h3>
-              <p className="text-xs text-sand-200/70 leading-relaxed">{pick(node.desc)}</p>
+              <p className="text-xs text-theme-text-muted leading-relaxed">{pick(node.desc)}</p>
             </div>
           ))}
 

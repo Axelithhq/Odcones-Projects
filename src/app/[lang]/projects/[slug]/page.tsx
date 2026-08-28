@@ -41,7 +41,7 @@ export default async function ProjectDetailPage(props: { params: Promise<{ lang:
     : undefined;
 
   return (
-    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
+    <main className="min-h-screen bg-theme-base text-theme-text relative has-custom-cursor overflow-x-hidden pt-20">
       <CustomCursor />
       <Header />
 
@@ -67,15 +67,15 @@ export default async function ProjectDetailPage(props: { params: Promise<{ lang:
           </h1>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-forest-800/40 max-w-3xl">
-            <div className="flex items-center gap-2 text-xs text-sand-200/80">
+            <div className="flex items-center gap-2 text-xs text-theme-text-muted">
               <MapPin className="w-4 h-4 text-harvest-400" />
               <span><strong>{t("projects.location")}:</strong> {project.location}</span>
             </div>
-            <div className="flex items-center gap-2 text-xs text-sand-200/80">
+            <div className="flex items-center gap-2 text-xs text-theme-text-muted">
               <Calendar className="w-4 h-4 text-harvest-400" />
               <span><strong>{t("projects.timeline")}:</strong> {project.year}</span>
             </div>
-            <div className="flex items-center gap-2 text-xs text-sand-200/80">
+            <div className="flex items-center gap-2 text-xs text-theme-text-muted">
               <Building2 className="w-4 h-4 text-harvest-400" />
               <span><strong>{t("projects.client")}:</strong> {project.client}</span>
             </div>
@@ -97,7 +97,7 @@ export default async function ProjectDetailPage(props: { params: Promise<{ lang:
               <h3 className="font-display font-extrabold text-2xl text-sand-50 uppercase">
                 {t("projects.overview")}
               </h3>
-              <p className="text-sand-200/80 text-sm leading-relaxed">
+              <p className="text-theme-text-muted text-sm leading-relaxed">
                 {description}
               </p>
             </div>
@@ -107,14 +107,14 @@ export default async function ProjectDetailPage(props: { params: Promise<{ lang:
               {challenge && (
                 <div className="p-6 rounded-3xl bg-forest-900/40 border border-forest-800/60 space-y-3">
                   <h4 className="font-display font-bold text-lg text-sand-50 uppercase">{t("projects.challenge")}</h4>
-                  <p className="text-xs text-sand-200/70 leading-relaxed">{challenge}</p>
+                  <p className="text-xs text-theme-text-muted leading-relaxed">{challenge}</p>
                 </div>
               )}
 
               {solution && (
                 <div className="p-6 rounded-3xl bg-forest-900/40 border border-forest-800/60 space-y-3">
                   <h4 className="font-display font-bold text-lg text-harvest-400 uppercase">{t("projects.solution")}</h4>
-                  <p className="text-xs text-sand-200/70 leading-relaxed">{solution}</p>
+                  <p className="text-xs text-theme-text-muted leading-relaxed">{solution}</p>
                 </div>
               )}
             </div>

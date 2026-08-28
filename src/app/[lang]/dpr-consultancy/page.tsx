@@ -35,7 +35,7 @@ export default function DPRConsultancyPage() {
   const { language } = useTranslation();
 
   return (
-    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor pt-20">
+    <main className="min-h-screen bg-theme-base text-theme-text relative has-custom-cursor pt-20">
       <CustomCursor />
       <Header />
 
@@ -51,7 +51,7 @@ export default function DPRConsultancyPage() {
             {language === "or" ? "ବିସ୍ତୃତ ପ୍ରକଳ୍ପ ରିପୋର୍ଟ (DPR) ପରାମର୍ଶ" : "FROM BUSINESS CONCEPT TO BANKABLE PROJECT PROPOSAL"}
           </h1>
 
-          <p className="text-sand-200/80 text-base sm:text-lg max-w-3xl leading-relaxed font-light">
+          <p className="text-theme-text-muted text-base sm:text-lg max-w-3xl leading-relaxed font-light">
             ODCONS PROJECTS prepares customized Detailed Project Reports (DPRs) according to project capacity, technology, investment requirements, and commercial business models.
           </p>
         </div>
@@ -66,7 +66,7 @@ export default function DPRConsultancyPage() {
           <h2 className="font-display font-extrabold text-3xl text-sand-50 uppercase">
             What is a Detailed Project Report (DPR)?
           </h2>
-          <p className="text-sand-200/80 text-sm sm:text-base leading-relaxed font-light">
+          <p className="text-theme-text-muted text-sm sm:text-base leading-relaxed font-light">
             A Detailed Project Report provides the technical, financial, and commercial framework required to evaluate and implement a proposed investment. It is the primary document evaluated by banks, financial institutions, and government scheme sanctioning authorities.
           </p>
         </div>
@@ -75,7 +75,7 @@ export default function DPRConsultancyPage() {
           <span className="text-xs font-bold text-forest-300 font-display uppercase tracking-widest block">
             ODCONS DPR STANDARDS
           </span>
-          <div className="space-y-2 text-xs text-sand-100 font-mono">
+          <div className="space-y-2 text-xs text-theme-text font-mono">
             <div className="flex items-center gap-2.5">
               <CheckCircle2 className="w-4 h-4 text-harvest-400" />
               <span>Structured according to NABARD / RBI Bankable Norms</span>

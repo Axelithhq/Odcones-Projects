@@ -37,7 +37,7 @@ export default function CareersPage() {
   };
 
   return (
-    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
+    <main className="min-h-screen bg-theme-base text-theme-text relative has-custom-cursor overflow-x-hidden pt-20">
       <CustomCursor />
       <Header />
 
@@ -51,7 +51,7 @@ export default function CareersPage() {
             {t("careers.title")}
           </h1>
 
-          <p className="text-sand-200/80 text-base sm:text-lg max-w-2xl font-light">
+          <p className="text-theme-text-muted text-base sm:text-lg max-w-2xl font-light">
             {t("careers.subtitle")}
           </p>
         </div>
@@ -68,7 +68,7 @@ export default function CareersPage() {
                   {pick(job.dept, job.dept_or)} • {pick(job.exp, job.exp_or)}
                 </span>
                 <h3 className="font-display font-extrabold text-xl text-sand-50">{pick(job.title, job.title_or)}</h3>
-                <p className="text-xs text-sand-200/70">{pick(job.desc, job.desc_or)}</p>
+                <p className="text-xs text-theme-text-muted">{pick(job.desc, job.desc_or)}</p>
                 <div className="flex items-center gap-1 text-xs text-forest-300 font-semibold pt-1">
                   <MapPin className="w-3.5 h-3.5" />
                   <span>{pick(job.location, job.location_or)}</span>
@@ -94,7 +94,7 @@ export default function CareersPage() {
             <button
               onClick={() => setSelectedJob(null)}
               aria-label={t("careers.close")}
-              className="absolute top-6 right-6 text-sand-200 hover:text-sand-50"
+              className="absolute top-6 right-6 text-theme-text-muted hover:text-sand-50"
             >
               <X className="w-6 h-6" />
             </button>
@@ -103,7 +103,7 @@ export default function CareersPage() {
               <div className="text-center py-8 space-y-4">
                 <CheckCircle2 className="w-12 h-12 text-harvest-400 mx-auto" />
                 <h3 className="font-display font-extrabold text-xl text-sand-50 uppercase">{t("careers.applicationSubmitted")}</h3>
-                <p className="text-xs text-sand-200/80">
+                <p className="text-xs text-theme-text-muted">
                   {t("careers.applicationThanks", { position: pick(selectedJob.title, selectedJob.title_or) })}
                 </p>
               </div>
@@ -118,7 +118,7 @@ export default function CareersPage() {
                   placeholder={t("careers.fullName")}
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full p-3.5 text-xs bg-theme-base border border-forest-700 rounded-xl text-sand-100"
+                  className="w-full p-3.5 text-xs bg-theme-base border border-forest-700 rounded-xl text-theme-text"
                 />
                 <input
                   type="email"
@@ -126,7 +126,7 @@ export default function CareersPage() {
                   placeholder={t("careers.email")}
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full p-3.5 text-xs bg-theme-base border border-forest-700 rounded-xl text-sand-100"
+                  className="w-full p-3.5 text-xs bg-theme-base border border-forest-700 rounded-xl text-theme-text"
                 />
                 <input
                   type="tel"
@@ -134,14 +134,14 @@ export default function CareersPage() {
                   placeholder={t("careers.phone")}
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full p-3.5 text-xs bg-theme-base border border-forest-700 rounded-xl text-sand-100"
+                  className="w-full p-3.5 text-xs bg-theme-base border border-forest-700 rounded-xl text-theme-text"
                 />
                 <textarea
                   rows={3}
                   placeholder={t("careers.tellUs")}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full p-3.5 text-xs bg-theme-base border border-forest-700 rounded-xl text-sand-100"
+                  className="w-full p-3.5 text-xs bg-theme-base border border-forest-700 rounded-xl text-theme-text"
                 />
                 {submitState === "error" && (
                   <p className="text-xs text-rose-400 font-bold">{t("contact.errorDesc")}</p>

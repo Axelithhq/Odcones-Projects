@@ -119,7 +119,7 @@ export function InteractiveEcosystem() {
           <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-sand-50 tracking-tight">
             {t("ecosystem.title")}
           </h2>
-          <p className="text-sand-200/70 text-sm leading-relaxed">
+          <p className="text-theme-text-muted text-sm leading-relaxed">
             {t("ecosystem.subtitle")}
           </p>
         </div>
@@ -135,7 +135,7 @@ export function InteractiveEcosystem() {
                   className={`flex-shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all border ${
                     isSelected
                       ? "bg-forest-800 text-harvest-300 border-harvest-400 shadow-lg scale-105"
-                      : "bg-forest-900/40 text-sand-200/70 border-forest-700/30 hover:text-sand-50 hover:bg-forest-800/40"
+                      : "bg-forest-900/40 text-theme-text-muted border-forest-700/30 hover:text-sand-50 hover:bg-forest-800/40"
                   }`}
                 >
                   <span style={{ color: node.color }}>{node.icon}</span>
@@ -187,7 +187,7 @@ export function InteractiveEcosystem() {
 
                 <div className="space-y-2">
                   <h4 className="text-sm font-semibold text-harvest-400">{pick(activeStep.sub)}</h4>
-                  <p className="text-sand-200/80 text-sm leading-relaxed">{pick(activeStep.desc)}</p>
+                  <p className="text-theme-text-muted text-sm leading-relaxed">{pick(activeStep.desc)}</p>
                 </div>
 
                 <div className="p-4 rounded-xl bg-theme-base/80 border border-forest-800/60 flex items-center justify-between">
@@ -202,7 +202,7 @@ export function InteractiveEcosystem() {
               </motion.div>
             </AnimatePresence>
 
-            <p className="text-[10px] text-sand-200/50 font-mono uppercase tracking-widest text-center">
+            <p className="text-[10px] text-theme-text-muted font-mono uppercase tracking-widest text-center">
               {t("ecosystem.dataNote")}
             </p>
           </div>

@@ -15,7 +15,7 @@ export default function GalleryPage() {
   const pick = (en: string, or: string) => pickOr(en, or, language);
 
   return (
-    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
+    <main className="min-h-screen bg-theme-base text-theme-text relative has-custom-cursor overflow-x-hidden pt-20">
       <CustomCursor />
       <Header />
 
@@ -29,7 +29,7 @@ export default function GalleryPage() {
             {t("gallery.title")}
           </h1>
 
-          <p className="text-sand-200/80 text-base sm:text-lg max-w-2xl font-light">
+          <p className="text-theme-text-muted text-base sm:text-lg max-w-2xl font-light">
             {t("gallery.subtitle")}
           </p>
         </div>

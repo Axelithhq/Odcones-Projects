@@ -29,13 +29,13 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-theme-base text-sand-100 border-t border-forest-800/40 relative overflow-hidden pt-16 pb-12">
+    <footer className="bg-theme-base text-theme-text border-t border-theme-border relative overflow-hidden pt-16 pb-12 transition-colors duration-500">
       {/* Subtle Background Glow */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-forest-700/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-aqua-900/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-forest-800/40">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-theme-border">
           {/* Col 1 & 2: Brand Info */}
           <div className="lg:col-span-2 space-y-6">
             <Link href={localizeHref("/")} className="flex items-center gap-2.5">
@@ -45,16 +45,16 @@ export function Footer() {
                 </div>
               </div>
               <div className="flex flex-col">
-                <span className="font-display font-bold text-xl tracking-wider text-sand-50 uppercase leading-none">
+                <span className="font-display font-bold text-xl tracking-wider text-theme-text uppercase leading-none">
                   ODCONS
                 </span>
-                <span className="text-[10px] font-semibold tracking-[0.25em] text-forest-300 uppercase">
+                <span className="text-[10px] font-semibold tracking-[0.25em] text-theme-text-muted uppercase">
                   PROJECTS
                 </span>
               </div>
             </Link>
 
-            <p className="text-sand-200/70 text-sm max-w-sm leading-relaxed">
+            <p className="text-theme-text-muted text-sm max-w-sm leading-relaxed">
               {t("footer.tagline")}
             </p>
 
@@ -64,7 +64,7 @@ export function Footer() {
                 {t("footer.subscribeTitle")}
               </span>
               {subscribed ? (
-                <div className="flex items-center gap-2 text-xs font-semibold text-forest-300 bg-forest-900/60 p-3 rounded-xl border border-forest-500/40">
+                <div className="flex items-center gap-2 text-xs font-semibold text-theme-text bg-theme-surface p-3 rounded-xl border border-theme-border">
                   <Check className="w-4 h-4 text-harvest-400" />
                   <span>{t("footer.subscribed")}</span>
                 </div>
@@ -72,25 +72,25 @@ export function Footer() {
                 <>
                   <form onSubmit={handleSubscribe} className="flex gap-2 max-w-md">
                     <div className="relative flex-1">
-                      <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-forest-400" />
+                      <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-theme-text-muted" />
                       <input
                         type="email"
                         required
                         placeholder={t("footer.subscribePlaceholder")}
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="w-full pl-10 pr-4 py-2.5 text-xs bg-forest-900/50 border border-forest-700/50 rounded-xl text-sand-100 placeholder-sand-200/40 focus:outline-none focus:border-forest-400"
+                        className="w-full pl-10 pr-4 py-2.5 text-xs bg-theme-surface border border-theme-border rounded-xl text-theme-text placeholder-theme-text-muted focus:outline-none focus:border-harvest-400"
                       />
                     </div>
                     <button
                       type="submit"
-                      className="px-4 py-2.5 rounded-xl bg-forest-600 hover:bg-forest-500 text-sand-50 text-xs font-bold transition-all flex items-center gap-1.5"
+                      className="px-4 py-2.5 rounded-xl bg-forest-600 hover:bg-forest-500 text-sand-50 text-xs font-bold transition-all flex items-center gap-1.5 shadow-md"
                     >
                       <span>{t("footer.subscribeBtn")}</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </button>
                   </form>
-                  <p className="text-[10px] text-sand-200/40">{t("footer.subscribeNote")}</p>
+                  <p className="text-[10px] text-theme-text-muted">{t("footer.subscribeNote")}</p>
                 </>
               )}
             </div>
@@ -101,12 +101,12 @@ export function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-widest text-harvest-400 font-display">
               {t("footer.sectorsTitle")}
             </h4>
-            <ul className="space-y-2.5 text-xs text-sand-200/70">
+            <ul className="space-y-2.5 text-xs text-theme-text-muted">
               {SECTORS.map((sector) => (
                 <li key={sector.id}>
                   <Link
                     href={localizeHref(`/sectors/${sector.slug}`)}
-                    className="hover:text-sand-50 transition-colors"
+                    className="hover:text-theme-text transition-colors"
                   >
                     {language === "or" && sector.name_or ? sector.name_or : sector.name}
                   </Link>
@@ -120,14 +120,14 @@ export function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-widest text-harvest-400 font-display">
               {t("footer.companyTitle")}
             </h4>
-            <ul className="space-y-2.5 text-xs text-sand-200/70">
-              <li><Link href={localizeHref("/about")} className="hover:text-sand-50 transition-colors">{t("nav.about")}</Link></li>
-              <li><Link href={localizeHref("/services")} className="hover:text-sand-50 transition-colors">{t("nav.whatWeDo")}</Link></li>
-              <li><Link href={localizeHref("/projects")} className="hover:text-sand-50 transition-colors">{t("nav.projects")}</Link></li>
-              <li><Link href={localizeHref("/platform")} className="hover:text-sand-50 transition-colors">{t("nav.platform")}</Link></li>
-              <li><Link href={localizeHref("/impact")} className="hover:text-sand-50 transition-colors">{t("nav.impact")}</Link></li>
-              <li><Link href={localizeHref("/gallery")} className="hover:text-sand-50 transition-colors">{t("nav.gallery")}</Link></li>
-              <li><Link href={localizeHref("/careers")} className="hover:text-sand-50 transition-colors">{t("nav.careers")}</Link></li>
+            <ul className="space-y-2.5 text-xs text-theme-text-muted">
+              <li><Link href={localizeHref("/about")} className="hover:text-theme-text transition-colors">{t("nav.about")}</Link></li>
+              <li><Link href={localizeHref("/services")} className="hover:text-theme-text transition-colors">{t("nav.whatWeDo")}</Link></li>
+              <li><Link href={localizeHref("/projects")} className="hover:text-theme-text transition-colors">{t("nav.projects")}</Link></li>
+              <li><Link href={localizeHref("/platform")} className="hover:text-theme-text transition-colors">{t("nav.platform")}</Link></li>
+              <li><Link href={localizeHref("/impact")} className="hover:text-theme-text transition-colors">{t("nav.impact")}</Link></li>
+              <li><Link href={localizeHref("/gallery")} className="hover:text-theme-text transition-colors">{t("nav.gallery")}</Link></li>
+              <li><Link href={localizeHref("/careers")} className="hover:text-theme-text transition-colors">{t("nav.careers")}</Link></li>
             </ul>
           </div>
 
@@ -136,23 +136,23 @@ export function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-widest text-harvest-400 font-display">
               {t("footer.contactTitle")}
             </h4>
-            <div className="text-xs text-sand-200/70 space-y-2 leading-relaxed">
-              <p className="font-semibold text-sand-100">ODCONS PROJECTS PVT LTD</p>
+            <div className="text-xs text-theme-text-muted space-y-2 leading-relaxed">
+              <p className="font-semibold text-theme-text">ODCONS PROJECTS PVT LTD</p>
               <p>Plot No. 452, Infocity Rural Tech Hub,</p>
               <p>Patia, Bhubaneswar, Odisha — 751024</p>
-              <p className="pt-2"><strong className="text-sand-100">{t("contact.emailLabel")}:</strong> info@odconsprojects.org</p>
-              <p><strong className="text-sand-100">{t("contact.phoneLabel")}:</strong> +91 674 290 8820</p>
+              <p className="pt-2"><strong className="text-theme-text">{t("contact.emailLabel")}:</strong> info@odconsprojects.org</p>
+              <p><strong className="text-theme-text">{t("contact.phoneLabel")}:</strong> +91 674 290 8820</p>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-sand-200/50 gap-4">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-theme-text-muted gap-4">
           <p>© {new Date().getFullYear()} ODCONS PROJECTS. {t("footer.rights")}</p>
           <div className="flex items-center gap-6">
-            <Link href={localizeHref("/privacy")} className="hover:text-sand-100 transition-colors">{t("footer.privacy")}</Link>
-            <Link href={localizeHref("/terms")} className="hover:text-sand-100 transition-colors">{t("footer.terms")}</Link>
-            <Link href={localizeHref("/admin")} className="text-forest-400 hover:text-harvest-400 transition-colors">{t("footer.admin")}</Link>
+            <Link href={localizeHref("/privacy")} className="hover:text-theme-text transition-colors">{t("footer.privacy")}</Link>
+            <Link href={localizeHref("/terms")} className="hover:text-theme-text transition-colors">{t("footer.terms")}</Link>
+            <Link href={localizeHref("/admin")} className="text-harvest-400 hover:underline transition-colors">{t("footer.admin")}</Link>
           </div>
         </div>
       </div>

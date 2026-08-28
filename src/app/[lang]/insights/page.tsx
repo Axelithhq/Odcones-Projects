@@ -23,7 +23,7 @@ export default async function InsightsPage(props: { params: Promise<{ lang: stri
   const t = getServerT(lang);
 
   return (
-    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
+    <main className="min-h-screen bg-theme-base text-theme-text relative has-custom-cursor overflow-x-hidden pt-20">
       <CustomCursor />
       <Header />
 
@@ -37,7 +37,7 @@ export default async function InsightsPage(props: { params: Promise<{ lang: stri
             {t("insights.title")}
           </h1>
 
-          <p className="text-sand-200/80 text-base sm:text-lg max-w-2xl font-light">
+          <p className="text-theme-text-muted text-base sm:text-lg max-w-2xl font-light">
             {t("insights.subtitle")}
           </p>
         </div>
@@ -55,7 +55,7 @@ export default async function InsightsPage(props: { params: Promise<{ lang: stri
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2 text-[11px] text-sand-200/60 font-semibold">
+                <div className="flex items-center gap-2 text-[11px] text-theme-text-muted font-semibold">
                   <Clock className="w-3.5 h-3.5 text-forest-300" />
                   <span>{art.read_time} • {art.published_at}</span>
                 </div>
@@ -64,7 +64,7 @@ export default async function InsightsPage(props: { params: Promise<{ lang: stri
                   {pickOr(art.title, art.title_or, lang)}
                 </h3>
 
-                <p className="text-xs text-sand-200/70 line-clamp-3 leading-relaxed">
+                <p className="text-xs text-theme-text-muted line-clamp-3 leading-relaxed">
                   {pickOr(art.excerpt, art.excerpt_or, lang)}
                 </p>
               </div>

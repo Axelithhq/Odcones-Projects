@@ -33,7 +33,7 @@ export default function AdminLeadsPage() {
   const filteredLeads = filterStatus === "ALL" ? leads : leads.filter((l) => l.status === filterStatus);
 
   return (
-    <main className="min-h-screen bg-theme-base text-sand-100 pt-20">
+    <main className="min-h-screen bg-theme-base text-theme-text pt-20">
       <Header />
 
       <section className="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
@@ -61,7 +61,7 @@ export default function AdminLeadsPage() {
               className={`px-4 py-2 rounded-full text-xs font-bold uppercase transition-all ${
                 filterStatus === st
                   ? "bg-harvest-500 text-forest-950"
-                  : "bg-forest-900/60 text-sand-200/70 hover:text-sand-50"
+                  : "bg-forest-900/60 text-theme-text-muted hover:text-sand-50"
               }`}
             >
               {st}
@@ -89,15 +89,15 @@ export default function AdminLeadsPage() {
                     <td className="p-4 font-mono font-bold text-sand-50">{lead.id}</td>
                     <td className="p-4">
                       <strong className="block text-sand-50 font-display">{lead.name}</strong>
-                      <span className="text-[10px] text-sand-200/60">{lead.date}</span>
+                      <span className="text-[10px] text-theme-text-muted">{lead.date}</span>
                     </td>
-                    <td className="p-4 space-y-0.5 text-sand-200/80">
+                    <td className="p-4 space-y-0.5 text-theme-text-muted">
                       <div>{lead.email}</div>
                       <div className="font-mono text-[11px]">{lead.phone}</div>
                     </td>
                     <td className="p-4">
                       <span className="font-bold text-harvest-400 block">{lead.sector}</span>
-                      <span className="text-[10px] text-sand-200/60">{lead.investment}</span>
+                      <span className="text-[10px] text-theme-text-muted">{lead.investment}</span>
                     </td>
                     <td className="p-4">
                       <span className="px-2.5 py-1 rounded-md bg-theme-base border border-forest-700 text-[10px] font-bold text-sand-50 font-mono">

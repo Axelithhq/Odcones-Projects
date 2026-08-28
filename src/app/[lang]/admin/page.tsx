@@ -43,7 +43,7 @@ export default function AdminPage() {
   };
 
   return (
-    <main className="min-h-screen bg-theme-base text-sand-100 pt-20">
+    <main className="min-h-screen bg-theme-base text-theme-text pt-20">
       <Header />
 
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,12 +54,12 @@ export default function AdminPage() {
                 <Lock className="w-6 h-6" />
               </div>
               <h1 className="font-display font-extrabold text-2xl text-sand-50">{t("admin.loginTitle")}</h1>
-              <p className="text-xs text-sand-200/70">{t("admin.loginDesc")}</p>
+              <p className="text-xs text-theme-text-muted">{t("admin.loginDesc")}</p>
             </div>
 
             <form onSubmit={handleLogin} className="space-y-4">
               <div className="space-y-1">
-                <label className="text-xs font-bold text-sand-200 uppercase">{t("admin.passkey")}</label>
+                <label className="text-xs font-bold text-theme-text-muted uppercase">{t("admin.passkey")}</label>
                 <input
                   type="password"
                   value={passkey}
@@ -94,7 +94,7 @@ export default function AdminPage() {
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => setIsAuthenticated(false)}
-                  className="px-4 py-2 rounded-xl bg-forest-900 border border-forest-700 text-xs font-bold text-sand-200 hover:text-rose-400"
+                  className="px-4 py-2 rounded-xl bg-forest-900 border border-forest-700 text-xs font-bold text-theme-text-muted hover:text-rose-400"
                 >
                   {t("admin.lock")}
                 </button>
@@ -110,7 +110,7 @@ export default function AdminPage() {
                   className={`px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all border ${
                     activeTab === tab
                       ? "bg-harvest-500 text-forest-950 border-harvest-400 shadow-lg"
-                      : "bg-forest-900/40 text-sand-200/70 border-forest-800 hover:text-sand-50"
+                      : "bg-forest-900/40 text-theme-text-muted border-forest-800 hover:text-sand-50"
                   }`}
                 >
                   {TAB_LABELS[tab]}
@@ -133,7 +133,7 @@ export default function AdminPage() {
                   <button
                     onClick={() => setActiveLangTab("en")}
                     className={`px-4 py-1.5 rounded-full text-xs font-bold ${
-                      activeLangTab === "en" ? "bg-harvest-500 text-forest-950" : "text-sand-200/70"
+                      activeLangTab === "en" ? "bg-harvest-500 text-forest-950" : "text-theme-text-muted"
                     }`}
                   >
                     {t("admin.english")}
@@ -141,7 +141,7 @@ export default function AdminPage() {
                   <button
                     onClick={() => setActiveLangTab("or")}
                     className={`px-4 py-1.5 rounded-full text-xs font-bold ${
-                      activeLangTab === "or" ? "bg-harvest-500 text-forest-950" : "text-sand-200/70"
+                      activeLangTab === "or" ? "bg-harvest-500 text-forest-950" : "text-theme-text-muted"
                     }`}
                   >
                     {t("admin.odia")}
@@ -196,8 +196,8 @@ export default function AdminPage() {
                 )}
               </div>
 
-              <p className="text-[10px] text-sand-200/60 font-mono">{t("admin.demoNote")}</p>
-              <p className="text-[10px] text-sand-200/60 font-mono">{t("admin.editHint")}</p>
+              <p className="text-[10px] text-theme-text-muted font-mono">{t("admin.demoNote")}</p>
+              <p className="text-[10px] text-theme-text-muted font-mono">{t("admin.editHint")}</p>
 
               <div className="pt-4 border-t border-forest-800 flex items-center justify-between">
                 {saveSuccess ? (
@@ -206,7 +206,7 @@ export default function AdminPage() {
                     <span>{t("admin.saved")}</span>
                   </span>
                 ) : (
-                  <span className="text-xs text-sand-200/60 font-mono">{t("admin.demoNote")}</span>
+                  <span className="text-xs text-theme-text-muted font-mono">{t("admin.demoNote")}</span>
                 )}
 
                 <button

@@ -79,7 +79,7 @@ export function NewsletterModal() {
         >
         <button
           onClick={handleDismiss}
-          className="absolute top-4 right-4 p-2 rounded-full bg-theme-base/60 border border-forest-700 text-sand-200 hover:text-rose-400"
+          className="absolute top-4 right-4 p-2 rounded-full bg-theme-base/60 border border-forest-700 text-theme-text-muted hover:text-rose-400"
           aria-label="Close modal"
         >
           <X className="w-4 h-4" />
@@ -91,7 +91,7 @@ export function NewsletterModal() {
             <h3 className="font-display font-extrabold text-xl text-sand-50">
               {language === "or" ? "ସବସ୍କ୍ରିପସନ୍ ସଫଳ ହେଲା!" : "Subscribed Successfully!"}
             </h3>
-            <p className="text-xs text-sand-200/80">
+            <p className="text-xs text-theme-text-muted">
               {language === "or"
                 ? "ଓଡକୋନ୍ସ ପ୍ରୋଜେକ୍ଟସ ସହ ଯୋଡ଼ି ହୋଇଥିବାରୁ ଧନ୍ୟବାଦ।"
                 : "Thank you for staying connected with ODCONS PROJECTS technical insights."}
@@ -109,7 +109,7 @@ export function NewsletterModal() {
               <h3 className="font-display font-extrabold text-2xl text-sand-50">
                 {language === "or" ? "ଓଡକୋନ୍ସ ନିଉଜଲେଟର ସବସ୍କ୍ରାଇବ୍ କରନ୍ତୁ" : "Get Agribusiness & Project DPR Advisory"}
               </h3>
-              <p className="text-xs text-sand-200/80 leading-relaxed font-light">
+              <p className="text-xs text-theme-text-muted leading-relaxed font-light">
                 {language === "or"
                   ? "କୃଷି, ମତ୍ସ୍ୟଚାଷ, ଜଳଚର ପାଳନ, ସରକାରୀ ଯୋଜନା ଓ ସବସିଡି ସମ୍ବନ୍ଧୀୟ ନିୟମିତ ତଥ୍ୟ ପାଆନ୍ତୁ।"
                   : "Receive monthly DPR guides, subsidy policy updates, and technical feasibility insights."}

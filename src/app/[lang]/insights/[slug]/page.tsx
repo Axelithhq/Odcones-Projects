@@ -34,7 +34,7 @@ export default async function ArticleDetailPage(props: { params: Promise<{ lang:
   const content = pickOr(article.content, article.content_or, lang);
 
   return (
-    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
+    <main className="min-h-screen bg-theme-base text-theme-text relative has-custom-cursor overflow-x-hidden pt-20">
       <CustomCursor />
       <Header />
 
@@ -53,7 +53,7 @@ export default async function ArticleDetailPage(props: { params: Promise<{ lang:
             {title}
           </h1>
 
-          <div className="flex items-center gap-6 text-xs text-sand-200/70 border-t border-forest-800/40 pt-4">
+          <div className="flex items-center gap-6 text-xs text-theme-text-muted border-t border-forest-800/40 pt-4">
             <span className="flex items-center gap-1.5"><User className="w-4 h-4 text-harvest-400" /> {article.author}</span>
             <span className="flex items-center gap-1.5"><Clock className="w-4 h-4 text-harvest-400" /> {article.read_time}</span>
             <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4 text-harvest-400" /> {article.published_at}</span>
@@ -67,7 +67,7 @@ export default async function ArticleDetailPage(props: { params: Promise<{ lang:
             <img src={article.image_url} alt={title} className="w-full h-full object-cover" />
           </div>
 
-          <div className="p-8 rounded-3xl bg-forest-900/40 border border-forest-800/60 prose prose-invert max-w-none text-xs sm:text-sm text-sand-200/90 leading-relaxed whitespace-pre-line">
+          <div className="p-8 rounded-3xl bg-forest-900/40 border border-forest-800/60 prose prose-invert max-w-none text-xs sm:text-sm text-theme-text-muted leading-relaxed whitespace-pre-line">
             {content}
           </div>
         </div>

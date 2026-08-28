@@ -23,7 +23,7 @@ export default async function ServicesPage(props: { params: Promise<{ lang: stri
   const t = getServerT(lang);
 
   return (
-    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
+    <main className="min-h-screen bg-theme-base text-theme-text relative has-custom-cursor overflow-x-hidden pt-20">
       <CustomCursor />
       <Header />
 
@@ -38,7 +38,7 @@ export default async function ServicesPage(props: { params: Promise<{ lang: stri
             {t("services.title")}
           </h1>
 
-          <p className="text-sand-200/80 text-base sm:text-lg max-w-2xl font-light">
+          <p className="text-theme-text-muted text-base sm:text-lg max-w-2xl font-light">
             {t("services.subtitle")}
           </p>
         </div>
@@ -69,7 +69,7 @@ export default async function ServicesPage(props: { params: Promise<{ lang: stri
                     {pickOr(srv.title, srv.title_or, lang)}
                   </h3>
 
-                  <p className="text-xs text-sand-200/70 leading-relaxed">
+                  <p className="text-xs text-theme-text-muted leading-relaxed">
                     {pickOr(srv.shortDesc, srv.shortDesc_or, lang)}
                   </p>
                 </div>
@@ -78,7 +78,7 @@ export default async function ServicesPage(props: { params: Promise<{ lang: stri
                   <span className="text-[10px] font-bold text-forest-300 uppercase tracking-widest">
                     {t("services.keyDeliverables")}
                   </span>
-                  <ul className="space-y-1.5 text-xs text-sand-200/80">
+                  <ul className="space-y-1.5 text-xs text-theme-text-muted">
                     {pickOrArray(srv.deliverables, srv.deliverables_or, lang).slice(0, 3).map((item, idx) => (
                       <li key={idx} className="flex items-center gap-2">
                         <CheckCircle2 className="w-3.5 h-3.5 text-harvest-400 flex-shrink-0" />

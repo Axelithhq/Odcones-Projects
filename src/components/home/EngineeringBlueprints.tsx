@@ -66,7 +66,7 @@ export function EngineeringBlueprints() {
             {language === "or" ? "୨D/୩D ଇଞ୍ଜିନିୟରିଂ ନକ୍ସା ଓ ସିଭିଲ୍ ଲେ-ଆଉଟ୍" : "ENGINEERING & TECHNICAL DRAWINGS"}
           </h2>
 
-          <p className="text-sand-200/80 text-sm sm:text-base leading-relaxed font-light">
+          <p className="text-theme-text-muted text-sm sm:text-base leading-relaxed font-light">
             Every ODCONS project includes precision AutoCAD structural plans, machinery arrangement drawings, and civil site layouts.
           </p>
         </div>
@@ -118,7 +118,7 @@ export function EngineeringBlueprints() {
               </svg>
             </div>
 
-            <div className="relative z-10 text-[10px] font-mono text-sand-200/50 text-center uppercase">
+            <div className="relative z-10 text-[10px] font-mono text-theme-text-muted text-center uppercase">
               [ Click CAD Zones to inspect structural specifications ]
             </div>
           </div>
@@ -127,21 +127,21 @@ export function EngineeringBlueprints() {
           <div className="lg:col-span-5 p-8 rounded-3xl bg-forest-900/40 border border-forest-700/50 space-y-6">
             <div className="flex justify-between items-center text-xs font-mono font-bold text-harvest-400 uppercase">
               <span>{activeZone.code}</span>
-              <span className="text-sand-200/60">AUTOCAD APPROVED</span>
+              <span className="text-theme-text-muted">AUTOCAD APPROVED</span>
             </div>
 
             <div className="space-y-2">
               <h3 className="font-display font-extrabold text-2xl text-sand-50">
                 {language === "or" ? activeZone.name_or : activeZone.name}
               </h3>
-              <p className="text-xs text-sand-200/80 leading-relaxed font-light">{activeZone.desc}</p>
+              <p className="text-xs text-theme-text-muted leading-relaxed font-light">{activeZone.desc}</p>
             </div>
 
             <div className="p-4 rounded-2xl bg-theme-base border border-forest-800 space-y-2">
               <span className="text-[10px] font-bold text-forest-300 uppercase tracking-widest font-display">
                 STRUCTURAL SPECIFICATIONS:
               </span>
-              <div className="space-y-1.5 text-xs text-sand-100 font-mono">
+              <div className="space-y-1.5 text-xs text-theme-text font-mono">
                 {activeZone.specs.map((sp, idx) => (
                   <div key={idx} className="flex items-center gap-2">
                     <span className="text-harvest-400">✓</span>

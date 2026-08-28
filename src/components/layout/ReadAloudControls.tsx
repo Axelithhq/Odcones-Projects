@@ -15,7 +15,7 @@ export function ReadAloudControls() {
 
   const baseBtn = isLight
     ? "bg-white border-[#D4DDD5] text-[#4A5D50] hover:text-harvest-600"
-    : "bg-forest-900/60 border-forest-700/50 text-sand-200/80 hover:text-sand-50";
+    : "bg-forest-900/60 border-forest-700/50 text-theme-text-muted hover:text-sand-50";
 
   return (
     <div className="relative inline-flex items-center gap-1.5">
@@ -63,7 +63,7 @@ export function ReadAloudControls() {
           className={`p-1.5 rounded-full border transition-colors ${
             isLight
               ? "bg-white border-[#D4DDD5] text-[#4A5D50] hover:text-rose-500"
-              : "bg-forest-900 border-forest-700 text-sand-200 hover:text-rose-400"
+              : "bg-forest-900 border-forest-700 text-theme-text-muted hover:text-rose-400"
           }`}
           title={t("readAloud.stop")}
           aria-label={t("readAloud.ariaStop")}
@@ -78,7 +78,7 @@ export function ReadAloudControls() {
         className={`p-1.5 rounded-full border transition-colors ${
           isLight
             ? "bg-white border-[#D4DDD5] text-[#4A5D50] hover:text-harvest-600"
-            : "bg-forest-900/50 border-forest-700/50 text-sand-200/70 hover:text-sand-50"
+            : "bg-forest-900/50 border-forest-700/50 text-theme-text-muted hover:text-sand-50"
         }`}
         title={t("readAloud.speedTitle")}
         aria-label={t("readAloud.speedTitle")}
@@ -111,7 +111,7 @@ export function ReadAloudControls() {
                     ? "bg-harvest-500 text-forest-950"
                     : isLight
                     ? "bg-[#F0F3EE] text-[#4A5D50] hover:bg-[#E5EAE3]"
-                    : "bg-forest-900 text-sand-200/80 hover:bg-forest-800"
+                    : "bg-forest-900 text-theme-text-muted hover:bg-forest-800"
                 }`}
               >
                 {s}x
@@ -131,7 +131,7 @@ export function ReadAloudControls() {
           <Info className={`w-5 h-5 flex-shrink-0 mt-0.5 ${isLight ? "text-harvest-600" : "text-harvest-400"}`} />
           <div className="space-y-1">
             <strong className={`block font-display ${isLight ? "text-harvest-700" : "text-harvest-400"}`}>{t("readAloud.odiaNoticeTitle")}</strong>
-            <p className={`text-[11px] leading-relaxed ${isLight ? "text-[#4A5D50]" : "text-sand-200/80"}`}>
+            <p className={`text-[11px] leading-relaxed ${isLight ? "text-[#4A5D50]" : "text-theme-text-muted"}`}>
               {t("readAloud.odiaNoticeBody")}
             </p>
             <button

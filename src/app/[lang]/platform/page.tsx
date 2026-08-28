@@ -53,7 +53,7 @@ export default function PlatformDashboardPage() {
   const pick = (pair: [string, string]) => (language === "or" ? pair[1] : pair[0]);
 
   return (
-    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
+    <main className="min-h-screen bg-theme-base text-theme-text relative has-custom-cursor overflow-x-hidden pt-20">
       <CustomCursor />
       <Header />
 
@@ -68,7 +68,7 @@ export default function PlatformDashboardPage() {
             <h1 className="font-display font-extrabold text-3xl sm:text-4xl text-sand-50 uppercase">
               {t("platform.title")}
             </h1>
-            <p className="text-xs sm:text-sm text-sand-200/70 pt-1">
+            <p className="text-xs sm:text-sm text-theme-text-muted pt-1">
               {t("platform.subtitle")}
             </p>
           </div>
@@ -95,7 +95,7 @@ export default function PlatformDashboardPage() {
           {/* Demo Banner */}
           <div className="p-4 rounded-2xl bg-aqua-950/40 border border-aqua-500/30 flex items-center gap-3">
             <Bell className="w-5 h-5 text-aqua-400 flex-shrink-0" />
-            <p className="text-xs text-sand-200/90">{t("platform.demoBanner")}</p>
+            <p className="text-xs text-theme-text-muted">{t("platform.demoBanner")}</p>
           </div>
 
           {/* Active Alert Banner */}
@@ -105,7 +105,7 @@ export default function PlatformDashboardPage() {
                 <AlertTriangle className="w-5 h-5 text-amber-400 flex-shrink-0" />
                 <div className="text-xs">
                   <strong className="text-sand-50 font-bold">{t("platform.alertTitle")}: Hirakud Cage Cluster #4</strong>
-                  <p className="text-sand-200/80">{t("platform.alertDesc")}</p>
+                  <p className="text-theme-text-muted">{t("platform.alertDesc")}</p>
                 </div>
               </div>
               <button
@@ -131,7 +131,7 @@ export default function PlatformDashboardPage() {
                 className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex-shrink-0 border ${
                   activeModule === mod.id
                     ? "bg-forest-800 border-harvest-400 text-sand-50 shadow-lg"
-                    : "bg-forest-900/40 border-forest-800 text-sand-200/70 hover:text-sand-50"
+                    : "bg-forest-900/40 border-forest-800 text-theme-text-muted hover:text-sand-50"
                 }`}
               >
                 {mod.icon}
@@ -168,7 +168,7 @@ export default function PlatformDashboardPage() {
                     <Thermometer className="w-4 h-4" />
                   </div>
                   <p className="font-display font-extrabold text-3xl text-sand-50">28.4 °C</p>
-                  <span className="text-[10px] text-sand-200/60">{t("platform.seasonal")}</span>
+                  <span className="text-[10px] text-theme-text-muted">{t("platform.seasonal")}</span>
                 </div>
 
                 <div className="p-6 rounded-3xl bg-forest-900/40 border border-forest-800 space-y-2">
@@ -191,14 +191,14 @@ export default function PlatformDashboardPage() {
                   <div className="p-5 rounded-2xl bg-theme-base border border-forest-800 flex items-center justify-between">
                     <div>
                       <h4 className="font-bold text-sm text-sand-50">{t("platform.aerators")}</h4>
-                      <p className="text-xs text-sand-200/60">Hirakud Cage Sector #4</p>
+                      <p className="text-xs text-theme-text-muted">Hirakud Cage Sector #4</p>
                     </div>
                     <button
                       onClick={() => setAeratorsActive(!aeratorsActive)}
                       className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
                         aeratorsActive
                           ? "bg-emerald-600 text-sand-50 shadow-md"
-                          : "bg-forest-800 text-sand-200/60"
+                          : "bg-forest-800 text-theme-text-muted"
                       }`}
                     >
                       {aeratorsActive ? t("platform.running") : t("platform.paused")}
@@ -208,14 +208,14 @@ export default function PlatformDashboardPage() {
                   <div className="p-5 rounded-2xl bg-theme-base border border-forest-800 flex items-center justify-between">
                     <div>
                       <h4 className="font-bold text-sm text-sand-50">{t("platform.drip")}</h4>
-                      <p className="text-xs text-sand-200/60">Koraput Polyhouse #12</p>
+                      <p className="text-xs text-theme-text-muted">Koraput Polyhouse #12</p>
                     </div>
                     <button
                       onClick={() => setDripActive(!dripActive)}
                       className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
                         dripActive
                           ? "bg-emerald-600 text-sand-50 shadow-md"
-                          : "bg-forest-800 text-sand-200/60"
+                          : "bg-forest-800 text-theme-text-muted"
                       }`}
                     >
                       {dripActive ? t("platform.running") : t("platform.paused")}
@@ -239,8 +239,8 @@ export default function PlatformDashboardPage() {
                       <span>{t("platform.cageNode")}{cage}</span>
                       <CheckCircle className="w-4 h-4 text-emerald-400" />
                     </div>
-                    <p className="text-xs text-sand-200/70">{t("platform.species")}</p>
-                    <p className="text-xs text-sand-200/70">{t("platform.biomass")}</p>
+                    <p className="text-xs text-theme-text-muted">{t("platform.species")}</p>
+                    <p className="text-xs text-theme-text-muted">{t("platform.biomass")}</p>
                     <p className="text-xs text-aqua-400 font-mono">DO: 6.7 mg/L | Temp: 28.1°C</p>
                   </div>
                 ))}
@@ -257,13 +257,13 @@ export default function PlatformDashboardPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="p-5 rounded-2xl bg-theme-base border border-forest-800 space-y-2">
                   <span className="text-xs font-bold text-harvest-400">{t("platform.clusterA")}</span>
-                  <p className="text-xs text-sand-200/80">{t("platform.soilCarbon")}</p>
-                  <p className="text-xs text-sand-200/80">{t("platform.vwc")}</p>
+                  <p className="text-xs text-theme-text-muted">{t("platform.soilCarbon")}</p>
+                  <p className="text-xs text-theme-text-muted">{t("platform.vwc")}</p>
                 </div>
                 <div className="p-5 rounded-2xl bg-theme-base border border-forest-800 space-y-2">
                   <span className="text-xs font-bold text-harvest-400">{t("platform.clusterB")}</span>
-                  <p className="text-xs text-sand-200/80">{t("platform.ec")}</p>
-                  <p className="text-xs text-sand-200/80">{t("platform.npk")}</p>
+                  <p className="text-xs text-theme-text-muted">{t("platform.ec")}</p>
+                  <p className="text-xs text-theme-text-muted">{t("platform.npk")}</p>
                 </div>
               </div>
             </div>
@@ -280,7 +280,7 @@ export default function PlatformDashboardPage() {
                   <div key={idx} className="p-4 rounded-2xl bg-theme-base border border-forest-800 flex items-center justify-between text-xs">
                     <div>
                       <h4 className="font-bold text-sand-50">{pick(item.name)}</h4>
-                      <span className="text-sand-200/60">{pick(item.members)} • {pick(item.sector)}</span>
+                      <span className="text-theme-text-muted">{pick(item.members)} • {pick(item.sector)}</span>
                     </div>
                     <span className="px-3 py-1 rounded-full bg-emerald-950 text-emerald-400 font-bold">
                       {pick(item.status)}

@@ -82,7 +82,7 @@ export function LanguageToggle() {
                         : "bg-forest-800 text-harvest-300 font-display"
                       : isLight
                       ? "text-[#4A5D50] hover:bg-[#F0F3EE]"
-                      : "text-sand-200/80 hover:bg-forest-900"
+                      : "text-theme-text-muted hover:bg-forest-900"
                   }`}
                 >
                   <span>{opt.label}</span>

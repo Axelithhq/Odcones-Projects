@@ -57,7 +57,7 @@ export function FounderSection() {
             {/* Founder Quote Card */}
             <div className="p-6 rounded-2xl bg-forest-900/40 border border-forest-700/40 relative space-y-3">
               <Quote className="w-8 h-8 text-harvest-400/40 absolute top-4 right-4" />
-              <p className="text-sand-100/90 text-sm sm:text-base leading-relaxed italic font-light">
+              <p className="text-theme-text/90 text-sm sm:text-base leading-relaxed italic font-light">
                 "{t("founder.quote")}"
               </p>
               <div className="pt-2 border-t border-forest-800/60 flex items-center justify-between text-xs">
@@ -66,7 +66,7 @@ export function FounderSection() {
               </div>
             </div>
 
-            <div className="space-y-3 text-sand-200/80 text-xs sm:text-sm leading-relaxed">
+            <div className="space-y-3 text-theme-text-muted text-xs sm:text-sm leading-relaxed">
               <p>
                 {t("founder.para1")}
               </p>

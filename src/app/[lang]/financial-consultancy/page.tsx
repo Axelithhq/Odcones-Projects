@@ -45,7 +45,7 @@ export default function FinancialConsultancyPage() {
   const { language } = useTranslation();
 
   return (
-    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor pt-20">
+    <main className="min-h-screen bg-theme-base text-theme-text relative has-custom-cursor pt-20">
       <CustomCursor />
       <Header />
 
@@ -61,7 +61,7 @@ export default function FinancialConsultancyPage() {
             {language === "or" ? "ଆର୍ଥିକ ଯୋଜନା, DSCR ଓ ଋଣ ଆକଳନ" : "FINANCIAL MODELING & LOAN APPRAISAL"}
           </h1>
 
-          <p className="text-sand-200/80 text-base sm:text-lg max-w-3xl leading-relaxed font-light">
+          <p className="text-theme-text-muted text-base sm:text-lg max-w-3xl leading-relaxed font-light">
             ODCONS PROJECTS delivers rigorous financial modeling, 10-year cash flow projections, Debt Service Coverage Ratio (DSCR) calculations, break-even analysis, and loan repayment scheduling for commercial agribusiness and industrial investments.
           </p>
         </div>
@@ -88,7 +88,7 @@ export default function FinancialConsultancyPage() {
                 <h3 className="font-display font-bold text-lg text-sand-50">
                   {language === "or" ? m.title_or : m.title}
                 </h3>
-                <p className="text-xs text-sand-200/80 leading-relaxed font-light">{m.desc}</p>
+                <p className="text-xs text-theme-text-muted leading-relaxed font-light">{m.desc}</p>
               </div>
 
               <div className="pt-3 border-t border-forest-800/60 flex items-center gap-1.5 text-[11px] font-mono text-forest-300">
@@ -105,7 +105,7 @@ export default function FinancialConsultancyPage() {
         <h2 className="font-display font-extrabold text-3xl text-sand-50 uppercase">
           Need Financial Projections for Your DPR?
         </h2>
-        <p className="text-sand-200/80 text-sm max-w-xl mx-auto font-light">
+        <p className="text-theme-text-muted text-sm max-w-xl mx-auto font-light">
           Structure bankable financial models, DSCR schedules, and means of finance tailored for bank appraisal and subsidy applications.
         </p>
 

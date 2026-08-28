@@ -113,7 +113,7 @@ export function FieldToFinance() {
             {language === "or" ? "କ୍ଷେତ୍ରରୁ ଆର୍ଥିକ ଯୋଜନା ପର୍ଯ୍ୟନ୍ତ" : "FROM FIELD TO FINANCE"}
           </h2>
 
-          <p className="text-sand-200/80 text-sm sm:text-base leading-relaxed font-light">
+          <p className="text-theme-text-muted text-sm sm:text-base leading-relaxed font-light">
             How ODCONS PROJECTS transforms raw agricultural or aquatic land into a bankable, high-yield commercial enterprise.
           </p>
         </div>
@@ -129,7 +129,7 @@ export function FieldToFinance() {
                 className={`flex-shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-bold uppercase transition-all border ${
                   isSelected
                     ? "bg-harvest-500 text-forest-950 border-harvest-400 shadow-xl scale-105"
-                    : "bg-forest-900/40 text-sand-200/70 border-forest-800 hover:text-sand-50"
+                    : "bg-forest-900/40 text-theme-text-muted border-forest-800 hover:text-sand-50"
                 }`}
               >
                 <span>{stg.step}.</span>
@@ -167,7 +167,7 @@ export function FieldToFinance() {
                 </h3>
               </div>
 
-              <p className="text-sand-200/80 text-sm leading-relaxed font-light">
+              <p className="text-theme-text-muted text-sm leading-relaxed font-light">
                 {language === "or" ? activeStep.desc_or : activeStep.desc}
               </p>
 
@@ -175,7 +175,7 @@ export function FieldToFinance() {
                 <span className="text-[10px] font-bold text-forest-300 uppercase tracking-widest">
                   DELIVERABLE SPECIFICATIONS:
                 </span>
-                <div className="space-y-1 text-xs text-sand-100 font-mono">
+                <div className="space-y-1 text-xs text-theme-text font-mono">
                   {activeStep.specs.map((sp, idx) => (
                     <div key={idx} className="flex items-center gap-2">
                       <span className="text-harvest-400">•</span>

@@ -44,7 +44,7 @@ export default function ProjectsPage() {
   });
 
   return (
-    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
+    <main className="min-h-screen bg-theme-base text-theme-text relative has-custom-cursor overflow-x-hidden pt-20">
       <CustomCursor />
       <Header />
 
@@ -59,7 +59,7 @@ export default function ProjectsPage() {
             {t("projects.title")}
           </h1>
 
-          <p className="text-sand-200/80 text-base sm:text-lg max-w-2xl font-light">
+          <p className="text-theme-text-muted text-base sm:text-lg max-w-2xl font-light">
             {t("projects.subtitle")}
           </p>
         </div>
@@ -78,7 +78,7 @@ export default function ProjectsPage() {
                 className={`px-4 py-2 rounded-full text-xs font-bold tracking-wide transition-all flex-shrink-0 ${
                   selectedCategory === cat.key
                     ? "bg-harvest-500 text-forest-950 shadow-md"
-                    : "bg-theme-base/80 text-sand-200/70 border border-forest-800 hover:text-sand-50"
+                    : "bg-theme-base/80 text-theme-text-muted border border-forest-800 hover:text-sand-50"
                 }`}
               >
                 {cat.label}
@@ -94,7 +94,7 @@ export default function ProjectsPage() {
               placeholder={t("projects.searchPlaceholder")}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 text-xs bg-theme-base border border-forest-700/50 rounded-full text-sand-100 placeholder-sand-200/40 focus:outline-none focus:border-harvest-400"
+              className="w-full pl-10 pr-4 py-2 text-xs bg-theme-base border border-forest-700/50 rounded-full text-theme-text placeholder-sand-200/40 focus:outline-none focus:border-harvest-400"
             />
           </div>
         </div>
@@ -141,7 +141,7 @@ export default function ProjectsPage() {
                         </div>
                       </div>
 
-                      <div className="flex items-center gap-4 text-[11px] text-sand-200/60 font-semibold">
+                      <div className="flex items-center gap-4 text-[11px] text-theme-text-muted font-semibold">
                         <span className="flex items-center gap-1">
                           <MapPin className="w-3.5 h-3.5 text-forest-300" />
                           {proj.location}
@@ -156,7 +156,7 @@ export default function ProjectsPage() {
                         {pickOr(proj.title, proj.title_or, language)}
                       </h3>
 
-                      <p className="text-xs text-sand-200/70 line-clamp-3 leading-relaxed">
+                      <p className="text-xs text-theme-text-muted line-clamp-3 leading-relaxed">
                         {pickOr(proj.description, proj.description_or, language)}
                       </p>
                     </div>

@@ -105,7 +105,7 @@ export function AquacultureSimulator() {
               className={`p-3 rounded-2xl border text-left transition-all ${
                 isActive
                   ? "bg-forest-800 border-harvest-400 text-sand-50 shadow-lg scale-105"
-                  : "bg-theme-base/60 border-forest-800 text-sand-200/60 hover:text-sand-50 hover:bg-forest-900/40"
+                  : "bg-theme-base/60 border-forest-800 text-theme-text-muted hover:text-sand-50 hover:bg-forest-900/40"
               }`}
             >
               <div className="flex items-center justify-between mb-2">
@@ -143,7 +143,7 @@ export function AquacultureSimulator() {
               </div>
             </div>
 
-            <p className="text-xs sm:text-sm text-sand-200/80 leading-relaxed">
+            <p className="text-xs sm:text-sm text-theme-text-muted leading-relaxed">
               {currentStage.desc}
             </p>
 
@@ -151,7 +151,7 @@ export function AquacultureSimulator() {
               <span className="text-[10px] font-bold text-harvest-400 uppercase tracking-wider">
                 COMMISSIONED TECHNOLOGIES:
               </span>
-              <ul className="space-y-1.5 text-xs text-sand-100">
+              <ul className="space-y-1.5 text-xs text-theme-text">
                 {currentStage.keyTech.map((tech, idx) => (
                   <li key={idx} className="flex items-center gap-2">
                     <CheckCircle className="w-3.5 h-3.5 text-forest-300" />
@@ -170,17 +170,17 @@ export function AquacultureSimulator() {
 
             <div className="space-y-3 text-xs">
               <div className="flex justify-between items-center p-2.5 rounded-lg bg-theme-base border border-forest-800">
-                <span className="text-sand-200/70">Target Temperature:</span>
+                <span className="text-theme-text-muted">Target Temperature:</span>
                 <span className="font-mono font-bold text-sand-50">{currentStage.temp}</span>
               </div>
 
               <div className="flex justify-between items-center p-2.5 rounded-lg bg-theme-base border border-forest-800">
-                <span className="text-sand-200/70">Dissolved Oxygen:</span>
+                <span className="text-theme-text-muted">Dissolved Oxygen:</span>
                 <span className="font-mono font-bold text-aqua-400">{currentStage.doLevel}</span>
               </div>
 
               <div className="flex justify-between items-center p-2.5 rounded-lg bg-theme-base border border-forest-800">
-                <span className="text-sand-200/70">Feed Regimen:</span>
+                <span className="text-theme-text-muted">Feed Regimen:</span>
                 <span className="font-mono font-bold text-harvest-400">{currentStage.feedType}</span>
               </div>
             </div>

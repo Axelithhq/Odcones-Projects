@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark-mode" data-theme="dark">
-      <body className="antialiased min-h-screen bg-theme-base text-sand-100">
+      <body className="antialiased min-h-screen bg-theme-base text-theme-text">
         <ThemeProvider>
           <TranslationProvider>
             {children}

@@ -42,7 +42,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor pt-20">
+    <main className="min-h-screen bg-theme-base text-theme-text relative has-custom-cursor pt-20">
       <CustomCursor />
       <Header />
 
@@ -56,7 +56,7 @@ export default function ContactPage() {
             {t("contact.title")}
           </h1>
 
-          <p className="text-sand-200/80 text-base sm:text-lg max-w-2xl font-light">
+          <p className="text-theme-text-muted text-base sm:text-lg max-w-2xl font-light">
             {t("contact.subtitle")}
           </p>
         </div>
@@ -71,7 +71,7 @@ export default function ContactPage() {
                 {t("contact.hqTitle")}
               </h3>
 
-              <div className="space-y-4 text-xs text-sand-200/80">
+              <div className="space-y-4 text-xs text-theme-text-muted">
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-harvest-400 flex-shrink-0 mt-0.5" />
                   <div>
@@ -101,7 +101,7 @@ export default function ContactPage() {
                 <h3 className="font-display font-extrabold text-2xl text-sand-50">
                   {t("contact.successTitle")}
                 </h3>
-                <p className="text-xs text-sand-200/80">
+                <p className="text-xs text-theme-text-muted">
                   {t("contact.successLocal")}
                 </p>
               </div>

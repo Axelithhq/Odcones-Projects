@@ -103,7 +103,7 @@ export function FieldKit() {
             {t("fieldKit.title")}
           </h2>
 
-          <p className="text-sand-200/80 text-sm leading-relaxed">
+          <p className="text-theme-text-muted text-sm leading-relaxed">
             {t("fieldKit.subtitle")}
           </p>
         </div>
@@ -139,7 +139,7 @@ export function FieldKit() {
 
                 <div className="space-y-1">
                   <h3 className="font-display font-bold text-lg text-sand-50">{pick(item.name)}</h3>
-                  <p className="text-xs text-sand-200/70 leading-relaxed">{pick(item.desc)}</p>
+                  <p className="text-xs text-theme-text-muted leading-relaxed">{pick(item.desc)}</p>
                 </div>
               </div>
             );

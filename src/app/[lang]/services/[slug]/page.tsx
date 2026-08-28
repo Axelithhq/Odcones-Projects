@@ -37,7 +37,7 @@ export default async function ServiceDetailPage(props: { params: Promise<{ lang:
   const deliverables = pickOrArray(service.deliverables, service.deliverables_or, lang);
 
   return (
-    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
+    <main className="min-h-screen bg-theme-base text-theme-text relative has-custom-cursor overflow-x-hidden pt-20">
       <CustomCursor />
       <Header />
 
@@ -56,7 +56,7 @@ export default async function ServiceDetailPage(props: { params: Promise<{ lang:
             {title}
           </h1>
 
-          <p className="text-sand-200/90 text-base sm:text-lg max-w-3xl font-light">
+          <p className="text-theme-text-muted text-base sm:text-lg max-w-3xl font-light">
             {shortDesc}
           </p>
         </div>
@@ -73,7 +73,7 @@ export default async function ServiceDetailPage(props: { params: Promise<{ lang:
               <h2 className="font-display font-extrabold text-2xl text-sand-50 uppercase">
                 {t("services.scopeTitle")}
               </h2>
-              <p className="text-sand-200/80 text-sm leading-relaxed whitespace-pre-line">
+              <p className="text-theme-text-muted text-sm leading-relaxed whitespace-pre-line">
                 {fullDesc}
               </p>
             </div>
@@ -86,7 +86,7 @@ export default async function ServiceDetailPage(props: { params: Promise<{ lang:
                 {deliverables.map((item, idx) => (
                   <div key={idx} className="p-4 rounded-2xl bg-forest-900/40 border border-forest-800/60 flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-harvest-400 flex-shrink-0" />
-                    <span className="text-xs font-semibold text-sand-100">{item}</span>
+                    <span className="text-xs font-semibold text-theme-text">{item}</span>
                   </div>
                 ))}
               </div>
@@ -99,7 +99,7 @@ export default async function ServiceDetailPage(props: { params: Promise<{ lang:
               <h3 className="font-display font-extrabold text-xl text-sand-50 uppercase">
                 {t("services.contractService")}
               </h3>
-              <p className="text-xs text-sand-200/70 leading-relaxed">
+              <p className="text-xs text-theme-text-muted leading-relaxed">
                 {t("services.contractDesc")}
               </p>
 

@@ -145,7 +145,7 @@ export function FromFieldToFuture() {
             </span>
           </h2>
 
-          <p className="text-sand-200/80 text-sm sm:text-base leading-relaxed font-light">
+          <p className="text-theme-text-muted text-sm sm:text-base leading-relaxed font-light">
             {t("fromField.subtitle")}
           </p>
 
@@ -161,7 +161,7 @@ export function FromFieldToFuture() {
                   className={`px-5 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase transition-all flex items-center gap-2 border ${
                     isSelected
                       ? "bg-forest-800 text-sand-50 border-harvest-400 shadow-xl scale-105"
-                      : "bg-forest-900/50 text-sand-200/70 border-forest-800 hover:text-sand-50 hover:bg-forest-800/50"
+                      : "bg-forest-900/50 text-theme-text-muted border-forest-800 hover:text-sand-50 hover:bg-forest-800/50"
                   }`}
                   style={isSelected ? { borderColor: sec.accentColor } : {}}
                   data-cursor-text="SECTOR"
@@ -219,7 +219,7 @@ export function FromFieldToFuture() {
                 <div className="flex items-center justify-between border-b border-forest-800 pb-2">
                   <div className="flex items-center gap-2">
                     <Smartphone className="w-4 h-4 text-harvest-400" />
-                    <span className="text-[10px] font-bold tracking-widest text-sand-100 uppercase font-display">
+                    <span className="text-[10px] font-bold tracking-widest text-theme-text uppercase font-display">
                       {t("fromField.telemetry")}
                     </span>
                   </div>
@@ -266,7 +266,7 @@ export function FromFieldToFuture() {
                 <p className="font-display font-bold text-sm text-sand-50">{pick(comp.heroObject)}</p>
                 <div className="space-y-1.5 pt-1">
                   {comp.foregroundItems.map((item, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-xs text-sand-200/80">
+                    <div key={idx} className="flex items-center gap-2 text-xs text-theme-text-muted">
                       <CheckCircle2 className="w-3.5 h-3.5 text-forest-300" />
                       <span>{pick(item)}</span>
                     </div>
@@ -275,7 +275,7 @@ export function FromFieldToFuture() {
               </div>
 
               {/* Data Pipeline Flow Banner */}
-              <div className="p-4 rounded-xl bg-forest-900/40 border border-forest-700/30 text-xs text-sand-200/80 space-y-1">
+              <div className="p-4 rounded-xl bg-forest-900/40 border border-forest-700/30 text-xs text-theme-text-muted space-y-1">
                 <strong className="text-sand-50 uppercase text-[10px] tracking-wider block font-display">
                   {t("fromField.dataPipeline")}
                 </strong>

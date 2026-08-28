@@ -27,7 +27,7 @@ export function FinalCTA() {
           {t("cta.title")}
         </h2>
 
-        <p className="text-sand-200/80 text-base sm:text-xl max-w-2xl mx-auto leading-relaxed font-light">
+        <p className="text-theme-text-muted text-base sm:text-xl max-w-2xl mx-auto leading-relaxed font-light">
           {t("cta.desc")}
         </p>
 

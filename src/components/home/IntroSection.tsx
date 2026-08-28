@@ -27,7 +27,7 @@ export function IntroSection() {
               </span>
             </h2>
 
-            <p className="text-sand-200/80 text-base sm:text-lg leading-relaxed max-w-2xl font-light">
+            <p className="text-theme-text-muted text-base sm:text-lg leading-relaxed max-w-2xl font-light">
               ODCONS PROJECTS operates at the intersection of <strong className="text-sand-50 font-semibold">Agriculture, Blue Economy, Precision Technology, Agri-Infrastructure, and Community Resilience</strong>. We engineer holistic, scaleable solutions that empower smallholder farmers, fishing communities, and institutional partners across India.
             </p>
 
@@ -35,19 +35,19 @@ export function IntroSection() {
               <div className="p-4 rounded-2xl bg-forest-900/40 border border-forest-700/30 space-y-1">
                 <Sprout className="w-5 h-5 text-harvest-400" />
                 <h4 className="font-bold text-sm text-sand-50">Agri-Resilience</h4>
-                <p className="text-xs text-sand-200/60">Climate-smart cropping & soil health</p>
+                <p className="text-xs text-theme-text-muted">Climate-smart cropping & soil health</p>
               </div>
 
               <div className="p-4 rounded-2xl bg-forest-900/40 border border-forest-700/30 space-y-1">
                 <Waves className="w-5 h-5 text-aqua-400" />
                 <h4 className="font-bold text-sm text-sand-50">Blue Economy</h4>
-                <p className="text-xs text-sand-200/60">Biofloc, RAS & reservoir cages</p>
+                <p className="text-xs text-theme-text-muted">Biofloc, RAS & reservoir cages</p>
               </div>
 
               <div className="p-4 rounded-2xl bg-forest-900/40 border border-forest-700/30 space-y-1 col-span-2 sm:col-span-1">
                 <Cpu className="w-5 h-5 text-forest-300" />
                 <h4 className="font-bold text-sm text-sand-50">Agritech Integration</h4>
-                <p className="text-xs text-sand-200/60">ODCONS FieldOS & telemetry</p>
+                <p className="text-xs text-theme-text-muted">ODCONS FieldOS & telemetry</p>
               </div>
             </div>
 
@@ -79,7 +79,7 @@ export function IntroSection() {
                   <span>ECOSYSTEM VISION</span>
                   <ShieldCheck className="w-4 h-4 text-forest-300" />
                 </div>
-                <p className="text-xs text-sand-100/90 leading-relaxed italic">
+                <p className="text-xs text-theme-text/90 leading-relaxed italic">
                   "Engineering better outcomes for the people who grow, produce, and sustain our future."
                 </p>
               </div>

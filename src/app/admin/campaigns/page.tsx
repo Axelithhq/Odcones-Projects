@@ -44,7 +44,7 @@ export default function AdminCampaignsPage() {
   };
 
   return (
-    <main className="min-h-screen bg-theme-base text-sand-100 pt-20">
+    <main className="min-h-screen bg-theme-base text-theme-text pt-20">
       <Header />
 
       <section className="py-12 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">

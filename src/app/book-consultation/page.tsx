@@ -149,7 +149,7 @@ export default function BookConsultationPage() {
   };
 
   return (
-    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor pt-20">
+    <main className="min-h-screen bg-theme-base text-theme-text relative has-custom-cursor pt-20">
       <CustomCursor />
       <Header />
 
@@ -164,7 +164,7 @@ export default function BookConsultationPage() {
             {language === "or" ? "ବୈଷୟିକ ପରାମର୍ଶ ବୁକ୍ କରନ୍ତୁ" : "Book A Technical Consultation"}
           </h1>
 
-          <p className="text-sand-200/80 text-sm sm:text-base max-w-2xl font-light">
+          <p className="text-theme-text-muted text-sm sm:text-base max-w-2xl font-light">
             Schedule a 1-on-1 project planning session with Founder Anshuman Mohapatra & ODCONS engineering team.
           </p>
 
@@ -183,7 +183,7 @@ export default function BookConsultationPage() {
                     ? "bg-harvest-500 text-forest-950"
                     : step > s.num
                     ? "bg-forest-800 text-harvest-400"
-                    : "bg-forest-900/40 text-sand-200/60"
+                    : "bg-forest-900/40 text-theme-text-muted"
                 }`}
               >
                 <span>{s.label}</span>
@@ -220,9 +220,9 @@ export default function BookConsultationPage() {
                       </span>
                     </div>
 
-                    <p className="text-xs text-sand-200/80 leading-relaxed font-light">{srv.desc}</p>
+                    <p className="text-xs text-theme-text-muted leading-relaxed font-light">{srv.desc}</p>
 
-                    <div className="flex justify-between items-center text-[11px] text-sand-200/60 pt-2 border-t border-forest-800/60">
+                    <div className="flex justify-between items-center text-[11px] text-theme-text-muted pt-2 border-t border-forest-800/60">
                       <span>Duration: {srv.duration}</span>
                       <span className="text-harvest-400 font-bold">Select Service →</span>
                     </div>
@@ -267,7 +267,7 @@ export default function BookConsultationPage() {
                       className={`px-5 py-2.5 rounded-xl text-xs font-bold transition-all border ${
                         selectedTime === tSlot
                           ? "bg-harvest-500 text-forest-950 border-harvest-400 shadow-lg"
-                          : "bg-theme-base text-sand-200/80 border-forest-800 hover:border-forest-600"
+                          : "bg-theme-base text-theme-text-muted border-forest-800 hover:border-forest-600"
                       }`}
                     >
                       {tSlot}
@@ -280,7 +280,7 @@ export default function BookConsultationPage() {
             <div className="flex justify-between pt-4">
               <button
                 onClick={() => setStep(1)}
-                className="px-6 py-3 rounded-full bg-forest-900 border border-forest-700 text-xs font-bold text-sand-200"
+                className="px-6 py-3 rounded-full bg-forest-900 border border-forest-700 text-xs font-bold text-theme-text-muted"
               >
                 ← Back
               </button>
@@ -412,7 +412,7 @@ export default function BookConsultationPage() {
             <div className="flex justify-between pt-4">
               <button
                 onClick={() => setStep(2)}
-                className="px-6 py-3 rounded-full bg-forest-900 border border-forest-700 text-xs font-bold text-sand-200"
+                className="px-6 py-3 rounded-full bg-forest-900 border border-forest-700 text-xs font-bold text-theme-text-muted"
               >
                 ← Back
               </button>
@@ -439,14 +439,14 @@ export default function BookConsultationPage() {
               </h2>
             </div>
 
-            <div className="max-w-md mx-auto p-4 rounded-2xl bg-theme-base border border-forest-800 space-y-2 text-xs text-sand-200/80 text-left font-mono">
+            <div className="max-w-md mx-auto p-4 rounded-2xl bg-theme-base border border-forest-800 space-y-2 text-xs text-theme-text-muted text-left font-mono">
               <p><strong>Client Name:</strong> {bookingConfirmed.name}</p>
               <p><strong>Service:</strong> {bookingConfirmed.serviceName}</p>
               <p><strong>Scheduled Slot:</strong> {bookingConfirmed.date} at {bookingConfirmed.time}</p>
               <p><strong>Amount Paid:</strong> ₹{bookingConfirmed.amount}</p>
             </div>
 
-            <p className="text-xs text-sand-200/70 max-w-md mx-auto">
+            <p className="text-xs text-theme-text-muted max-w-md mx-auto">
               A confirmation email has been dispatched to <strong>{bookingConfirmed.email}</strong>. Our technical engineering team will connect with you at your scheduled slot.
             </p>
 

@@ -22,7 +22,7 @@ export function DigitalField() {
             ODCONS FieldOS™ Spatial Platform
           </h2>
 
-          <p className="text-sand-200/80 text-sm sm:text-base leading-relaxed font-light">
+          <p className="text-theme-text-muted text-sm sm:text-base leading-relaxed font-light">
             Designed for mobile field officers, district project managers, and executive stakeholders. Experience the real HTML/React interface of FieldOS below.
           </p>
 
@@ -32,7 +32,7 @@ export function DigitalField() {
               className={`px-4 py-2 rounded-full text-xs font-bold transition-all border ${
                 activeScreen === "phone"
                   ? "bg-aqua-600 border-aqua-400 text-sand-50 shadow-lg"
-                  : "bg-forest-900/60 border-forest-800 text-sand-200/70 hover:text-sand-50"
+                  : "bg-forest-900/60 border-forest-800 text-theme-text-muted hover:text-sand-50"
               }`}
             >
               Field Mobile App
@@ -42,7 +42,7 @@ export function DigitalField() {
               className={`px-4 py-2 rounded-full text-xs font-bold transition-all border ${
                 activeScreen === "tablet"
                   ? "bg-aqua-600 border-aqua-400 text-sand-50 shadow-lg"
-                  : "bg-forest-900/60 border-forest-800 text-sand-200/70 hover:text-sand-50"
+                  : "bg-forest-900/60 border-forest-800 text-theme-text-muted hover:text-sand-50"
               }`}
             >
               Tablet Manager Portal
@@ -52,7 +52,7 @@ export function DigitalField() {
               className={`px-4 py-2 rounded-full text-xs font-bold transition-all border ${
                 activeScreen === "desktop"
                   ? "bg-aqua-600 border-aqua-400 text-sand-50 shadow-lg"
-                  : "bg-forest-900/60 border-forest-800 text-sand-200/70 hover:text-sand-50"
+                  : "bg-forest-900/60 border-forest-800 text-theme-text-muted hover:text-sand-50"
               }`}
             >
               Executive Desktop Command
@@ -85,7 +85,7 @@ export function DigitalField() {
               <div className="text-right">
                 <span className="font-mono text-xs text-harvest-400 font-bold">28.4°C | Clear Sky</span>
                 {activeScreen !== "phone" && (
-                  <p className="text-[10px] text-sand-200/60">Bhubaneswar Regional Node</p>
+                  <p className="text-[10px] text-theme-text-muted">Bhubaneswar Regional Node</p>
                 )}
               </div>
             </div>
@@ -129,7 +129,7 @@ export function DigitalField() {
               <div className="grid grid-cols-2 gap-4 pt-2">
                 <div className="p-4 rounded-xl bg-forest-900/40 border border-forest-800/60 space-y-2">
                   <span className="text-[10px] font-bold text-harvest-400 uppercase">Cage Cluster Status</span>
-                  <div className="space-y-1 text-xs text-sand-200/80">
+                  <div className="space-y-1 text-xs text-theme-text-muted">
                     <div className="flex justify-between"><span>Hirakud Cluster #1</span><span className="text-emerald-400">24/24 Active</span></div>
                     <div className="flex justify-between"><span>Hirakud Cluster #2</span><span className="text-emerald-400">18/18 Active</span></div>
                     <div className="flex justify-between"><span>Mahanadi Pilot</span><span className="text-harvest-400">6/12 Deploying</span></div>
@@ -137,7 +137,7 @@ export function DigitalField() {
                 </div>
                 <div className="p-4 rounded-xl bg-forest-900/40 border border-forest-800/60 space-y-2">
                   <span className="text-[10px] font-bold text-harvest-400 uppercase">Beneficiary Ledger</span>
-                  <div className="space-y-1 text-xs text-sand-200/80">
+                  <div className="space-y-1 text-xs text-theme-text-muted">
                     <div className="flex justify-between"><span>Hirakud FPS</span><span className="text-emerald-400">350 Members</span></div>
                     <div className="flex justify-between"><span>Koraput FPO</span><span className="text-emerald-400">120 Members</span></div>
                     <div className="flex justify-between"><span>Ganjam SHG</span><span className="text-harvest-400">85 Members</span></div>
@@ -162,7 +162,7 @@ export function DigitalField() {
                   ] : []),
                 ].map((task, idx) => (
                   <div key={idx} className="p-3 rounded-xl bg-forest-900/40 border border-forest-800/60 flex items-center justify-between">
-                    <span className="text-sand-100 font-semibold">{task}</span>
+                    <span className="text-theme-text font-semibold">{task}</span>
                     <CheckCircle className="w-4 h-4 text-emerald-400 flex-shrink-0" />
                   </div>
                 ))}

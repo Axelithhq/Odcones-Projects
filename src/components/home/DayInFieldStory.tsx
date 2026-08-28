@@ -115,7 +115,7 @@ export function DayInFieldStory() {
               {t("dayInField.title")}
             </h2>
           </div>
-          <p className="text-sand-200/70 text-xs sm:text-sm max-w-md leading-relaxed">
+          <p className="text-theme-text-muted text-xs sm:text-sm max-w-md leading-relaxed">
             {t("dayInField.subtitle")}
           </p>
         </div>
@@ -131,7 +131,7 @@ export function DayInFieldStory() {
                 className={`flex-shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all border ${
                   isSelected
                     ? "bg-harvest-500 text-forest-950 border-harvest-400 shadow-lg scale-105"
-                    : "bg-forest-900/40 text-sand-200/70 border-forest-800 hover:text-sand-50"
+                    : "bg-forest-900/40 text-theme-text-muted border-forest-800 hover:text-sand-50"
                 }`}
                 data-cursor-text="TIME"
               >
@@ -176,7 +176,7 @@ export function DayInFieldStory() {
                 </h3>
               </div>
 
-              <p className="text-sand-200/80 text-sm leading-relaxed font-light">
+              <p className="text-theme-text-muted text-sm leading-relaxed font-light">
                 {pick(activeScene.desc)}
               </p>
 

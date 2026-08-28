@@ -22,7 +22,7 @@ export function InteractiveFieldMap() {
           <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-sand-50 tracking-tight">
             {t("map.title")}
           </h2>
-          <p className="text-sand-200/70 text-sm leading-relaxed">
+          <p className="text-theme-text-muted text-sm leading-relaxed">
             {t("map.subtitle")}
           </p>
         </div>
@@ -77,7 +77,7 @@ export function InteractiveFieldMap() {
               })}
             </div>
 
-            <div className="relative z-10 text-[10px] text-sand-200/50 text-center font-mono uppercase">
+            <div className="relative z-10 text-[10px] text-theme-text-muted text-center font-mono uppercase">
               {t("map.hint")}
             </div>
           </div>
@@ -86,7 +86,7 @@ export function InteractiveFieldMap() {
           <div className="lg:col-span-5 p-8 rounded-3xl bg-forest-900/40 border border-forest-700/50 space-y-6">
             <div className="flex justify-between items-center text-xs font-bold text-harvest-400 uppercase font-display">
               <span>{pickOr(selectedProj.sector, selectedProj.sector_or, language)}</span>
-              <span className="text-sand-200/60">{selectedProj.location}</span>
+              <span className="text-theme-text-muted">{selectedProj.location}</span>
             </div>
 
             <div className="h-44 rounded-2xl overflow-hidden">
@@ -95,7 +95,7 @@ export function InteractiveFieldMap() {
 
             <div className="space-y-2">
               <h3 className="font-display font-extrabold text-xl text-sand-50">{pickOr(selectedProj.title, selectedProj.title_or, language)}</h3>
-              <p className="text-xs text-sand-200/80 line-clamp-3 leading-relaxed">{pickOr(selectedProj.description, selectedProj.description_or, language)}</p>
+              <p className="text-xs text-theme-text-muted line-clamp-3 leading-relaxed">{pickOr(selectedProj.description, selectedProj.description_or, language)}</p>
             </div>
 
             <div className="pt-2">
