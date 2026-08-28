@@ -13,25 +13,25 @@
 
 /* Light Theme Variables (Warm Silver & Architectural Paper) */
 html.light-mode {
-  --bg-base: #EBECE7;
-  --bg-surface: #F4F5F0;
+  --bg-base: #E7E9E6;
+  --bg-surface: #F2F3EF;
   --bg-surface-elevated: #FAFAFA;
-  --bg-surface-muted: #E0E3DD;
-  --text-primary: #16221A;
+  --bg-surface-muted: #DDE0D8;
+  --text-primary: #142018;
   --text-muted: #485A4D;
-  --border-subtle: #CFD4CA;
+  --border-subtle: #CED3C9;
   --accent-primary: #1E4D36;
   --accent-gold: #B8860B;
   --accent-water: #006680;
-  --shadow-color: rgba(22, 34, 26, 0.08);
+  --shadow-color: rgba(20, 32, 24, 0.08);
 }
 
 /* Dark Theme Variables (Deep Forest Charcoal, Earth & Water Depth) */
 html.dark-mode, html:not(.light-mode) {
-  --bg-base: #08120C;
-  --bg-surface: #0F1B13;
-  --bg-surface-elevated: #16261C;
-  --bg-surface-muted: #1B2E23;
+  --bg-base: #0A140E;
+  --bg-surface: #101D14;
+  --bg-surface-elevated: #17281D;
+  --bg-surface-muted: #1F3225;
   --text-primary: #EFF2EC;
   --text-muted: #93A89A;
   --border-subtle: #24382C;

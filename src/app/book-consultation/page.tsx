@@ -149,11 +149,11 @@ export default function BookConsultationPage() {
   };
 
   return (
-    <main className="min-h-screen bg-forest-950 text-sand-100 relative has-custom-cursor pt-20">
+    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor pt-20">
       <CustomCursor />
       <Header />
 
-      <section className="py-16 bg-forest-950 border-b border-forest-800/40">
+      <section className="py-16 bg-theme-base border-b border-forest-800/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-900/80 border border-forest-500/30 text-xs font-bold uppercase tracking-widest text-harvest-400">
             <Calendar className="w-3.5 h-3.5" />
@@ -215,7 +215,7 @@ export default function BookConsultationPage() {
                       <h3 className="font-display font-bold text-lg text-sand-50">
                         {language === "or" ? srv.name_or : srv.name}
                       </h3>
-                      <span className="px-2.5 py-1 rounded-full bg-forest-950 border border-forest-700 text-xs font-mono font-bold text-harvest-400">
+                      <span className="px-2.5 py-1 rounded-full bg-theme-base border border-forest-700 text-xs font-mono font-bold text-harvest-400">
                         ₹{srv.price}
                       </span>
                     </div>
@@ -253,7 +253,7 @@ export default function BookConsultationPage() {
                   type="date"
                   value={selectedDate}
                   onChange={(e) => setSelectedDate(e.target.value)}
-                  className="w-full max-w-xs px-4 py-3 rounded-xl bg-forest-950 border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
+                  className="w-full max-w-xs px-4 py-3 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
                 />
               </div>
 
@@ -267,7 +267,7 @@ export default function BookConsultationPage() {
                       className={`px-5 py-2.5 rounded-xl text-xs font-bold transition-all border ${
                         selectedTime === tSlot
                           ? "bg-harvest-500 text-forest-950 border-harvest-400 shadow-lg"
-                          : "bg-forest-950 text-sand-200/80 border-forest-800 hover:border-forest-600"
+                          : "bg-theme-base text-sand-200/80 border-forest-800 hover:border-forest-600"
                       }`}
                     >
                       {tSlot}
@@ -308,7 +308,7 @@ export default function BookConsultationPage() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Anshuman Mohapatra"
-                    className="w-full px-4 py-3 rounded-xl bg-forest-950 border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
+                    className="w-full px-4 py-3 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
                   />
                 </div>
 
@@ -320,7 +320,7 @@ export default function BookConsultationPage() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="name@domain.com"
-                    className="w-full px-4 py-3 rounded-xl bg-forest-950 border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
+                    className="w-full px-4 py-3 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
                   />
                 </div>
               </div>
@@ -334,7 +334,7 @@ export default function BookConsultationPage() {
                     value={mobile}
                     onChange={(e) => setMobile(e.target.value)}
                     placeholder="+91 98765 43210"
-                    className="w-full px-4 py-3 rounded-xl bg-forest-950 border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
+                    className="w-full px-4 py-3 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
                   />
                 </div>
 
@@ -345,7 +345,7 @@ export default function BookConsultationPage() {
                     value={org}
                     onChange={(e) => setOrg(e.target.value)}
                     placeholder="Company or Farmer Cooperative"
-                    className="w-full px-4 py-3 rounded-xl bg-forest-950 border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
+                    className="w-full px-4 py-3 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
                   />
                 </div>
               </div>
@@ -356,7 +356,7 @@ export default function BookConsultationPage() {
                   <select
                     value={sector}
                     onChange={(e) => setSector(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl bg-forest-950 border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
+                    className="w-full px-4 py-3 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
                   >
                     <option value="Agriculture">Agriculture & Processing</option>
                     <option value="Fisheries">Fisheries & Aquaculture</option>
@@ -371,7 +371,7 @@ export default function BookConsultationPage() {
                   <select
                     value={investment}
                     onChange={(e) => setInvestment(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl bg-forest-950 border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
+                    className="w-full px-4 py-3 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
                   >
                     <option value="₹10 Lakhs - ₹25 Lakhs">₹10 Lakhs - ₹25 Lakhs</option>
                     <option value="₹25 Lakhs - ₹50 Lakhs">₹25 Lakhs - ₹50 Lakhs</option>
@@ -390,7 +390,7 @@ export default function BookConsultationPage() {
                     value={couponCode}
                     onChange={(e) => setCouponCode(e.target.value)}
                     placeholder="Enter e.g. ODCONS1000"
-                    className="w-full px-4 py-2 rounded-xl bg-forest-950 border border-forest-700 text-sand-50 text-xs font-mono uppercase focus:outline-none"
+                    className="w-full px-4 py-2 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-xs font-mono uppercase focus:outline-none"
                   />
                   <button
                     type="button"
@@ -439,7 +439,7 @@ export default function BookConsultationPage() {
               </h2>
             </div>
 
-            <div className="max-w-md mx-auto p-4 rounded-2xl bg-forest-950 border border-forest-800 space-y-2 text-xs text-sand-200/80 text-left font-mono">
+            <div className="max-w-md mx-auto p-4 rounded-2xl bg-theme-base border border-forest-800 space-y-2 text-xs text-sand-200/80 text-left font-mono">
               <p><strong>Client Name:</strong> {bookingConfirmed.name}</p>
               <p><strong>Service:</strong> {bookingConfirmed.serviceName}</p>
               <p><strong>Scheduled Slot:</strong> {bookingConfirmed.date} at {bookingConfirmed.time}</p>

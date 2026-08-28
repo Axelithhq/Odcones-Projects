@@ -88,7 +88,7 @@ export function AquacultureSimulator() {
             5-Stage Scientific Aquaculture Lifecycle
           </h3>
         </div>
-        <div className="flex items-center gap-2 text-xs text-forest-300 bg-forest-950 px-3 py-1.5 rounded-lg border border-forest-800">
+        <div className="flex items-center gap-2 text-xs text-forest-300 bg-theme-base px-3 py-1.5 rounded-lg border border-forest-800">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
           <span>Click stage nodes to simulate environmental telemetry</span>
         </div>
@@ -105,7 +105,7 @@ export function AquacultureSimulator() {
               className={`p-3 rounded-2xl border text-left transition-all ${
                 isActive
                   ? "bg-forest-800 border-harvest-400 text-sand-50 shadow-lg scale-105"
-                  : "bg-forest-950/60 border-forest-800 text-sand-200/60 hover:text-sand-50 hover:bg-forest-900/40"
+                  : "bg-theme-base/60 border-forest-800 text-sand-200/60 hover:text-sand-50 hover:bg-forest-900/40"
               }`}
             >
               <div className="flex items-center justify-between mb-2">
@@ -126,7 +126,7 @@ export function AquacultureSimulator() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -15 }}
           transition={{ duration: 0.3 }}
-          className="grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 rounded-2xl bg-forest-950/80 border border-forest-800/60"
+          className="grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 rounded-2xl bg-theme-base/80 border border-forest-800/60"
         >
           <div className="lg:col-span-7 space-y-4">
             <div className="flex items-center gap-3">
@@ -169,17 +169,17 @@ export function AquacultureSimulator() {
             </span>
 
             <div className="space-y-3 text-xs">
-              <div className="flex justify-between items-center p-2.5 rounded-lg bg-forest-950 border border-forest-800">
+              <div className="flex justify-between items-center p-2.5 rounded-lg bg-theme-base border border-forest-800">
                 <span className="text-sand-200/70">Target Temperature:</span>
                 <span className="font-mono font-bold text-sand-50">{currentStage.temp}</span>
               </div>
 
-              <div className="flex justify-between items-center p-2.5 rounded-lg bg-forest-950 border border-forest-800">
+              <div className="flex justify-between items-center p-2.5 rounded-lg bg-theme-base border border-forest-800">
                 <span className="text-sand-200/70">Dissolved Oxygen:</span>
                 <span className="font-mono font-bold text-aqua-400">{currentStage.doLevel}</span>
               </div>
 
-              <div className="flex justify-between items-center p-2.5 rounded-lg bg-forest-950 border border-forest-800">
+              <div className="flex justify-between items-center p-2.5 rounded-lg bg-theme-base border border-forest-800">
                 <span className="text-sand-200/70">Feed Regimen:</span>
                 <span className="font-mono font-bold text-harvest-400">{currentStage.feedType}</span>
               </div>

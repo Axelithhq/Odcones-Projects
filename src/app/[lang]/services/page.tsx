@@ -23,12 +23,12 @@ export default async function ServicesPage(props: { params: Promise<{ lang: stri
   const t = getServerT(lang);
 
   return (
-    <main className="min-h-screen bg-forest-950 text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
+    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
       <CustomCursor />
       <Header />
 
       {/* Hero */}
-      <section className="py-20 bg-forest-950 border-b border-forest-800/40">
+      <section className="py-20 bg-theme-base border-b border-forest-800/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-900/80 border border-forest-500/30 text-xs font-bold uppercase tracking-widest text-harvest-400">
             <span>{t("services.badge")}</span>
@@ -45,7 +45,7 @@ export default async function ServicesPage(props: { params: Promise<{ lang: stri
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-forest-950">
+      <section className="py-20 bg-theme-base">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {SERVICES.map((srv) => (
@@ -60,7 +60,7 @@ export default async function ServicesPage(props: { params: Promise<{ lang: stri
                       alt={pickOr(srv.title, srv.title_or, lang)}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-forest-950/80 backdrop-blur-md text-[10px] font-bold tracking-wider text-harvest-400 uppercase">
+                    <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-theme-base/80 backdrop-blur-md text-[10px] font-bold tracking-wider text-harvest-400 uppercase">
                       {pickOr(srv.category, srv.category_or, lang)}
                     </div>
                   </div>

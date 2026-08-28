@@ -19,11 +19,11 @@ export default async function PrivacyPage(props: { params: Promise<{ lang: strin
   const t = getServerT(lang);
 
   return (
-    <main className="min-h-screen bg-forest-950 text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
+    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
       <CustomCursor />
       <Header />
 
-      <section className="py-20 bg-forest-950 border-b border-forest-800/40">
+      <section className="py-20 bg-theme-base border-b border-forest-800/40">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-900/80 border border-forest-500/30 text-xs font-bold uppercase tracking-widest text-harvest-400">
             <ShieldCheck className="w-3.5 h-3.5" />
@@ -40,7 +40,7 @@ export default async function PrivacyPage(props: { params: Promise<{ lang: strin
         </div>
       </section>
 
-      <section className="py-20 bg-forest-950">
+      <section className="py-20 bg-theme-base">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="p-8 rounded-3xl bg-forest-900/40 border border-forest-800 space-y-4">
             <h2 className="font-display font-extrabold text-2xl text-sand-50 uppercase">{t("privacy.bodyTitle")}</h2>

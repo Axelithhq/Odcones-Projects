@@ -54,7 +54,7 @@ export function EngineeringBlueprints() {
   const { language } = useTranslation();
 
   return (
-    <section className="py-24 bg-forest-950 text-sand-50 relative border-b border-forest-800/40 overflow-hidden">
+    <section className="py-24 bg-theme-base text-sand-50 relative border-b border-forest-800/40 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-900/80 border border-forest-500/30 text-xs font-bold uppercase tracking-widest text-harvest-400">
@@ -80,7 +80,7 @@ export function EngineeringBlueprints() {
 
             <div className="relative z-10 flex justify-between items-center text-xs font-mono font-bold text-harvest-400">
               <span>AUTOCAD DRAWING NO: ODC-CAD-2026</span>
-              <span className="px-2.5 py-1 rounded bg-forest-950 border border-forest-800 text-sand-50">
+              <span className="px-2.5 py-1 rounded bg-theme-base border border-forest-800 text-sand-50">
                 SCALE: 1:100 METRIC
               </span>
             </div>
@@ -137,7 +137,7 @@ export function EngineeringBlueprints() {
               <p className="text-xs text-sand-200/80 leading-relaxed font-light">{activeZone.desc}</p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-forest-950 border border-forest-800 space-y-2">
+            <div className="p-4 rounded-2xl bg-theme-base border border-forest-800 space-y-2">
               <span className="text-[10px] font-bold text-forest-300 uppercase tracking-widest font-display">
                 STRUCTURAL SPECIFICATIONS:
               </span>

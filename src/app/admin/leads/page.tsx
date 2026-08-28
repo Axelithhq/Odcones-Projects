@@ -33,7 +33,7 @@ export default function AdminLeadsPage() {
   const filteredLeads = filterStatus === "ALL" ? leads : leads.filter((l) => l.status === filterStatus);
 
   return (
-    <main className="min-h-screen bg-forest-950 text-sand-100 pt-20">
+    <main className="min-h-screen bg-theme-base text-sand-100 pt-20">
       <Header />
 
       <section className="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
@@ -73,7 +73,7 @@ export default function AdminLeadsPage() {
         <div className="rounded-3xl bg-forest-900/40 border border-forest-700/50 overflow-hidden shadow-2xl">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
-              <thead className="bg-forest-950 text-harvest-400 font-display uppercase tracking-wider border-b border-forest-800">
+              <thead className="bg-theme-base text-harvest-400 font-display uppercase tracking-wider border-b border-forest-800">
                 <tr>
                   <th className="p-4">Lead ID</th>
                   <th className="p-4">Client Name</th>
@@ -100,7 +100,7 @@ export default function AdminLeadsPage() {
                       <span className="text-[10px] text-sand-200/60">{lead.investment}</span>
                     </td>
                     <td className="p-4">
-                      <span className="px-2.5 py-1 rounded-md bg-forest-950 border border-forest-700 text-[10px] font-bold text-sand-50 font-mono">
+                      <span className="px-2.5 py-1 rounded-md bg-theme-base border border-forest-700 text-[10px] font-bold text-sand-50 font-mono">
                         {lead.status}
                       </span>
                     </td>
@@ -108,7 +108,7 @@ export default function AdminLeadsPage() {
                       <select
                         value={lead.status}
                         onChange={(e) => updateLeadStatus(lead.id, e.target.value as Lead["status"])}
-                        className="px-2.5 py-1.5 rounded-lg bg-forest-950 border border-forest-700 text-[11px] text-sand-50 focus:outline-none"
+                        className="px-2.5 py-1.5 rounded-lg bg-theme-base border border-forest-700 text-[11px] text-sand-50 focus:outline-none"
                       >
                         <option value="NEW">Set NEW</option>
                         <option value="CONTACTED">Set CONTACTED</option>

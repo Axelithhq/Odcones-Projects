@@ -31,7 +31,7 @@ export default async function HomePage(props: { params: Promise<{ lang: string }
   requireLang((await props.params).lang);
 
   return (
-    <main className="min-h-screen bg-forest-950 text-sand-100 relative has-custom-cursor overflow-x-hidden">
+    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor overflow-x-hidden">
       <CustomCursor />
       <IntroAnimation />
       <Header />

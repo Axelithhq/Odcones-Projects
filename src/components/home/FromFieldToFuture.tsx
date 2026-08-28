@@ -121,7 +121,7 @@ export function FromFieldToFuture() {
   const comp = SECTOR_COMPOSITIONS[activeSector];
 
   return (
-    <section className="py-24 bg-forest-950 text-sand-50 relative border-b border-forest-800/40 overflow-hidden">
+    <section className="py-24 bg-theme-base text-sand-50 relative border-b border-forest-800/40 overflow-hidden">
       {/* Dynamic Ambient Background Glow */}
       <div
         className="absolute inset-0 opacity-15 transition-all duration-700 pointer-events-none"
@@ -209,13 +209,13 @@ export function FromFieldToFuture() {
                 >
                   {t("fromField.heroDomain")}: {pick(comp.title)}
                 </div>
-                <div className="px-3 py-1 rounded-full bg-forest-950/80 backdrop-blur-md border border-forest-700/50 text-[11px] font-bold text-forest-300">
+                <div className="px-3 py-1 rounded-full bg-theme-base/80 backdrop-blur-md border border-forest-700/50 text-[11px] font-bold text-forest-300">
                   📍 {pick(comp.operatorRole)}
                 </div>
               </div>
 
               {/* Layer 5: Floating Rugged Device Mockup (Right Side Overlay) */}
-              <div className="absolute bottom-6 right-6 max-w-xs p-5 rounded-2xl bg-forest-950/90 backdrop-blur-xl border border-forest-700/60 shadow-2xl space-y-3 z-20">
+              <div className="absolute bottom-6 right-6 max-w-xs p-5 rounded-2xl bg-theme-base/90 backdrop-blur-xl border border-forest-700/60 shadow-2xl space-y-3 z-20">
                 <div className="flex items-center justify-between border-b border-forest-800 pb-2">
                   <div className="flex items-center gap-2">
                     <Smartphone className="w-4 h-4 text-harvest-400" />
@@ -259,7 +259,7 @@ export function FromFieldToFuture() {
                 </h3>
               </div>
 
-              <div className="p-5 rounded-2xl bg-forest-950/80 border border-forest-800 space-y-3">
+              <div className="p-5 rounded-2xl bg-theme-base/80 border border-forest-800 space-y-3">
                 <span className="text-[10px] font-bold text-harvest-400 uppercase tracking-wider font-display">
                   {t("fromField.heroObject")}:
                 </span>

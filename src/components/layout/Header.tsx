@@ -80,7 +80,7 @@ export function Header() {
           isScrolled
             ? isLight
               ? "h-[70px] bg-sand-50/94 backdrop-blur-2xl border-b border-[#D4DDD5] shadow-xl shadow-forest-900/5"
-              : "h-[70px] bg-forest-950/92 backdrop-blur-2xl border-b border-forest-500/25 shadow-2xl shadow-forest-950/70"
+              : "h-[70px] bg-theme-base/92 backdrop-blur-2xl border-b border-forest-500/25 shadow-2xl shadow-forest-950/70"
             : "h-[84px] bg-gradient-to-b from-forest-950/85 via-forest-950/45 to-transparent border-b border-sand-100/10"
         }`}
       >
@@ -243,7 +243,7 @@ export function Header() {
               className={`absolute top-full left-0 right-0 border-b shadow-2xl z-40 overflow-hidden ${
                 isLight
                   ? "bg-white/98 border-[#D4DDD5] text-[#1A251E]"
-                  : "bg-[#06130B]/98 backdrop-blur-2xl border-forest-700/60 text-sand-50"
+                  : "bg-theme-base/98 backdrop-blur-2xl border-forest-700/60 text-sand-50"
               }`}
               onMouseEnter={() => handleMouseEnter(activeMegaMenu)}
               onMouseLeave={handleMouseLeave}
@@ -364,7 +364,7 @@ export function Header() {
             exit={{ opacity: 0, y: "-100%" }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className={`fixed inset-0 z-40 flex flex-col justify-between pt-24 pb-8 px-6 lg:hidden ${
-              isLight ? "bg-white/98 text-[#1A251E]" : "bg-forest-950/98 backdrop-blur-2xl text-sand-50"
+              isLight ? "bg-white/98 text-[#1A251E]" : "bg-theme-base/98 backdrop-blur-2xl text-sand-50"
             }`}
           >
             <div className="flex flex-col gap-2 overflow-y-auto">

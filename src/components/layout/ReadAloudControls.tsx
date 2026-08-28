@@ -37,9 +37,9 @@ export function ReadAloudControls() {
         {speechState === "speaking" ? (
           <>
             <span className="flex items-end gap-0.5 h-3">
-              <span className="w-0.5 bg-forest-950 h-full animate-bounce" />
-              <span className="w-0.5 bg-forest-950 h-2/3 animate-bounce [animation-delay:0.15s]" />
-              <span className="w-0.5 bg-forest-950 h-full animate-bounce [animation-delay:0.3s]" />
+              <span className="w-0.5 bg-theme-base h-full animate-bounce" />
+              <span className="w-0.5 bg-theme-base h-2/3 animate-bounce [animation-delay:0.15s]" />
+              <span className="w-0.5 bg-theme-base h-full animate-bounce [animation-delay:0.3s]" />
             </span>
             <span>{t("nav.readAloud")}</span>
           </>
@@ -91,7 +91,7 @@ export function ReadAloudControls() {
         <div className={`absolute top-full right-0 mt-2 p-3 rounded-2xl border shadow-2xl z-50 w-44 space-y-2 text-xs ${
           isLight
             ? "bg-white border-[#D4DDD5] shadow-forest-900/10"
-            : "bg-[#06130B] border-forest-700/60 shadow-forest-950/60"
+            : "bg-theme-base border-forest-700/60 shadow-forest-950/60"
         }`}>
           <span className={`text-[10px] font-bold uppercase tracking-widest block ${
             isLight ? "text-harvest-600" : "text-harvest-400"
@@ -126,7 +126,7 @@ export function ReadAloudControls() {
         <div className={`fixed bottom-6 right-6 max-w-sm p-4 rounded-2xl border text-xs shadow-2xl z-[9999] flex items-start gap-3 ${
           isLight
             ? "bg-white border-harvest-500/40 text-[#1A251E]"
-            : "bg-[#06130B] border-harvest-500/50 text-sand-50"
+            : "bg-theme-base border-harvest-500/50 text-sand-50"
         }`}>
           <Info className={`w-5 h-5 flex-shrink-0 mt-0.5 ${isLight ? "text-harvest-600" : "text-harvest-400"}`} />
           <div className="space-y-1">

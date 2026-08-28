@@ -12,7 +12,7 @@ export function InteractiveFieldMap() {
   const { t, language, localizeHref } = useTranslation();
 
   return (
-    <section className="py-24 bg-forest-950 text-sand-50 relative border-b border-forest-800/40">
+    <section className="py-24 bg-theme-base text-sand-50 relative border-b border-forest-800/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-900/80 border border-forest-500/30 text-xs font-bold uppercase tracking-widest text-harvest-400">
@@ -35,7 +35,7 @@ export function InteractiveFieldMap() {
             {/* Top Map Label */}
             <div className="relative z-10 flex justify-between items-center text-xs font-bold text-forest-300 font-display uppercase">
               <span>{t("map.gridLabel")}</span>
-              <span className="px-2.5 py-1 rounded-md bg-forest-950 border border-forest-800 text-harvest-400">
+              <span className="px-2.5 py-1 rounded-md bg-theme-base border border-forest-800 text-harvest-400">
                 {t("impact.districts")}
               </span>
             </div>
@@ -69,7 +69,7 @@ export function InteractiveFieldMap() {
                     aria-label={pickOr(proj.title, proj.title_or, language)}
                   >
                     <MapPin className="w-5 h-5" />
-                    <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 px-2 py-0.5 rounded text-[9px] font-bold bg-forest-950 border border-forest-700 text-sand-50 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 px-2 py-0.5 rounded text-[9px] font-bold bg-theme-base border border-forest-700 text-sand-50 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
                       {proj.location.split(",")[0]}
                     </span>
                   </button>

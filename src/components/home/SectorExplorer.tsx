@@ -95,7 +95,7 @@ export function SectorExplorer() {
   const { language } = useTranslation();
 
   return (
-    <section className="py-24 bg-forest-950 text-sand-50 relative border-b border-forest-800/40 overflow-hidden min-h-screen flex flex-col justify-between">
+    <section className="py-24 bg-theme-base text-sand-50 relative border-b border-forest-800/40 overflow-hidden min-h-screen flex flex-col justify-between">
       {/* Background Full-Screen Visual Switcher */}
       <div
         className="absolute inset-0 bg-cover bg-center transition-all duration-1000 opacity-30 scale-105"
@@ -126,7 +126,7 @@ export function SectorExplorer() {
                   className={`p-4 rounded-2xl border transition-all cursor-pointer flex items-center justify-between ${
                     isSelected
                       ? "bg-forest-900/90 border-harvest-400 shadow-xl"
-                      : "bg-forest-950/40 border-forest-800/60 hover:border-forest-700"
+                      : "bg-theme-base/40 border-forest-800/60 hover:border-forest-700"
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -152,7 +152,7 @@ export function SectorExplorer() {
                   {language === "or" ? selectedSector.name_or : selectedSector.name}
                 </h3>
               </div>
-              <div className="p-3 rounded-2xl bg-forest-950 border border-forest-800">
+              <div className="p-3 rounded-2xl bg-theme-base border border-forest-800">
                 {selectedSector.icon}
               </div>
             </div>
@@ -161,7 +161,7 @@ export function SectorExplorer() {
               {selectedSector.desc}
             </p>
 
-            <div className="p-4 rounded-2xl bg-forest-950 border border-forest-800 space-y-2">
+            <div className="p-4 rounded-2xl bg-theme-base border border-forest-800 space-y-2">
               <span className="text-[10px] font-bold text-forest-300 uppercase tracking-widest font-display">
                 TECHNICAL PROJECT TYPES INCLUDED:
               </span>

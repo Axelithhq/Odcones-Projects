@@ -103,7 +103,7 @@ export function DayInFieldStory() {
   const pick = (pair: L10nString) => pickOr(pair[0], pair[1], language);
 
   return (
-    <section className="py-24 bg-forest-950 text-sand-50 relative border-b border-forest-800/40 overflow-hidden">
+    <section className="py-24 bg-theme-base text-sand-50 relative border-b border-forest-800/40 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div className="space-y-3">
@@ -160,7 +160,7 @@ export function DayInFieldStory() {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-forest-950 via-forest-950/30 to-transparent" />
-              <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-forest-950/80 backdrop-blur-md text-xs font-bold text-harvest-400 uppercase">
+              <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-theme-base/80 backdrop-blur-md text-xs font-bold text-harvest-400 uppercase">
                 {pick(activeScene.category)}
               </div>
             </div>

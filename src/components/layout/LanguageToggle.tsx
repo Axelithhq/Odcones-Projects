@@ -63,7 +63,7 @@ export function LanguageToggle() {
             className={`absolute right-0 mt-2 w-40 rounded-2xl border shadow-2xl z-50 overflow-hidden py-1 ${
               isLight
                 ? "bg-white border-[#D4DDD5] shadow-forest-900/10"
-                : "bg-[#06130B] border-forest-700/60 shadow-forest-950/60"
+                : "bg-theme-base border-forest-700/60 shadow-forest-950/60"
             }`}
           >
             {options.map((opt) => {

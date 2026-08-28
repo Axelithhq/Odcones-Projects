@@ -110,7 +110,7 @@ export function InteractiveEcosystem() {
   const pick = (pair: [string, string]) => (language === "or" ? pair[1] : pair[0]);
 
   return (
-    <section className="py-24 bg-forest-950 text-sand-50 relative border-b border-forest-800/40">
+    <section className="py-24 bg-theme-base text-sand-50 relative border-b border-forest-800/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-900/80 border border-forest-500/30 text-xs font-bold uppercase tracking-widest text-harvest-400">
@@ -190,7 +190,7 @@ export function InteractiveEcosystem() {
                   <p className="text-sand-200/80 text-sm leading-relaxed">{pick(activeStep.desc)}</p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-forest-950/80 border border-forest-800/60 flex items-center justify-between">
+                <div className="p-4 rounded-xl bg-theme-base/80 border border-forest-800/60 flex items-center justify-between">
                   <div>
                     <span className="text-[10px] font-bold uppercase tracking-wider text-forest-400">
                       {t("ecosystem.outcomeImpact")}

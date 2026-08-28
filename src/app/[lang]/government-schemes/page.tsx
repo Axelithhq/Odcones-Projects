@@ -37,12 +37,12 @@ export default function GovernmentSchemesPage() {
   const { language } = useTranslation();
 
   return (
-    <main className="min-h-screen bg-forest-950 text-sand-100 relative has-custom-cursor pt-20">
+    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor pt-20">
       <CustomCursor />
       <Header />
 
       {/* Hero Header */}
-      <section className="py-20 bg-forest-950 border-b border-forest-800/40 relative overflow-hidden">
+      <section className="py-20 bg-theme-base border-b border-forest-800/40 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 relative z-10">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-forest-900/90 border border-forest-500/30 text-xs font-bold uppercase tracking-widest text-harvest-400 font-display">
             <Landmark className="w-4 h-4" />

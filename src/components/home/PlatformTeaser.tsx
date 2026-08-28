@@ -10,7 +10,7 @@ export function PlatformTeaser() {
   const { localizeHref } = useTranslation();
 
   return (
-    <section className="py-24 bg-forest-950 text-sand-50 relative overflow-hidden border-b border-forest-800/40">
+    <section className="py-24 bg-theme-base text-sand-50 relative overflow-hidden border-b border-forest-800/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Side Info */}
@@ -77,7 +77,7 @@ export function PlatformTeaser() {
                     FieldOS TELEMETRY NODE #482 — HIRAKUD POND #12
                   </span>
                 </div>
-                <span className="text-[10px] font-mono text-forest-300 bg-forest-950 px-2.5 py-1 rounded-md border border-forest-700/40">
+                <span className="text-[10px] font-mono text-forest-300 bg-theme-base px-2.5 py-1 rounded-md border border-forest-700/40">
                   LIVE STREAM
                 </span>
               </div>
@@ -89,7 +89,7 @@ export function PlatformTeaser() {
                   className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                     activeTab === "water"
                       ? "bg-aqua-600 text-sand-50 font-bold"
-                      : "bg-forest-950 text-sand-200/60 hover:text-sand-50"
+                      : "bg-theme-base text-sand-200/60 hover:text-sand-50"
                   }`}
                 >
                   Water Telemetry
@@ -99,7 +99,7 @@ export function PlatformTeaser() {
                   className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                     activeTab === "soil"
                       ? "bg-harvest-600 text-sand-50 font-bold"
-                      : "bg-forest-950 text-sand-200/60 hover:text-sand-50"
+                      : "bg-theme-base text-sand-200/60 hover:text-sand-50"
                   }`}
                 >
                   Soil Nitrogen & Moisture
@@ -109,7 +109,7 @@ export function PlatformTeaser() {
                   className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                     activeTab === "weather"
                       ? "bg-forest-700 text-sand-50 font-bold"
-                      : "bg-forest-950 text-sand-200/60 hover:text-sand-50"
+                      : "bg-theme-base text-sand-200/60 hover:text-sand-50"
                   }`}
                 >
                   Micro-Climate
@@ -120,7 +120,7 @@ export function PlatformTeaser() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {activeTab === "water" && (
                   <>
-                    <div className="p-4 rounded-2xl bg-forest-950/80 border border-forest-800/60 space-y-1">
+                    <div className="p-4 rounded-2xl bg-theme-base/80 border border-forest-800/60 space-y-1">
                       <div className="flex items-center justify-between text-xs text-aqua-400">
                         <span>Dissolved Oxygen</span>
                         <Droplets className="w-4 h-4" />
@@ -129,7 +129,7 @@ export function PlatformTeaser() {
                       <span className="text-[10px] text-emerald-400">Optimal Range (5.5 - 7.5)</span>
                     </div>
 
-                    <div className="p-4 rounded-2xl bg-forest-950/80 border border-forest-800/60 space-y-1">
+                    <div className="p-4 rounded-2xl bg-theme-base/80 border border-forest-800/60 space-y-1">
                       <div className="flex items-center justify-between text-xs text-harvest-400">
                         <span>pH Level</span>
                         <Activity className="w-4 h-4" />
@@ -138,7 +138,7 @@ export function PlatformTeaser() {
                       <span className="text-[10px] text-emerald-400">Balanced Alkaline</span>
                     </div>
 
-                    <div className="p-4 rounded-2xl bg-forest-950/80 border border-forest-800/60 space-y-1">
+                    <div className="p-4 rounded-2xl bg-theme-base/80 border border-forest-800/60 space-y-1">
                       <div className="flex items-center justify-between text-xs text-forest-300">
                         <span>Water Temp</span>
                         <Thermometer className="w-4 h-4" />
@@ -151,7 +151,7 @@ export function PlatformTeaser() {
 
                 {activeTab === "soil" && (
                   <>
-                    <div className="p-4 rounded-2xl bg-forest-950/80 border border-forest-800/60 space-y-1">
+                    <div className="p-4 rounded-2xl bg-theme-base/80 border border-forest-800/60 space-y-1">
                       <div className="flex items-center justify-between text-xs text-harvest-400">
                         <span>Soil Carbon</span>
                         <Activity className="w-4 h-4" />
@@ -160,7 +160,7 @@ export function PlatformTeaser() {
                       <span className="text-[10px] text-emerald-400">+42% Soil Improvement</span>
                     </div>
 
-                    <div className="p-4 rounded-2xl bg-forest-950/80 border border-forest-800/60 space-y-1">
+                    <div className="p-4 rounded-2xl bg-theme-base/80 border border-forest-800/60 space-y-1">
                       <div className="flex items-center justify-between text-xs text-forest-300">
                         <span>Root Moisture</span>
                         <Droplets className="w-4 h-4" />
@@ -169,7 +169,7 @@ export function PlatformTeaser() {
                       <span className="text-[10px] text-emerald-400">Drip Auto-Triggered</span>
                     </div>
 
-                    <div className="p-4 rounded-2xl bg-forest-950/80 border border-forest-800/60 space-y-1">
+                    <div className="p-4 rounded-2xl bg-theme-base/80 border border-forest-800/60 space-y-1">
                       <div className="flex items-center justify-between text-xs text-aqua-400">
                         <span>Salinity EC</span>
                         <BarChart3 className="w-4 h-4" />
@@ -182,7 +182,7 @@ export function PlatformTeaser() {
 
                 {activeTab === "weather" && (
                   <>
-                    <div className="p-4 rounded-2xl bg-forest-950/80 border border-forest-800/60 space-y-1">
+                    <div className="p-4 rounded-2xl bg-theme-base/80 border border-forest-800/60 space-y-1">
                       <div className="flex items-center justify-between text-xs text-amber-400">
                         <span>Ambient Temp</span>
                         <Thermometer className="w-4 h-4" />
@@ -191,7 +191,7 @@ export function PlatformTeaser() {
                       <span className="text-[10px] text-sand-200/60">Humidity 68%</span>
                     </div>
 
-                    <div className="p-4 rounded-2xl bg-forest-950/80 border border-forest-800/60 space-y-1">
+                    <div className="p-4 rounded-2xl bg-theme-base/80 border border-forest-800/60 space-y-1">
                       <div className="flex items-center justify-between text-xs text-blue-400">
                         <span>Rain Forecast</span>
                         <Droplets className="w-4 h-4" />
@@ -200,7 +200,7 @@ export function PlatformTeaser() {
                       <span className="text-[10px] text-sand-200/60">Expected 16:00 IST</span>
                     </div>
 
-                    <div className="p-4 rounded-2xl bg-forest-950/80 border border-forest-800/60 space-y-1">
+                    <div className="p-4 rounded-2xl bg-theme-base/80 border border-forest-800/60 space-y-1">
                       <div className="flex items-center justify-between text-xs text-emerald-400">
                         <span>Wind Speed</span>
                         <Activity className="w-4 h-4" />

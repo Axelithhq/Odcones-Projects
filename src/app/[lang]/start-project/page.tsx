@@ -103,11 +103,11 @@ export default function StartProjectWizardPage() {
   };
 
   return (
-    <main className="min-h-screen bg-forest-950 text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
+    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
       <CustomCursor />
       <Header />
 
-      <section className="py-16 bg-forest-950 border-b border-forest-800/40">
+      <section className="py-16 bg-theme-base border-b border-forest-800/40">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-900/80 border border-forest-500/30 text-xs font-bold uppercase tracking-widest text-harvest-400">
             <Sprout className="w-3.5 h-3.5" />
@@ -141,7 +141,7 @@ export default function StartProjectWizardPage() {
       </section>
 
       {/* Wizard Form Container */}
-      <section className="py-16 bg-forest-950">
+      <section className="py-16 bg-theme-base">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           {submitted ? (
             <div className="p-10 rounded-3xl bg-forest-900/60 border border-forest-700/50 text-center space-y-6">
@@ -184,7 +184,7 @@ export default function StartProjectWizardPage() {
                         className={`p-4 rounded-2xl border text-left text-xs font-bold transition-all ${
                           formData.entityType === type.value
                             ? "bg-forest-800 border-harvest-400 text-sand-50 shadow-md"
-                            : "bg-forest-950/80 border-forest-800 text-sand-200/70 hover:text-sand-50"
+                            : "bg-theme-base/80 border-forest-800 text-sand-200/70 hover:text-sand-50"
                         }`}
                       >
                         {pick(type)}
@@ -209,7 +209,7 @@ export default function StartProjectWizardPage() {
                         className={`p-4 rounded-2xl border text-left text-xs font-bold transition-all ${
                           formData.sector === sec.value
                             ? "bg-forest-800 border-harvest-400 text-sand-50 shadow-md"
-                            : "bg-forest-950/80 border-forest-800 text-sand-200/70 hover:text-sand-50"
+                            : "bg-theme-base/80 border-forest-800 text-sand-200/70 hover:text-sand-50"
                         }`}
                       >
                         {pick(sec)}
@@ -231,7 +231,7 @@ export default function StartProjectWizardPage() {
                     placeholder={t("wizard.step3Placeholder")}
                     value={formData.problemStatement}
                     onChange={(e) => setFormData({ ...formData, problemStatement: e.target.value })}
-                    className="w-full p-4 text-xs bg-forest-950 border border-forest-700/50 rounded-2xl text-sand-100 placeholder-sand-200/40 focus:outline-none focus:border-harvest-400"
+                    className="w-full p-4 text-xs bg-theme-base border border-forest-700/50 rounded-2xl text-sand-100 placeholder-sand-200/40 focus:outline-none focus:border-harvest-400"
                   />
                 </div>
               )}
@@ -248,7 +248,7 @@ export default function StartProjectWizardPage() {
                     placeholder={t("wizard.step4Placeholder")}
                     value={formData.location}
                     onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                    className="w-full p-4 text-xs bg-forest-950 border border-forest-700/50 rounded-2xl text-sand-100 placeholder-sand-200/40 focus:outline-none focus:border-harvest-400"
+                    className="w-full p-4 text-xs bg-theme-base border border-forest-700/50 rounded-2xl text-sand-100 placeholder-sand-200/40 focus:outline-none focus:border-harvest-400"
                   />
                 </div>
               )}
@@ -268,7 +268,7 @@ export default function StartProjectWizardPage() {
                         className={`p-4 rounded-2xl border text-left text-xs font-bold transition-all ${
                           formData.timeline === tl.value
                             ? "bg-forest-800 border-harvest-400 text-sand-50 shadow-md"
-                            : "bg-forest-950/80 border-forest-800 text-sand-200/70 hover:text-sand-50"
+                            : "bg-theme-base/80 border-forest-800 text-sand-200/70 hover:text-sand-50"
                         }`}
                       >
                         {pick(tl)}
@@ -293,7 +293,7 @@ export default function StartProjectWizardPage() {
                         className={`p-4 rounded-2xl border text-left text-xs font-bold transition-all ${
                           formData.budget === bg.value
                             ? "bg-forest-800 border-harvest-400 text-sand-50 shadow-md"
-                            : "bg-forest-950/80 border-forest-800 text-sand-200/70 hover:text-sand-50"
+                            : "bg-theme-base/80 border-forest-800 text-sand-200/70 hover:text-sand-50"
                         }`}
                       >
                         {pick(bg)}
@@ -316,14 +316,14 @@ export default function StartProjectWizardPage() {
                       placeholder={t("wizard.namePlaceholder")}
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full p-4 text-xs bg-forest-950 border border-forest-700/50 rounded-2xl text-sand-100 focus:outline-none focus:border-harvest-400"
+                      className="w-full p-4 text-xs bg-theme-base border border-forest-700/50 rounded-2xl text-sand-100 focus:outline-none focus:border-harvest-400"
                     />
                     <input
                       type="text"
                       placeholder={t("wizard.orgPlaceholder")}
                       value={formData.organization}
                       onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
-                      className="w-full p-4 text-xs bg-forest-950 border border-forest-700/50 rounded-2xl text-sand-100 focus:outline-none focus:border-harvest-400"
+                      className="w-full p-4 text-xs bg-theme-base border border-forest-700/50 rounded-2xl text-sand-100 focus:outline-none focus:border-harvest-400"
                     />
                     <input
                       type="email"
@@ -331,7 +331,7 @@ export default function StartProjectWizardPage() {
                       placeholder={t("wizard.emailPlaceholder")}
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full p-4 text-xs bg-forest-950 border border-forest-700/50 rounded-2xl text-sand-100 focus:outline-none focus:border-harvest-400"
+                      className="w-full p-4 text-xs bg-theme-base border border-forest-700/50 rounded-2xl text-sand-100 focus:outline-none focus:border-harvest-400"
                     />
                     <input
                       type="tel"
@@ -339,7 +339,7 @@ export default function StartProjectWizardPage() {
                       placeholder={t("wizard.phonePlaceholder")}
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full p-4 text-xs bg-forest-950 border border-forest-700/50 rounded-2xl text-sand-100 focus:outline-none focus:border-harvest-400"
+                      className="w-full p-4 text-xs bg-theme-base border border-forest-700/50 rounded-2xl text-sand-100 focus:outline-none focus:border-harvest-400"
                     />
                   </div>
                 </div>
@@ -352,7 +352,7 @@ export default function StartProjectWizardPage() {
                     {t("wizard.step")} 8: {t("wizard.step8Title")}
                   </h3>
 
-                  <div className="p-5 rounded-2xl bg-forest-950 border border-forest-800 space-y-3 text-xs">
+                  <div className="p-5 rounded-2xl bg-theme-base border border-forest-800 space-y-3 text-xs">
                     <div className="flex justify-between border-b border-forest-800 pb-2">
                       <span className="text-sand-200/60">{t("wizard.entityType")}:</span>
                       <strong className="text-sand-50">{formData.entityType}</strong>

@@ -15,11 +15,11 @@ export default function GalleryPage() {
   const pick = (en: string, or: string) => pickOr(en, or, language);
 
   return (
-    <main className="min-h-screen bg-forest-950 text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
+    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
       <CustomCursor />
       <Header />
 
-      <section className="py-20 bg-forest-950 border-b border-forest-800/40">
+      <section className="py-20 bg-theme-base border-b border-forest-800/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-900/80 border border-forest-500/30 text-xs font-bold uppercase tracking-widest text-harvest-400">
             <span>{t("gallery.badge")}</span>
@@ -36,7 +36,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Masonry Grid */}
-      <section className="py-20 bg-forest-950">
+      <section className="py-20 bg-theme-base">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {GALLERY_IMAGES.map((img) => (
             <div
@@ -66,7 +66,7 @@ export default function GalleryPage() {
       {selectedImage && (
         <div
           onClick={() => setSelectedImage(null)}
-          className="fixed inset-0 z-[10000] bg-forest-950/95 backdrop-blur-2xl flex items-center justify-center p-4"
+          className="fixed inset-0 z-[10000] bg-theme-base/95 backdrop-blur-2xl flex items-center justify-center p-4"
         >
           <button
             onClick={() => setSelectedImage(null)}

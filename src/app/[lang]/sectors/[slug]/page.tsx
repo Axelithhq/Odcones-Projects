@@ -47,12 +47,12 @@ export default async function SectorDetailPage(props: { params: Promise<{ lang: 
   );
 
   return (
-    <main className="min-h-screen bg-forest-950 text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
+    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
       <CustomCursor />
       <Header />
 
       {/* Sector Hero */}
-      <section className="relative py-20 bg-forest-950 border-b border-forest-800/40">
+      <section className="relative py-20 bg-theme-base border-b border-forest-800/40">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-overlay"
           style={{ backgroundImage: `url(${sector.heroImage})` }}
@@ -86,7 +86,7 @@ export default async function SectorDetailPage(props: { params: Promise<{ lang: 
       </section>
 
       {/* Sector Deep Dive Content */}
-      <section className="py-20 bg-forest-950 border-b border-forest-800/40">
+      <section className="py-20 bg-theme-base border-b border-forest-800/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 space-y-6">

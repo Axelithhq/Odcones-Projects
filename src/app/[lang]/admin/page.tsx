@@ -43,7 +43,7 @@ export default function AdminPage() {
   };
 
   return (
-    <main className="min-h-screen bg-forest-950 text-sand-100 pt-20">
+    <main className="min-h-screen bg-theme-base text-sand-100 pt-20">
       <Header />
 
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,7 +65,7 @@ export default function AdminPage() {
                   value={passkey}
                   onChange={(e) => setPasskey(e.target.value)}
                   placeholder={t("admin.passkeyPlaceholder")}
-                  className="w-full px-4 py-3 rounded-xl bg-forest-950 border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
+                  className="w-full px-4 py-3 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
                 />
               </div>
 
@@ -129,7 +129,7 @@ export default function AdminPage() {
                 </div>
 
                 {/* Language Tab Switcher */}
-                <div className="flex items-center gap-1 p-1 rounded-full bg-forest-950 border border-forest-800">
+                <div className="flex items-center gap-1 p-1 rounded-full bg-theme-base border border-forest-800">
                   <button
                     onClick={() => setActiveLangTab("en")}
                     className={`px-4 py-1.5 rounded-full text-xs font-bold ${
@@ -159,7 +159,7 @@ export default function AdminPage() {
                         type="text"
                         value={titleEn}
                         onChange={(e) => setTitleEn(e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl bg-forest-950 border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
+                        className="w-full px-4 py-3 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
                       />
                     </div>
                     <div className="space-y-1">
@@ -168,7 +168,7 @@ export default function AdminPage() {
                         rows={4}
                         value={descEn}
                         onChange={(e) => setDescEn(e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl bg-forest-950 border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
+                        className="w-full px-4 py-3 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
                       />
                     </div>
                   </div>
@@ -180,7 +180,7 @@ export default function AdminPage() {
                         type="text"
                         value={titleOr}
                         onChange={(e) => setTitleOr(e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl bg-forest-950 border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400 font-sans"
+                        className="w-full px-4 py-3 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400 font-sans"
                       />
                     </div>
                     <div className="space-y-1">
@@ -189,7 +189,7 @@ export default function AdminPage() {
                         rows={4}
                         value={descOr}
                         onChange={(e) => setDescOr(e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl bg-forest-950 border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400 font-sans"
+                        className="w-full px-4 py-3 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400 font-sans"
                       />
                     </div>
                   </div>

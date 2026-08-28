@@ -188,7 +188,7 @@ export function EcosystemCanvas() {
 
   if (!webglSupported) {
     return (
-      <div className="w-full h-full min-h-[350px] flex flex-col items-center justify-center bg-forest-950/80 border border-forest-800 rounded-2xl p-6 text-center space-y-3">
+      <div className="w-full h-full min-h-[350px] flex flex-col items-center justify-center bg-theme-base/80 border border-forest-800 rounded-2xl p-6 text-center space-y-3">
         <Sprout className="w-8 h-8 text-harvest-400" />
         <p className="text-xs text-sand-200/80">ODCONS Sustainable Ecosystem Visualizer</p>
       </div>
@@ -198,7 +198,7 @@ export function EcosystemCanvas() {
   return (
     <div
       ref={containerRef}
-      className="w-full h-full min-h-[350px] relative rounded-2xl overflow-hidden bg-forest-950/60 border border-forest-700/40 cursor-grab active:cursor-grabbing"
+      className="w-full h-full min-h-[350px] relative rounded-2xl overflow-hidden bg-theme-base/60 border border-forest-700/40 cursor-grab active:cursor-grabbing"
     />
   );
 }

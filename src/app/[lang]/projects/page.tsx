@@ -44,12 +44,12 @@ export default function ProjectsPage() {
   });
 
   return (
-    <main className="min-h-screen bg-forest-950 text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
+    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
       <CustomCursor />
       <Header />
 
       {/* Hero */}
-      <section className="py-20 bg-forest-950 border-b border-forest-800/40">
+      <section className="py-20 bg-theme-base border-b border-forest-800/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-900/80 border border-forest-500/30 text-xs font-bold uppercase tracking-widest text-harvest-400">
             <span>{t("projects.badge")}</span>
@@ -78,7 +78,7 @@ export default function ProjectsPage() {
                 className={`px-4 py-2 rounded-full text-xs font-bold tracking-wide transition-all flex-shrink-0 ${
                   selectedCategory === cat.key
                     ? "bg-harvest-500 text-forest-950 shadow-md"
-                    : "bg-forest-950/80 text-sand-200/70 border border-forest-800 hover:text-sand-50"
+                    : "bg-theme-base/80 text-sand-200/70 border border-forest-800 hover:text-sand-50"
                 }`}
               >
                 {cat.label}
@@ -94,14 +94,14 @@ export default function ProjectsPage() {
               placeholder={t("projects.searchPlaceholder")}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 text-xs bg-forest-950 border border-forest-700/50 rounded-full text-sand-100 placeholder-sand-200/40 focus:outline-none focus:border-harvest-400"
+              className="w-full pl-10 pr-4 py-2 text-xs bg-theme-base border border-forest-700/50 rounded-full text-sand-100 placeholder-sand-200/40 focus:outline-none focus:border-harvest-400"
             />
           </div>
         </div>
       </section>
 
       {/* Projects Grid */}
-      <section className="py-20 bg-forest-950">
+      <section className="py-20 bg-theme-base">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {filteredProjects.length === 0 ? (
             <div className="p-12 text-center rounded-3xl bg-forest-900/30 border border-forest-800 space-y-3">
@@ -133,7 +133,7 @@ export default function ProjectsPage() {
                           alt={pickOr(proj.title, proj.title_or, language)}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
-                        <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-forest-950/80 backdrop-blur-md text-[10px] font-bold text-harvest-400 uppercase">
+                        <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-theme-base/80 backdrop-blur-md text-[10px] font-bold text-harvest-400 uppercase">
                           {pickOr(proj.sector, proj.sector_or, language)}
                         </div>
                         <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-[10px] font-bold text-emerald-400">

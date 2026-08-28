@@ -8,7 +8,7 @@ export function FounderSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="py-24 bg-forest-950 text-sand-50 relative overflow-hidden border-b border-forest-800/40">
+    <section className="py-24 bg-theme-base text-sand-50 relative overflow-hidden border-b border-forest-800/40">
       {/* Background Subtle Accent */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-harvest-500/5 rounded-full blur-3xl pointer-events-none" />
 
@@ -23,7 +23,7 @@ export function FounderSection() {
                 
                 {/* Founder Portrait Frame — Replace with <img> when real photo is provided */}
                 <div className="w-36 h-36 rounded-full bg-gradient-to-br from-forest-600 via-forest-800 to-harvest-600 p-1 mb-6 shadow-xl relative z-10">
-                  <div className="w-full h-full bg-forest-950 rounded-full flex items-center justify-center text-harvest-400 font-display font-extrabold text-4xl">
+                  <div className="w-full h-full bg-theme-base rounded-full flex items-center justify-center text-harvest-400 font-display font-extrabold text-4xl">
                     AM
                   </div>
                 </div>

@@ -20,7 +20,7 @@ export function IntroAnimation() {
         <motion.div
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, transition: { duration: 0.6, ease: "easeInOut" } }}
-          className="fixed inset-0 z-[10000] bg-forest-950 flex flex-col items-center justify-center pointer-events-none"
+          className="fixed inset-0 z-[10000] bg-theme-base flex flex-col items-center justify-center pointer-events-none"
         >
           <div className="relative flex flex-col items-center gap-4">
             <motion.div
@@ -29,7 +29,7 @@ export function IntroAnimation() {
               transition={{ duration: 0.5 }}
               className="w-16 h-16 rounded-2xl bg-gradient-to-br from-forest-500 via-forest-700 to-harvest-600 p-0.5 shadow-2xl flex items-center justify-center"
             >
-              <div className="w-full h-full bg-forest-950 rounded-[14px] flex items-center justify-center">
+              <div className="w-full h-full bg-theme-base rounded-[14px] flex items-center justify-center">
                 <Sprout className="w-8 h-8 text-harvest-400" />
               </div>
             </motion.div>

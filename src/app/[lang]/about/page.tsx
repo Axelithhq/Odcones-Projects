@@ -37,12 +37,12 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
   ];
 
   return (
-    <main className="min-h-screen bg-forest-950 text-sand-100 relative has-custom-cursor pt-20">
+    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor pt-20">
       <CustomCursor />
       <Header />
 
       {/* Hero Header */}
-      <section className="py-20 bg-forest-950 border-b border-forest-800/40 relative overflow-hidden">
+      <section className="py-20 bg-theme-base border-b border-forest-800/40 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 relative z-10">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-forest-900/90 border border-forest-500/30 text-xs font-bold uppercase tracking-widest text-harvest-400 font-display">
             <Compass className="w-4 h-4" />
@@ -62,7 +62,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
       {/* Vision & Mission */}
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8 border-b border-forest-800/40">
         <div className="p-8 rounded-3xl bg-forest-900/40 border border-forest-700/50 space-y-4 shadow-xl">
-          <div className="w-12 h-12 rounded-2xl bg-forest-950 border border-forest-700 flex items-center justify-center text-harvest-400">
+          <div className="w-12 h-12 rounded-2xl bg-theme-base border border-forest-700 flex items-center justify-center text-harvest-400">
             <Eye className="w-6 h-6" />
           </div>
           <h2 className="font-display font-extrabold text-2xl text-sand-50 uppercase">Our Vision</h2>
@@ -72,7 +72,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
         </div>
 
         <div className="p-8 rounded-3xl bg-forest-900/40 border border-forest-700/50 space-y-4 shadow-xl">
-          <div className="w-12 h-12 rounded-2xl bg-forest-950 border border-forest-700 flex items-center justify-center text-aqua-400">
+          <div className="w-12 h-12 rounded-2xl bg-theme-base border border-forest-700 flex items-center justify-center text-aqua-400">
             <Target className="w-6 h-6" />
           </div>
           <h2 className="font-display font-extrabold text-2xl text-sand-50 uppercase">Our Mission</h2>
@@ -101,7 +101,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
             <div key={stg.step} className="p-6 rounded-3xl bg-forest-900/40 border border-forest-700/50 space-y-3 shadow-xl">
               <div className="flex justify-between items-center text-xs font-mono font-bold text-harvest-400">
                 <span>STAGE {stg.step}</span>
-                <span className="px-2.5 py-1 rounded bg-forest-950 border border-forest-800">{isOr ? stg.stage[1] : stg.stage[0]}</span>
+                <span className="px-2.5 py-1 rounded bg-theme-base border border-forest-800">{isOr ? stg.stage[1] : stg.stage[0]}</span>
               </div>
               <h3 className="font-display font-bold text-lg text-sand-50">
                 {isOr ? stg.title_or : stg.title}

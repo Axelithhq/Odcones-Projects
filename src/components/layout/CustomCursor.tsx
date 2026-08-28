@@ -53,7 +53,7 @@ export function CustomCursor() {
     <div className="hidden lg:block pointer-events-none fixed inset-0 z-[9999] overflow-hidden">
       {/* Outer Ring / Cursor Bubble */}
       <motion.div
-        className="fixed top-0 left-0 rounded-full flex items-center justify-center pointer-events-none border border-forest-300/60 bg-forest-950/70 backdrop-blur-[4px] shadow-2xl transition-colors"
+        className="fixed top-0 left-0 rounded-full flex items-center justify-center pointer-events-none border border-forest-300/60 bg-theme-base/70 backdrop-blur-[4px] shadow-2xl transition-colors"
         animate={{
           x: mousePosition.x - (cursorText ? 48 : isHovered ? 24 : 12),
           y: mousePosition.y - (cursorText ? 48 : isHovered ? 24 : 12),

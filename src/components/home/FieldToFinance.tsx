@@ -102,7 +102,7 @@ export function FieldToFinance() {
   const { language } = useTranslation();
 
   return (
-    <section className="py-24 bg-forest-950 text-sand-50 relative border-b border-forest-800/40 overflow-hidden">
+    <section className="py-24 bg-theme-base text-sand-50 relative border-b border-forest-800/40 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-900/80 border border-forest-500/30 text-xs font-bold uppercase tracking-widest text-harvest-400">
@@ -152,7 +152,7 @@ export function FieldToFinance() {
             <div className="lg:col-span-7 h-[420px] rounded-2xl overflow-hidden relative border border-forest-700/50">
               <img src={activeStep.image} alt={activeStep.title} className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-forest-950 via-forest-950/40 to-transparent" />
-              <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-forest-950/80 text-xs font-bold text-harvest-400">
+              <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-theme-base/80 text-xs font-bold text-harvest-400">
                 STAGE {activeStep.step} • {activeStep.category}
               </div>
             </div>
@@ -171,7 +171,7 @@ export function FieldToFinance() {
                 {language === "or" ? activeStep.desc_or : activeStep.desc}
               </p>
 
-              <div className="p-4 rounded-2xl bg-forest-950 border border-forest-800 space-y-2">
+              <div className="p-4 rounded-2xl bg-theme-base border border-forest-800 space-y-2">
                 <span className="text-[10px] font-bold text-forest-300 uppercase tracking-widest">
                   DELIVERABLE SPECIFICATIONS:
                 </span>

@@ -42,11 +42,11 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen bg-forest-950 text-sand-100 relative has-custom-cursor pt-20">
+    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor pt-20">
       <CustomCursor />
       <Header />
 
-      <section className="py-20 bg-forest-950 border-b border-forest-800/40">
+      <section className="py-20 bg-theme-base border-b border-forest-800/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-900/80 border border-forest-500/30 text-xs font-bold uppercase tracking-widest text-harvest-400">
             <span>{t("nav.contact")}</span>
@@ -62,7 +62,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-forest-950">
+      <section className="py-20 bg-theme-base">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Info Sidebar */}
           <div className="lg:col-span-5 space-y-8">
@@ -96,7 +96,7 @@ export default function ContactPage() {
           {/* Contact Form */}
           <div className="lg:col-span-7 p-8 rounded-3xl bg-forest-900/50 border border-forest-700/50 space-y-6 shadow-2xl">
             {submitted ? (
-              <div className="p-8 rounded-2xl bg-forest-950 border border-emerald-500/40 text-center space-y-4">
+              <div className="p-8 rounded-2xl bg-theme-base border border-emerald-500/40 text-center space-y-4">
                 <CheckCircle2 className="w-12 h-12 text-emerald-400 mx-auto" />
                 <h3 className="font-display font-extrabold text-2xl text-sand-50">
                   {t("contact.successTitle")}
@@ -118,7 +118,7 @@ export default function ContactPage() {
                       placeholder={t("contact.formNamePlaceholder")}
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-forest-950 border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
+                      className="w-full px-4 py-3 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
                     />
                   </div>
 
@@ -132,7 +132,7 @@ export default function ContactPage() {
                       placeholder="name@domain.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-forest-950 border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
+                      className="w-full px-4 py-3 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
                     />
                   </div>
                 </div>
@@ -147,7 +147,7 @@ export default function ContactPage() {
                       placeholder={t("contact.formPhonePlaceholder")}
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-forest-950 border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
+                      className="w-full px-4 py-3 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
                     />
                   </div>
 
@@ -160,7 +160,7 @@ export default function ContactPage() {
                       placeholder={t("contact.formOrgPlaceholder")}
                       value={formData.org}
                       onChange={(e) => setFormData({ ...formData, org: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-forest-950 border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
+                      className="w-full px-4 py-3 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
                     />
                   </div>
                 </div>
@@ -175,7 +175,7 @@ export default function ContactPage() {
                     placeholder={t("contact.formMessagePlaceholder")}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-forest-950 border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
+                    className="w-full px-4 py-3 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
                   />
                 </div>
 

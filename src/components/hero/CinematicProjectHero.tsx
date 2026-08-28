@@ -10,7 +10,7 @@ export function CinematicProjectHero() {
   const { t, language } = useTranslation();
 
   return (
-    <section className="relative w-full min-h-screen pt-24 pb-16 bg-forest-950 flex flex-col justify-between overflow-hidden border-b border-forest-800/40">
+    <section className="relative w-full min-h-screen pt-24 pb-16 bg-theme-base flex flex-col justify-between overflow-hidden border-b border-forest-800/40">
       {/* Background Panoramic Landscape with Atmospheric Layers */}
       <div
         className="absolute inset-0 bg-cover bg-center transition-all duration-1000 opacity-40 scale-105"

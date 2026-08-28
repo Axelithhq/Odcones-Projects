@@ -66,7 +66,7 @@ export function NewsletterModal() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.3 }}
-        className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-forest-950/80 backdrop-blur-md"
+        className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-theme-base/80 backdrop-blur-md"
         onClick={handleDismiss}
       >
         <motion.div
@@ -79,7 +79,7 @@ export function NewsletterModal() {
         >
         <button
           onClick={handleDismiss}
-          className="absolute top-4 right-4 p-2 rounded-full bg-forest-950/60 border border-forest-700 text-sand-200 hover:text-rose-400"
+          className="absolute top-4 right-4 p-2 rounded-full bg-theme-base/60 border border-forest-700 text-sand-200 hover:text-rose-400"
           aria-label="Close modal"
         >
           <X className="w-4 h-4" />
@@ -122,7 +122,7 @@ export function NewsletterModal() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder={language === "or" ? "ଆପଣଙ୍କ ନାମ (Optional)" : "Your Name (Optional)"}
-                className="w-full px-4 py-3 rounded-xl bg-forest-950 border border-forest-700 text-sand-50 text-xs focus:outline-none focus:border-harvest-400"
+                className="w-full px-4 py-3 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-xs focus:outline-none focus:border-harvest-400"
               />
               <input
                 required
@@ -130,7 +130,7 @@ export function NewsletterModal() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={language === "or" ? "ଆପଣଙ୍କ ଇମେଲ୍ (Required)" : "Email Address *"}
-                className="w-full px-4 py-3 rounded-xl bg-forest-950 border border-forest-700 text-sand-50 text-xs focus:outline-none focus:border-harvest-400"
+                className="w-full px-4 py-3 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-xs focus:outline-none focus:border-harvest-400"
               />
 
               <button

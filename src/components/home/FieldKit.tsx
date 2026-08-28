@@ -91,7 +91,7 @@ export function FieldKit() {
   const pick = (pair: L10nString) => pickOr(pair[0], pair[1], language);
 
   return (
-    <section className="py-24 bg-forest-950 text-sand-50 relative border-b border-forest-800/40 overflow-hidden">
+    <section className="py-24 bg-theme-base text-sand-50 relative border-b border-forest-800/40 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-900/80 border border-forest-500/30 text-xs font-bold uppercase tracking-widest text-harvest-400">
@@ -124,7 +124,7 @@ export function FieldKit() {
                 data-cursor-text="TOOL"
               >
                 <div className="flex items-center justify-between">
-                  <div className="w-10 h-10 rounded-xl bg-forest-950 border border-forest-700 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-xl bg-theme-base border border-forest-700 flex items-center justify-center">
                     {item.icon}
                   </div>
                   <span className="text-[10px] font-bold text-harvest-400 uppercase tracking-widest font-display">

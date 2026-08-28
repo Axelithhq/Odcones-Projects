@@ -29,7 +29,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-forest-950 text-sand-100 border-t border-forest-800/40 relative overflow-hidden pt-16 pb-12">
+    <footer className="bg-theme-base text-sand-100 border-t border-forest-800/40 relative overflow-hidden pt-16 pb-12">
       {/* Subtle Background Glow */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-forest-700/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-aqua-900/10 rounded-full blur-3xl pointer-events-none" />
@@ -40,7 +40,7 @@ export function Footer() {
           <div className="lg:col-span-2 space-y-6">
             <Link href={localizeHref("/")} className="flex items-center gap-2.5">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-forest-600 via-forest-800 to-soil-700 p-0.5">
-                <div className="w-full h-full bg-forest-950 rounded-[10px] flex items-center justify-center">
+                <div className="w-full h-full bg-theme-base rounded-[10px] flex items-center justify-center">
                   <Sprout className="w-5 h-5 text-harvest-400" />
                 </div>
               </div>

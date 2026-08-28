@@ -37,11 +37,11 @@ export default async function ServiceDetailPage(props: { params: Promise<{ lang:
   const deliverables = pickOrArray(service.deliverables, service.deliverables_or, lang);
 
   return (
-    <main className="min-h-screen bg-forest-950 text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
+    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
       <CustomCursor />
       <Header />
 
-      <section className="py-20 bg-forest-950 border-b border-forest-800/40">
+      <section className="py-20 bg-theme-base border-b border-forest-800/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           <Link href={getPathWithLocale("/services", lang)} className="inline-flex items-center gap-2 text-xs font-bold text-forest-300 hover:text-sand-50 transition-colors">
             <ArrowLeft className="w-4 h-4" />
@@ -62,7 +62,7 @@ export default async function ServiceDetailPage(props: { params: Promise<{ lang:
         </div>
       </section>
 
-      <section className="py-20 bg-forest-950">
+      <section className="py-20 bg-theme-base">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-8 space-y-8">
             <div className="rounded-3xl overflow-hidden border border-forest-800/60 h-80 sm:h-96">

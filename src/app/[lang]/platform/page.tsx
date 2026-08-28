@@ -53,12 +53,12 @@ export default function PlatformDashboardPage() {
   const pick = (pair: [string, string]) => (language === "or" ? pair[1] : pair[0]);
 
   return (
-    <main className="min-h-screen bg-forest-950 text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
+    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
       <CustomCursor />
       <Header />
 
       {/* Hero Header */}
-      <section className="py-12 bg-forest-950 border-b border-forest-800/40">
+      <section className="py-12 bg-theme-base border-b border-forest-800/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-aqua-950 border border-aqua-500/30 text-xs font-bold uppercase tracking-widest text-aqua-400 mb-2">
@@ -90,7 +90,7 @@ export default function PlatformDashboardPage() {
       </section>
 
       {/* Main Interactive Dashboard Area */}
-      <section className="py-12 bg-forest-950">
+      <section className="py-12 bg-theme-base">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           {/* Demo Banner */}
           <div className="p-4 rounded-2xl bg-aqua-950/40 border border-aqua-500/30 flex items-center gap-3">
@@ -188,7 +188,7 @@ export default function PlatformDashboardPage() {
                 </h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="p-5 rounded-2xl bg-forest-950 border border-forest-800 flex items-center justify-between">
+                  <div className="p-5 rounded-2xl bg-theme-base border border-forest-800 flex items-center justify-between">
                     <div>
                       <h4 className="font-bold text-sm text-sand-50">{t("platform.aerators")}</h4>
                       <p className="text-xs text-sand-200/60">Hirakud Cage Sector #4</p>
@@ -205,7 +205,7 @@ export default function PlatformDashboardPage() {
                     </button>
                   </div>
 
-                  <div className="p-5 rounded-2xl bg-forest-950 border border-forest-800 flex items-center justify-between">
+                  <div className="p-5 rounded-2xl bg-theme-base border border-forest-800 flex items-center justify-between">
                     <div>
                       <h4 className="font-bold text-sm text-sand-50">{t("platform.drip")}</h4>
                       <p className="text-xs text-sand-200/60">Koraput Polyhouse #12</p>
@@ -234,7 +234,7 @@ export default function PlatformDashboardPage() {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {[1, 2, 3, 4, 5, 6].map((cage) => (
-                  <div key={cage} className="p-4 rounded-2xl bg-forest-950 border border-forest-800 space-y-2">
+                  <div key={cage} className="p-4 rounded-2xl bg-theme-base border border-forest-800 space-y-2">
                     <div className="flex justify-between items-center text-xs font-bold text-harvest-400">
                       <span>{t("platform.cageNode")}{cage}</span>
                       <CheckCircle className="w-4 h-4 text-emerald-400" />
@@ -255,12 +255,12 @@ export default function PlatformDashboardPage() {
                 {t("platform.cropsHeader")}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="p-5 rounded-2xl bg-forest-950 border border-forest-800 space-y-2">
+                <div className="p-5 rounded-2xl bg-theme-base border border-forest-800 space-y-2">
                   <span className="text-xs font-bold text-harvest-400">{t("platform.clusterA")}</span>
                   <p className="text-xs text-sand-200/80">{t("platform.soilCarbon")}</p>
                   <p className="text-xs text-sand-200/80">{t("platform.vwc")}</p>
                 </div>
-                <div className="p-5 rounded-2xl bg-forest-950 border border-forest-800 space-y-2">
+                <div className="p-5 rounded-2xl bg-theme-base border border-forest-800 space-y-2">
                   <span className="text-xs font-bold text-harvest-400">{t("platform.clusterB")}</span>
                   <p className="text-xs text-sand-200/80">{t("platform.ec")}</p>
                   <p className="text-xs text-sand-200/80">{t("platform.npk")}</p>
@@ -277,7 +277,7 @@ export default function PlatformDashboardPage() {
               </h3>
               <div className="space-y-3">
                 {BENEFICIARIES.map((item, idx) => (
-                  <div key={idx} className="p-4 rounded-2xl bg-forest-950 border border-forest-800 flex items-center justify-between text-xs">
+                  <div key={idx} className="p-4 rounded-2xl bg-theme-base border border-forest-800 flex items-center justify-between text-xs">
                     <div>
                       <h4 className="font-bold text-sand-50">{pick(item.name)}</h4>
                       <span className="text-sand-200/60">{pick(item.members)} • {pick(item.sector)}</span>

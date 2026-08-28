@@ -37,11 +37,11 @@ export default function CareersPage() {
   };
 
   return (
-    <main className="min-h-screen bg-forest-950 text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
+    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
       <CustomCursor />
       <Header />
 
-      <section className="py-20 bg-forest-950 border-b border-forest-800/40">
+      <section className="py-20 bg-theme-base border-b border-forest-800/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-900/80 border border-forest-500/30 text-xs font-bold uppercase tracking-widest text-harvest-400">
             <span>{t("careers.badge")}</span>
@@ -57,7 +57,7 @@ export default function CareersPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-forest-950">
+      <section className="py-20 bg-theme-base">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           <h2 className="font-display font-extrabold text-2xl text-sand-50 uppercase mb-8">{t("careers.openPositions")}</h2>
 
@@ -89,7 +89,7 @@ export default function CareersPage() {
 
       {/* Application Modal */}
       {selectedJob && (
-        <div className="fixed inset-0 z-[10000] bg-forest-950/90 backdrop-blur-2xl flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-[10000] bg-theme-base/90 backdrop-blur-2xl flex items-center justify-center p-4">
           <div className="max-w-lg w-full p-8 rounded-3xl bg-forest-900 border border-forest-700 relative space-y-6">
             <button
               onClick={() => setSelectedJob(null)}
@@ -118,7 +118,7 @@ export default function CareersPage() {
                   placeholder={t("careers.fullName")}
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full p-3.5 text-xs bg-forest-950 border border-forest-700 rounded-xl text-sand-100"
+                  className="w-full p-3.5 text-xs bg-theme-base border border-forest-700 rounded-xl text-sand-100"
                 />
                 <input
                   type="email"
@@ -126,7 +126,7 @@ export default function CareersPage() {
                   placeholder={t("careers.email")}
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full p-3.5 text-xs bg-forest-950 border border-forest-700 rounded-xl text-sand-100"
+                  className="w-full p-3.5 text-xs bg-theme-base border border-forest-700 rounded-xl text-sand-100"
                 />
                 <input
                   type="tel"
@@ -134,14 +134,14 @@ export default function CareersPage() {
                   placeholder={t("careers.phone")}
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full p-3.5 text-xs bg-forest-950 border border-forest-700 rounded-xl text-sand-100"
+                  className="w-full p-3.5 text-xs bg-theme-base border border-forest-700 rounded-xl text-sand-100"
                 />
                 <textarea
                   rows={3}
                   placeholder={t("careers.tellUs")}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full p-3.5 text-xs bg-forest-950 border border-forest-700 rounded-xl text-sand-100"
+                  className="w-full p-3.5 text-xs bg-theme-base border border-forest-700 rounded-xl text-sand-100"
                 />
                 {submitState === "error" && (
                   <p className="text-xs text-rose-400 font-bold">{t("contact.errorDesc")}</p>

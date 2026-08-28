@@ -9,7 +9,7 @@ export function FinalCTA() {
   const { t, localizeHref } = useTranslation();
 
   return (
-    <section className="relative py-28 bg-forest-950 text-sand-50 overflow-hidden">
+    <section className="relative py-28 bg-theme-base text-sand-50 overflow-hidden">
       {/* Background Graphic & Glow */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-15 mix-blend-overlay"

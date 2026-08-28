@@ -7,7 +7,7 @@ export function DigitalField() {
   const [activeScreen, setActiveScreen] = useState<"phone" | "tablet" | "desktop">("phone");
 
   return (
-    <section className="py-24 bg-forest-950 text-sand-50 relative border-b border-forest-800/40 overflow-hidden">
+    <section className="py-24 bg-theme-base text-sand-50 relative border-b border-forest-800/40 overflow-hidden">
       {/* Background Accent Grid */}
       <div className="absolute inset-0 bg-[radial-gradient(#0D879F_1px,transparent_1px)] [background-size:32px_32px] opacity-15 pointer-events-none" />
 
@@ -69,13 +69,13 @@ export function DigitalField() {
               <ShieldCheck className="w-4 h-4" />
               <span>LIVE FIELDOS DEMO — {activeScreen.toUpperCase()} VIEW</span>
             </div>
-            <span className="text-[10px] font-mono text-forest-300 bg-forest-950 px-2.5 py-1 rounded-md border border-forest-800">
+            <span className="text-[10px] font-mono text-forest-300 bg-theme-base px-2.5 py-1 rounded-md border border-forest-800">
               OPERATIONAL
             </span>
           </div>
 
           {/* Interactive Screen Interface */}
-          <div className="p-6 rounded-2xl bg-forest-950 border border-forest-800 space-y-6">
+          <div className="p-6 rounded-2xl bg-theme-base border border-forest-800 space-y-6">
             {/* Top Greeting Bar */}
             <div className="flex justify-between items-center border-b border-forest-800/80 pb-4">
               <div>

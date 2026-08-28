@@ -45,12 +45,12 @@ export default function FinancialConsultancyPage() {
   const { language } = useTranslation();
 
   return (
-    <main className="min-h-screen bg-forest-950 text-sand-100 relative has-custom-cursor pt-20">
+    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor pt-20">
       <CustomCursor />
       <Header />
 
       {/* Hero Header */}
-      <section className="py-20 bg-forest-950 border-b border-forest-800/40 relative overflow-hidden">
+      <section className="py-20 bg-theme-base border-b border-forest-800/40 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 relative z-10">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-forest-900/90 border border-forest-500/30 text-xs font-bold uppercase tracking-widest text-harvest-400 font-display">
             <Landmark className="w-4 h-4" />
@@ -82,7 +82,7 @@ export default function FinancialConsultancyPage() {
           {FINANCIAL_METRICS.map((m, idx) => (
             <div key={idx} className="p-6 rounded-3xl bg-forest-900/40 border border-forest-700/50 space-y-3 shadow-xl flex flex-col justify-between">
               <div className="space-y-2">
-                <span className="font-mono text-xs font-bold text-harvest-400 p-2 rounded-lg bg-forest-950 border border-forest-800 inline-block">
+                <span className="font-mono text-xs font-bold text-harvest-400 p-2 rounded-lg bg-theme-base border border-forest-800 inline-block">
                   0{idx + 1}
                 </span>
                 <h3 className="font-display font-bold text-lg text-sand-50">

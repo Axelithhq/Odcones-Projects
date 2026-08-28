@@ -41,12 +41,12 @@ export default async function ProjectDetailPage(props: { params: Promise<{ lang:
     : undefined;
 
   return (
-    <main className="min-h-screen bg-forest-950 text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
+    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
       <CustomCursor />
       <Header />
 
       {/* Case Study Hero */}
-      <section className="py-20 bg-forest-950 border-b border-forest-800/40">
+      <section className="py-20 bg-theme-base border-b border-forest-800/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           <Link href={getPathWithLocale("/projects", lang)} className="inline-flex items-center gap-2 text-xs font-bold text-forest-300 hover:text-sand-50 transition-colors">
             <ArrowLeft className="w-4 h-4" />
@@ -84,7 +84,7 @@ export default async function ProjectDetailPage(props: { params: Promise<{ lang:
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-forest-950">
+      <section className="py-20 bg-theme-base">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-8 space-y-12">
             {/* Main Image Banner */}
@@ -144,7 +144,7 @@ export default async function ProjectDetailPage(props: { params: Promise<{ lang:
 
                 <div className="space-y-4">
                   {Object.entries(impactMetrics).map(([key, val]) => (
-                    <div key={key} className="p-4 rounded-2xl bg-forest-950 border border-forest-800 space-y-1">
+                    <div key={key} className="p-4 rounded-2xl bg-theme-base border border-forest-800 space-y-1">
                       <span className="text-[10px] font-bold text-forest-300 uppercase tracking-widest">{key}</span>
                       <p className="font-display font-extrabold text-2xl text-harvest-300">{val}</p>
                     </div>

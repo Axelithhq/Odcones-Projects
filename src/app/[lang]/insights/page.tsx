@@ -23,11 +23,11 @@ export default async function InsightsPage(props: { params: Promise<{ lang: stri
   const t = getServerT(lang);
 
   return (
-    <main className="min-h-screen bg-forest-950 text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
+    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor overflow-x-hidden pt-20">
       <CustomCursor />
       <Header />
 
-      <section className="py-20 bg-forest-950 border-b border-forest-800/40">
+      <section className="py-20 bg-theme-base border-b border-forest-800/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-900/80 border border-forest-500/30 text-xs font-bold uppercase tracking-widest text-harvest-400">
             <span>{t("insights.badge")}</span>
@@ -43,14 +43,14 @@ export default async function InsightsPage(props: { params: Promise<{ lang: stri
         </div>
       </section>
 
-      <section className="py-20 bg-forest-950">
+      <section className="py-20 bg-theme-base">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {ARTICLES.map((art) => (
             <div key={art.id} className="group p-6 rounded-3xl bg-forest-900/40 border border-forest-800/60 hover:border-forest-500/50 transition-all flex flex-col justify-between space-y-5">
               <div className="space-y-4">
                 <div className="h-48 rounded-2xl overflow-hidden relative">
                   <img src={art.image_url} alt={pickOr(art.title, art.title_or, lang)} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-forest-950/80 backdrop-blur-md text-[10px] font-bold text-harvest-400 uppercase">
+                  <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-theme-base/80 backdrop-blur-md text-[10px] font-bold text-harvest-400 uppercase">
                     {art.category}
                   </div>
                 </div>

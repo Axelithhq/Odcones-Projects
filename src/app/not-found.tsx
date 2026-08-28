@@ -12,7 +12,7 @@ export default function NotFound() {
   const { t, localizeHref } = useTranslation();
 
   return (
-    <main className="min-h-screen bg-forest-950 text-sand-100 relative has-custom-cursor flex flex-col justify-between pt-24">
+    <main className="min-h-screen bg-theme-base text-sand-100 relative has-custom-cursor flex flex-col justify-between pt-24">
       <CustomCursor />
       <Header />
 

@@ -8,7 +8,7 @@ import { useTranslation } from "@/lib/i18n";
 export function IntroSection() {
   const { localizeHref } = useTranslation();
   return (
-    <section className="py-24 bg-forest-950 text-sand-50 relative overflow-hidden border-b border-forest-800/40">
+    <section className="py-24 bg-theme-base text-sand-50 relative overflow-hidden border-b border-forest-800/40">
       {/* Background Accent Grid */}
       <div className="absolute inset-0 bg-[radial-gradient(#1A4D2E_1px,transparent_1px)] [background-size:32px_32px] opacity-20 pointer-events-none" />
 

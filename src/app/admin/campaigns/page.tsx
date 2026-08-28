@@ -44,7 +44,7 @@ export default function AdminCampaignsPage() {
   };
 
   return (
-    <main className="min-h-screen bg-forest-950 text-sand-100 pt-20">
+    <main className="min-h-screen bg-theme-base text-sand-100 pt-20">
       <Header />
 
       <section className="py-12 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
@@ -65,7 +65,7 @@ export default function AdminCampaignsPage() {
               value={recipientsInput}
               onChange={(e) => setRecipientsInput(e.target.value)}
               placeholder="e.g. client1@domain.com, client2@domain.com"
-              className="w-full px-4 py-3 rounded-xl bg-forest-950 border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
+              className="w-full px-4 py-3 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
             />
           </div>
 
@@ -77,7 +77,7 @@ export default function AdminCampaignsPage() {
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
               placeholder="e.g. New Agriculture DPR & Government Scheme Policy Update"
-              className="w-full px-4 py-3 rounded-xl bg-forest-950 border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
+              className="w-full px-4 py-3 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-sm focus:outline-none focus:border-harvest-400"
             />
           </div>
 
@@ -89,12 +89,12 @@ export default function AdminCampaignsPage() {
               value={bodyHtml}
               onChange={(e) => setBodyHtml(e.target.value)}
               placeholder="<p>Dear Valued Partner,</p><p>We are pleased to share our latest techno-economic feasibility insights...</p>"
-              className="w-full px-4 py-3 rounded-xl bg-forest-950 border border-forest-700 text-sand-50 text-xs font-mono focus:outline-none focus:border-harvest-400"
+              className="w-full px-4 py-3 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-xs font-mono focus:outline-none focus:border-harvest-400"
             />
           </div>
 
           {statusMsg && (
-            <p className="text-xs font-bold text-emerald-400 p-3 rounded-xl bg-forest-950 border border-forest-800">
+            <p className="text-xs font-bold text-emerald-400 p-3 rounded-xl bg-theme-base border border-forest-800">
               {statusMsg}
             </p>
           )}
