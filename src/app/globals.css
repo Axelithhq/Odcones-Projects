@@ -11,26 +11,26 @@
   --font-noto-oriya: 'Noto Sans Oriya', 'Inter', sans-serif;
 }
 
-/* Light Theme Variables (Warm Silver & Architectural Paper Surface) */
+/* Light Theme Variables (Elevated Warm Silver Base & Crisp Paper White Surfaces) */
 html.light-mode {
-  --bg-base: #E7E9E6;
-  --bg-surface: #F2F3EF;
-  --bg-surface-elevated: #FAFAFA;
-  --bg-surface-muted: #DDE0D8;
+  --bg-base: #EBECE7;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #F4F6F2;
+  --bg-surface-muted: #D8DFD4;
 
-  /* 4-Tier Deep Foreground System */
-  --text-heading: #111713;
-  --text-primary: #18201C;
-  --text-secondary: #303934;
-  --text-muted: #4B5550;
-  --text-subtle: #5C6760;
+  /* 4-Tier High-Definition Foreground System */
+  --text-heading: #0B130E;
+  --text-primary: #141F18;
+  --text-secondary: #29382E;
+  --text-muted: #3D4C42;
+  --text-subtle: #526357;
 
-  --border-subtle: #CED3C9;
-  --border-strong: #A8B1A2;
+  --border-subtle: #B8C2B3;
+  --border-strong: #1E4D36;
   --accent-primary: #1E4D36;
-  --accent-gold: #B8860B;
+  --accent-gold: #996515;
   --accent-water: #006680;
-  --shadow-color: rgba(20, 32, 24, 0.08);
+  --shadow-color: rgba(18, 30, 22, 0.10);
 }
 
 /* Dark Theme Variables (Deep Forest Charcoal, Earth & Water Depth) */
@@ -133,6 +133,7 @@ body {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border-subtle);
   color: var(--text-primary);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease;
 }
 
