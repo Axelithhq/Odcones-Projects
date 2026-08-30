@@ -38,7 +38,7 @@ const SECTOR_COMPOSITIONS: Record<SectorType, SectorVisual> = {
     title: ["AGRICULTURE", "କୃଷି"],
     subtitle: ["From Soil to Harvest, Precision Crop Systems", "ମାଟିରୁ ଅମଳ ପର୍ଯ୍ୟନ୍ତ, ସୁସ୍ଥିର ଓ ଉଚ୍ଚ ଉତ୍ପାଦନକ୍ଷମ କୃଷି ବ୍ୟବସ୍ଥା"],
     heroObject: ["Paddy Farmer & Direct Seeder Gear", "ଧାନ ଚାଷୀ ଓ ସ୍ମାର୍ଟ ସିଡର"],
-    bgImage: "https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&q=80&w=1600",
+    bgImage: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=1600",
     accentColor: "#40916C",
     badgeBg: "rgba(64, 145, 108, 0.2)",
     operatorRole: ["Paddy Farmer (Bargarh, Odisha)", "ଧାନ ଚାଷୀ (ବରଗଡ଼, ଓଡ଼ିଶା)"],
