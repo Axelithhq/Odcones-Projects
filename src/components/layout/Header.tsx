@@ -287,30 +287,31 @@ export function Header() {
                   <div className="space-y-4">
                     <div className="flex justify-between items-center border-b border-[#B8C2B3]/60 pb-3">
                       <span className="text-[10px] font-mono font-bold text-harvest-500 uppercase tracking-widest">
-                        7 INTEGRATED SECTOR DOMAINS
+                        8 INTEGRATED SECTOR DOMAINS
                       </span>
                       <Link href="/sectors" className="text-xs font-bold text-harvest-500 hover:underline">
                         Explore All Sectors →
                       </Link>
                     </div>
 
-                    <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2.5">
                       {[
-                        { title: "Agriculture", slug: "agriculture", desc: "Grains & Seeds" },
-                        { title: "Fisheries", slug: "fisheries", desc: "Farms & Hatcheries" },
-                        { title: "Aquaculture", slug: "aquaculture", desc: "Biofloc & Cages" },
-                        { title: "Dairy", slug: "dairy", desc: "Cattle & BMC" },
-                        { title: "Poultry", slug: "poultry", desc: "Broiler & Layer" },
-                        { title: "Horticulture", slug: "horticulture", desc: "Polyhouse & Mushroom" },
-                        { title: "Cold Chain", slug: "cold-chain", desc: "Cold Rooms & PUF" }
+                        { title: "Agriculture", slug: "agriculture", desc: "Crops & Soil" },
+                        { title: "Fisheries & Aqua", slug: "fisheries", desc: "Biofloc & Cages" },
+                        { title: "Dairy & Livestock", slug: "dairy", desc: "BMC & Fodder" },
+                        { title: "Horticulture", slug: "horticulture", desc: "Polyhouses" },
+                        { title: "Food Processing", slug: "food-processing", desc: "Agro-Mills" },
+                        { title: "Cold Chain", slug: "cold-chain", desc: "PUF Cold Rooms" },
+                        { title: "Rural Infra", slug: "rural-infrastructure", desc: "Check Dams" },
+                        { title: "Allied MSME", slug: "msme-projects", desc: "Incubators" }
                       ].map((sec) => (
                         <Link
                           key={sec.slug}
                           href={`/sectors/${sec.slug}`}
                           className="p-3 rounded-xl glass-card space-y-1 group"
                         >
-                          <span className="text-xs font-display font-bold block group-hover:text-harvest-500">{sec.title}</span>
-                          <span className="text-[10px] text-theme-text-muted font-mono block">{sec.desc}</span>
+                          <span className="text-xs font-display font-bold block group-hover:text-harvest-500 leading-tight">{sec.title}</span>
+                          <span className="text-[9.5px] text-theme-text-muted font-mono block">{sec.desc}</span>
                         </Link>
                       ))}
                     </div>
