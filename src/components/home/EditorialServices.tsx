@@ -85,18 +85,18 @@ export function EditorialServices() {
   const { language } = useTranslation();
 
   return (
-    <section className="py-24 bg-theme-base text-sand-50 relative border-b border-forest-800/40 overflow-hidden">
+    <section className="py-24 bg-theme-base text-theme-text relative border-b border-theme-border overflow-hidden transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-900/80 border border-forest-500/30 text-xs font-bold uppercase tracking-widest text-harvest-400">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel text-xs font-bold uppercase tracking-widest text-theme-gold font-display">
             <span>TECHNICAL SERVICES & CAPABILITIES</span>
           </div>
 
-          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-sand-50 tracking-tight uppercase">
+          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-theme-text tracking-tight uppercase text-balance">
             {language === "or" ? "ଆମର ବୈଷୟିକ ସେବା ସମୂହ" : "EDITORIAL SERVICE SYSTEM"}
           </h2>
 
-          <p className="text-theme-text-muted text-sm sm:text-base leading-relaxed font-light">
+          <p className="text-theme-text-muted text-sm sm:text-base leading-relaxed font-normal max-w-prose-custom mx-auto">
             ODCONS PROJECTS provides complete end-to-end technical consultancy across project planning, engineering, DPR preparation, and financial modeling.
           </p>
         </div>
@@ -113,19 +113,19 @@ export function EditorialServices() {
                   onClick={() => setActiveService(srv)}
                   className={`p-5 rounded-2xl border transition-all cursor-pointer flex items-center justify-between ${
                     isSelected
-                      ? "bg-forest-900/90 border-harvest-400 shadow-xl"
-                      : "bg-theme-base/40 border-forest-800/60 hover:border-forest-700"
+                      ? "bg-theme-elevated border-harvest-400 shadow-xl"
+                      : "glass-card hover:border-theme-border/80"
                   }`}
                 >
                   <div className="space-y-1">
-                    <span className="font-mono text-[10px] font-bold text-harvest-400 uppercase block">
+                    <span className="font-mono text-[10px] font-bold text-theme-gold uppercase block">
                       SERVICE {srv.num}
                     </span>
-                    <h3 className="font-display font-bold text-base text-sand-50">
+                    <h3 className="font-display font-bold text-base text-theme-text">
                       {language === "or" ? srv.title_or : srv.title}
                     </h3>
                   </div>
-                  <span className="text-xs font-bold text-harvest-400">→</span>
+                  <span className="text-xs font-bold text-theme-gold">→</span>
                 </div>
               );
             })}
@@ -139,33 +139,33 @@ export function EditorialServices() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.3 }}
-              className="lg:col-span-7 p-8 rounded-3xl bg-forest-900/50 border border-forest-700/60 space-y-6 shadow-2xl backdrop-blur-xl"
+              className="lg:col-span-7 p-8 rounded-3xl glass-panel space-y-6 shadow-2xl"
             >
-              <div className="h-64 rounded-2xl overflow-hidden relative border border-forest-700">
+              <div className="h-64 rounded-2xl overflow-hidden relative border border-theme-border">
                 <img src={activeService.image} alt={activeService.title} className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-forest-950 via-forest-950/40 to-transparent" />
-                <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-theme-base/80 text-xs font-bold text-harvest-400 font-mono">
+                <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-forest-950/80 text-xs font-bold text-harvest-400 font-mono">
                   {activeService.category}
                 </div>
               </div>
 
               <div className="space-y-2">
-                <h3 className="font-display font-extrabold text-2xl text-sand-50">
+                <h3 className="font-display font-extrabold text-2xl text-theme-text text-balance">
                   {language === "or" ? activeService.title_or : activeService.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-theme-text-muted leading-relaxed font-light">
+                <p className="text-xs sm:text-sm text-theme-text-muted leading-relaxed font-normal max-w-prose-custom">
                   {activeService.desc}
                 </p>
               </div>
 
-              <div className="p-4 rounded-2xl bg-theme-base border border-forest-800 space-y-2">
-                <span className="text-[10px] font-bold text-forest-300 uppercase tracking-widest font-display">
+              <div className="p-4 rounded-2xl bg-theme-surface border border-theme-border space-y-2">
+                <span className="text-[10px] font-bold text-theme-gold uppercase tracking-widest font-display">
                   SERVICE DELIVERABLES:
                 </span>
                 <div className="space-y-1 text-xs text-theme-text font-mono">
                   {activeService.deliverables.map((del, idx) => (
                     <div key={idx} className="flex items-center gap-2">
-                      <span className="text-harvest-400">✓</span>
+                      <span className="text-theme-gold">✓</span>
                       <span>{del}</span>
                     </div>
                   ))}
@@ -175,7 +175,7 @@ export function EditorialServices() {
               <div className="pt-2">
                 <Link
                   href={`/services/${activeService.id}`}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-harvest-500 text-forest-950 font-display font-extrabold text-xs uppercase tracking-wider shadow-lg hover:bg-harvest-400 transition-all"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-forest-900 text-sand-50 font-display font-extrabold text-xs uppercase tracking-wider shadow-lg hover:bg-forest-800 transition-all"
                 >
                   <span>Explore Service Specifications →</span>
                 </Link>

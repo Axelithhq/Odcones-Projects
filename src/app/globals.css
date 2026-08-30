@@ -58,7 +58,8 @@ html {
 
 html[lang="or"] {
   font-family: var(--font-noto-oriya);
-  line-height: 1.6;
+  line-height: 1.75;
+  word-break: break-word;
 }
 
 body {
@@ -68,6 +69,16 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   transition: background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1), color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Typographic Helpers */
+.text-balance {
+  text-wrap: balance;
+  -webkit-text-wrap: balance;
+}
+
+.max-w-prose-custom {
+  max-width: 68ch;
 }
 
 /* Custom Architectural Scrollbar */
@@ -98,6 +109,7 @@ body {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
   box-shadow: 0 10px 30px -10px var(--shadow-color);
 }
 
@@ -106,6 +118,7 @@ body {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
   transition: all 0.3s ease;
 }
 
