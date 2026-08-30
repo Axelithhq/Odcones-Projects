@@ -79,9 +79,9 @@ export function Header() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
             ? isLight
-              ? "h-[70px] bg-sand-50/94 backdrop-blur-2xl border-b border-[#D4DDD5] shadow-xl shadow-forest-900/5"
-              : "h-[70px] bg-theme-base/92 backdrop-blur-2xl border-b border-forest-500/25 shadow-2xl shadow-forest-950/70"
-            : "h-[84px] bg-gradient-to-b from-forest-950/85 via-forest-950/45 to-transparent border-b border-sand-100/10"
+              ? "h-[70px] bg-white backdrop-blur-2xl border-b border-[#B8C2B3] shadow-xl shadow-forest-900/5 text-[#0B130E]"
+              : "h-[70px] bg-theme-base/92 backdrop-blur-2xl border-b border-forest-500/25 shadow-2xl shadow-forest-950/70 text-sand-50"
+            : "h-[84px] bg-gradient-to-b from-forest-950/85 via-forest-950/45 to-transparent border-b border-sand-100/10 text-sand-50"
         }`}
       >
         <div className="max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between relative">
@@ -103,7 +103,7 @@ export function Header() {
               <div className="flex flex-col justify-center">
                 <div className="flex items-center gap-1.5">
                   <span className={`font-display font-extrabold text-xl tracking-wider uppercase leading-none transition-colors ${
-                    isLight && isScrolled ? "text-[#1A251E] group-hover:text-harvest-700" : "text-sand-50 group-hover:text-harvest-400"
+                    isLight && isScrolled ? "text-[#0B130E] group-hover:text-harvest-700" : "text-sand-50 group-hover:text-harvest-400"
                   }`}>
                     ODCONS
                   </span>
@@ -146,8 +146,8 @@ export function Header() {
                           ? "bg-harvest-400/20 text-harvest-800 border-harvest-500/40 font-bold"
                           : "bg-forest-800/80 text-harvest-300 border-forest-500/50 font-bold shadow-md"
                         : isLight && isScrolled
-                        ? "border-transparent text-[#4A5D50] hover:text-[#1A251E] hover:bg-forest-100/60 hover:border-[#D4DDD5]"
-                        : "border-transparent text-theme-text-muted hover:text-sand-50 hover:bg-forest-800/40 hover:border-forest-700/40"
+                        ? "border-transparent text-[#29382E] hover:text-[#0B130E] hover:bg-[#F2F3EF] hover:border-[#B8C2B3]"
+                        : "border-transparent text-sand-200/80 hover:text-sand-50 hover:bg-forest-800/40 hover:border-forest-700/40"
                     }`}
                   >
                     <span className="group-hover:-translate-y-[0.5px] transition-transform duration-200">
@@ -179,7 +179,7 @@ export function Header() {
             {/* Utility Controls Group */}
             <div className={`flex items-center gap-1.5 p-1 rounded-full border shadow-inner ${
               isLight && isScrolled
-                ? "bg-white/90 border-[#D4DDD5]"
+                ? "bg-white border-[#B8C2B3]"
                 : "bg-forest-900/60 border-forest-500/30 backdrop-blur-md"
             }`}>
               <ReadAloudControls />
@@ -190,8 +190,8 @@ export function Header() {
                 onClick={toggleTheme}
                 className={`p-1.5 rounded-full transition-colors ${
                   isLight
-                    ? "text-[#4A5D50] hover:text-harvest-600"
-                    : "text-theme-text-muted hover:text-harvest-400"
+                    ? "text-[#29382E] hover:text-harvest-600"
+                    : "text-sand-200/80 hover:text-harvest-400"
                 }`}
                 title="Toggle Theme"
                 aria-label="Toggle Theme"
@@ -222,7 +222,7 @@ export function Header() {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className={`p-2.5 rounded-xl border transition-all ${
                 isLight && isScrolled
-                  ? "bg-white border-[#D4DDD5] text-[#1A251E]"
+                  ? "bg-white border-[#B8C2B3] text-[#0B130E]"
                   : "bg-forest-900/90 border-forest-500/40 text-sand-100 shadow-lg"
               }`}
               aria-label="Toggle menu"
@@ -232,7 +232,7 @@ export function Header() {
           </div>
         </div>
 
-        {/* Architectural Mega-Menus Directory */}
+        {/* Architectural Mega-Menus Directory (100% Solid Opaque in Light Mode) */}
         <AnimatePresence>
           {activeMegaMenu && (
             <motion.div
@@ -242,8 +242,8 @@ export function Header() {
               transition={{ duration: 0.22, ease: "easeOut" }}
               className={`absolute top-full left-0 right-0 border-b shadow-2xl z-40 overflow-hidden ${
                 isLight
-                  ? "bg-white/98 border-[#D4DDD5] text-[#1A251E]"
-                  : "bg-theme-base/98 backdrop-blur-2xl border-forest-700/60 text-sand-50"
+                  ? "bg-white border-[#B8C2B3] text-[#0B130E] shadow-forest-950/20"
+                  : "bg-[#06130B] backdrop-blur-2xl border-forest-700/60 text-sand-50"
               }`}
               onMouseEnter={() => handleMouseEnter(activeMegaMenu)}
               onMouseLeave={handleMouseLeave}
@@ -252,30 +252,30 @@ export function Header() {
                 {/* Services Directory Mega Menu */}
                 {activeMegaMenu === "services" && (
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                    <div className="space-y-2 border-r border-forest-800/40 pr-6">
-                      <span className="text-[10px] font-mono font-bold text-harvest-400 uppercase tracking-widest block">
+                    <div className="space-y-2 border-r border-[#B8C2B3]/60 pr-6">
+                      <span className="text-[10px] font-mono font-bold text-harvest-500 uppercase tracking-widest block">
                         TECHNICAL CONSULTANCY
                       </span>
                       <h4 className="font-display font-extrabold text-base">Engineering & DPR Services</h4>
-                      <p className="text-xs text-theme-text-muted font-light leading-relaxed">
+                      <p className="text-xs text-theme-text-muted font-normal leading-relaxed">
                         Structured Detailed Project Reports, civil construction estimates, financial DSCR analysis, and scheme advisory.
                       </p>
                     </div>
 
-                    <Link href="/dpr-consultancy" className="p-4 rounded-2xl bg-forest-900/40 border border-forest-800/60 hover:border-harvest-400/60 hover:bg-forest-900/70 transition-all space-y-2 group shadow-md">
-                      <FileText className="w-5 h-5 text-harvest-400 group-hover:scale-110 transition-transform" />
+                    <Link href="/dpr-consultancy" className="p-4 rounded-2xl glass-card space-y-2 group shadow-sm hover:shadow-md">
+                      <FileText className="w-5 h-5 text-harvest-500 group-hover:scale-110 transition-transform" />
                       <h5 className="font-display font-bold text-sm">Detailed Project Reports (DPR)</h5>
                       <p className="text-xs text-theme-text-muted">Customized DPRs for bank credit appraisal and subsidy applications.</p>
                     </Link>
 
-                    <Link href="/engineering" className="p-4 rounded-2xl bg-forest-900/40 border border-forest-800/60 hover:border-harvest-400/60 hover:bg-forest-900/70 transition-all space-y-2 group shadow-md">
-                      <Wrench className="w-5 h-5 text-harvest-400 group-hover:scale-110 transition-transform" />
+                    <Link href="/engineering" className="p-4 rounded-2xl glass-card space-y-2 group shadow-sm hover:shadow-md">
+                      <Wrench className="w-5 h-5 text-harvest-500 group-hover:scale-110 transition-transform" />
                       <h5 className="font-display font-bold text-sm">Engineering Estimates & 2D/3D</h5>
                       <p className="text-xs text-theme-text-muted">Civil estimates, plant machinery layouts, and 3D spatial models.</p>
                     </Link>
 
-                    <Link href="/financial-consultancy" className="p-4 rounded-2xl bg-forest-900/40 border border-forest-800/60 hover:border-harvest-400/60 hover:bg-forest-900/70 transition-all space-y-2 group shadow-md">
-                      <Landmark className="w-5 h-5 text-harvest-400 group-hover:scale-110 transition-transform" />
+                    <Link href="/financial-consultancy" className="p-4 rounded-2xl glass-card space-y-2 group shadow-sm hover:shadow-md">
+                      <Landmark className="w-5 h-5 text-harvest-500 group-hover:scale-110 transition-transform" />
                       <h5 className="font-display font-bold text-sm">Financial Modeling & DSCR</h5>
                       <p className="text-xs text-theme-text-muted">Projected P&L, 10-year cash flow, and loan repayment analysis.</p>
                     </Link>
@@ -285,11 +285,11 @@ export function Header() {
                 {/* Sectors Directory Mega Menu */}
                 {activeMegaMenu === "sectors" && (
                   <div className="space-y-4">
-                    <div className="flex justify-between items-center border-b border-forest-800/40 pb-3">
-                      <span className="text-[10px] font-mono font-bold text-harvest-400 uppercase tracking-widest">
+                    <div className="flex justify-between items-center border-b border-[#B8C2B3]/60 pb-3">
+                      <span className="text-[10px] font-mono font-bold text-harvest-500 uppercase tracking-widest">
                         7 INTEGRATED SECTOR DOMAINS
                       </span>
-                      <Link href="/sectors" className="text-xs font-bold text-harvest-400 hover:underline">
+                      <Link href="/sectors" className="text-xs font-bold text-harvest-500 hover:underline">
                         Explore All Sectors →
                       </Link>
                     </div>
@@ -307,9 +307,9 @@ export function Header() {
                         <Link
                           key={sec.slug}
                           href={`/sectors/${sec.slug}`}
-                          className="p-3 rounded.xl bg-forest-900/40 border border-forest-800/50 hover:border-harvest-400/60 hover:bg-forest-900/80 transition-all space-y-1 group"
+                          className="p-3 rounded-xl glass-card space-y-1 group"
                         >
-                          <span className="text-xs font-display font-bold block group-hover:text-harvest-400">{sec.title}</span>
+                          <span className="text-xs font-display font-bold block group-hover:text-harvest-500">{sec.title}</span>
                           <span className="text-[10px] text-theme-text-muted font-mono block">{sec.desc}</span>
                         </Link>
                       ))}
@@ -320,12 +320,12 @@ export function Header() {
                 {/* Projects Directory Mega Menu */}
                 {activeMegaMenu === "projects" && (
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="space-y-2 border-r border-forest-800/40 pr-6">
-                      <span className="text-[10px] font-mono font-bold text-harvest-400 uppercase tracking-widest block">
+                    <div className="space-y-2 border-r border-[#B8C2B3]/60 pr-6">
+                      <span className="text-[10px] font-mono font-bold text-harvest-500 uppercase tracking-widest block">
                         PROJECT CAPABILITIES
                       </span>
                       <h4 className="font-display font-extrabold text-base">Project Expertise Categories</h4>
-                      <p className="text-xs text-theme-text-muted font-light leading-relaxed">
+                      <p className="text-xs text-theme-text-muted font-normal leading-relaxed">
                         Technical DPRs and layouts structured by ODCONS PROJECTS across agricultural and aquaculture domains.
                       </p>
                     </div>
@@ -340,10 +340,10 @@ export function Header() {
                         <Link
                           key={p.slug}
                           href={`/projects/${p.slug}`}
-                          className="p-3.5 rounded-xl bg-forest-900/40 border border-forest-800/50 hover:border-harvest-400/60 hover:bg-forest-900/80 transition-all flex items-center justify-between group"
+                          className="p-3.5 rounded-xl glass-card flex items-center justify-between group"
                         >
-                          <span className="text-xs font-display font-bold group-hover:text-harvest-400">{p.title}</span>
-                          <ArrowRight className="w-3.5 h-3.5 text-harvest-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          <span className="text-xs font-display font-bold group-hover:text-harvest-500">{p.title}</span>
+                          <ArrowRight className="w-3.5 h-3.5 text-harvest-500 opacity-0 group-hover:opacity-100 transition-opacity" />
                         </Link>
                       ))}
                     </div>
@@ -364,11 +364,11 @@ export function Header() {
             exit={{ opacity: 0, y: "-100%" }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className={`fixed inset-0 z-40 flex flex-col justify-between pt-24 pb-8 px-6 lg:hidden ${
-              isLight ? "bg-white/98 text-[#1A251E]" : "bg-theme-base/98 backdrop-blur-2xl text-sand-50"
+              isLight ? "bg-white text-[#0B130E]" : "bg-forest-950/98 backdrop-blur-2xl text-sand-50"
             }`}
           >
             <div className="flex flex-col gap-2 overflow-y-auto">
-              <span className="text-[10px] font-mono font-bold tracking-[0.3em] text-harvest-400 uppercase mb-2">
+              <span className="text-[10px] font-mono font-bold tracking-[0.3em] text-harvest-500 uppercase mb-2">
                 ODCONS NAVIGATION DIRECTORY
               </span>
               {primaryNav.map((item, idx) => (
@@ -380,7 +380,7 @@ export function Header() {
                 >
                   <Link
                     href={item.href}
-                    className="flex items-center justify-between text-lg font-display font-bold py-2.5 border-b border-forest-800/40 hover:text-harvest-400"
+                    className="flex items-center justify-between text-lg font-display font-bold py-2.5 border-b border-[#B8C2B3]/50 hover:text-harvest-500"
                   >
                     <span>0{idx + 1} &nbsp; {item.label}</span>
                   </Link>
@@ -388,7 +388,7 @@ export function Header() {
               ))}
             </div>
 
-            <div className="pt-4 border-t border-forest-800/60 flex flex-col gap-3">
+            <div className="pt-4 border-t border-[#B8C2B3]/60 flex flex-col gap-3">
               <div className="flex justify-between items-center">
                 <LanguageToggle />
                 <button

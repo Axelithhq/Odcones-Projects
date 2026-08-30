@@ -37,14 +37,14 @@ export function LanguageToggle() {
         onClick={() => setIsOpen(!isOpen)}
         className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs font-semibold transition-all duration-200 ${
           isLight
-            ? "bg-white border-[#D4DDD5] text-[#4A5D50] hover:text-harvest-600 hover:border-harvest-500/50"
+            ? "bg-white border-[#B8C2B3] text-[#0B130E] hover:text-harvest-700 hover:border-harvest-500"
             : "bg-forest-900/60 border-forest-700/50 text-sand-100 hover:text-harvest-400"
         }`}
         aria-label="Select Language"
         aria-expanded={isOpen}
         data-cursor-text="LANG"
       >
-        <Globe className={`w-3.5 h-3.5 ${isLight ? "text-harvest-600" : "text-harvest-400"}`} />
+        <Globe className={`w-3.5 h-3.5 ${isLight ? "text-harvest-700" : "text-harvest-400"}`} />
         <span className="font-display font-bold">
           {language === "en" ? "English" : "ଓଡ଼ିଆ"}
         </span>
@@ -60,9 +60,9 @@ export function LanguageToggle() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -8, scale: 0.96 }}
             transition={{ duration: 0.18, ease: "easeOut" }}
-            className={`absolute right-0 mt-2 w-40 rounded-2xl border shadow-2xl z-50 overflow-hidden py-1 ${
+            className={`absolute right-0 mt-2 w-44 rounded-2xl border shadow-2xl z-50 overflow-hidden py-1.5 ${
               isLight
-                ? "bg-white border-[#D4DDD5] shadow-forest-900/10"
+                ? "bg-white border-[#B8C2B3] text-[#0B130E] shadow-forest-950/20"
                 : "bg-theme-base border-forest-700/60 shadow-forest-950/60"
             }`}
           >
@@ -78,10 +78,10 @@ export function LanguageToggle() {
                   className={`w-full px-4 py-2.5 text-left text-xs font-bold transition-colors flex items-center justify-between ${
                     selected
                       ? isLight
-                        ? "bg-harvest-400/15 text-harvest-700"
+                        ? "bg-harvest-400/20 text-harvest-800 font-display"
                         : "bg-forest-800 text-harvest-300 font-display"
                       : isLight
-                      ? "text-[#4A5D50] hover:bg-[#F0F3EE]"
+                      ? "text-[#141F18] hover:bg-[#F4F6F2]"
                       : "text-theme-text-muted hover:bg-forest-900"
                   }`}
                 >
