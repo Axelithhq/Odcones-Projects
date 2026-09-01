@@ -13,24 +13,91 @@
 
 /* Light Theme Variables (Elevated Warm Silver Base & Crisp Paper White Surfaces) */
 html.light-mode {
-  --bg-base: #EBECE7;
+  --bg-base: #F2F4EF;
   --bg-surface: #FFFFFF;
-  --bg-surface-elevated: #F4F6F2;
-  --bg-surface-muted: #D8DFD4;
+  --bg-surface-elevated: #FAFCF8;
+  --bg-surface-muted: #E2E8DE;
 
-  /* 4-Tier High-Definition Foreground System */
-  --text-heading: #0B130E;
-  --text-primary: #141F18;
-  --text-secondary: #29382E;
-  --text-muted: #3D4C42;
-  --text-subtle: #526357;
+  /* High-Definition Foreground System for Light Mode */
+  --text-heading: #0B140E;
+  --text-primary: #121F16;
+  --text-secondary: #223326;
+  --text-muted: #3D4F42;
+  --text-subtle: #56695C;
 
-  --border-subtle: #B8C2B3;
+  --border-subtle: #C0CBBA;
   --border-strong: #1E4D36;
   --accent-primary: #1E4D36;
-  --accent-gold: #996515;
-  --accent-water: #006680;
-  --shadow-color: rgba(18, 30, 22, 0.10);
+  --accent-gold: #85550B;
+  --accent-water: #005F73;
+  --shadow-color: rgba(18, 30, 22, 0.08);
+}
+
+/* Light Mode Overrides for Pale & White Text Utility Classes */
+html.light-mode .text-sand-50,
+html.light-mode .text-sand-100,
+html.light-mode .text-sand-200,
+html.light-mode .text-white {
+  color: #0E1A11 !important;
+}
+
+html.light-mode .text-theme-text-muted {
+  color: #384A3D !important;
+}
+
+html.light-mode .text-harvest-400,
+html.light-mode .text-harvest-300 {
+  color: #8C5A0A !important;
+}
+
+html.light-mode .text-theme-gold {
+  color: #925E0C !important;
+}
+
+html.light-mode .text-emerald-400,
+html.light-mode .text-forest-300,
+html.light-mode .text-forest-400 {
+  color: #125932 !important;
+}
+
+html.light-mode .text-aqua-400,
+html.light-mode .text-aqua-300 {
+  color: #005F73 !important;
+}
+
+/* Light Mode Card & Surface Background Contrast Adjustments */
+html.light-mode .bg-forest-950,
+html.light-mode .bg-forest-950\/60,
+html.light-mode .bg-forest-950\/80,
+html.light-mode .bg-forest-950\/90,
+html.light-mode .bg-forest-900,
+html.light-mode .bg-forest-900\/40,
+html.light-mode .bg-forest-900\/60,
+html.light-mode .bg-forest-900\/80,
+html.light-mode .bg-forest-900\/90 {
+  background-color: #FFFFFF !important;
+  border-color: #C3CFC0 !important;
+}
+
+html.light-mode .glass-panel,
+html.light-mode .glass-card {
+  background-color: #FFFFFF !important;
+  border-color: #BAC6B6 !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08) !important;
+  color: #0E1A11 !important;
+}
+
+html.light-mode input,
+html.light-mode textarea,
+html.light-mode select {
+  background-color: #F7F9F5 !important;
+  color: #0B140E !important;
+  border-color: #A9B8A4 !important;
+}
+
+html.light-mode input::placeholder,
+html.light-mode textarea::placeholder {
+  color: #5C6E61 !important;
 }
 
 /* Dark Theme Variables (Deep Forest Charcoal, Earth & Water Depth) */
