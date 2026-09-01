@@ -204,14 +204,14 @@ export function Header() {
               </button>
             </div>
 
-            {/* Refined Engineering Shimmer CTA Button */}
+            {/* High-Attraction Perfectly Aligned Consultation CTA Button */}
             <Link
               href="/book-consultation"
-              className="group relative inline-flex items-center gap-2 px-4.5 py-2.5 rounded-full bg-gradient-to-r from-forest-600 via-forest-500 to-harvest-600 text-sand-50 text-xs font-display font-extrabold tracking-wider uppercase shadow-xl shadow-forest-950/40 border border-harvest-400/40 hover:border-harvest-400 hover:scale-[1.03] transition-all duration-300"
+              className="group relative inline-flex items-center justify-center gap-2 h-10 px-5 rounded-full bg-gradient-to-r from-harvest-500 via-harvest-400 to-harvest-600 text-forest-950 font-display font-extrabold text-xs tracking-wider uppercase shadow-lg shadow-harvest-500/20 border border-harvest-300 hover:scale-[1.04] hover:shadow-harvest-400/40 hover:border-white transition-all duration-300 flex-shrink-0"
             >
-              <Calendar className="w-3.5 h-3.5 text-harvest-300 group-hover:rotate-12 transition-transform" />
-              <span>{isOr ? "ବୁକିଂ କରନ୍ତୁ" : "Book Consultation"}</span>
-              <ArrowRight className="w-3.5 h-3.5 text-harvest-300 group-hover:translate-x-0.5 transition-transform" />
+              <Calendar className="w-3.5 h-3.5 text-forest-950 group-hover:rotate-12 transition-transform" />
+              <span className="whitespace-nowrap">{isOr ? "ବୁକିଂ କରନ୍ତୁ" : "Book Consultation"}</span>
+              <ArrowRight className="w-3.5 h-3.5 text-forest-950 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
 
@@ -401,7 +401,7 @@ export function Header() {
 
               <Link
                 href="/book-consultation"
-                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-forest-600 to-harvest-600 text-center font-display font-extrabold text-xs tracking-wider uppercase text-sand-50 shadow-xl"
+                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-harvest-500 via-harvest-400 to-harvest-600 text-center font-display font-extrabold text-xs tracking-wider uppercase text-forest-950 shadow-xl"
               >
                 {isOr ? "ବୁକିଂ କରନ୍ତୁ" : "Book Consultation"}
               </Link>
