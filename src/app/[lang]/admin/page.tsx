@@ -74,7 +74,7 @@ export default function AdminPage() {
 
   // Admin Navigation Tabs
   const [activeTab, setActiveTab] = useState<
-    "consultation_services" | "coupons" | "mail_composer" | "consultation_leads" | "project_leads" | "projects" | "services" | "insights" | "schemes"
+    "consultation_services" | "coupons" | "library_resources" | "mail_composer" | "consultation_leads" | "project_leads" | "projects" | "services" | "insights" | "schemes"
   >("consultation_services");
 
   const [searchQuery, setSearchQuery] = useState("");
@@ -91,6 +91,7 @@ export default function AdminPage() {
   // Local & DB Collections
   const [consultationServices, setConsultationServices] = useState<any[]>([]);
   const [coupons, setCoupons] = useState<any[]>([]);
+  const [libraryResources, setLibraryResources] = useState<any[]>([]);
   const [consultationBookings, setConsultationBookings] = useState<any[]>([]);
   const [projectInquiries, setProjectInquiries] = useState<any[]>([]);
 
@@ -126,12 +127,17 @@ export default function AdminPage() {
       const jsonCp = await resCp.json();
       if (jsonCp.success) setCoupons(jsonCp.data);
 
-      // 03. Real Consultation Bookings Leads
+      // 03. Library Resources
+      const resLib = await fetch("/api/admin/db?type=library_resources");
+      const jsonLib = await resLib.json();
+      if (jsonLib.success) setLibraryResources(jsonLib.data);
+
+      // 04. Real Consultation Bookings Leads
       const resCb = await fetch("/api/admin/db?type=consultation_bookings");
       const jsonCb = await resCb.json();
       if (jsonCb.success) setConsultationBookings(jsonCb.data);
 
-      // 04. Real Project Inquiries Leads
+      // 05. Real Project Inquiries Leads
       const resIq = await fetch("/api/admin/db?type=project_inquiries");
       const jsonIq = await resIq.json();
       if (jsonIq.success) setProjectInquiries(jsonIq.data);
@@ -284,6 +290,24 @@ export default function AdminPage() {
     setIsModalOpen(true);
   };
 
+  const handleOpenCreateLibraryResource = () => {
+    setEditingEntityType("library_resource");
+    setEditingEntity({
+      id: `lib-${Date.now()}`,
+      title: "",
+      title_or: "",
+      category: "Tales of Aquaculture",
+      slug: `doc-${Date.now()}`,
+      description: "",
+      pdfUrl: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      coverImage: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=800",
+      publishedDate: new Date().toISOString().split("T")[0],
+      pages: "20 Pages",
+      active: true
+    });
+    setIsModalOpen(true);
+  };
+
   const handleOpenCreateCoreService = () => {
     setEditingEntityType("core_service");
     setEditingEntity({
@@ -413,6 +437,25 @@ export default function AdminPage() {
     }
   };
 
+  const handleSaveLibraryResource = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const res = await fetch("/api/admin/db", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "save", type: "library_resources", data: editingEntity })
+      });
+      const json = await res.json();
+      if (json.success) {
+        setLibraryResources(json.data);
+        showToast(`Library Document "${editingEntity.title}" saved!`);
+        setIsModalOpen(false);
+      }
+    } catch {
+      showToast("Failed to save library document", "error");
+    }
+  };
+
   const handleSaveCoreService = (e: React.FormEvent) => {
     e.preventDefault();
     const updated = saveStoredService(editingEntity);
@@ -478,6 +521,20 @@ export default function AdminPage() {
     if (json.success) {
       setCoupons(json.data);
       showToast(`Coupon "${codeStr}" deleted.`);
+    }
+  };
+
+  const handleDeleteLibraryResource = async (id: string, titleStr: string) => {
+    if (!window.confirm(`Delete library document "${titleStr}"?`)) return;
+    const res = await fetch("/api/admin/db", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ action: "delete", type: "library_resources", data: { id } })
+    });
+    const json = await res.json();
+    if (json.success) {
+      setLibraryResources(json.data);
+      showToast(`Library document "${titleStr}" deleted.`);
     }
   };
 
@@ -554,6 +611,11 @@ export default function AdminPage() {
     const matchStatus = filterStatus === "all" || (iq.status || "").toLowerCase() === filterStatus.toLowerCase();
     return matchSearch && matchStatus;
   });
+
+  const filteredLibraryResources = libraryResources.filter((item) =>
+    (item.title || "").toLowerCase().includes(searchQuery.toLowerCase()) ||
+    (item.category || "").toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   const filteredCoreServices = services.filter((s) =>
     (s.title || s.name || "").toLowerCase().includes(searchQuery.toLowerCase())
@@ -664,7 +726,7 @@ export default function AdminPage() {
               </div>
 
               {/* Metrics Bar */}
-              <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-6 gap-3">
                 <div className="p-4 rounded-2xl bg-forest-950 border border-forest-800 space-y-1">
                   <span className="text-[10px] font-mono text-theme-text-muted uppercase">Consultation Services</span>
                   <p className="font-display font-extrabold text-2xl text-harvest-400">{consultationServices.length}</p>
@@ -672,6 +734,10 @@ export default function AdminPage() {
                 <div className="p-4 rounded-2xl bg-forest-950 border border-forest-800 space-y-1">
                   <span className="text-[10px] font-mono text-theme-text-muted uppercase">Coupon Codes</span>
                   <p className="font-display font-extrabold text-2xl text-emerald-400">{coupons.length}</p>
+                </div>
+                <div className="p-4 rounded-2xl bg-forest-950 border border-forest-800 space-y-1">
+                  <span className="text-[10px] font-mono text-theme-text-muted uppercase">Library PDFs</span>
+                  <p className="font-display font-extrabold text-2xl text-cyan-400">{libraryResources.length}</p>
                 </div>
                 <div className="p-4 rounded-2xl bg-forest-950 border border-forest-800 space-y-1">
                   <span className="text-[10px] font-mono text-theme-text-muted uppercase">Consultation Leads</span>
@@ -694,6 +760,7 @@ export default function AdminPage() {
                 {[
                   { key: "consultation_services", label: "💳 Consultation Services", count: consultationServices.length },
                   { key: "coupons", label: "🎟️ Coupon Codes", count: coupons.length },
+                  { key: "library_resources", label: "📚 Library Resources", count: libraryResources.length },
                   { key: "mail_composer", label: "📧 Mail Composer", count: allClientEmails.length },
                   { key: "consultation_leads", label: "📅 Consultation Bookings Leads", count: consultationBookings.length },
                   { key: "project_leads", label: "🏗️ Project Inquiries Leads", count: projectInquiries.length },
@@ -741,6 +808,16 @@ export default function AdminPage() {
                 >
                   <Plus className="w-4 h-4" />
                   <span>Create Coupon Code</span>
+                </button>
+              )}
+
+              {activeTab === "library_resources" && (
+                <button
+                  onClick={handleOpenCreateLibraryResource}
+                  className="px-5 py-2.5 rounded-full bg-gradient-to-r from-harvest-500 to-harvest-600 text-forest-950 font-display font-extrabold text-xs uppercase tracking-wider shadow-lg hover:scale-105 transition-all flex items-center gap-2"
+                >
+                  <Plus className="w-4 h-4" />
+                  <span>Upload Library Document</span>
                 </button>
               )}
 
@@ -818,8 +895,57 @@ export default function AdminPage() {
             )}
 
             {/* ------------------------------------------------------------- */}
-            {/* EMAIL COMPOSER MODULE (Resend API + Attachments) */}
+            {/* LIBRARY RESOURCES TAB CRUD */}
             {/* ------------------------------------------------------------- */}
+            {activeTab === "library_resources" && (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredLibraryResources.map((item) => (
+                  <div
+                    key={item.id}
+                    className="p-6 rounded-3xl glass-panel border border-theme-border space-y-4 shadow-xl hover:border-harvest-400/60 transition-all flex flex-col justify-between"
+                  >
+                    <div className="space-y-3">
+                      <div className="flex justify-between items-start">
+                        <span className="px-3 py-1 rounded-full bg-forest-950 border border-forest-700 font-mono font-bold text-xs text-harvest-400 uppercase">
+                          {item.category}
+                        </span>
+                        <div className="flex items-center gap-2">
+                          <button
+                            onClick={() => {
+                              setEditingEntityType("library_resource");
+                              setEditingEntity({ ...item });
+                              setIsModalOpen(true);
+                            }}
+                            className="p-1.5 rounded-xl bg-forest-950 border border-forest-800 text-harvest-400 hover:bg-forest-900"
+                          >
+                            <Edit className="w-4 h-4" />
+                          </button>
+                          <button
+                            onClick={() => handleDeleteLibraryResource(item.id, item.title)}
+                            className="p-1.5 rounded-xl bg-rose-950/40 border border-rose-800/60 text-rose-400 hover:bg-rose-900/60"
+                          >
+                            <Trash2 className="w-4 h-4" />
+                          </button>
+                        </div>
+                      </div>
+
+                      <div className="space-y-1">
+                        <h3 className="font-display font-extrabold text-base text-sand-50">{item.title}</h3>
+                        {item.title_or && <p className="text-xs text-harvest-300 font-sans">{item.title_or}</p>}
+                        <p className="text-xs text-theme-text-muted leading-relaxed line-clamp-3 pt-1">{item.description}</p>
+                      </div>
+                    </div>
+
+                    <div className="flex justify-between items-center pt-3 border-t border-theme-border/60 text-xs font-mono text-theme-text-muted">
+                      <span>PDF: {item.pages || "Document"}</span>
+                      <span className="text-emerald-400 font-bold">Protected Reader</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* EMAIL COMPOSER MODULE */}
             {activeTab === "mail_composer" && (
               <div className="p-8 rounded-3xl glass-panel border border-theme-border shadow-2xl space-y-6">
                 <div className="border-b border-theme-border pb-4 flex justify-between items-center">
@@ -837,7 +963,6 @@ export default function AdminPage() {
                   </span>
                 </div>
 
-                {/* Quick Client Email Selector */}
                 {allClientEmails.length > 0 && (
                   <div className="space-y-2 pt-2">
                     <span className="text-xs font-bold text-harvest-400 uppercase block font-mono">
@@ -893,12 +1018,11 @@ export default function AdminPage() {
                       rows={10}
                       value={mailMessage}
                       onChange={(e) => setMailMessage(e.target.value)}
-                      placeholder="Type your normal text email message here...&#10;&#10;Dear Client,&#10;&#10;Thank you for reaching out to ODCONS Projects. We have reviewed your agribusiness DPR requirements..."
+                      placeholder="Type your normal text email message here..."
                       className="w-full p-4 rounded-xl bg-forest-950 border border-forest-800 text-sand-50 text-xs leading-relaxed focus:outline-none focus:border-harvest-400 font-sans"
                     />
                   </div>
 
-                  {/* Attachment Section */}
                   <div className="space-y-3 pt-2">
                     <div className="flex items-center justify-between">
                       <label className="text-xs font-bold text-harvest-400 uppercase flex items-center gap-1.5">
@@ -923,7 +1047,6 @@ export default function AdminPage() {
                       />
                     </div>
 
-                    {/* Attached Files List */}
                     {mailAttachments.length > 0 && (
                       <div className="flex flex-wrap gap-2.5 p-3 rounded-2xl bg-forest-950 border border-forest-800">
                         {mailAttachments.map((att, index) => (
@@ -944,7 +1067,6 @@ export default function AdminPage() {
                               type="button"
                               onClick={() => handleRemoveAttachment(index)}
                               className="p-1 rounded-lg hover:bg-rose-950/60 text-rose-400 ml-1"
-                              title="Remove Attachment"
                             >
                               <X className="w-3.5 h-3.5" />
                             </button>
@@ -977,13 +1099,10 @@ export default function AdminPage() {
               </div>
             )}
 
-            {/* ------------------------------------------------------------- */}
-            {/* 01. CONSULTATION SERVICES TAB CRUD */}
-            {/* ------------------------------------------------------------- */}
+            {/* CONSULTATION SERVICES TAB */}
             {activeTab === "consultation_services" && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {consultationServices.map((cs) => {
-                  const slots = Array.isArray(cs.timeSlots) ? cs.timeSlots : (cs.timeSlots || "").split(",");
                   return (
                     <div
                       key={cs.id}
@@ -1034,9 +1153,7 @@ export default function AdminPage() {
               </div>
             )}
 
-            {/* ------------------------------------------------------------- */}
-            {/* 02. COUPON CODES TAB CRUD */}
-            {/* ------------------------------------------------------------- */}
+            {/* COUPON CODES TAB */}
             {activeTab === "coupons" && (
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {coupons.map((cp) => (
@@ -1083,9 +1200,7 @@ export default function AdminPage() {
               </div>
             )}
 
-            {/* ------------------------------------------------------------- */}
-            {/* 03. CONSULTATION BOOKINGS LEADS TAB */}
-            {/* ------------------------------------------------------------- */}
+            {/* CONSULTATION LEADS TAB */}
             {activeTab === "consultation_leads" && (
               <div className="rounded-3xl glass-panel border border-theme-border overflow-hidden shadow-2xl">
                 {filteredConsultationBookings.length === 0 ? (
@@ -1152,9 +1267,7 @@ export default function AdminPage() {
               </div>
             )}
 
-            {/* ------------------------------------------------------------- */}
-            {/* 04. PROJECT INQUIRIES LEADS TAB */}
-            {/* ------------------------------------------------------------- */}
+            {/* PROJECT INQUIRIES LEADS TAB */}
             {activeTab === "project_leads" && (
               <div className="rounded-3xl glass-panel border border-theme-border overflow-hidden shadow-2xl">
                 {filteredProjectInquiries.length === 0 ? (
@@ -1221,9 +1334,7 @@ export default function AdminPage() {
               </div>
             )}
 
-            {/* ------------------------------------------------------------- */}
-            {/* 05. CORE SERVICES TAB CRUD */}
-            {/* ------------------------------------------------------------- */}
+            {/* CORE SERVICES TAB */}
             {activeTab === "services" && (
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {filteredCoreServices.map((srv) => (
@@ -1268,9 +1379,7 @@ export default function AdminPage() {
               </div>
             )}
 
-            {/* ------------------------------------------------------------- */}
-            {/* 06. PROJECTS TAB CRUD */}
-            {/* ------------------------------------------------------------- */}
+            {/* PROJECTS TAB */}
             {activeTab === "projects" && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {filteredProjects.map((proj) => (
@@ -1310,9 +1419,7 @@ export default function AdminPage() {
               </div>
             )}
 
-            {/* ------------------------------------------------------------- */}
-            {/* 07. INSIGHTS TAB CRUD */}
-            {/* ------------------------------------------------------------- */}
+            {/* INSIGHTS TAB */}
             {activeTab === "insights" && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {filteredInsights.map((ins) => (
@@ -1349,9 +1456,7 @@ export default function AdminPage() {
               </div>
             )}
 
-            {/* ------------------------------------------------------------- */}
-            {/* 08. SCHEMES TAB CRUD */}
-            {/* ------------------------------------------------------------- */}
+            {/* SCHEMES TAB */}
             {activeTab === "schemes" && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {filteredSchemes.map((sc) => (
@@ -1391,9 +1496,7 @@ export default function AdminPage() {
         )}
       </section>
 
-      {/* ------------------------------------------------------------- */}
-      {/* UNIVERSAL DYNAMIC MODALS FOR ALL ENTITIES */}
-      {/* ------------------------------------------------------------- */}
+      {/* DYNAMIC MODALS FOR ALL ENTITIES */}
       {isModalOpen && editingEntity && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-forest-950/80 backdrop-blur-md overflow-y-auto">
           <div className="w-full max-w-xl rounded-3xl bg-forest-950 border border-harvest-400/60 shadow-2xl p-6 space-y-6 max-h-[90vh] overflow-y-auto">
@@ -1406,6 +1509,88 @@ export default function AdminPage() {
                 <X className="w-5 h-5" />
               </button>
             </div>
+
+            {/* FORM 00: LIBRARY RESOURCE */}
+            {editingEntityType === "library_resource" && (
+              <form onSubmit={handleSaveLibraryResource} className="space-y-4">
+                <div className="space-y-1">
+                  <label className="text-xs font-bold text-harvest-400 uppercase">Document Title *</label>
+                  <input
+                    required
+                    type="text"
+                    value={editingEntity.title || ""}
+                    onChange={(e) => setEditingEntity({ ...editingEntity, title: e.target.value })}
+                    className="w-full px-4 py-2.5 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-xs focus:outline-none"
+                  />
+                </div>
+                <div className="space-y-1">
+                  <label className="text-xs font-bold text-harvest-400 uppercase">Title (Odia / ଓଡ଼ିଆ)</label>
+                  <input
+                    type="text"
+                    value={editingEntity.title_or || ""}
+                    onChange={(e) => setEditingEntity({ ...editingEntity, title_or: e.target.value })}
+                    className="w-full px-4 py-2.5 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-xs focus:outline-none font-sans"
+                  />
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-1">
+                    <label className="text-xs font-bold text-harvest-400 uppercase">Category *</label>
+                    <select
+                      value={editingEntity.category || "Tales of Aquaculture"}
+                      onChange={(e) => setEditingEntity({ ...editingEntity, category: e.target.value })}
+                      className="w-full px-4 py-2.5 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-xs focus:outline-none"
+                    >
+                      <option value="Tales of Aquaculture">Tales of Aquaculture</option>
+                      <option value="Aquamarvel">Aquamarvel</option>
+                      <option value="Magazines & Publications">Magazines & Publications</option>
+                      <option value="Testimonials">Testimonials</option>
+                    </select>
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-bold text-harvest-400 uppercase">Pages / Info</label>
+                    <input
+                      type="text"
+                      value={editingEntity.pages || "20 Pages"}
+                      onChange={(e) => setEditingEntity({ ...editingEntity, pages: e.target.value })}
+                      className="w-full px-4 py-2.5 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-xs focus:outline-none font-mono"
+                    />
+                  </div>
+                </div>
+                <div className="space-y-1">
+                  <label className="text-xs font-bold text-harvest-400 uppercase">PDF Document URL *</label>
+                  <input
+                    required
+                    type="text"
+                    value={editingEntity.pdfUrl || ""}
+                    onChange={(e) => setEditingEntity({ ...editingEntity, pdfUrl: e.target.value })}
+                    placeholder="https://domain.com/sample.pdf"
+                    className="w-full px-4 py-2.5 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-xs font-mono focus:outline-none"
+                  />
+                </div>
+                <div className="space-y-1">
+                  <label className="text-xs font-bold text-harvest-400 uppercase">Cover Image Thumbnail URL</label>
+                  <input
+                    type="text"
+                    value={editingEntity.coverImage || ""}
+                    onChange={(e) => setEditingEntity({ ...editingEntity, coverImage: e.target.value })}
+                    placeholder="https://images.unsplash.com/photo-..."
+                    className="w-full px-4 py-2.5 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-xs font-mono focus:outline-none"
+                  />
+                </div>
+                <div className="space-y-1">
+                  <label className="text-xs font-bold text-harvest-400 uppercase">Description</label>
+                  <textarea
+                    rows={3}
+                    value={editingEntity.description || ""}
+                    onChange={(e) => setEditingEntity({ ...editingEntity, description: e.target.value })}
+                    className="w-full px-4 py-2.5 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-xs focus:outline-none"
+                  />
+                </div>
+                <button type="submit" className="w-full py-3 rounded-xl bg-harvest-500 text-forest-950 font-extrabold text-xs uppercase">
+                  Save Library Document →
+                </button>
+              </form>
+            )}
 
             {/* FORM 01: CONSULTATION SERVICE */}
             {editingEntityType === "consultation_service" && (

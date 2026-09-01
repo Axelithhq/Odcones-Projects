@@ -163,3 +163,72 @@ export interface ProjectInquiryDB {
   status: "New" | "Contacted" | "In Progress" | "Completed" | "Cancelled";
   created_at: string;
 }
+
+export interface LibraryResourceDB {
+  id: string;
+  title: string;
+  title_or?: string;
+  category: "Tales of Aquaculture" | "Aquamarvel" | "Magazines & Publications" | "Testimonials";
+  slug: string;
+  description: string;
+  pdfUrl: string;
+  coverImage?: string;
+  publishedDate?: string;
+  pages?: string;
+  active: boolean;
+}
+
+export const INITIAL_LIBRARY_RESOURCES: LibraryResourceDB[] = [
+  {
+    id: "lib-01",
+    title: "Tales of Aquaculture: Biofloc Revolution in Odisha",
+    title_or: "ଆକ୍ୱାକଲଚର କାହାଣୀ: ଓଡ଼ିଶାରେ ବାୟୋଫ୍ଲୋକ୍ ବିପ୍ଲବ",
+    category: "Tales of Aquaculture",
+    slug: "tales-of-aquaculture-biofloc",
+    description: "Inspiring stories and operational lessons from smallholder fish farmers adopting Biofloc technology across coastal and inland Odisha.",
+    pdfUrl: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+    coverImage: "https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?q=80&w=800",
+    publishedDate: "2026-08-15",
+    pages: "18 Pages",
+    active: true
+  },
+  {
+    id: "lib-02",
+    title: "Aquamarvel: Hi-Tech Reservoir Cage Culture Blueprint",
+    title_or: "ଆକ୍ୱାମାର୍ଭେଲ: ଜଳାଶୟ କେଜ୍ ଚାଷ ବ୍ଲୁପ୍ରିଣ୍ଟ",
+    category: "Aquamarvel",
+    slug: "aquamarvel-reservoir-cage-blueprint",
+    description: "Technical engineering standards, water quality telemetry, and yield optimization protocols for floating cage aquaculture.",
+    pdfUrl: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+    coverImage: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800",
+    publishedDate: "2026-07-20",
+    pages: "24 Pages",
+    active: true
+  },
+  {
+    id: "lib-03",
+    title: "ODCONS Agribusiness & Blue Economy Quarterly Magazine (Q3 2026)",
+    title_or: "ଓଡକୋନ୍ସ କୃଷି ଓ ବ୍ଲୁ ଇକୋନୋମି ତ୍ରୈମାସିକ ପତ୍ରିକା",
+    category: "Magazines & Publications",
+    slug: "odcons-quarterly-magazine-q3-2026",
+    description: "Quarterly editorial publication detailing government schemes, PMMSY subsidies, cold chain infrastructure, and DPR engineering.",
+    pdfUrl: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+    coverImage: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=800",
+    publishedDate: "2026-08-01",
+    pages: "32 Pages",
+    active: true
+  },
+  {
+    id: "lib-04",
+    title: "Client Testimonials & DPR Success Stories Compendium",
+    title_or: "ଗ୍ରାହକ ମତାମତ ଓ ସଫଳତା କାହାଣୀ ସଙ୍କଳନ",
+    category: "Testimonials",
+    slug: "testimonials-dpr-success-stories",
+    description: "Verified testimonials and case studies from entrepreneurs who secured bank loans and MKUY/PMMSY subsidies with ODCONS DPRs.",
+    pdfUrl: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+    coverImage: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=800",
+    publishedDate: "2026-06-10",
+    pages: "14 Pages",
+    active: true
+  }
+];

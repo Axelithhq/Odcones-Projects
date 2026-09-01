@@ -23,7 +23,8 @@ import {
   Wrench,
   CheckCircle2,
   Sparkles,
-  Rocket
+  Rocket,
+  BookOpen
 } from "lucide-react";
 
 export function Header() {
@@ -69,6 +70,7 @@ export function Header() {
     { label: isOr ? "ପ୍ରକଳ୍ପ ସମୂହ" : "Projects", href: "/projects", hasMega: "projects" },
     { label: isOr ? "DPR ପରାମର୍ଶ" : "DPR", href: "/dpr-consultancy" },
     { label: isOr ? "ସରକାରୀ ଯୋଜନା" : "Schemes", href: "/government-schemes" },
+    { label: isOr ? "ଗ୍ରନ୍ଥାଗାର" : "Library", href: "/library" },
     { label: isOr ? "ଜ୍ଞାନ କେନ୍ଦ୍ର" : "Insights", href: "/insights" },
     { label: isOr ? "ଯୋଗାଯୋଗ" : "Contact", href: "/contact" }
   ];

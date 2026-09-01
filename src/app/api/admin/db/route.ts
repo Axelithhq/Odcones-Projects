@@ -4,9 +4,11 @@ import {
   writeCollection,
   INITIAL_CONSULTATION_SERVICES,
   INITIAL_COUPONS,
+  INITIAL_LIBRARY_RESOURCES,
   ConsultationBookingDB,
   ProjectInquiryDB,
-  CouponDB
+  CouponDB,
+  LibraryResourceDB
 } from "@/lib/serverDb";
 
 export async function GET(request: Request) {
@@ -22,6 +24,11 @@ export async function GET(request: Request) {
     if (type === "coupons") {
       const coupons = readCollection<CouponDB[]>("coupons", INITIAL_COUPONS);
       return NextResponse.json({ success: true, data: coupons });
+    }
+
+    if (type === "library_resources") {
+      const library = readCollection<LibraryResourceDB[]>("library_resources", INITIAL_LIBRARY_RESOURCES);
+      return NextResponse.json({ success: true, data: library });
     }
 
     if (type === "consultation_bookings") {
@@ -40,6 +47,7 @@ export async function GET(request: Request) {
       data: {
         consultation_services: readCollection("consultation_services", INITIAL_CONSULTATION_SERVICES),
         coupons: readCollection<CouponDB[]>("coupons", INITIAL_COUPONS),
+        library_resources: readCollection<LibraryResourceDB[]>("library_resources", INITIAL_LIBRARY_RESOURCES),
         consultation_bookings: readCollection<ConsultationBookingDB[]>("consultation_bookings", []),
         project_inquiries: readCollection<ProjectInquiryDB[]>("project_inquiries", [])
       }
@@ -93,6 +101,27 @@ export async function POST(request: Request) {
         currentCoupons = currentCoupons.filter((c) => c.id !== data.id && c.code.toUpperCase() !== data.code.toUpperCase());
         writeCollection("coupons", currentCoupons);
         return NextResponse.json({ success: true, data: currentCoupons });
+      }
+    }
+
+    if (type === "library_resources") {
+      let currentLib = readCollection<LibraryResourceDB[]>("library_resources", INITIAL_LIBRARY_RESOURCES);
+
+      if (action === "save") {
+        const index = currentLib.findIndex((item) => item.id === data.id || item.slug === data.slug);
+        if (index >= 0) {
+          currentLib[index] = data;
+        } else {
+          currentLib.unshift(data);
+        }
+        writeCollection("library_resources", currentLib);
+        return NextResponse.json({ success: true, data: currentLib });
+      }
+
+      if (action === "delete") {
+        currentLib = currentLib.filter((item) => item.id !== data.id && item.slug !== data.slug);
+        writeCollection("library_resources", currentLib);
+        return NextResponse.json({ success: true, data: currentLib });
       }
     }
 
