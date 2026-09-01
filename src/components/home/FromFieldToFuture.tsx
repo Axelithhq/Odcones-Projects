@@ -2,18 +2,44 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Cpu, Smartphone, Activity, Droplets, Sprout, Fish, Flower2, Layers, ArrowRight, ShieldCheck, CheckCircle2, Utensils, Snowflake, Building2, Factory } from "lucide-react";
+import {
+  Cpu,
+  Smartphone,
+  Sprout,
+  Fish,
+  Flower2,
+  ArrowRight,
+  ShieldCheck,
+  CheckCircle2,
+  Utensils,
+  Snowflake,
+  Building2,
+  Factory,
+  ChevronLeft,
+  ChevronRight,
+  Sparkles
+} from "lucide-react";
 import { useTranslation } from "@/lib/i18n";
 import { pickOr } from "@/lib/localize";
 import Link from "next/link";
 
-type SectorType = "agriculture" | "fisheries" | "dairy" | "horticulture" | "food-processing" | "cold-chain" | "rural-infrastructure" | "msme-projects";
+type SectorType =
+  | "agriculture"
+  | "fisheries"
+  | "dairy"
+  | "horticulture"
+  | "food-processing"
+  | "cold-chain"
+  | "rural-infrastructure"
+  | "msme-projects";
+
 type L10nString = [string, string];
 
 interface SectorVisual {
   id: SectorType;
   slug: string;
   num: string;
+  icon: React.ElementType;
   title: L10nString;
   subtitle: L10nString;
   heroObject: L10nString;
@@ -35,6 +61,7 @@ const SECTOR_COMPOSITIONS: Record<SectorType, SectorVisual> = {
     id: "agriculture",
     slug: "agriculture",
     num: "01",
+    icon: Sprout,
     title: ["AGRICULTURE", "କୃଷି"],
     subtitle: ["From Soil to Harvest, Precision Crop Systems", "ମାଟିରୁ ଅମଳ ପର୍ଯ୍ୟନ୍ତ, ସୁସ୍ଥିର ଓ ଉଚ୍ଚ ଉତ୍ପାଦନକ୍ଷମ କୃଷି ବ୍ୟବସ୍ଥା"],
     heroObject: ["Paddy Farmer & Direct Seeder Gear", "ଧାନ ଚାଷୀ ଓ ସ୍ମାର୍ଟ ସିଡର"],
@@ -58,6 +85,7 @@ const SECTOR_COMPOSITIONS: Record<SectorType, SectorVisual> = {
     id: "fisheries",
     slug: "fisheries",
     num: "02",
+    icon: Fish,
     title: ["FISHERIES & AQUACULTURE", "ମତ୍ସ୍ୟଚାଷ ଓ ଜଳଚର ପାଳନ"],
     subtitle: ["Biofloc Tanks & Floating Reservoir Cages", "ବାୟୋଫ୍ଲୋକ୍ ଟାଙ୍କି, HDPE କେଜ୍ ଓ ସ୍ମାର୍ଟ ଜଳଚର ପାଳନ"],
     heroObject: ["Biofloc Tank & Microbubble Aerator", "ବାୟୋଫ୍ଲୋକ୍ ଟାଙ୍କି ଓ ମାଇକ୍ରୋବବଲ ଏରେଟର"],
@@ -81,10 +109,11 @@ const SECTOR_COMPOSITIONS: Record<SectorType, SectorVisual> = {
     id: "dairy",
     slug: "dairy",
     num: "03",
+    icon: ShieldCheck,
     title: ["DAIRY & ANIMAL HUSBANDRY", "ଦୁଗ୍ଧ ଓ ପଶୁସମ୍ପଦ"],
     subtitle: ["Smart Dairy Hubs & Hydroponic Fodder Trays", "ସ୍ମାର୍ଟ ଦୁଗ୍ଧ ସଂଗ୍ରହ କେନ୍ଦ୍ର, ଗୋପାଳନ, କୁକୁଡ଼ା ପାଳନ ଓ ଘାସ"],
     heroObject: ["Cattle Shed & Bulk Milk Chiller", "ଆଧୁନିକ ଗୋଶାଳା ଓ ବଲ୍କ ମିଲ୍କ ଚିଲର"],
-    bgImage: "https://images.unsplash.com/photo-1570042707220-410a563f8d9b?auto=format&fit=crop&q=80&w=1600",
+    bgImage: "https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?auto=format&fit=crop&q=80&w=1600",
     accentColor: "#D4A373",
     badgeBg: "rgba(212, 163, 115, 0.2)",
     operatorRole: ["Dairy Farm Manager (Puri)", "ଦୁଗ୍ଧ ଫାର୍ମ ମ୍ୟାନେଜର (ପୁରୀ)"],
@@ -104,6 +133,7 @@ const SECTOR_COMPOSITIONS: Record<SectorType, SectorVisual> = {
     id: "horticulture",
     slug: "horticulture",
     num: "04",
+    icon: Flower2,
     title: ["HORTICULTURE", "ଉଦ୍ୟାନ କୃଷି"],
     subtitle: ["Hi-Tech Polyhouses & Controlled Climate Farming", "ସଂରକ୍ଷିତ ପଲିହାଉସ, ସେଡନେଟ୍ ନର୍ସରୀ, ପନିପରିବା ଓ ଛତୁ ଚାଷ"],
     heroObject: ["Polyhouse Grower & Drip Manifold", "ପଲିହାଉସ ଚାଷୀ ଓ ଡ୍ରିପ୍ ମାନିଫୋଲ୍ଡ"],
@@ -127,6 +157,7 @@ const SECTOR_COMPOSITIONS: Record<SectorType, SectorVisual> = {
     id: "food-processing",
     slug: "food-processing",
     num: "05",
+    icon: Utensils,
     title: ["FOOD PROCESSING", "ଖାଦ୍ୟ ପ୍ରସଂସ୍କରଣ"],
     subtitle: ["Primary & Secondary Agro-Processing Enterprises", "ଅମଳ ପରବର୍ତ୍ତୀ କ୍ଷତି ରୋକିବା ପାଇଁ ଆଗ୍ରୋ-ପ୍ରସେସିଂ ଓ ମୂଲ୍ୟ ବୃଦ୍ଧି"],
     heroObject: ["Color Sorter & Rice Mill Complex", "କଲର ସର୍ଟର ଓ ଧାନ ମିଲ୍ କମ୍ପ୍ଲେକ୍ସ"],
@@ -150,6 +181,7 @@ const SECTOR_COMPOSITIONS: Record<SectorType, SectorVisual> = {
     id: "cold-chain",
     slug: "cold-chain",
     num: "06",
+    icon: Snowflake,
     title: ["COLD CHAIN & STORAGE", "କୋଲ୍ଡ ଷ୍ଟୋରେଜ୍ ଓ କୋଲ୍ଡ-ଚେନ୍"],
     subtitle: ["PUF Panel Cold Rooms & Reefer Logistics", "ତାପମାତ୍ରା ନିୟନ୍ତ୍ରିତ ଷ୍ଟୋରେଜ୍ ଓ ଶୀତଳ ଭଣ୍ଡାର ମାଧ୍ୟମରେ ଫସଲ ସୁରକ୍ଷା"],
     heroObject: ["Multi-Chamber Cold Room & Reefer Van", "କୋଲ୍ଡ ଷ୍ଟୋରେଜ୍ ଓ ରିଫର ଭ୍ୟାନ୍"],
@@ -173,6 +205,7 @@ const SECTOR_COMPOSITIONS: Record<SectorType, SectorVisual> = {
     id: "rural-infrastructure",
     slug: "rural-infrastructure",
     num: "07",
+    icon: Building2,
     title: ["RURAL INFRASTRUCTURE", "ଗ୍ରାମୀଣ ଭିତ୍ତିଭୂମି"],
     subtitle: ["Watershed Check Dams & Grain Warehouses", "ଚେକ୍ ଡ୍ୟାମ୍, ଫାର୍ମ ପୋଣ୍ଡ, ଗ୍ରାମୀଣ ରାସ୍ତା ଓ ଶସ୍ୟ ଗୋଦାମ"],
     heroObject: ["RCC Check Dam & Solar Water Pump", "RCC ଚେକ୍ ଡ୍ୟାମ୍ ଓ ସୌର ୱାଟର ପମ୍ପ"],
@@ -196,6 +229,7 @@ const SECTOR_COMPOSITIONS: Record<SectorType, SectorVisual> = {
     id: "msme-projects",
     slug: "msme-projects",
     num: "08",
+    icon: Factory,
     title: ["ALLIED MSME PROJECTS", "ଆନୁଷଙ୍ଗିକ MSME ପ୍ରକଳ୍ପ"],
     subtitle: ["Micro-Enterprise Incubators & PM-FME Units", "ଗ୍ରାମୀଣ ଉଦ୍ୟୋଗୀମାନଙ୍କ ପାଇଁ MSME, PMEGP, MKUY ଓ PM-FME ପ୍ରକଳ୍ପ"],
     heroObject: ["Custom Hiring Center & Feed Extruder", "କୃଷି ଯନ୍ତ୍ରପାତି କେନ୍ଦ୍ର ଓ ଦାଣା ପ୍ରସେସିଂ"],
@@ -217,11 +251,26 @@ const SECTOR_COMPOSITIONS: Record<SectorType, SectorVisual> = {
   }
 };
 
+const SECTOR_KEYS = Object.keys(SECTOR_COMPOSITIONS) as SectorType[];
+
 export function FromFieldToFuture() {
   const [activeSector, setActiveSector] = useState<SectorType>("agriculture");
   const { t, language } = useTranslation();
   const pick = (pair: L10nString) => pickOr(pair[0], pair[1], language);
   const comp = SECTOR_COMPOSITIONS[activeSector];
+
+  const currentIndex = SECTOR_KEYS.indexOf(activeSector);
+  const progressPercent = ((currentIndex + 1) / SECTOR_KEYS.length) * 100;
+
+  const handlePrev = () => {
+    const prevIdx = (currentIndex - 1 + SECTOR_KEYS.length) % SECTOR_KEYS.length;
+    setActiveSector(SECTOR_KEYS[prevIdx]);
+  };
+
+  const handleNext = () => {
+    const nextIdx = (currentIndex + 1) % SECTOR_KEYS.length;
+    setActiveSector(SECTOR_KEYS[nextIdx]);
+  };
 
   return (
     <section className="py-24 bg-theme-base text-theme-text relative border-b border-theme-border overflow-hidden transition-colors duration-500">
@@ -233,16 +282,16 @@ export function FromFieldToFuture() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel text-xs font-bold uppercase tracking-widest text-theme-gold font-display">
-            <Cpu className="w-3.5 h-3.5 text-theme-gold" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass-panel text-xs font-bold uppercase tracking-widest text-theme-gold font-display">
+            <Cpu className="w-3.5 h-3.5 text-theme-gold animate-pulse" />
             <span>{t("fromField.badge")}</span>
           </div>
 
           <h2 className="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-theme-text tracking-tight leading-[1.08] text-balance">
-            {t("fromField.title1")} <br />
+            {t("fromField.title1")}{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-harvest-400 via-forest-400 to-aqua-400">
               {t("fromField.title2")}
             </span>
@@ -251,30 +300,94 @@ export function FromFieldToFuture() {
           <p className="text-theme-text-muted text-sm sm:text-base leading-relaxed font-normal max-w-prose-custom mx-auto">
             {t("fromField.subtitle")}
           </p>
+        </div>
 
-          {/* Interactive Sector Switcher Slide Buttons (8 Core Domains) */}
-          <div className="flex items-center justify-center gap-2 overflow-x-auto pt-4 pb-2 scrollbar-none">
-            {(Object.keys(SECTOR_COMPOSITIONS) as SectorType[]).map((secKey) => {
+        {/* Creative Interactive Option Choosing System */}
+        <div className="p-3 sm:p-4 rounded-3xl glass-panel border border-theme-border shadow-xl space-y-3 max-w-5xl mx-auto">
+          {/* Top Control Bar with Slide Counter & Progress Track */}
+          <div className="flex items-center justify-between px-2 sm:px-4 text-xs">
+            <div className="flex items-center gap-3">
+              <span className="px-2.5 py-1 rounded-lg bg-forest-900/90 text-harvest-400 font-mono font-bold border border-forest-700">
+                SLIDE {comp.num} / 08
+              </span>
+              <span className="font-display font-bold text-theme-text uppercase hidden sm:inline-block">
+                {pick(comp.title)}
+              </span>
+            </div>
+
+            {/* Slider Progress Bar */}
+            <div className="flex-1 max-w-xs mx-4 h-1.5 rounded-full bg-forest-950/80 overflow-hidden border border-forest-800/40 hidden md:block">
+              <div
+                className="h-full rounded-full transition-all duration-500"
+                style={{
+                  width: `${progressPercent}%`,
+                  backgroundColor: comp.accentColor
+                }}
+              />
+            </div>
+
+            {/* Prev / Next Arrow Controls */}
+            <div className="flex items-center gap-1.5">
+              <button
+                onClick={handlePrev}
+                className="p-2 rounded-xl glass-card hover:bg-forest-800 hover:text-sand-50 transition-all border border-theme-border active:scale-95"
+                title="Previous Sector Slide"
+                aria-label="Previous Sector Slide"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+              <button
+                onClick={handleNext}
+                className="p-2 rounded-xl glass-card hover:bg-forest-800 hover:text-sand-50 transition-all border border-theme-border active:scale-95"
+                title="Next Sector Slide"
+                aria-label="Next Sector Slide"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+
+          {/* Interactive Sliding Tabs Bar */}
+          <div className="relative flex items-center gap-1.5 sm:gap-2 overflow-x-auto py-1 px-1 scrollbar-none snap-x snap-mandatory">
+            {SECTOR_KEYS.map((secKey) => {
               const sec = SECTOR_COMPOSITIONS[secKey];
               const isSelected = activeSector === secKey;
+              const IconComp = sec.icon;
+
               return (
                 <button
                   key={secKey}
                   onClick={() => setActiveSector(secKey)}
-                  className={`px-4 py-2 rounded-full text-xs font-display font-bold tracking-wider uppercase transition-all flex items-center gap-2 border whitespace-nowrap ${
+                  className={`relative px-3.5 py-2.5 rounded-2xl text-xs font-display font-bold tracking-wider uppercase transition-all flex items-center gap-2 border whitespace-nowrap shrink-0 snap-align-start ${
                     isSelected
-                      ? "bg-forest-900 text-sand-50 border-harvest-400 shadow-xl scale-105"
-                      : "glass-card hover:border-theme-border/80"
+                      ? "text-sand-50 shadow-xl border-harvest-400"
+                      : "glass-card text-theme-text-muted hover:text-theme-text hover:border-theme-border/80"
                   }`}
                   style={isSelected ? { borderColor: sec.accentColor } : {}}
                   data-cursor-text="SECTOR"
                 >
-                  <span className="font-mono text-[10px] text-theme-gold">{sec.num}</span>
+                  {isSelected && (
+                    <motion.div
+                      layoutId="activeSectorPill"
+                      className="absolute inset-0 rounded-2xl bg-forest-900 border"
+                      style={{ borderColor: sec.accentColor }}
+                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                    />
+                  )}
+
+                  <span className="relative z-10 font-mono text-[10px] text-theme-gold">{sec.num}</span>
+
                   <span
-                    className="w-2 h-2 rounded-full"
-                    style={{ backgroundColor: sec.accentColor }}
-                  />
-                  <span>{pick(sec.title)}</span>
+                    className="relative z-10 p-1 rounded-lg"
+                    style={{
+                      backgroundColor: isSelected ? sec.badgeBg : "transparent",
+                      color: isSelected ? sec.accentColor : "currentColor"
+                    }}
+                  >
+                    <IconComp className="w-3.5 h-3.5" />
+                  </span>
+
+                  <span className="relative z-10">{pick(sec.title)}</span>
                 </button>
               );
             })}
@@ -285,14 +398,14 @@ export function FromFieldToFuture() {
         <AnimatePresence mode="wait">
           <motion.div
             key={comp.id}
-            initial={{ opacity: 0, scale: 0.98 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.98 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-8 rounded-3xl glass-panel relative shadow-2xl"
+            initial={{ opacity: 0, scale: 0.98, y: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.98, y: -10 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-6 sm:p-8 rounded-3xl glass-panel relative shadow-2xl"
           >
             {/* Left 7 Cols: Layered 3D Scene */}
-            <div className="lg:col-span-7 h-[460px] rounded-2xl overflow-hidden relative group border border-theme-border shadow-2xl">
+            <div className="lg:col-span-7 h-[380px] sm:h-[460px] rounded-2xl overflow-hidden relative group border border-theme-border shadow-2xl">
               {/* Layer 1: Background Landscape */}
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"
@@ -306,20 +419,43 @@ export function FromFieldToFuture() {
               <div className="absolute inset-0 bg-[radial-gradient(#52B788_1px,transparent_1px)] [background-size:28px_28px] opacity-20 pointer-events-none" />
 
               {/* Layer 4: Floating Telemetry Badges */}
-              <div className="absolute top-6 left-6 space-y-2 z-10">
+              <div className="absolute top-4 left-4 sm:top-6 sm:left-6 space-y-2 z-10">
                 <div
-                  className="px-3 py-1 rounded-full backdrop-blur-md border text-xs font-bold text-sand-50 uppercase tracking-widest font-display"
+                  className="px-3 py-1 rounded-full backdrop-blur-md border text-xs font-bold text-sand-50 uppercase tracking-widest font-display flex items-center gap-2"
                   style={{ backgroundColor: comp.badgeBg, borderColor: comp.accentColor }}
                 >
-                  {t("fromField.heroDomain")}: {pick(comp.title)}
+                  <Sparkles className="w-3.5 h-3.5 text-theme-gold" />
+                  <span>
+                    {t("fromField.heroDomain")}: {pick(comp.title)}
+                  </span>
                 </div>
                 <div className="px-3 py-1 rounded-full bg-forest-950/80 backdrop-blur-md border border-forest-700/50 text-[11px] font-bold text-harvest-400">
                   📍 {pick(comp.operatorRole)}
                 </div>
               </div>
 
+              {/* Slide Arrow Overlay Controls on Card */}
+              <div className="absolute top-1/2 -translate-y-1/2 left-3 right-3 flex justify-between pointer-events-none z-20">
+                <button
+                  onClick={handlePrev}
+                  className="p-2.5 rounded-full bg-forest-950/70 border border-forest-700/60 backdrop-blur-md text-sand-50 opacity-0 group-hover:opacity-100 transition-all pointer-events-auto hover:scale-110 active:scale-95 shadow-xl"
+                  title="Previous Slide"
+                  aria-label="Previous Slide"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </button>
+                <button
+                  onClick={handleNext}
+                  className="p-2.5 rounded-full bg-forest-950/70 border border-forest-700/60 backdrop-blur-md text-sand-50 opacity-0 group-hover:opacity-100 transition-all pointer-events-auto hover:scale-110 active:scale-95 shadow-xl"
+                  title="Next Slide"
+                  aria-label="Next Slide"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </button>
+              </div>
+
               {/* Layer 5: Floating Device Mockup (Right Side Overlay) */}
-              <div className="absolute bottom-6 right-6 max-w-xs p-5 rounded-2xl bg-forest-950/90 backdrop-blur-xl border border-forest-700/60 shadow-2xl space-y-3 z-20">
+              <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 max-w-xs p-4 sm:p-5 rounded-2xl bg-forest-950/90 backdrop-blur-xl border border-forest-700/60 shadow-2xl space-y-3 z-20">
                 <div className="flex items-center justify-between border-b border-forest-800 pb-2">
                   <div className="flex items-center gap-2">
                     <Smartphone className="w-4 h-4 text-harvest-400" />
@@ -353,12 +489,14 @@ export function FromFieldToFuture() {
             <div className="lg:col-span-5 space-y-6">
               <div className="space-y-2">
                 <span
-                  className="text-xs font-bold uppercase tracking-widest font-display"
+                  className="text-xs font-bold uppercase tracking-widest font-display flex items-center gap-2"
                   style={{ color: comp.accentColor }}
                 >
-                  SECTOR DOMAIN {comp.num}
+                  <span>SECTOR DOMAIN {comp.num}</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-current" />
+                  <span>08 DOMAIN ENGINE</span>
                 </span>
-                <h3 className="font-display font-extrabold text-2xl sm:text-3xl text-theme-text uppercase text-balance">
+                <h3 className="font-display font-extrabold text-2xl sm:text-3xl text-theme-text uppercase text-balance leading-tight">
                   {pick(comp.subtitle)}
                 </h3>
               </div>
@@ -371,7 +509,7 @@ export function FromFieldToFuture() {
                 <div className="space-y-1.5 pt-1">
                   {comp.foregroundItems.map((item, idx) => (
                     <div key={idx} className="flex items-center gap-2 text-xs text-theme-text font-mono">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-theme-gold" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-theme-gold shrink-0" />
                       <span>{pick(item)}</span>
                     </div>
                   ))}
@@ -384,7 +522,7 @@ export function FromFieldToFuture() {
                   href={`/sectors/${comp.slug}`}
                   className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-forest-900 text-sand-50 font-display font-extrabold text-xs uppercase tracking-wider shadow-xl hover:bg-forest-800 hover:scale-[1.02] transition-all"
                 >
-                  <span>Explore {pick(comp.title)} Domain Specification</span>
+                  <span>Explore {pick(comp.title)} Specification</span>
                   <ArrowRight className="w-4 h-4 text-harvest-400" />
                 </Link>
               </div>

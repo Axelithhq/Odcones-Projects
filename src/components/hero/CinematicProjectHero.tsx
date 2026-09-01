@@ -15,7 +15,7 @@ export function CinematicProjectHero() {
       <div
         className="absolute inset-0 bg-cover bg-center transition-all duration-1000 opacity-40 scale-105"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&q=80&w=2000')`
+          backgroundImage: `url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=2000')`
         }}
       />
 

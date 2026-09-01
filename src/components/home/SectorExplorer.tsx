@@ -23,7 +23,7 @@ const SECTOR_ITEMS: SectorItem[] = [
     num: "01",
     name: "Agriculture",
     name_or: "କୃଷି ଉନ୍ନୟନ",
-    bgImage: "https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&q=80&w=1600",
+    bgImage: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=1600",
     icon: <Sprout className="w-6 h-6 text-theme-gold" />,
     desc: "Climate-resilient crop planning, soil organic carbon restoration, precision GIS zoning, and seed processing infrastructure.",
     projects: ["Precision Crop Planning", "Soil Regeneration Systems", "GIS Micro-Zoning"]
@@ -43,7 +43,7 @@ const SECTOR_ITEMS: SectorItem[] = [
     num: "03",
     name: "Dairy & Animal Husbandry",
     name_or: "ଦୁଗ୍ଧ ଓ ପଶୁସମ୍ପଦ",
-    bgImage: "https://images.unsplash.com/photo-1570042707220-410a563f8d9b?auto=format&fit=crop&q=80&w=1600",
+    bgImage: "https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?auto=format&fit=crop&q=80&w=1600",
     icon: <ShieldCheck className="w-6 h-6 text-theme-accent" />,
     desc: "Commercial cattle sheds, Bulk Milk Chilling (BMC) hubs, hydroponic green fodder trays, and poultry layer units.",
     projects: ["Smart BMC Dairy Hubs", "Hydroponic Fodder Security", "Cattle Shed Architecture"]

@@ -1,19 +1,5 @@
 import { NextResponse } from "next/server";
-import { createClient } from "@supabase/supabase-js";
-import { isSupabaseConfigured } from "@/lib/email";
-
-function getSupabaseAdmin() {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!url || !key) return null;
-  return createClient(url, key, { auth: { autoRefreshToken: false, persistSession: false } });
-}
-
-const VALID_COUPONS: Record<string, { code: string; type: "fixed" | "percentage"; value: number; desc: string }> = {
-  "ODCONS1000": { code: "ODCONS1000", type: "fixed", value: 1000, desc: "₹1,000 Flat Discount" },
-  "FARMER20": { code: "FARMER20", type: "percentage", value: 20, desc: "20% Off for Farmers & FPOs" },
-  "LAUNCH500": { code: "LAUNCH500", type: "fixed", value: 500, desc: "₹500 Launch Offer" },
-};
+import { readCollection, INITIAL_COUPONS, CouponDB } from "@/lib/serverDb";
 
 export async function POST(req: Request) {
   try {
@@ -24,75 +10,28 @@ export async function POST(req: Request) {
     }
 
     const cleanCode = code.trim().toUpperCase();
+    const coupons = readCollection<CouponDB[]>("coupons", INITIAL_COUPONS);
 
-    if (isSupabaseConfigured()) {
-      const supabase = getSupabaseAdmin();
-      if (supabase) {
-        const { data: coupon, error } = await supabase
-          .from("coupons")
-          .select("*")
-          .eq("code", cleanCode)
-          .eq("active", true)
-          .single();
+    const coupon = coupons.find((c) => c.code.toUpperCase() === cleanCode && c.active);
 
-        if (error || !coupon) {
-          return NextResponse.json({ error: "Invalid coupon code" }, { status: 404 });
-        }
-
-        if (coupon.expires_at && new Date(coupon.expires_at) < new Date()) {
-          return NextResponse.json({ error: "Coupon has expired" }, { status: 404 });
-        }
-
-        if (coupon.max_uses != null && coupon.used_count >= coupon.max_uses) {
-          return NextResponse.json({ error: "Coupon usage limit reached" }, { status: 404 });
-        }
-
-        if (coupon.min_amount != null && amount < coupon.min_amount) {
-          return NextResponse.json({
-            error: `Minimum amount of ₹${coupon.min_amount} required to use this coupon`,
-          }, { status: 400 });
-        }
-
-        let discount = 0;
-        if (coupon.type === "fixed") {
-          discount = coupon.value;
-        } else {
-          discount = Math.round((amount * coupon.value) / 100);
-        }
-
-        if (coupon.max_discount != null && discount > coupon.max_discount) {
-          discount = coupon.max_discount;
-        }
-
-        const finalAmount = Math.max(0, amount - discount);
-
-        return NextResponse.json({
-          success: true,
-          coupon: {
-            code: coupon.code,
-            type: coupon.type,
-            value: coupon.value,
-            description: coupon.description || coupon.desc || "",
-            discountAmount: discount,
-            finalAmount,
-          },
-        });
-      }
-    }
-
-    const coupon = VALID_COUPONS[cleanCode];
     if (!coupon) {
-      return NextResponse.json({ error: "Invalid coupon code" }, { status: 404 });
+      return NextResponse.json({ error: "Invalid or inactive coupon code" }, { status: 404 });
     }
 
-    let discount = 0;
+    if (coupon.minAmount && amount < coupon.minAmount) {
+      return NextResponse.json({
+        error: `Minimum order amount of ₹${coupon.minAmount} required for coupon ${coupon.code}`
+      }, { status: 400 });
+    }
+
+    let discountAmount = 0;
     if (coupon.type === "fixed") {
-      discount = coupon.value;
+      discountAmount = coupon.value;
     } else {
-      discount = Math.round((amount * coupon.value) / 100);
+      discountAmount = Math.round((amount * coupon.value) / 100);
     }
 
-    const finalAmount = Math.max(0, amount - discount);
+    const finalAmount = Math.max(0, amount - discountAmount);
 
     return NextResponse.json({
       success: true,
@@ -101,9 +40,9 @@ export async function POST(req: Request) {
         type: coupon.type,
         value: coupon.value,
         description: coupon.desc,
-        discountAmount: discount,
-        finalAmount: finalAmount,
-      },
+        discountAmount,
+        finalAmount
+      }
     });
   } catch (error) {
     return NextResponse.json({ error: "Failed to validate coupon" }, { status: 500 });

@@ -22,7 +22,8 @@ import {
   Layers,
   Wrench,
   CheckCircle2,
-  Sparkles
+  Sparkles,
+  Rocket
 } from "lucide-react";
 
 export function Header() {
@@ -65,7 +66,6 @@ export function Header() {
   const primaryNav = [
     { label: isOr ? "ଆମ ବିଷୟରେ" : "About", href: "/about" },
     { label: isOr ? "ସେବା ସମୂହ" : "Services", href: "/services", hasMega: "services" },
-    { label: isOr ? "କ୍ଷେତ୍ରଗୁଡ଼ିକ" : "Sectors", href: "/sectors", hasMega: "sectors" },
     { label: isOr ? "ପ୍ରକଳ୍ପ ସମୂହ" : "Projects", href: "/projects", hasMega: "projects" },
     { label: isOr ? "DPR ପରାମର୍ଶ" : "DPR", href: "/dpr-consultancy" },
     { label: isOr ? "ସରକାରୀ ଯୋଜନା" : "Schemes", href: "/government-schemes" },
@@ -92,11 +92,11 @@ export function Header() {
               className="group flex items-center gap-3.5 z-10"
               data-cursor-text="ODCONS"
             >
-              <div className="relative w-10 h-10 rounded-xl overflow-hidden bg-gradient-to-br from-forest-800/90 via-forest-900/95 to-forest-950 border border-forest-500/40 p-1 flex items-center justify-center group-hover:scale-[1.04] group-hover:border-harvest-400/80 transition-all duration-300 shadow-lg shadow-forest-950/50">
+              <div className="relative flex items-center justify-center py-1 group-hover:scale-105 transition-transform duration-300">
                 <img
                   src="/logo.png"
                   alt="ODCONS PROJECTS Logo"
-                  className="w-full h-full object-contain filter drop-shadow-md"
+                  className="h-10 sm:h-11 w-auto max-w-[160px] object-contain drop-shadow-md"
                 />
               </div>
 
@@ -232,7 +232,7 @@ export function Header() {
           </div>
         </div>
 
-        {/* Architectural Mega-Menus Directory (100% Solid Opaque in Light Mode) */}
+        {/* Architectural Mega-Menus Directory */}
         <AnimatePresence>
           {activeMegaMenu && (
             <motion.div
@@ -282,56 +282,10 @@ export function Header() {
                   </div>
                 )}
 
-                {/* Sectors Directory Mega Menu */}
-                {activeMegaMenu === "sectors" && (
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center border-b border-[#B8C2B3]/60 pb-3">
-                      <span className="text-[10px] font-mono font-bold text-harvest-500 uppercase tracking-widest">
-                        8 INTEGRATED SECTOR DOMAINS
-                      </span>
-                      <Link href="/sectors" className="text-xs font-bold text-harvest-500 hover:underline">
-                        Explore All Sectors →
-                      </Link>
-                    </div>
-
-                    <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2.5">
-                      {[
-                        { title: "Agriculture", slug: "agriculture", desc: "Crops & Soil" },
-                        { title: "Fisheries & Aqua", slug: "fisheries", desc: "Biofloc & Cages" },
-                        { title: "Dairy & Livestock", slug: "dairy", desc: "BMC & Fodder" },
-                        { title: "Horticulture", slug: "horticulture", desc: "Polyhouses" },
-                        { title: "Food Processing", slug: "food-processing", desc: "Agro-Mills" },
-                        { title: "Cold Chain", slug: "cold-chain", desc: "PUF Cold Rooms" },
-                        { title: "Rural Infra", slug: "rural-infrastructure", desc: "Check Dams" },
-                        { title: "Allied MSME", slug: "msme-projects", desc: "Incubators" }
-                      ].map((sec) => (
-                        <Link
-                          key={sec.slug}
-                          href={`/sectors/${sec.slug}`}
-                          className="p-3 rounded-xl glass-card space-y-1 group"
-                        >
-                          <span className="text-xs font-display font-bold block group-hover:text-harvest-500 leading-tight">{sec.title}</span>
-                          <span className="text-[9.5px] text-theme-text-muted font-mono block">{sec.desc}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* Projects Directory Mega Menu */}
+                {/* Projects Directory Mega Menu with High Attraction "START YOUR PROJECT" CTA */}
                 {activeMegaMenu === "projects" && (
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="space-y-2 border-r border-[#B8C2B3]/60 pr-6">
-                      <span className="text-[10px] font-mono font-bold text-harvest-500 uppercase tracking-widest block">
-                        PROJECT CAPABILITIES
-                      </span>
-                      <h4 className="font-display font-extrabold text-base">Project Expertise Categories</h4>
-                      <p className="text-xs text-theme-text-muted font-normal leading-relaxed">
-                        Technical DPRs and layouts structured by ODCONS PROJECTS across agricultural and aquaculture domains.
-                      </p>
-                    </div>
-
-                    <div className="md:col-span-2 grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                    <div className="md:col-span-7 grid grid-cols-2 gap-3">
                       {[
                         { title: "Biofloc Fish Farming", slug: "biofloc-fish-farming-units" },
                         { title: "Groundnut Processing", slug: "groundnut-agro-processing-units" },
@@ -341,12 +295,48 @@ export function Header() {
                         <Link
                           key={p.slug}
                           href={`/projects/${p.slug}`}
-                          className="p-3.5 rounded-xl glass-card flex items-center justify-between group"
+                          className="p-3.5 rounded-xl glass-card flex items-center justify-between group hover:border-harvest-400/60 transition-all"
                         >
-                          <span className="text-xs font-display font-bold group-hover:text-harvest-500">{p.title}</span>
-                          <ArrowRight className="w-3.5 h-3.5 text-harvest-500 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          <span className="text-xs font-display font-bold group-hover:text-harvest-400">{p.title}</span>
+                          <ArrowRight className="w-3.5 h-3.5 text-harvest-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                         </Link>
                       ))}
+                      <Link
+                        href="/projects"
+                        className="col-span-2 p-2.5 rounded-xl bg-forest-900/60 border border-forest-800 text-center text-xs font-bold text-harvest-400 hover:text-sand-50 transition-colors"
+                      >
+                        Explore All Featured Case Studies →
+                      </Link>
+                    </div>
+
+                    {/* High Attraction Featured "START YOUR PROJECT" Card */}
+                    <div className="md:col-span-5 p-5 rounded-2xl bg-gradient-to-br from-forest-900 via-forest-950 to-aqua-950 border border-harvest-400/70 shadow-2xl space-y-3 relative overflow-hidden group">
+                      <div className="flex items-center justify-between">
+                        <span className="px-2.5 py-0.5 rounded-full bg-harvest-400 text-forest-950 text-[10px] font-mono font-extrabold uppercase tracking-widest flex items-center gap-1 shadow-md">
+                          <Sparkles className="w-3 h-3 text-forest-950 animate-spin" />
+                          <span>READY TO LAUNCH?</span>
+                        </span>
+                        <Rocket className="w-5 h-5 text-harvest-400 group-hover:scale-125 transition-transform" />
+                      </div>
+
+                      <div>
+                        <h4 className="font-display font-extrabold text-base text-sand-50 group-hover:text-harvest-400 transition-colors">
+                          {isOr ? "ନୂତନ ପ୍ରକଳ୍ପ ଆରମ୍ଭ କରନ୍ତୁ" : "Start Your Project Now"}
+                        </h4>
+                        <p className="text-xs text-sand-200/80 leading-relaxed font-normal pt-1">
+                          {isOr
+                            ? "ଆପଣଙ୍କ ପ୍ରକଳ୍ପ ପାଇଁ ବ୍ୟାଙ୍କ DPR, ୨D/୩D ନକ୍ସା ଓ ସରକାରୀ ସବସିଡି ପରାମର୍ଶ ନିଅନ୍ତୁ।"
+                            : "Turn your land, water & agribusiness vision into a bankable DPR with full scheme subsidy support."}
+                        </p>
+                      </div>
+
+                      <Link
+                        href="/start-project"
+                        className="w-full py-3 rounded-xl bg-gradient-to-r from-harvest-500 to-harvest-600 text-forest-950 font-display font-extrabold text-xs uppercase tracking-wider shadow-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-2"
+                      >
+                        <span>{isOr ? "ପ୍ରକଳ୍ପ ଆରମ୍ଭ କରନ୍ତୁ" : "START A PROJECT TODAY"}</span>
+                        <ArrowRight className="w-4 h-4 text-forest-950" />
+                      </Link>
                     </div>
                   </div>
                 )}
@@ -387,6 +377,14 @@ export function Header() {
                   </Link>
                 </motion.div>
               ))}
+
+              <Link
+                href="/start-project"
+                className="mt-4 p-4 rounded-xl bg-gradient-to-r from-harvest-500 to-harvest-600 text-forest-950 font-display font-extrabold text-xs tracking-wider uppercase shadow-lg flex items-center justify-between"
+              >
+                <span>{isOr ? "ନୂତନ ପ୍ରକଳ୍ପ ଆରମ୍ଭ କରନ୍ତୁ" : "Start Your Project"}</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
 
             <div className="pt-4 border-t border-[#B8C2B3]/60 flex flex-col gap-3">

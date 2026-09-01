@@ -54,6 +54,6 @@ export const GALLERY_IMAGES: GalleryImage[] = [
     title_or: "ବଲ୍କ କ୍ଷୀର ଥଣ୍ଡା କରିବା ସଂଗ୍ରହ କେନ୍ଦ୍ର",
     category: "Animal Husbandry",
     category_or: "ପଶୁପାଳନ",
-    url: "https://images.unsplash.com/photo-1570042707220-410a563f8d9b?auto=format&fit=crop&q=80&w=1200",
+    url: "https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?auto=format&fit=crop&q=80&w=1200",
   },
 ];

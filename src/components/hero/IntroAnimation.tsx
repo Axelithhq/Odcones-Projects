@@ -27,10 +27,10 @@ export function IntroAnimation() {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="w-16 h-16 rounded-2xl bg-gradient-to-br from-forest-500 via-forest-700 to-harvest-600 p-0.5 shadow-2xl flex items-center justify-center"
+              className="w-16 h-16 rounded-2xl bg-gradient-to-br from-forest-500 via-forest-700 to-harvest-600 p-1 shadow-2xl flex items-center justify-center"
             >
-              <div className="w-full h-full bg-theme-base rounded-[14px] flex items-center justify-center">
-                <Sprout className="w-8 h-8 text-harvest-400" />
+              <div className="w-full h-full bg-theme-base rounded-[14px] flex items-center justify-center p-2">
+                <img src="/logo.png" alt="ODCONS Monogram" className="w-full h-full object-contain filter drop-shadow-lg" />
               </div>
             </motion.div>
 

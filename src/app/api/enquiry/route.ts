@@ -1,21 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getDictionary, translate } from "@/lib/messages";
-import { isValidLocale } from "@/lib/i18n-config";
-import { isEmailConfigured, isSupabaseConfigured, sendEmail, escapeHtml } from "@/lib/email";
+import { readCollection, writeCollection, ProjectInquiryDB } from "@/lib/serverDb";
 
 export const runtime = "nodejs";
 
-function t(lang: string, key: string, fallback?: string): string {
-  return translate(getDictionary(isValidLocale(lang) ? lang : "en"), key, fallback);
-}
-
 export async function POST(req: NextRequest) {
-  const lang = "en";
   let body: Record<string, unknown> = {};
   try {
     body = await req.json();
   } catch {
-    return NextResponse.json({ success: false, error: t(lang, "api.invalidInput") }, { status: 400 });
+    return NextResponse.json({ success: false, error: "Invalid input" }, { status: 400 });
   }
 
   const name = String(body.name ?? "").trim();
@@ -28,62 +21,36 @@ export async function POST(req: NextRequest) {
   const timeline = String(body.timeline ?? "").trim();
   const budget = String(body.budget ?? "").trim();
 
-  if (!name || !email || !problemStatement) {
-    return NextResponse.json({ success: false, error: t(lang, "api.invalidInput") }, { status: 400 });
+  if (!name || !email) {
+    return NextResponse.json({ success: false, error: "Name and email are required" }, { status: 400 });
   }
 
-  const demo = !isSupabaseConfigured();
+  const inquiryId = `INQ-${Date.now()}-${Math.floor(100 + Math.random() * 900)}`;
 
-  // Persist to Supabase only when a real project is configured.
-  if (isSupabaseConfigured()) {
-    try {
-      const { createClient } = await import("@supabase/supabase-js");
-      const client = createClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-      );
-      await client.from("enquiries").insert([
-        {
-          name,
-          email,
-          phone,
-          organization: organization || null,
-          sector: sector || null,
-          problem_statement: problemStatement,
-          location: location || null,
-          timeline: timeline || null,
-          budget: budget || null,
-          status: "New",
-        },
-      ]);
-    } catch {
-      // Persistence failure should not block the response.
-    }
-  }
+  const newInquiry: ProjectInquiryDB = {
+    id: inquiryId,
+    name,
+    email,
+    phone: phone || "Not Provided",
+    organization: organization || "",
+    sector: sector || "General Agribusiness",
+    location: location || "",
+    budget: budget || "",
+    timeline: timeline || "",
+    problem_statement: problemStatement || "Direct Project Enquiry",
+    status: "New",
+    created_at: new Date().toISOString()
+  };
 
-  if (isEmailConfigured()) {
-    await sendEmail({
-      to: process.env.CONTACT_EMAIL!,
-      subject: `[ODCONS] New Project Enquiry from ${name}`,
-      html: `
-        <h2>New Project Enquiry</h2>
-        <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-        <p><strong>Phone:</strong> ${escapeHtml(phone)}</p>
-        <p><strong>Organization:</strong> ${escapeHtml(organization)}</p>
-        <p><strong>Sector:</strong> ${escapeHtml(sector)}</p>
-        <p><strong>Location:</strong> ${escapeHtml(location)}</p>
-        <p><strong>Timeline:</strong> ${escapeHtml(timeline)}</p>
-        <p><strong>Budget:</strong> ${escapeHtml(budget)}</p>
-        <p><strong>Problem Statement:</strong></p>
-        <p>${escapeHtml(problemStatement).replace(/\n/g, "<br/>")}</p>
-      `,
-    });
-  }
+  // Save to local filesystem database with zero data loss
+  const currentInquiries = readCollection<ProjectInquiryDB[]>("project_inquiries", []);
+  const updatedInquiries = [newInquiry, ...currentInquiries];
+  writeCollection("project_inquiries", updatedInquiries);
 
-  return NextResponse.json({ success: true, demo });
+  return NextResponse.json({ success: true, inquiry: newInquiry });
 }
 
 export async function GET() {
-  return NextResponse.json({ success: false, error: t("en", "api.invalidMethod") }, { status: 405 });
+  const inquiries = readCollection<ProjectInquiryDB[]>("project_inquiries", []);
+  return NextResponse.json({ success: true, data: inquiries });
 }

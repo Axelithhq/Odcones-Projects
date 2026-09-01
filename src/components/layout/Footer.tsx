@@ -40,8 +40,8 @@ export function Footer() {
           <div className="lg:col-span-2 space-y-6">
             <Link href={localizeHref("/")} className="flex items-center gap-2.5">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-forest-600 via-forest-800 to-soil-700 p-0.5">
-                <div className="w-full h-full bg-theme-base rounded-[10px] flex items-center justify-center">
-                  <Sprout className="w-5 h-5 text-harvest-400" />
+                <div className="w-full h-full bg-theme-base rounded-[10px] flex items-center justify-center p-1.5">
+                  <img src="/logo.png" alt="ODCONS Logo" className="w-full h-full object-contain" />
                 </div>
               </div>
               <div className="flex flex-col">
