@@ -60,8 +60,10 @@ export function SecurePdfModal({ isOpen, onClose, title, category, pdfUrl }: Sec
 
   if (!isOpen) return null;
 
-  // Append hash flags to hide native PDF viewer download & print toolbars
-  const secureSrc = `${pdfUrl}#toolbar=0&navpanes=0&scrollbar=1`;
+  // Append hash flags for URLs or pass data URI directly for embedded PDFs
+  const secureSrc = pdfUrl.startsWith("data:") 
+    ? pdfUrl 
+    : `${pdfUrl}#toolbar=0&navpanes=0&scrollbar=1`;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-forest-950/95 backdrop-blur-xl select-none">

@@ -40,7 +40,8 @@ import {
   Loader2,
   Paperclip,
   File,
-  Image as ImageIcon
+  Image as ImageIcon,
+  Upload
 } from "lucide-react";
 import {
   getStoredProjects,
@@ -87,6 +88,10 @@ export default function AdminPage() {
   const [mailAttachments, setMailAttachments] = useState<AttachmentItem[]>([]);
   const [isSendingMail, setIsSendingMail] = useState(false);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
+
+  // Hidden File Input Refs for Library Uploads
+  const pdfInputRef = useRef<HTMLInputElement | null>(null);
+  const coverImageInputRef = useRef<HTMLInputElement | null>(null);
 
   // Local & DB Collections
   const [consultationServices, setConsultationServices] = useState<any[]>([]);
@@ -210,6 +215,42 @@ export default function AdminPage() {
   };
 
   // -------------------------------------------------------------
+  // LIBRARY FILE UPLOAD HANDLERS (PDF & Cover Image)
+  // -------------------------------------------------------------
+  const handlePdfFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      const result = reader.result as string;
+      setEditingEntity((prev: any) => ({
+        ...prev,
+        pdfUrl: result,
+        pdfFileName: file.name
+      }));
+      showToast(`PDF Document "${file.name}" uploaded successfully!`);
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const handleCoverImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      const result = reader.result as string;
+      setEditingEntity((prev: any) => ({
+        ...prev,
+        coverImage: result
+      }));
+      showToast(`Thumbnail image "${file.name}" uploaded successfully!`);
+    };
+    reader.readAsDataURL(file);
+  };
+
+  // -------------------------------------------------------------
   // MAIL COMPOSER HANDLER (Resend API)
   // -------------------------------------------------------------
   const handleSendMail = async (e: React.FormEvent) => {
@@ -299,8 +340,8 @@ export default function AdminPage() {
       category: "Tales of Aquaculture",
       slug: `doc-${Date.now()}`,
       description: "",
-      pdfUrl: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
-      coverImage: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=800",
+      pdfUrl: "",
+      coverImage: "",
       publishedDate: new Date().toISOString().split("T")[0],
       pages: "20 Pages",
       active: true
@@ -439,6 +480,11 @@ export default function AdminPage() {
 
   const handleSaveLibraryResource = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!editingEntity.pdfUrl) {
+      showToast("Please upload a PDF document file.", "error");
+      return;
+    }
+
     try {
       const res = await fetch("/api/admin/db", {
         method: "POST",
@@ -1510,7 +1556,7 @@ export default function AdminPage() {
               </button>
             </div>
 
-            {/* FORM 00: LIBRARY RESOURCE */}
+            {/* FORM 00: LIBRARY RESOURCE WITH DIRECT FILE UPLOADS */}
             {editingEntityType === "library_resource" && (
               <form onSubmit={handleSaveLibraryResource} className="space-y-4">
                 <div className="space-y-1">
@@ -1523,6 +1569,7 @@ export default function AdminPage() {
                     className="w-full px-4 py-2.5 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-xs focus:outline-none"
                   />
                 </div>
+
                 <div className="space-y-1">
                   <label className="text-xs font-bold text-harvest-400 uppercase">Title (Odia / ଓଡ଼ିଆ)</label>
                   <input
@@ -1532,6 +1579,7 @@ export default function AdminPage() {
                     className="w-full px-4 py-2.5 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-xs focus:outline-none font-sans"
                   />
                 </div>
+
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-1">
                     <label className="text-xs font-bold text-harvest-400 uppercase">Category *</label>
@@ -1546,6 +1594,7 @@ export default function AdminPage() {
                       <option value="Testimonials">Testimonials</option>
                     </select>
                   </div>
+
                   <div className="space-y-1">
                     <label className="text-xs font-bold text-harvest-400 uppercase">Pages / Info</label>
                     <input
@@ -1556,27 +1605,78 @@ export default function AdminPage() {
                     />
                   </div>
                 </div>
-                <div className="space-y-1">
-                  <label className="text-xs font-bold text-harvest-400 uppercase">PDF Document URL *</label>
-                  <input
-                    required
-                    type="text"
-                    value={editingEntity.pdfUrl || ""}
-                    onChange={(e) => setEditingEntity({ ...editingEntity, pdfUrl: e.target.value })}
-                    placeholder="https://domain.com/sample.pdf"
-                    className="w-full px-4 py-2.5 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-xs font-mono focus:outline-none"
-                  />
+
+                {/* DIRECT PDF FILE UPLOAD */}
+                <div className="space-y-2 pt-1 border-t border-forest-800/80">
+                  <label className="text-xs font-bold text-harvest-400 uppercase flex items-center justify-between">
+                    <span>PDF Document File * (No URL required)</span>
+                    {editingEntity.pdfUrl && (
+                      <span className="text-[10px] font-mono font-bold text-emerald-400">✓ PDF Loaded</span>
+                    )}
+                  </label>
+
+                  <div className="flex items-center gap-3 p-3 rounded-2xl bg-forest-900 border border-forest-700">
+                    <button
+                      type="button"
+                      onClick={() => pdfInputRef.current?.click()}
+                      className="px-4 py-2.5 rounded-xl bg-harvest-500 hover:bg-harvest-400 text-forest-950 font-bold text-xs uppercase tracking-wider flex items-center gap-2 transition-all shadow-md"
+                    >
+                      <Upload className="w-4 h-4" />
+                      <span>Upload PDF Document</span>
+                    </button>
+                    <input
+                      ref={pdfInputRef}
+                      type="file"
+                      accept=".pdf"
+                      onChange={handlePdfFileUpload}
+                      className="hidden"
+                    />
+                    <div className="text-xs font-mono text-sand-200 truncate flex-1">
+                      {editingEntity.pdfFileName || (editingEntity.pdfUrl ? "PDF File Stored In Database" : "No PDF selected")}
+                    </div>
+                  </div>
                 </div>
-                <div className="space-y-1">
-                  <label className="text-xs font-bold text-harvest-400 uppercase">Cover Image Thumbnail URL</label>
-                  <input
-                    type="text"
-                    value={editingEntity.coverImage || ""}
-                    onChange={(e) => setEditingEntity({ ...editingEntity, coverImage: e.target.value })}
-                    placeholder="https://images.unsplash.com/photo-..."
-                    className="w-full px-4 py-2.5 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-xs font-mono focus:outline-none"
-                  />
+
+                {/* DIRECT COVER THUMBNAIL PHOTO UPLOAD */}
+                <div className="space-y-2 pt-1">
+                  <label className="text-xs font-bold text-harvest-400 uppercase flex items-center justify-between">
+                    <span>Cover Thumbnail Image (No URL required)</span>
+                    {editingEntity.coverImage && (
+                      <span className="text-[10px] font-mono font-bold text-emerald-400">✓ Cover Image Loaded</span>
+                    )}
+                  </label>
+
+                  <div className="flex items-center gap-3 p-3 rounded-2xl bg-forest-900 border border-forest-700">
+                    {editingEntity.coverImage ? (
+                      <img
+                        src={editingEntity.coverImage}
+                        alt="Thumbnail preview"
+                        className="w-12 h-12 rounded-xl object-cover border border-forest-700"
+                      />
+                    ) : (
+                      <div className="w-12 h-12 rounded-xl bg-forest-950 border border-forest-800 flex items-center justify-center text-theme-text-muted">
+                        <ImageIcon className="w-5 h-5" />
+                      </div>
+                    )}
+
+                    <button
+                      type="button"
+                      onClick={() => coverImageInputRef.current?.click()}
+                      className="px-4 py-2.5 rounded-xl bg-forest-950 hover:bg-forest-800 border border-forest-700 text-harvest-400 font-bold text-xs uppercase tracking-wider flex items-center gap-2 transition-all"
+                    >
+                      <ImageIcon className="w-4 h-4" />
+                      <span>Upload Cover Image</span>
+                    </button>
+                    <input
+                      ref={coverImageInputRef}
+                      type="file"
+                      accept="image/*"
+                      onChange={handleCoverImageUpload}
+                      className="hidden"
+                    />
+                  </div>
                 </div>
+
                 <div className="space-y-1">
                   <label className="text-xs font-bold text-harvest-400 uppercase">Description</label>
                   <textarea
@@ -1586,6 +1686,7 @@ export default function AdminPage() {
                     className="w-full px-4 py-2.5 rounded-xl bg-theme-base border border-forest-700 text-sand-50 text-xs focus:outline-none"
                   />
                 </div>
+
                 <button type="submit" className="w-full py-3 rounded-xl bg-harvest-500 text-forest-950 font-extrabold text-xs uppercase">
                   Save Library Document →
                 </button>
