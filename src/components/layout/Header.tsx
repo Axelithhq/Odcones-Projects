@@ -81,24 +81,25 @@ export function Header() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
             ? isLight
-              ? "h-[70px] bg-white backdrop-blur-2xl border-b border-[#B8C2B3] shadow-xl shadow-forest-900/5 text-[#0B130E]"
-              : "h-[70px] bg-theme-base/92 backdrop-blur-2xl border-b border-forest-500/25 shadow-2xl shadow-forest-950/70 text-sand-50"
-            : "h-[84px] bg-gradient-to-b from-forest-950/85 via-forest-950/45 to-transparent border-b border-sand-100/10 text-sand-50"
+              ? "h-[72px] bg-white/95 backdrop-blur-2xl border-b border-[#B8C2B3] shadow-xl shadow-forest-900/5 text-[#0B130E]"
+              : "h-[72px] bg-theme-base/95 backdrop-blur-2xl border-b border-forest-500/25 shadow-2xl shadow-forest-950/70 text-sand-50"
+            : "h-[84px] bg-gradient-to-b from-forest-950/90 via-forest-950/50 to-transparent border-b border-sand-100/10 text-sand-50"
         }`}
       >
-        <div className="max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between relative">
-          {/* Brand Logo & Technical Domain Accent */}
-          <div className="flex items-center gap-4">
+        <div className="max-w-[1440px] mx-auto h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 relative">
+          
+          {/* Left: Brand Logo & CAD Survey Badge */}
+          <div className="flex items-center gap-3 flex-shrink-0">
             <Link
               href="/"
-              className="group flex items-center gap-3.5 z-10"
+              className="group flex items-center gap-3 z-10"
               data-cursor-text="ODCONS"
             >
               <div className="relative flex items-center justify-center py-1 group-hover:scale-105 transition-transform duration-300">
                 <img
                   src="/logo.png"
                   alt="ODCONS PROJECTS Logo"
-                  className="h-10 sm:h-11 w-auto max-w-[160px] object-contain drop-shadow-md"
+                  className="h-10 sm:h-11 w-auto max-w-[150px] object-contain drop-shadow-md"
                 />
               </div>
 
@@ -111,7 +112,7 @@ export function Header() {
                   </span>
                   <span className="w-1.5 h-1.5 rounded-full bg-harvest-400 animate-pulse shadow-sm shadow-harvest-400" />
                 </div>
-                <span className={`text-[9.5px] font-mono font-bold tracking-[0.28em] uppercase leading-tight pt-0.5 ${
+                <span className={`text-[9px] font-mono font-bold tracking-[0.28em] uppercase leading-tight pt-0.5 ${
                   isLight && isScrolled ? "text-forest-700" : "text-forest-300"
                 }`}>
                   PROJECTS
@@ -119,16 +120,16 @@ export function Header() {
               </div>
             </Link>
 
-            {/* CAD Survey Coordinate Accent */}
-            <div className="hidden lg:flex items-center gap-2 pl-4 border-l border-forest-700/40">
+            {/* CAD Survey Coordinate Accent (Shown on 2XL screens) */}
+            <div className="hidden 2xl:flex items-center gap-2 pl-3 border-l border-forest-700/40">
               <span className="px-2 py-0.5 rounded bg-forest-900/40 border border-forest-700/30 text-[9px] font-mono tracking-widest text-forest-300/80 uppercase">
                 FIELD · WATER · PROJECT
               </span>
             </div>
           </div>
 
-          {/* Minimalist Editorial Desktop Navigation */}
-          <nav className="hidden xl:flex items-center gap-1.5 h-full">
+          {/* Center: Desktop Navigation Bar (Starts seamlessly at lg: 1024px) */}
+          <nav className="hidden lg:flex items-center justify-center gap-1 xl:gap-1.5 h-full">
             {primaryNav.map((item) => {
               const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
               const isHovered = activeMegaMenu === item.hasMega;
@@ -142,7 +143,7 @@ export function Header() {
                 >
                   <Link
                     href={item.href}
-                    className={`group relative px-3 py-1.5 rounded-full border text-xs font-semibold tracking-wide transition-all duration-200 flex items-center gap-1.5 ${
+                    className={`group relative px-2.5 xl:px-3 py-1.5 rounded-full border text-xs font-semibold tracking-wide transition-all duration-200 flex items-center gap-1 ${
                       isActive
                         ? isLight && isScrolled
                           ? "bg-harvest-400/20 text-harvest-800 border-harvest-500/40 font-bold"
@@ -152,7 +153,7 @@ export function Header() {
                         : "border-transparent text-sand-200/80 hover:text-sand-50 hover:bg-forest-800/40 hover:border-forest-700/40"
                     }`}
                   >
-                    <span className="group-hover:-translate-y-[0.5px] transition-transform duration-200">
+                    <span className="group-hover:-translate-y-[0.5px] transition-transform duration-200 whitespace-nowrap">
                       {item.label}
                     </span>
 
@@ -176,8 +177,8 @@ export function Header() {
             })}
           </nav>
 
-          {/* Compact Utility Controls & Shimmering CTA */}
-          <div className="hidden lg:flex items-center gap-3">
+          {/* Right: Desktop Utility Controls & Consultation CTA Button */}
+          <div className="hidden lg:flex items-center gap-2.5 flex-shrink-0">
             {/* Utility Controls Group */}
             <div className={`flex items-center gap-1.5 p-1 rounded-full border shadow-inner ${
               isLight && isScrolled
@@ -209,7 +210,7 @@ export function Header() {
             {/* High-Attraction Perfectly Aligned Consultation CTA Button */}
             <Link
               href="/book-consultation"
-              className="group relative inline-flex items-center justify-center gap-2 h-10 px-5 rounded-full bg-gradient-to-r from-harvest-500 via-harvest-400 to-harvest-600 text-forest-950 font-display font-extrabold text-xs tracking-wider uppercase shadow-lg shadow-harvest-500/20 border border-harvest-300 hover:scale-[1.04] hover:shadow-harvest-400/40 hover:border-white transition-all duration-300 flex-shrink-0"
+              className="group relative inline-flex items-center justify-center gap-2 h-10 px-4.5 xl:px-5 rounded-full bg-gradient-to-r from-harvest-500 via-harvest-400 to-harvest-600 text-forest-950 font-display font-extrabold text-xs tracking-wider uppercase shadow-lg shadow-harvest-500/20 border border-harvest-300 hover:scale-[1.04] hover:shadow-harvest-400/40 hover:border-white transition-all duration-300 flex-shrink-0"
             >
               <Calendar className="w-3.5 h-3.5 text-forest-950 group-hover:rotate-12 transition-transform" />
               <span className="whitespace-nowrap">{isOr ? "ବୁକିଂ କରନ୍ତୁ" : "Book Consultation"}</span>
@@ -217,7 +218,7 @@ export function Header() {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button (Only visible below lg: 1024px) */}
           <div className="flex items-center gap-2 lg:hidden">
             <ReadAloudControls />
             <button
@@ -284,7 +285,7 @@ export function Header() {
                   </div>
                 )}
 
-                {/* Projects Directory Mega Menu with High Attraction "START YOUR PROJECT" CTA */}
+                {/* Projects Directory Mega Menu */}
                 {activeMegaMenu === "projects" && (
                   <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
                     <div className="md:col-span-7 grid grid-cols-2 gap-3">
